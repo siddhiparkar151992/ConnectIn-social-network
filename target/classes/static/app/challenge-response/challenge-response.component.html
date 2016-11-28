@@ -1,0 +1,46 @@
+
+                    <form  *ngIf='selectedStep==1 && formValidator' (ngSubmit)='nextStep(1)' novalidate [ngFormModel]='formValidator' class='cres' >
+                          <div *ngIf='chError' class="error la-form-error">{{chError}}</div>
+
+                        <div class="form-group-2">
+                            <div class="custom-select select-lg" >
+                                <div class="icon-select-dropdown"></div>
+                                <input value='{{cq1.value}}' class="select-value" type="text" >
+                                <select [(ngModel)]='choice1' ngControl='cq1' required  class="select-list" class="select-list">
+                                         <option *ngFor='#cq of componentData.challengeQuestions;#i=index' value='{{cq}}'>{{cq[1]}}</option>  
+                                    </select>
+                            </div>
+                             <div *ngIf='(cq1.touched && !cq1.valid)||(submitStep1 && !cq1.valid)' class="error la-form-error">Please Select challenge Question</div>
+
+                            <input ngControl='cr1' name='cr1' type="text" class="form-control input-lg custom-input" id="" placeholder="Answer">
+                            <div *ngIf='(cr1.touched && !cr1.valid)||(submitStep1 && !cr1.valid)' class="error la-form-error">Please enter a answer</div>
+
+                        </div>
+                        <div class="form-group-2">
+                            <div class="custom-select select-lg" >
+                                <div class="icon-select-dropdown"></div>
+                                <input value='{{cq2.value}}' class="select-value" type="text" value='{{cq2.value}}'>
+                                 <select [(ngModel)]='choice2' ngControl='cq2' required  class="select-list form-control" class="select-list">
+                                         <option  *ngFor='#cq of componentData.challengeQuestions'  value='{{cq}}'>{{cq[1]}}</option>  
+                                    </select>
+                            </div>
+                             <div *ngIf='(cq2.touched && !cq2.valid) || (submitStep1 && !cq2.valid)' class="error la-form-error">Please Select challenge Question</div>
+                            <input ngControl='cr2' name='userId' type="text" class="form-control input-lg custom-input" id="" placeholder="Answer">
+                            <div *ngIf='(cr2.touched && !cr2.valid) || (submitStep1 && !cr2.valid)' class="error la-form-error">Please enter a answer</div>
+
+                        </div>
+                        <div class="form-group-2">
+                            <div class="custom-select select-lg" >
+                                <div class="icon-select-dropdown"></div>
+                                <input class="select-value" type="text" value='{{cq3.value}}'>
+                                 <select  [(ngModel)]='choice3'  ngControl='cq3' required  class="select-list form-control" class="select-list">
+                                         <option *ngFor='#cq of componentData.challengeQuestions' value='{{cq}}'>{{cq[1]}}</option>  
+                                    </select>
+                            </div>
+                            <div *ngIf='(cq3.touched && !cq3.valid) || (submitStep1 && !cq3.valid)' class="error la-form-error">Please Select challenge Question</div>
+                            <input ngControl='cr3' name='userId' type="text" class="form-control input-lg custom-input" id="" placeholder="Answer">
+                             <div *ngIf='(cr3.touched && !cr3.valid) || (submitStep1 && !cr3.valid)' class="error la-form-error">Please enter a answer</div>
+                        </div>
+                        <button type='text' [disabled]='!formValidator.valid'  class="btn btn-lg btn-block bg-blue text-uppercase btn-custom text-center bg-blue btn-step1">Next</button>
+                    </form>
+               

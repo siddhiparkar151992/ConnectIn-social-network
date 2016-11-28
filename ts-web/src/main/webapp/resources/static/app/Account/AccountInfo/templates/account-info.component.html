@@ -1,0 +1,51 @@
+
+<div *ngIf="accountInfo" class="container acc-info-container">
+  <h4 class="page-title">Account Information of {{accountInfo.customerName}}</h4>
+  
+  <table class="table table-bordered account-info-table">
+    
+    <tbody>
+      <tr>
+        <td>Account No</td>
+        <td>{{accountInfo.short32AccNum}}</td>
+        
+      </tr>
+      <tr>
+       <td>Branch</td>
+        <td>{{accountInfo.branchName}}</td>
+        
+      </tr>
+       <tr>
+        <td>Currency Code</td>
+        <td>INR</td>
+        
+      </tr>
+       <tr>
+        <td>Total Balance</td>
+        <td>{{accountInfo.acctBalance}}</td>
+        
+      </tr>
+       <tr>
+        <td>Clearing Balance</td>
+        <td>{{accountInfo.acctBalance}}</td>
+        
+      </tr>
+       <tr>
+        <td>15 digit Account No</td>
+         <td>{{accountInfo.accountNos}}</td>
+        
+      </tr>
+       <tr>
+        <td>IFSC code</td>
+        <td>{{accountInfo.ifscCode}}</td>
+        
+      </tr>
+       <tr>
+        <td>MICR code</td>
+        <td>{{accountInfo.micrNum}}</td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+</div>

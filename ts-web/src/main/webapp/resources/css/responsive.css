@@ -1,0 +1,268 @@
+
+/*    Default Layout: 992px. 
+    Gutters: 24px.
+    Outer margins: 48px.
+    Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+@media (max-width: 767px) {
+
+
+
+}
+
+
+
+/*    Tablet Layout: 768px.
+    Gutters: 24px.
+    Outer margins: 28px.
+    Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+.navigation .navbar-nav > li > a{
+  padding: 38px 20px;
+}
+
+.animated-nav .navigation .navbar-nav > li > a{
+  padding: 30px 20px;
+}
+
+#service .media{
+  padding-left: 0;
+}
+
+.mobile-device .black{
+  left: 0px;
+}
+
+.mobile-device .white{
+  left: -98px;
+}
+
+figcaption.mask{
+  padding: 10px;
+}
+
+figcaption.mask h3{
+  font-size: 15px;
+}
+
+figcaption.mask span{
+  font-size: 12px;
+}
+
+.plus{
+    height: 30%;
+    width: 30%;
+    margin-left: -15%;
+}
+
+.portfolio-item:hover .plus{
+  top: 40%;
+}
+
+.fact-item{
+  padding-bottom: 30px;
+}
+
+.subtitle{
+  padding-top: 50px;
+}
+
+.pricing-table{
+  padding-bottom: 50px;
+}
+
+figure, p{
+  padding-top: 30px;
+}
+
+
+  
+ 
+}
+
+
+
+/*    Mobile Layout: 320px.
+    Gutters: 24px.
+    Outer margins: 34px.
+    Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+
+
+
+.navbar-toggle {
+  border: 1px solid rgba(15, 116, 143, 0.8);
+  margin-top: 37px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: rgba(15, 116, 143, 0.8);
+}
+
+.animated-nav .navbar-toggle {
+  border: 1px solid #fff;
+  margin-top: 21px;
+}
+
+.animated-nav .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.animated-nav .navigation .navbar-nav > li > a,
+.navigation .navbar-nav > li > a {
+  padding: 15px 25px;
+}
+
+.navigation .navbar-nav > li > a {
+  background-color: #00c7fc;
+}
+
+.navigation .navbar-nav > li > a:hover {
+  background-color: #00c7fc;
+}
+
+.navigation .navbar-nav > li.current > a {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+
+.carousel-caption > div{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#home-carousel .carousel-inner h2{
+    font-size: 20px;
+    line-height: 31px;
+}
+
+.carousel-caption{
+  right: 0;
+}
+
+.section-title{
+  width: 100%;
+}
+
+#service .media{
+  padding-left: 0px;
+}
+
+#service .media > .pull-left{
+  margin-right: 15px;
+}
+
+.mobile-device img{
+  float: none;
+}
+
+.mobile-device .black{
+  left: 0;
+}
+
+.mobile-device .white{
+  bottom: 336px;
+  left: 83px;
+}
+
+#service-bottom{
+  padding-bottom: 100%;
+}
+
+.service-features{
+  padding: 40px 0 0 20px;
+  width: 100%;
+  top: 60%;
+  height: 319px;
+}
+
+.service-features h3{
+  margin-bottom: 0px;
+}
+
+.portfolio-item{
+  width: 100%;
+}
+
+.tst-content{
+  margin: 10px 0 0 125px;
+}
+
+.subtitle{
+  padding-top: 50px;
+}
+
+.call-to-action p{
+  font-size: 14px;
+}
+
+.pricing-table{
+  padding-bottom: 50px;
+}
+
+figure, p{
+  padding-top: 30px;
+}
+
+.special-plan p{
+  line-height: 30px;
+}
+
+.contact-details{
+  margin-bottom: 0px;
+}
+
+.contact-details > span{
+  padding-top: 100px;
+}
+
+
+
+
+
+
+}
+
+
+
+/*    Wide Mobile Layout: 480px.
+    Gutters: 24px.
+    Outer margins: 22px.
+    Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+}
+
+
+/*  Retina media query.
+  Overrides styles for devices with a 
+  device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+  
+  
+  
+}

@@ -1,0 +1,24 @@
+<form (ngSubmit)="onFormSubmit()" novalidate [ngFormModel]="formValidator" class="col-md-4 col-sm-4 col-md-offset-4">   
+               
+                    <div class="container-white stop_payment-section">
+                        <h4>Update email address</h4>
+
+                         <div class="text-red" *ngIf="serverError">Error: {{serverError}}</div>
+                        <div class="text-blue" *ngIf="successMessage">Success: {{successMessage}}</div>
+                        <div class="clear10"></div>
+                        
+                        <div class="basic-divider"></div>
+                        <div class="row">
+                            <div class="col-md-6">Email id</div>
+                                <div class="form-group col-md-12">
+                                    <input ngControl="email" type="text" class="form-control custom-input" placeholder="" />
+
+                                     <div *ngIf='email.touched && !email.valid ||  (!email.touched && !email.valid && submitStep)' class="error la-form-error">Please enter valid email id</div>
+                                </div>
+                            </div>
+                       
+        <div class="clear10"></div>
+        <button [disabled]="!formValidator.valid" class="text-center btn btn-custom-4 bg-red" type="submit">submit</button>
+        <div class="clearfix"></div>
+    </div>
+</form>

@@ -1,0 +1,89 @@
+.custom-navbar {
+    background-color: #fff;
+    box-shadow: 0 0 15px #000;
+    border-radius: 0;
+    margin-bottom: 30px;
+    .navbar-brand {
+        margin: 25px 0 10px 0;
+        padding: 0 10px;
+        height: auto;
+    }
+    .navbar-nav {
+        li {
+            a {
+                color: #333;
+                font-family: $font-light ;
+                text-transform: uppercase;
+                line-height: 30px;
+                padding-top:30px;
+            }
+        }
+        .active {
+            a {
+                background-color:#eee;
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+        .dropdown {
+            .dropdown-menu {
+                background-color:#eee;
+                padding:0;
+                border:none;
+                padding:15px;
+                li {
+                    a {
+                        padding:0 10px;
+                        border-bottom:1px solid #e5e5e5;
+                        font-size:12px;
+                        }
+                    }
+                
+                }
+            }
+        .dropdown.open {
+            a {
+                background-color:#eee;
+                }
+            }
+        
+    }
+    .navbar-collapse {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .user-details {
+        margin-top: 30px;
+        /*width: 110px;*/
+        li {
+            a {
+                height: 60px;
+                background-color: transparent;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            .userinfo {
+                float: left;
+                color: $color-blue;
+                font-size: 16px;
+                text-transform: uppercase;
+                min-width: 100px;
+            }
+            .userdropdown {
+                float: left;
+                width: 30px;
+                margin-left: 5px;
+            }
+            ul {
+                li {
+                    a {
+                        padding: 5px 10px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

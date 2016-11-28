@@ -1,0 +1,28 @@
+<div class="login-container">
+	<div class="logo"><img src="static/custom/images/logo.png"  alt=""/></div>
+	<div class="login">
+		<div class="heading"><span class="userlogin-icon icon-lock"></span>USER LOGIN</div>
+		<form  [ngFormModel]='loginValidator' #login="ngForm" class="form-group" (ngSubmit)='onLoginSubmit()'>
+				<div *ngIf='invalidUser' class="error la-form-error">Invalid username or password</div>
+				<div class="input-group">
+						<div class="input-group-addon"><img class='user-icon' src="static/custom/images/icon-user.png" alt=""/></div>
+						<input ngControl='userName' name="username" type="text" class="form-control" id="" placeholder="USER ID">
+						<div *ngIf='userName.touched && userName.invalid' class="error la-form-error">Please enter valid Name</div>
+				</div>
+				<div class="input-group">
+						<div class="input-group-addon"><img class='pwd-icon' src="static/custom/images/icon-pwd.png" alt=""/></div>
+						<input  ngControl='userPwd' name="password" type="text" class="form-control" id="" placeholder="PASSWORD">
+						<div *ngIf='userPwd.touched && userPwd.invalid' class="error la-form-error">Please enter Password Name</div>
+				</div>
+			
+				<div class="links">
+				<div class="pull-left">	<input type="checkbox">
+						<label><a href="#">Remember Password </a></label></div>
+				<div class="pull-right"><a href="#">Forgot Password ?</a></div>													
+				</div>
+					<button  type="submit" class="custom-btn">Login</button>
+		</form>
+	</div>
+</div>
+<!--/.login-container--> 
+	

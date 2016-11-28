@@ -1,0 +1,247 @@
+<div id="addModal" class="modal in" role="dialog" >
+    <div class="modal-dialog custom-modal-sm addPayeeCustm"> 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" (click) = 'onClose()'>&times;</button>
+                <h3 class="text-center text-blue alfa-half">Add Payee</h3>
+                <br>
+                <!--step-1-->
+                <div *ngIf='addAction.selected==1' class="step-1">
+                    <form [ngFormModel]='addFormValidator' class="form-group">
+                        <div class="row">
+                            <div class="col-md-6 radio-div">
+                                <div style="color:#928D8D;font-family:oswald-light">
+                                     <label class='addRadio' >Internal Transaction<div class="iradio_square-blue" style="position: relative;"><input type="radio" class="radio-inputbox" name="addPayeeRadio" id="addRadio1" value="option1" ></div>
+                                    </label>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 radio-div">
+                                <div style="color:#928D8D;font-family:oswald-light">
+                                    <label class='addRadio' >External Transaction<div class="iradio_square-blue" style="position: relative;"><input type="radio" class="radio-inputbox" name="addPayeeRadio" id="addRadio2" value="option2" checked></div>
+                                   
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id= 'acctDetails'>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-addon updatePwd"><img alt="" class="user-icon" src="static/custom/images/icon-user.png"></div>
+                                    <input class="form-control custom-input form-text" id="" ngControl="acctName" placeholder="A/C NAME" type="text" [(ngModel)] = "newPayee.name">
+                                    <div *ngIf='(!acctName.valid && submitStep1) || (acctName.valid &&  !validatorService.validateAcctName(newPayee.name)) ' class="error la-form-error">Please enter valid Name</div>
+                                </div>
+                                <!--template bindings={}-->
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="input-group">
+                                   <div class="input-group-addon updatePwd"><img alt="" class="user-icon" src="static/custom/images/icon-user.png"></div>
+                                   <input class="form-control custom-input form-text" id="" ngControl="nickName" placeholder="NICKNAME" type="text" [(ngModel)] = "newPayee.nickName">
+                                   <div *ngIf='(!nickName.valid && submitStep1) || (nickName.valid && !validatorService.validateAcctName(newPayee.nickName) )' class="error la-form-error">Please enter valid Name</div>
+                               </div>
+                                <!--template bindings={}-->
+                           </div>
+
+
+                        </div>
+                        <div class="clear10"></div>
+                        <div class="row">
+                            
+                            <div class="col-sm-6">
+                                <div class="input-group" >
+                                    <div class="input-group-addon updatePwd"><img class='pwd-icon' src="static/custom/images/icon-pwd.png" alt=""/></div>
+                                    <input ngControl='ifscCode' type="text" class="form-control custom-input form-text" placeholder="IFSC CODE" (change)='ifscDetails($event)' [(ngModel)]="newPayee.ifsc">
+                                    </div>
+                                    <div *ngIf='(!ifscCode.valid && submitStep1) && (transType!="SCB")|| (ifscCode.valid && !validatorService.validateIFSC(newPayee.ifsc,11)) ' class="error la-form-error">Please enter valid IFSC Code</div>
+                                    <div *ngIf='(ifscValidatn == true) || throwErr_ifsc' class="error la-form-error">Please enter valid IFSC Code</div>
+                            </div>
+                                                        
+                            <div class="col-sm-6" style="
+                                padding-top: 5px;
+                            ">
+                                <div class="input-group" style='width:100%'>
+                                    <div class="form-control bankDetails">
+                                        {{newPayee.bankName}}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear10"></div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group" style='width:100%'>
+                                    <div class="form-control bankDetails">
+                                        {{newPayee.bankCity}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group" style='width:100%'>
+                                    <div   class="form-control bankDetails">
+                                        {{newPayee.bankLocation}}
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="clear10"></div>
+                        </div>
+
+
+                        <div id ='acctNos'>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="input-group" >
+                                    <div class="input-group-addon updatePwd"><img class='pwd-icon' src="static/custom/images/icon-pwd.png" alt=""/></div>
+                                        <input ngControl='acctNum' type="text" class="form-control custom-input form-text" id="" placeholder="A/C NUMBER" [(ngModel)]='newPayee.numbr'>
+                                </div>
+                                <div *ngIf='(!acctNum.valid && submitStep1 ) || (acctNum.valid && !validatorService.validateNumbers(newPayee.numbr,9,18)) ' class="error la-form-error">Please enter valid Account Number</div>
+                                <!--template bindings={}-->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group" >
+                                    <div class="input-group-addon updatePwd"><img class='pwd-icon' src="static/custom/images/icon-pwd.png" alt=""/></div>
+                                        <input  ngControl='confrmAcctNum' [(ngModel)]='newPayee.confrmNumbr' (change)='custDetails($event)' type="text" class="form-control custom-input form-text" id="" placeholder="CONFIRM A/C NUMBER">
+                                    </div>
+                                    <div *ngIf='(!confrmAcctNum.valid && submitStep1 ) || (confrmAcctNum.valid &&!validatorService.validateCnfrmAcct(newPayee.confrmNumbr,newPayee.numbr))'  class="error la-form-error">Please enter valid Account Number</div>
+                                    <div *ngIf='throwErr_acct'  class="error la-form-error">Invalid Account Number</div>
+                                <!--template bindings={}-->
+                            </div>
+                        </div>
+                        <div class="clear10"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="custom-select">
+                                    <div class="icon-select-dropdown"></div>
+                                        <input [(ngModel)]="newPayee.acctType" class="select-value form-text" type="text">
+                                        <select ngControl= 'acctTypeVal' (change)='onAcctSelectn($event)'  required class="select-value form-control" class="select-list">
+                                            <option  *ngFor='#accType of ["Savings", "Current"]' [value]="accType" >{{accType}}</option>                                            
+                                        </select>
+                                </div>
+                                <div *ngIf='newPayee.acctType == "ACCOUNT TYPE" && submitStep1' class="error la-form-error">Please select Account Type</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div  *ngIf='showSubType==true' class="custom-select">
+                                    <div class="icon-select-dropdown"></div>
+                                        <input  value='{{newPayee.subAcctType}}' class="select-value form-text" type="text" [(ngModel)]='newPayee.subAcctType'>
+                                        <select (change)='onSubAcctSelectn($event)' ngControl='subAcctTypeVal'  required class="select-value form-control" class="select-list">
+                                            <option *ngFor='#account of ["DOMESTIC","NRO", "NRE"]'>{{account}}</option>                                            
+                                        </select>
+                                    </div>
+                                    <div *ngIf='newPayee.acctType != "Account Type" && newPayee.subAcctType == "Sub-Account Type" && submitStep1' class="error la-form-error">Please select Sub-Account Type</div>
+                            </div>
+                        </div>
+
+                        <div class="clear10"></div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                
+                                <input class="form-control custom-input form-text" id="" maxlength="40" ngControl="acctAddr1" placeholder="ADDRESS LINE 1" type="text"  [(ngModel)] = "newPayee.addr1" >
+                                <div *ngIf='(!acctAddr1.valid && submitStep1) || (acctAddr1.valid && !validatorService.validateAddress(newPayee.addr1)) ' class="error la-form-error">Please enter valid Address</div>
+                                <!--template bindings={}-->
+                            </div>
+                            <div class="col-sm-6">
+                                
+                                <input class="form-control custom-input form-text" id="" ngControl="acctAddr2" placeholder="ADDRESS LINE 2" type="text"  [(ngModel)] = "newPayee.addr2" >
+                                <div *ngIf='(!acctAddr2.valid && submitStep1) || (acctAddr2.valid && !validatorService.validateAddress(newPayee.addr2)) ' class="error la-form-error">Please enter valid Address</div>
+                                <!--template bindings={}-->
+                            </div>
+                        </div>
+                        <div class="clear10"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                
+                                <input class="form-control custom-input form-text" id="" ngControl="acctAddr3" placeholder="ADDRESS LINE 3" type="text" [(ngModel)] = "newPayee.addr3" >
+                                <div *ngIf='(!acctAddr3.valid && submitStep1) || (acctAddr3.valid &&  !validatorService.validateAddress(newPayee.addr3)) ' class="error la-form-error">Please enter valid Address</div>
+                                <!--template bindings={}-->
+                            </div>
+                            <div class="col-sm-6">
+                                
+                                <input class="form-control custom-input form-text" id="" ngControl="acctPhoneNo" placeholder="PHONE NO" type="text" [(ngModel)]='newPayee.phoneNo'>
+                                <div *ngIf='(!acctPhoneNo.valid && submitStep1) || (acctPhoneNo.valid &&!validatorService.validateNumbers(newPayee.phoneNo, 6, 10)) ' class="error la-form-error">Please enter valid Phone no</div>
+                                <!--template bindings={}-->
+                            </div>
+                       </div>
+                       <div class="clear10"></div>
+
+                       
+
+                    </form>
+                    <div  class="error la-form-error" *ngIf='addErr'>Error while adding : User already exists!</div>
+                    <div class="pull-right"><a class="btn btn-custom-3" (click) = 'nextStep(1)'>Authorize & Submit &gt; </a></div>
+                </div>
+
+                <div class="clear10"></div>
+                
+                <!--step-2-->
+                <div *ngIf='addAction.selected==2' class="step-2">
+                    <form class="form-group">
+                        <div class="text-center text-sm"> Enter the Transaction Password </div>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6">
+                                <input ngControl='acctTransactn' [(ngModel)]='newPayee.transPwd'  type="password" class="form-control custom-input text-center" id="" placeholder="Enter the Transaction Password">
+                                <div *ngIf='(!acctTransactn.valid && submitStep2)' class="error la-form-error">Please enter password</div>
+                                <div *ngIf='(acctTransactn.valid && !validatorService.validateNumbers(newPayee.transPwd,"Password", 6,20))'  class="error la-form-error">Please enter valid Password</div>
+                                <div *ngIf='transErr'  class="error la-form-error">{{trans_errDesc}}</div>
+                                <div *ngIf='genOTPErr' class="error la-form-error">Error while Generating OTP <div><a (click) = 'resendOTP()'>Request OTP again</a></div></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="pull-right"><a class="btn btn-custom-3" (click) = 'nextStep(2)'>Next &gt; </a></div>
+                </div>
+                <div class="clear10"></div>
+
+                <!--step-3-->
+                <div *ngIf='addAction.selected==3' class="step-2">
+                    <form class="form-group">
+                        <div class="text-center text-sm"> Enter the OTP </div>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6">
+                                <input ngControl='acctOTP' [(ngModel)]='newPayee.otp'  type="password" class="form-control custom-input text-center" id="" placeholder="Enter the OTP">
+                                <div *ngIf=' !acctOTP.valid && submitStep3' class="error la-form-error">Please enter OTP</div>
+                                <div *ngIf='acctOTP.valid && !validatorService.validateNumbers(newPayee.otp,"Password", 4,10)'  class="error la-form-error">Please enter valid OTP</div>
+
+                                <div *ngIf='otpError'  class="error la-form-error">{{otpError}}</div>
+
+                            </div>
+                        </div>
+                        <div class="text-gray"> Please enter the OTP code sent to the registered mobile number</div>
+
+                    </form>
+                    <div class="pull-right"><a class="btn btn-custom-3" (click) = 'nextStep(3)'>Next &gt; </a></div>
+                </div>
+                <div class="clear10"></div>
+                <!--step-4-->
+                <div *ngIf='addAction.selected==4' class="step-sucess">
+                    <div class="text-center text-sm text-green"> Successful!</div>
+                    <br>
+                    <div class="clear10"></div>
+                    <div class="text-center text-gray">Payee Added
+                     <!-- A/C No.: 55230000001156<br>
+                        was successfully added<br>
+                        to your account.<br> -->
+                        <br>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

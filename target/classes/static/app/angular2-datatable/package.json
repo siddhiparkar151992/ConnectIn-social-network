@@ -1,0 +1,121 @@
+{
+  "_args": [
+    [
+      "angular2-datatable",
+      "/home/siddhi/Desktop/FinouxRepositories/trunk/BankingPOC"
+    ]
+  ],
+  "_from": "angular2-datatable@latest",
+  "_id": "angular2-datatable@0.4.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular2-datatable",
+  "_nodeVersion": "6.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/angular2-datatable-0.4.2.tgz_1462995513843_0.8744405061006546"
+  },
+  "_npmUser": {
+    "email": "mariuszfoltak@gmail.com",
+    "name": "mariuszfoltak"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular2-datatable",
+    "raw": "angular2-datatable",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npmjs.org/angular2-datatable/-/angular2-datatable-0.4.2.tgz",
+  "_shasum": "52c504d9bec889521311911d93bb556f23be9e70",
+  "_shrinkwrap": null,
+  "_spec": "angular2-datatable",
+  "_where": "/home/siddhi/Desktop/FinouxRepositories/trunk/BankingPOC",
+  "author": {
+    "name": "mariuszfoltak@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/mariuszfoltak/angular2-datatable/issues"
+  },
+  "dependencies": {},
+  "description": "DataTable component for Angular2 framework",
+  "devDependencies": {
+    "angular2/core": "^2.0.0-rc.0",
+    "angular2/platform-browser": "^2.0.0-rc.0",
+    "es6-shim": "^0.35.0",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^0.5.5",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "lodash": "^4.0.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "reflect-metadata": "^0.1.3",
+    "remap-istanbul": "^0.6.3",
+    "rxjs": "^5.0.0-beta.6",
+    "systemjs": "^0.19.27",
+    "traceur": "0.0.108",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
+    "zone.js": "^0.6.12"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "52c504d9bec889521311911d93bb556f23be9e70",
+    "tarball": "https://registry.npmjs.org/angular2-datatable/-/angular2-datatable-0.4.2.tgz"
+  },
+  "gitHead": "ee93c74a4c8f25e35828945be78a27bee015c073",
+  "homepage": "https://github.com/mariuszfoltak/angular2-datatable#readme",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular2",
+    "ng",
+    "ng2",
+    "table",
+    "pagination",
+    "sort",
+    "sorting"
+  ],
+  "license": "MIT",
+  "main": "datatable",
+  "maintainers": [
+    {
+      "email": "mariuszfoltak@gmail.com",
+      "name": "mariuszfoltak"
+    }
+  ],
+  "name": "angular2-datatable",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "angular2/core": "^2.0.0-rc.0",
+    "lodash": "^4.0.0",
+    "rxjs": "^5.0.0-beta.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariuszfoltak/angular2-datatable.git"
+  },
+  "scripts": {
+    "build": "tsc -p src",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage",
+    "coverage-remap": "remap-istanbul -i coverage/coverage-final.json -o coverage/coverage-remapped.lcov -t lcovonly",
+    "postinstall": "cd src && typings install",
+    "posttest": "remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "prebuild": "rm -rf lib",
+    "pretest": "npm run build",
+    "start": "http-server -c-1 -o -p 8875 .",
+    "test": "karma start karma.conf.js",
+    "watch": "tsc -p src -w"
+  },
+  "version": "0.4.2"
+}

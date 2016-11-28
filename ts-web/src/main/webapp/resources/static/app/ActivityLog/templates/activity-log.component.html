@@ -1,0 +1,106 @@
+<div class="col-md-4 col-sm-4 col-md-offset-4">
+    <div class="container-white activity_log_report-section">
+        <h4>Activity log Report</h4>
+        <form [ngFormModel]='act_Validator' >
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="font-light text-gray">Activity Type</div>
+                    <div class="custom-select-3" style="width:80%;">
+                        <div class="caret"></div>
+                        <input value='{{select_type.value}}' class="select-value" type="text" >
+                        <select  ngControl= 'select_type' (change)='onSelectType($event)' class="select-list">
+                            <option *ngFor='#selectType of activityList'>{{selectType}}</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="basic-divider"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="font-light text-gray">From Date</div>
+                    <div class="form-group datepicker act_datepicker">
+                        <div class="input-group date" >
+                            <input type="text"  class="form-control custom-input" placeholder="DD/MM/YYYY" id='act_strtDt'/>
+                            <span class="addon"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="font-light text-gray">To Date</div>
+                    <div class="form-group datepicker act_datepicker">
+                        <div class="input-group date" >
+                            <input type="text" class="form-control custom-input" placeholder="DD/MM/YYYY"  id='act_endDt'/>
+                            <span class="addon"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basic-divider"></div>
+            <div class="row">
+                <div class="col-md-12 radio-div">
+                    <div class="font-light text-gray">Select a format for Activity log Report</div>
+                    <div class="">
+                        <label class="radio-inline" style='color:black;'>
+                            <input type="radio"  name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                            Display on screen </label>
+                        <label class="radio-inline" style='color:black;'>
+                            <input type="radio"  name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            Save as Pdf file format </label>
+                    </div>
+                </div>
+            </div>
+            <div class="basic-divider"></div>
+            <div class="text-center"> <a class="btn btn-custom-4 bg-red" (click) ='onSubmit()' > submit </a> <a class="btn btn-custom-4 bg-black"(click) ='clear()'> Reset </a> </div>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+                   
+</div>
+
+
+<!-- Modal -->
+<div id="actModal" class="modal custom-modal modal-vC in" role="dialog"  >
+    <div class="modal-dialog modal-lg"> 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" (click) = 'onClose()'class="close" data-dismiss="modal">&times;</button>
+                <h4>Activity log report</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="font-light text-gray">Customer code</div>
+                        <div class="font-reg text-sm">{{custId}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="font-light text-gray">All/Selected</div>
+                        <div class="font-reg text-sm">{{select_type.value}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="font-light text-gray">Statement from</div>
+                        <div class="font-reg text-sm"><span>{{act_strtDt}}</span> to <span>{{act_endDt}}</span></div>
+                    </div>
+                </div>
+                <div class="clear10"></div>
+                <div class="row">
+                    <div class="col-md-12  statement-section" >
+                        <table class="table table-bordered table-striped custom-table table-trans" id="actTable">
+                            <thead>
+                                <th class="text-center">S. No.</th>
+                                <th class="text-center">Activity Time</th>
+                                <th class="text-left">Description</th>
+                            </thead>
+                            <!--  <tfoot>
+                                <tr>
+                                    <td colspan="3">
+                                        <mfBootstrapPaginator></mfBootstrapPaginator>
+                                    </td>
+                                </tr>
+                            </tfoot> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+
+<div style="margin-top: 4%;" class="col-md-4 col-sm-4 col-md-offset-4" *ngIf="context=='CCR'">
+            <form *ngIf="selectedStep==1" (ngSubmit)="onAccountInfoSubmit()" novalidate [ngFormModel]="formValidator1" >   
+                         
+                <div class="container-white stop_payment-section">
+                    <h4>Cardless cash request</h4>              
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-gray">Select Debit account: *</div>
+                            <div class="custom-select-3" style="width:60%;">
+                                <div class="caret"></div>
+                                 <input value="{{currentAccount.acctNumber}}" class="select-value text-blue" type="text" value="SBPUB / 26509 - JUHU" >
+                                <select (ngModelChange)="changeAccount($event)" ngControl="acctNumber" class="select-list">
+                                    <option  *ngFor="#account of acctList" [value]="account| json">{{account.acctNumber}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="pull-left"> <span class="font-light text-gray">Balance:</span> <span class="font-reg text-sm">{{currentAccount.acctBalance}}</span> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="pull-left"> <span class="font-light text-gray">Curr:</span> <span class="font-reg text-sm">INR</span> </div>
+                        </div>
+                    </div>
+                    <div class="basic-divider"></div>
+                    <div class="row">
+                        <div class="col-md-6">Mobile Number. *</div>
+                            <div class="form-group col-md-12">
+                                <input ngControl="mobileNumber" type="text" class="form-control custom-input" placeholder="" />
+
+
+                                 <div *ngIf='mobileNumber.touched && (!mobileNumber.valid || !valid("cn"))' class="error la-form-error">Please enter valid Mobile No</div>
+
+
+                            </div>
+                    </div>
+                     <div class="basic-divider"></div>
+                    <div class="row">
+                        <div class="col-md-6">Amount(INR)*</div>
+                            <div class="form-group col-md-12">
+                                <input ngControl="amount" type="text" class="form-control custom-input" placeholder="" />
+
+                                 <div *ngIf='amount.touched && (!amount.valid || !valid("am"))' class="error la-form-error">Please enter valid Amount</div>
+                                 
+                            </div>
+                    </div>
+
+                     <div class="basic-divider"></div>
+                    <div class="row">
+                        <div class="col-md-6">Full Name</div>
+                            <div class="form-group col-md-12">
+                                <input [(ngModel)]="name" type="text" class="form-control custom-input" placeholder="" />
+
+                               
+                            </div>
+                    </div>
+
+
+
+                               
+                <div class="clear10"></div>
+                <button [disabled]="!formValidator1.valid || !valid(undefined,1)" class="text-center btn btn-custom-4 bg-red" type="submit">submit</button>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+
+
+
+        <form *ngIf="selectedStep==2"  (ngSubmit)="validateTransactionPassword()" novalidate [ngFormModel]="formValidator2" >   
+                           
+                <div class="container-white stop_payment-section"> 
+                <h4>Cardless cash request</h4>                              
+                    <div class="row">
+                        <div class="col-md-6">Enter transaction password</div>
+                            <div class="form-group col-md-12">
+                                <input ngControl="transactionPwd" type="text" class="form-control custom-input" placeholder="" />
+
+                                 <div *ngIf='transactionPwd.touched && !transactionPwd.valid ||  (transactionPwd.touched && !valid("tp"))' class="error la-form-error">Please enter valid Transaction Password</div>
+
+                                 <div *ngIf='transError && submitStep==2' class="error la-form-error">Transaction Password is invalid!</div>
+
+                            </div>
+                    </div>
+                     <div class="basic-divider"></div>
+                     <div class="clear10"></div>
+                <button [disabled]="!formValidator2.valid || !valid(undefined,2)" class="text-center btn btn-custom-4 bg-red" type="submit">submit</button>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+
+
+        <form *ngIf="selectedStep==3"  (ngSubmit)="validateOTP()" novalidate [ngFormModel]="formValidator3" >   
+                           
+                <div class="container-white stop_payment-section">
+                    <h4>Cardless cash request</h4>              
+                    <div class="text-orange">Dear customer your dynamic password has been sent to your registered mobile number</div>
+                    <div class="basic-divider"></div>
+                    <div class="row">
+                        <div class="col-md-12">Enter One time password sent on your registered mobile</div>
+                            <div class="form-group col-md-12">
+                                <input ngControl="otp" type="text" class="form-control custom-input" placeholder="" />
+
+                                 <div *ngIf='otp.touched && !otp.valid ||  (otp.touched && !valid("ot"))' class="error la-form-error">Please enter valid OTP</div>
+                                 <div *ngIf='invalidOtp && submitStep==3' class="error la-form-error">{{otpError}}</div>
+                                 <div *ngIf='errorMsg && submitStep==3' class="error la-form-error">{{errorMsg}}</div>
+
+                            </div>
+                    </div>
+                     <div class="basic-divider"></div>
+                     <div class="clear10"></div>
+                <button [disabled]="!formValidator3.valid || !valid(undefined,3)" class="text-center btn btn-custom-4 bg-red" type="submit">Confirm</button>
+                <div class="clearfix"></div>
+            </div>
+        </form>
+        <div  *ngIf='selectedStep==4'  class="container-white stop_payment-section">
+            <span (click)="removeCCR('error')" class="cancel-icon glyphicon glyphicon-remove" ></span>
+        <form class='from-2'>
+                <div class="form-group-2">
+                    <div class="pwdChangeSucess" *ngIf="successMsg">{{successMsg}}
+                        
+                    </div>
+                    <div class="error la-form-error" *ngIf="errorMsg">{{errorMsg}}
+                        
+                    </div>
+
+                </div>
+                
+        </form>
+    </div>
+
+
+
+
+
+
+</div>
+
+<div style="margin-top: 4%;" class="col-md-12 col-sm-12" >
+   <div *ngIf='cancelErrorMsg' class="error la-form-error cancelErrorMsg">Error: {{cancelErrorMsg}}
+    <span (click)="remove('error')" class="cancel-icon glyphicon glyphicon-remove" ></span>
+   </div>
+
+    <table class="cc-statement-table table table-bordered table-striped custom-table table-trans" id="myTable" >
+        <thead>
+            <th class="text-right table-header" >Full Name</th>
+             <th class="text-right table-header" >Mobile No.</th>
+             <!-- <th class="text-right table-header" >RRN no.</th> -->
+              <th class="text-center table-header">  Branch name</th>
+            <th class="text-center table-header">Transaction ID</th>
+           
+            <th class="text-left table-header">Account Number</th>
+            <th class="text-right table-header">Transaction date</th>
+            <th class="text-right table-header">Status</th>
+           
+            <th class="text-right table-header" >Amount</th>
+            <th class="text-right table-header" ></th>
+            
+            
+
+
+        </thead>
+        <tbody>
+            <tr class="table-row" *ngFor="#item of statementList;#i =index">
+                <td class="text-right">{{item.longName}}</td>
+                <td class="text-right">{{item.mobileNo}}</td>
+                 <td class="text-center">{{item.branchName}}</td>
+
+                <td class="text-center">{{item.txnId}}</td>
+               
+                <td class="text-left">{{item.prdAcctId}}</td>
+                <td class="text-right" >
+                    <div>{{item.requestDate}}</div>
+                    <div>{{item.requestTime}}</div>
+                </td>
+                <td class="text-right">-</td>
+              
+                <td class="text-right">{{item.transAmnt}}</td>
+                <td class="text-right"><button *ngIf="item.status=='N'" type="text" class="btn-custom-4 bg-black" (click)="cancelRequest(item)">Cancel</button></td>
+                
+
+              
+            </tr>
+        </tbody>
+        
+    </table>
+</div>

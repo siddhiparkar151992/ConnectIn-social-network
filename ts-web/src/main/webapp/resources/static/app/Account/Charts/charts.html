@@ -1,0 +1,36 @@
+<div class="row">
+                <div class="col-md-6">
+                    <div class="summury-section">
+                        <div class="reg-text" style='color:black'>Networth (in <span class="font-rs">`</span>)</div>
+                        <div class="value networth" style='color:black'>{{netWorth.toLocaleString()}}</div>
+                        <div class="row">
+                            <div class="col-md-5 col-sm-3 col-xs-12 pie-chart"><donout-chart *ngIf='chartData.donutchart' [(chartData)]='chartData.donutchart' [(piechartData)] ='piechartData ' class='chart donout-chart'></donout-chart></div>
+                            <div class="col-md-7 col-sm-9 col-xs-12 acc-details">
+                                <ul class="list-theme" *ngIf='chartData.accountList'>
+                                    <li  style='color:white' *ngFor="#account of chartData.accountList;#i=index" ><span [ngStyle]="{'color':colors[i]}" class="text-accName">{{account.acctName}} </span>-  {{account.acctType}} A/C</li>
+                                    <!-- <li ><span class="text-skyblue">My Account </span>-  Self A/C</li>
+                                    <li><span class="text-yellow">Swati Singh </span>-  Daughter A/C</li>
+                                    <li><span class="text-lightgreen">Demat Account </span>-  Self A/C</li> -->
+                                </ul>
+                                <!-- <a class="btn btn-custom bg-green" data-toggle="modal" data-target="#myModal"> <span class="icon-link"></span> Another</a> -->
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="container-white consildatedflow-section">
+                        <div class="btn-group btn-toggle btn-toggle-custom">
+                            <button class="btn btn-on active"><span class="icon-graph "></span></button>
+                            <button class="btn btn-off "><span class="icon-calender"></span></button>
+                        </div>
+                        <h2>Consolidated Flow</h2>
+                        <p class="text-gray">Last 6 Months Summary of linked accounts</p>
+                      <!--   <img class="img-responsive" src="custom/images/consildatedflow-graph.jpg" alt=""/></div> -->
+                      <div class="bar-chart-warpper">
+                          <bar-chart *ngIf='chartData.barchart' [(chartData)]='chartData.barchart'></bar-chart>
+                      </div>
+                      
+                </div>
+                 <link-account (linkAcc) = "linkAcc($event)" ></link-account>
+            </div>
+

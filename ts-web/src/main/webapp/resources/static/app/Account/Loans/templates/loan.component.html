@@ -1,0 +1,83 @@
+<div class="container-white loans-section" >
+    <section class="slider custom-slider ">
+        <div *ngFor= "#loan of loanDetails">
+            <!-- <div> -->
+            <h4>Loans</h4>
+            <div class="text-sm text-blue">{{loan.loanType}}</div>
+            <div class="text-xs text-gray">{{loan.loanAccountNo}}</div>
+            <div class="clear10"></div>
+            <div class="text-xs text-gray">Loan Amount</div>
+            <div *ngIf='loan.loanAmount' class="text-sm" >{{loan.loanAmount.toLocaleString()}}</div>
+            <div class="clear10"></div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6 vl-dotted-divider">
+                    <div class="text-xs text-gray">EMI</div>
+                    <div *ngIf='loan.loanEMI' class="">{{loan.loanEMI.toLocaleString()}}</div>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <div class="text-xs text-gray">Tenure Due</div>
+                    <div *ngIf='loan.loanAmount' class="">{{loan.loanEndDate}}</div>
+                </div>
+            </div>
+            <ul class="activity">
+                <li (click) ='futureloanDetails($event,loan)'><a ><span class="icon-paper"></span></a></li>
+                <li (click)='getloanStatement($event, loan)'> <span class="icon-bell"><!-- <span class="badge">8</span> --></span></li>
+                <li (click)='getInterestCertificate($event, loan)'> <span class="icon-cart"></span></li>
+            </ul>
+            <div class="clearfix"></div>
+            </div>
+        
+    </section>
+</div>
+
+<!-- Modal -->
+<div id="loanModal" class="modal custom-modal modal-vC in" role="dialog"  >
+    <div class="modal-dialog modal-lg"> 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" (click) = 'onClose()'>&times;</button>
+                <h4>Future Loan Payment Detail</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="font-light text-gray">Loan Account No :</div>
+                        <div class="font-reg text-sm">{{currentAcctNo}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="font-light text-gray">Loan Amount : </div>
+                        <div class="font-reg text-sm">{{currentAmount}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="font-light text-gray">Start from </div>
+                        <div class="font-reg text-sm"><span>{{start_Date}}</span> to <span>{{end_Date}}</span></div>
+                    </div>
+                </div>
+                <div class="clear10"></div>
+                <div class="row">
+                    <div class="col-md-12  statement-section" >
+                        <table class="table table-bordered table-striped custom-table table-trans" id="loanTable">
+                            <thead>
+                                <th class="text-center">S. No.</th>
+                                <th class="text-center">Ideal Balance Date</th>
+                                <th class="text-left">Ideal Balance</th>
+                            </thead>
+                            <!--  <tfoot>
+                                <tr>
+                                    <td colspan="3">
+                                        <mfBootstrapPaginator></mfBootstrapPaginator>
+                                    </td>
+                                </tr>
+                            </tfoot> -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <loan-statement (onLoanClose)='closeLoanModal($event)' [(loanInputData)]='loanInputData' *ngIf='showLoanStatement'></loan-statement>
+ 
