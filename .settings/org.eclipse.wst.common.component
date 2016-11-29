@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="talentale">
+    <wb-module deploy-name="connectin">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-        <wb-resource deploy-path="/" source-path="/ts-web/src/main/webapp" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-core/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-domain/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-web/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/connectin-web/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-core/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-domain/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-web/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-config/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-web/src/main/webapp"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-web/src/main/resources"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-web/src/main/webapp/resources"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-web/src/main/webapp/WEB-INF"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ts-auth/src/main/java"/>
-        <property name="java-output-path" value="/talentale/target/classes"/>
-        <property name="context-root" value="talentale"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-config/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-web/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-web/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-web/src/main/webapp/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-web/src/main/webapp/WEB-INF"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/connectin-auth/src/main/java"/>
+        <property name="java-output-path" value="/connectin/target/classes"/>
+        <property name="context-root" value="connectin"/>
     </wb-module>
 </project-modules>

@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.talentale</groupId>
-	<artifactId>talentale</artifactId>
-	<name>talentale</name>
+	<groupId>com.connectin</groupId>
+	<artifactId>connectin</artifactId>
+	<name>connectin</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -218,9 +218,9 @@
 		<finalName>${project.artifactId}</finalName>
 	</build>
 	<modules>
-		<module>ts-core</module>
-		<module>ts-domain</module>
-		<module>ts-web</module>
-		<module>ts-config</module>
+		<module>connectin-core</module>
+		<module>connectin-domain</module>
+		<module>connectin-web</module>
+		<module>connectin-config</module>
 	</modules>
 </project>

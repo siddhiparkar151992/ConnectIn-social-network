@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="ts-core/src/main/java">
+	<classpathentry kind="src" output="target/classes" path="connectin-core/src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="ts-auth/src/main/java"/>
-	<classpathentry kind="src" path="ts-web/src/main/webapp/WEB-INF"/>
-	<classpathentry kind="src" path="ts-web/src/main/webapp/resources"/>
-	<classpathentry excluding="resources/|WEB-INF/" kind="src" path="ts-web/src/main/webapp"/>
-	<classpathentry kind="src" output="target/classes" path="ts-web/src/main/java">
+	<classpathentry kind="src" path="connectin-auth/src/main/java"/>
+	<classpathentry kind="src" path="connectin-web/src/main/webapp/WEB-INF"/>
+	<classpathentry kind="src" path="connectin-web/src/main/webapp/resources"/>
+	<classpathentry excluding="resources/|WEB-INF/" kind="src" path="connectin-web/src/main/webapp"/>
+	<classpathentry kind="src" output="target/classes" path="connectin-web/src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="ts-domain/src/main/java">
+	<classpathentry kind="src" output="target/classes" path="connectin-domain/src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/classes" path="ts-config/src/main/java">
+	<classpathentry kind="src" output="target/classes" path="connectin-config/src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
