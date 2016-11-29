@@ -3,7 +3,6 @@ package com.talentale.utils;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.talentale.business.user.entity.UserCredentials;
 
 public class Response<T>{
 	/**

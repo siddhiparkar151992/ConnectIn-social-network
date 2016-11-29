@@ -6,6 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="ts-auth/src/main/java"/>
 	<classpathentry kind="src" path="ts-web/src/main/webapp/WEB-INF"/>
 	<classpathentry kind="src" path="ts-web/src/main/webapp/resources"/>
 	<classpathentry excluding="resources/|WEB-INF/" kind="src" path="ts-web/src/main/webapp"/>

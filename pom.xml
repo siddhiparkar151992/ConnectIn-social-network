@@ -5,7 +5,7 @@
 	<artifactId>talentale</artifactId>
 	<name>talentale</name>
 	<packaging>pom</packaging>
-	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<version>1.0</version>
 	<properties>
 		<java-version>1.7</java-version>
 		<spring.security.version>4.0.4.RELEASE</spring.security.version>
@@ -255,6 +255,6 @@
 		<module>ts-domain</module>
 		<module>ts-web</module>
 		<module>ts-config</module>
-    <module>ts-auth</module>
+    	<module>ts-auth</module>
   </modules>
 </project>
