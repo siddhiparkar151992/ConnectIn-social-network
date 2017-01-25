@@ -19,7 +19,24 @@
 
 <body>
 
-
+<script type="text/javascript">
+	var login = function(){
+		var data ={};
+		$.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/connectin/login",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (data) {
+                alert("success")
+            },
+            error: function (e) {
+            	alert(e)
+            }
+	});
+	}
+</script>
 	<div class="login-area">
 		<div class="bg-image">
 			<div class="login-signup">
@@ -49,7 +66,7 @@
 									</h3>
 								</div>
 								<div class="login-form">
-									<form>
+									<div onsubmit="login()">
 										<div class="form-details">
 											<label class="user"> <input type="text"
 												name="username" placeholder="Full Name" id="username">
@@ -62,13 +79,13 @@
 												id="password">
 											</label>
 										</div>
-										<button type="submit" class="form-btn" onsubmit="">Login</button>
-									</form>
+										<button type="submit" class="form-btn">Login</button>
+									</div>
 								</div>
 							</div>
 						</div>
-								<c:url var="loginUrl" value="/login" />
-							<c:if test="error">errorrrrrrrrrrrrrr</c:if>
+						<c:url var="loginUrl" value="/login" />
+						<c:if test="error">errorrrrrrrrrrrrrr</c:if>
 						<div id="login" class="tab-pane fade in active">
 							<div class="login-inner">
 								<div class="title">
@@ -77,18 +94,17 @@
 									</h3>
 								</div>
 								<div class="login-form">
-									<form action="${loginUrl}" method="post" >
+									<div >
 										<div class="form-details">
-											
+
 											<label class="pass"> <input type="text"
 												name="username" placeholder="User name" id="username">
-											</label>
-											<label class="pass"> <input type="password"
+											</label> <label class="pass"> <input type="password"
 												name="password" placeholder="Password" id="password">
 											</label>
 										</div>
-										<button type="submit" class="form-btn" >Register</button>
-									</form>
+										<button onclick="login()" class="form-btn">Register</button>
+									</div>
 								</div>
 							</div>
 						</div>

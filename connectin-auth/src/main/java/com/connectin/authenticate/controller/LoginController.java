@@ -53,9 +53,10 @@ public class LoginController{
 		return "index";
 	};
 	
+	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String de(){
-		return "index";
+		return "login";
 	};
 	
 	@RequestMapping(value="/403", method = RequestMethod.GET)
@@ -63,8 +64,9 @@ public class LoginController{
 		return "403";
 	};
 	
-	@RequestMapping(value="/api/login", method = RequestMethod.GET)
+	@RequestMapping(value="/loginUser", method = RequestMethod.POST)
 	public String dummy(){
-		return "403";
+		System.out.println("/loginUser");
+		return "";
 	};
 }
