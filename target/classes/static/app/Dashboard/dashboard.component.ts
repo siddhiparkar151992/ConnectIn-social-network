@@ -18,7 +18,7 @@ declare var $: any;
 
 @Component({
 	selector: 'dashboard',
-	templateUrl: '/connectin/resources/static/app/Dashboard/dashboard.component.html',
+	templateUrl: '/resources/static/app/Dashboard/dashboard.component.html',
 	})
 
 

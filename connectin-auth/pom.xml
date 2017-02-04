@@ -7,7 +7,9 @@
 		<groupId>com.connectin</groupId>
 		<artifactId>connectin</artifactId>
 		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
+	<!-- <packaging>jar</packaging> -->
 	<artifactId>connectin-auth</artifactId>
 	<name>connectin-auth Maven Webapp</name>
 	<url>http://maven.apache.org</url>

@@ -12,8 +12,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
 import com.connectin.authenticate.security.tokenmanager.service.TokenAuthenticationService;
+import com.connectin.config.ApplicationConfig;
 
 public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
+	
+	@Autowired
+	private ApplicationConfig appConfig;
 	
 	@Autowired
 	TokenAuthenticationService tokenService;
@@ -22,7 +26,7 @@ public class AuthenticationSuccessHandler extends SimpleUrlAuthenticationSuccess
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
 			Authentication authentication) throws IOException, ServletException {
 		tokenService.addAuthentication(request, response, authentication);
-		response.sendRedirect("/connectin/home");
+		response.sendRedirect(appConfig.getHomeUrl());
 		tokenService.addAuthentication(request, response, authentication);
 	}
 

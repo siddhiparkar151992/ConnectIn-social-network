@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -10,33 +12,32 @@
 <link rel='stylesheet prefetch'
 	href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
 <script type="text/javascript"
-	src="/connectin/resources/js/vendor/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="/connectin/resources/css/login.css">
-<script type="text/javascript"
-	src="/connectin/resources/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/connectin/resources/css/bootstrap.min.css" />
+	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="/resources/css/login.css">
+<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
 </head>
 
 <body>
 
-<script type="text/javascript">
-	var login = function(){
-		var data ={};
-		$.ajax({
-            type: "POST",
-            contentType: "application/json",
-            url: "/connectin/login",
-            data: JSON.stringify(data),
-            dataType: 'json',
-            success: function (data) {
-                alert("success")
-            },
-            error: function (e) {
-            	alert(e)
-            }
-	});
-	}
-</script>
+	<script type="text/javascript">
+		var login = function() {
+			var data = {};
+			$.ajax({
+				type : "POST",
+				contentType : "application/json",
+				url : "/login",
+				data : JSON.stringify(data),
+				dataType : 'json',
+				success : function(data) {
+					alert("success")
+				},
+				error : function(e) {
+					alert(e)
+				}
+			});
+		}
+	</script>
 	<div class="login-area">
 		<div class="bg-image">
 			<div class="login-signup">
@@ -93,8 +94,8 @@
 										Sign <span>in!</span>
 									</h3>
 								</div>
-								<div class="login-form">
-									<div >
+								<form action="/login" method="POST" class="login-form">
+									<div>
 										<div class="form-details">
 
 											<label class="pass"> <input type="text"
@@ -103,9 +104,9 @@
 												name="password" placeholder="Password" id="password">
 											</label>
 										</div>
-										<button onclick="login()" class="form-btn">Register</button>
+										<button type="submit" class="form-btn">Register</button>
 									</div>
-								</div>
+								</form>
 							</div>
 						</div>
 					</div>

@@ -3,6 +3,7 @@ package com.connectin.authenticate.service;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.connectin.authenticate.entity.AuthErrors;
@@ -11,7 +12,7 @@ import com.connectin.authenticate.entity.user.UserCredentials;
 import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
 import com.connectin.security.encypt.Encryptor;
 
-@Service
+@Service("authService")
 public class AuthenticationManager implements IAuthenticator {
 	@Autowired
 	private IAuthenticationService authService;

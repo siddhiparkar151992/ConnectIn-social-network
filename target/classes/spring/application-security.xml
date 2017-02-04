@@ -7,16 +7,16 @@
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd
 	http://www.springframework.org/schema/security
-	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+	http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
 	<global-method-security pre-post-annotations="disabled"></global-method-security>
 
 
-	<http use-expressions="false" pattern="/home/**"
+	<http use-expressions="false" pattern="/connectin/home/**"
 		disable-url-rewriting="true" auto-config="true"
 		authentication-manager-ref="authM">
 		<access-denied-handler error-page="/403" />
-		<intercept-url pattern="/home" method="GET" access="ROLE_USER" />
+		<intercept-url pattern="/connectin/home" method="GET" access="ROLE_USER" />
 
 		<csrf disabled="true" />
 	</http>
@@ -31,10 +31,12 @@
 		<csrf disabled="true" />
 	</http>
 	<http pattern="/api/**" disable-url-rewriting="true"
+	use-expressions="true"
+	auto-config="true"
 		create-session="stateless" entry-point-ref="restServicesEntryPoint"
 		authentication-manager-ref="authM">
-		<custom-filter ref="authFilter" before="FORM_LOGIN_FILTER" />
-
+		<!-- <custom-filter ref="authFilter" before="FORM_LOGIN_FILTER" /> -->
+		
 		<csrf disabled="true" />
 	</http>
 	<beans:bean id="authSucess"
@@ -42,10 +44,10 @@
 	<beans:bean id="tokenService"
 		class="com.connectin.authenticate.security.tokenmanager.service.TokenAuthenticationService" />
 
-	<beans:bean id="authFilter"
-		class="com.connectin.authenticate.security.AuthenticationFilter">
+	<!-- <beans:bean  id="authFilter"
+		class="com.connectin.authenticate.security.AuthenticationFilter"> 
 
-	</beans:bean>
+	</beans:bean>-->
 	<beans:bean id="jwtUtil"
 		class="com.connectin.authenticate.security.tokenmanager.util.JwtUtil">
 

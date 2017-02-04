@@ -5,7 +5,9 @@
 		<groupId>com.connectin</groupId>
 		<artifactId>connectin</artifactId>
 		<version>1.0</version>
+		
 	</parent>
+	<!-- <packaging>war</packaging> -->
 	<artifactId>connectin-web</artifactId>
 	<name>connectin-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -31,5 +33,12 @@
 		</dependency>
 
 	</dependencies>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>		
+		</plugins>
+	</build>
 </project>

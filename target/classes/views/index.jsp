@@ -31,43 +31,43 @@
         ============================================= -->
 <!-- Fontawesome -->
 <link rel="stylesheet"
-	href="/connectin/resources/css/font-awesome.min.css">
+	href="/resources/css/font-awesome.min.css">
 <!-- Bootstrap -->
-<link rel="stylesheet" href="/connectin/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 <!-- Fancybox -->
 <link rel="stylesheet"
-	href="/connectin/resources/css/jquery.fancybox.css">
+	href="/resources/css/jquery.fancybox.css">
 <!-- owl carousel -->
-<link rel="stylesheet" href="/connectin/resources/css/owl.carousel.css">
+<link rel="stylesheet" href="/resources/css/owl.carousel.css">
 <!-- Animate -->
-<link rel="stylesheet" href="/connectin/resources/css/animate.css">
+<link rel="stylesheet" href="/resources/css/animate.css">
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="/connectin/resources/css/main.css">
+<link rel="stylesheet" href="/resources/css/main.css">
 <!-- Main Responsive -->
-<link rel="stylesheet" href="/connectin/resources/css/responsive.css">
+<link rel="stylesheet" href="/resources/css/responsive.css">
 
 
 <!-- Modernizer Script for old Browsers -->
-<script src="/connectin/resources/js/vendor/modernizr-2.6.2.min.js"></script>
-<script src="/connectin/resources/js/angular2/angular2-polyfills.js"></script>
-<script src="/connectin/resources/js/angular2/system.js"></script>
-<script src="/connectin/resources/js/angular2/typescript.js"></script>
-<script src="/connectin/resources/js/angular2/Rx.js"></script>
-<script src="/connectin/resources/js/angular2/angular2.dev.js"></script>
-<script src="/connectin/resources/js/angular2/http.dev.js"></script>
-<script src="/connectin/resources/js/angular2/router.dev.js"></script>
-<script src="/connectin/resources/js/angular2/router.dev.js"></script>
+<script src="/resources/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="/resources/js/angular2/angular2-polyfills.js"></script>
+<script src="/resources/js/angular2/system.js"></script>
+<script src="/resources/js/angular2/typescript.js"></script>
+<script src="/resources/js/angular2/Rx.js"></script>
+<script src="/resources/js/angular2/angular2.dev.js"></script>
+<script src="/resources/js/angular2/http.dev.js"></script>
+<script src="/resources/js/angular2/router.dev.js"></script>
+<script src="/resources/js/angular2/router.dev.js"></script>
 <script>
   System.config({
       
       transpiler: 'typescript', 
       typescriptOptions: { emitDecoratorMetadata: true }, 
       packages: {
-        '/connectin/resources/static/app': {defaultExtension: 'ts'}
+        '/resources/static/app': {defaultExtension: 'ts'}
     }
 
   });
-  System.import('/connectin/resources/static/app/main')
+  System.import('/resources/static/app/main')
   .then(null, console.error.bind(console));
 
 
@@ -94,7 +94,7 @@
 
 				<!-- logo -->
 				<h1 class="navbar-brand">
-					<a href="#body"> <img src="/connectin/resources/img/logo.png"
+					<a href="#body"> <img src="/resources/img/logo.png"
 						alt="Kasper Logo">
 					</a>
 				</h1>
@@ -110,8 +110,8 @@
 					<li><a href="#service">Service</a></li>
 					<li><a href="#portfolio">portfolio</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="/connectin/login">Login</a></li>
-					<li><a href="/connectin/login">Sign up</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/login">Sign up</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -136,7 +136,7 @@
 				<div class="col-lg-12">
 
 					<div class="footer-logo wow fadeInDown">
-						<img src="/connectin/resources/img/logo.png" alt="logo">
+						<img src="/resources/img/logo.png" alt="logo">
 					</div>
 
 					<div class="footer-social wow fadeInUp">
@@ -175,26 +175,26 @@
         ========================== -->
 
 	<!-- main jQuery -->
-	<script src="/connectin/resources/js/vendor/jquery-1.11.1.min.js"></script>
+	<script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="/connectin/resources/js/bootstrap.min.js"></script>
+	<script src="/resources/js/bootstrap.min.js"></script>
 	<!-- jquery.nav -->
-	<script src="/connectin/resources/js/jquery.nav.js"></script>
+	<script src="/resources/js/jquery.nav.js"></script>
 	<!-- Portfolio Filtering -->
-	<script src="/connectin/resources/js/jquery.mixitup.min.js"></script>
+	<script src="/resources/js/jquery.mixitup.min.js"></script>
 	<!-- Fancybox -->
-	<script src="/connectin/resources/js/jquery.fancybox.pack.js"></script>
+	<script src="/resources/js/jquery.fancybox.pack.js"></script>
 	<!-- Parallax sections -->
-	<script src="/connectin/resources/js/jquery.parallax-1.1.3.js"></script>
+	<script src="/resources/js/jquery.parallax-1.1.3.js"></script>
 	<!-- jQuery Appear -->
-	<script src="/connectin/resources/js/jquery.appear.js"></script>
+	<script src="/resources/js/jquery.appear.js"></script>
 	<!-- countTo -->
-	<script src="/connectin/resources/js/jquery-countTo.js"></script>
+	<script src="/resources/js/jquery-countTo.js"></script>
 	<!-- owl carousel -->
-	<script src="/connectin/resources/js/owl.carousel.min.js"></script>
+	<script src="/resources/js/owl.carousel.min.js"></script>
 	<!-- WOW script -->
-	<script src="/connectin/resources/js/wow.min.js"></script>
+	<script src="/resources/js/wow.min.js"></script>
 	<!-- theme custom scripts -->
-	<script src="/connectin/resources/js/main.js"></script>
+	<script src="/resources/js/main.js"></script>
 </body>
 </html>
