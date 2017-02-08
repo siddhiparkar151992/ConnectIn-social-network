@@ -39,6 +39,7 @@
 		}
 	</script>
 	<div class="login-area">
+
 		<div class="bg-image">
 			<div class="login-signup">
 				<div class="container">
@@ -86,9 +87,14 @@
 							</div>
 						</div>
 						<c:url var="loginUrl" value="/login" />
-						<c:if test="error">errorrrrrrrrrrrrrr</c:if>
+
 						<div id="login" class="tab-pane fade in active">
+
 							<div class="login-inner">
+								<c:if test="${error!=null}">
+									<div class="login-error alert alert-error"><strong>Error:
+										</strong>${error}</div>
+								</c:if>
 								<div class="title">
 									<h3>
 										Sign <span>in!</span>
@@ -115,10 +121,6 @@
 		</div>
 	</div>
 
-
-	<script type="text/javascript">
-		
-	</script>
 
 </body>
 </html>

@@ -29,25 +29,7 @@ public class LoginController{
 	@Autowired
 	private ApplicationConfig appConfig;
 	
-	@Autowired
-	IAuthenticator authService;
 	
-	@RequestMapping(value="/authenticate/login", method = RequestMethod.POST)
-	public @ResponseBody Response<UserCredentials> helloworld(@RequestBody UserCred userCreds) throws Exception{
-		HashMap<String,UserCredentials> userData; 
-		try{
-			userData= authService.login(userCreds);
-			UserCredentials user =userData.get("userData");
-		}catch(InvalidCredentialsException e){
-			return new Response<UserCredentials>(-1, null, e.getMessage());
-		} catch (NoResultException e) {
-			return new Response<UserCredentials>(-1, null, AuthErrors.INVALID_USER_CREDS);
-		}
-		catch(Exception e){
-			return new Response<>(-1, null, null, 0, AuthErrors.UNKNOWN_EXCEPTION);
-		}
-		return new Response<UserCredentials>(0, userData, "Login succesful");
-	};
 	
 
 }
