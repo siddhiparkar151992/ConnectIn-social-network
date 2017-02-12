@@ -13,7 +13,7 @@
 	href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
 <script type="text/javascript"
 	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="/resources/css/login.css">
+<link rel="stylesheet" href="/resources/css/css/login.css">
 <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
 </head>

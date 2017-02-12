@@ -30,13 +30,11 @@
         CSS
         ============================================= -->
 <!-- Fontawesome -->
-<link rel="stylesheet"
-	href="/resources/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 <!-- Fancybox -->
-<link rel="stylesheet"
-	href="/resources/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/resources/css/jquery.fancybox.css">
 <!-- owl carousel -->
 <link rel="stylesheet" href="/resources/css/owl.carousel.css">
 <!-- Animate -->
@@ -58,27 +56,25 @@
 <script src="/resources/js/angular2/router.dev.js"></script>
 <script src="/resources/js/angular2/router.dev.js"></script>
 <script>
-  System.config({
-      
-      transpiler: 'typescript', 
-      typescriptOptions: { emitDecoratorMetadata: true }, 
-      packages: {
-        '/resources/static/app': {defaultExtension: 'ts'}
-    }
+	System.config({
 
-  });
-  System.import('/resources/static/app/main')
-  .then(null, console.error.bind(console));
+		transpiler : 'typescript',
+		typescriptOptions : {
+			emitDecoratorMetadata : true
+		},
+		packages : {
+			'/resources/static/app' : {
+				defaultExtension : 'ts'
+			}
+		}
 
-
+	});
+	System.import('/resources/static/app/main').then(null,
+			console.error.bind(console));
 </script>
 </head>
 
 <body>
-
-	<!--
-        Fixed Navigation
-        ==================================== -->
 	<header id="navigation" class="navbar-fixed-top">
 		<div class="container">
 
@@ -120,16 +116,10 @@
 
 		</div>
 	</header>
-	<!--
-        End Fixed Navigation
-        ==================================== -->
 
+	<app></app>
 
-<app></app>
-
-	<!--
-        #footer
-        ========================== -->
+	
 	<footer id="footer" class="text-center">
 		<div class="container">
 			<div class="row">
@@ -165,36 +155,10 @@
 			</div>
 		</div>
 	</footer>
-	<!--
-        End #footer
-        ========================== -->
 
 
-	<!--
-        JavaScripts
-        ========================== -->
-
-	<!-- main jQuery -->
 	<script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
-	<!-- Bootstrap -->
 	<script src="/resources/js/bootstrap.min.js"></script>
-	<!-- jquery.nav -->
 	<script src="/resources/js/jquery.nav.js"></script>
-	<!-- Portfolio Filtering -->
-	<script src="/resources/js/jquery.mixitup.min.js"></script>
-	<!-- Fancybox -->
-	<script src="/resources/js/jquery.fancybox.pack.js"></script>
-	<!-- Parallax sections -->
-	<script src="/resources/js/jquery.parallax-1.1.3.js"></script>
-	<!-- jQuery Appear -->
-	<script src="/resources/js/jquery.appear.js"></script>
-	<!-- countTo -->
-	<script src="/resources/js/jquery-countTo.js"></script>
-	<!-- owl carousel -->
-	<script src="/resources/js/owl.carousel.min.js"></script>
-	<!-- WOW script -->
-	<script src="/resources/js/wow.min.js"></script>
-	<!-- theme custom scripts -->
-	<script src="/resources/js/main.js"></script>
 </body>
 </html>

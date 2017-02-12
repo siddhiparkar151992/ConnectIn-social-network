@@ -6,6 +6,7 @@ import javax.persistence.NoResultException;
 
 import org.apache.catalina.core.ApplicationFilterConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,13 +22,22 @@ import com.connectin.authenticate.entity.user.UserCredentials;
 import com.connectin.authenticate.service.IAuthenticator;
 import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
 import com.connectin.config.ApplicationConfig;
+import com.connectin.domain.user.User;
 
 
 @Controller
+@RequestMapping("${Application.Api.Auth}")
 public class LoginController{
 	
 	@Autowired
 	private ApplicationConfig appConfig;
+	
+	@RequestMapping(value="/registration", method= RequestMethod.POST)
+	public ResponseEntity<Object> register(@RequestBody User user){
+		
+		return null;
+		
+	}
 	
 	
 	

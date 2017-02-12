@@ -5,22 +5,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value="/connectin")
+@RequestMapping(value="/")
 public class AppController {
 
-	@RequestMapping(value="/home", method = RequestMethod.GET)
+	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public String index(){
 		return "index";
 	};
+	
 	@RequestMapping(value="/", method = RequestMethod.GET)
-	public String login(){
-		return "/connectin/login";
+	public String landingPage(){
+		return "index";
 	};
 	
-	@RequestMapping(method=RequestMethod.GET)
-	public String defaultLogin(){
-		return "login";
+	@RequestMapping(value="/storyline", method = RequestMethod.GET)
+	public String storyPage(){
+		return "home";
 	};
+	
 	
 	
 	
