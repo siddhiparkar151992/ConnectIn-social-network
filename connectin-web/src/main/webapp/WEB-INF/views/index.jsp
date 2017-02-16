@@ -13,36 +13,26 @@
 <!-- Meta Keyword -->
 <meta name="keywords"
 	content="one page, business template, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
-<!-- meta character set -->
 <meta charset="utf-8">
-
-<!-- Site Title -->
 <title>Connect Story</title>
 
-<!--
-        Google Fonts
-        ============================================= -->
 <link
 	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
 	rel="stylesheet" type="text/css">
-
-<!--
-        CSS
-        ============================================= -->
 <!-- Fontawesome -->
-<link rel="stylesheet" href="/resources/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/styles/vendor/font-awesome.min.css">
 <!-- Bootstrap -->
-<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css">
 <!-- Fancybox -->
-<link rel="stylesheet" href="/resources/css/jquery.fancybox.css">
+<!-- <link rel="stylesheet" href="/resources/css/jquery.fancybox.css">
 <!-- owl carousel -->
-<link rel="stylesheet" href="/resources/css/owl.carousel.css">
+<link rel="stylesheet" href="/resources/styles/vendor/owl.carousel.css">
 <!-- Animate -->
-<link rel="stylesheet" href="/resources/css/animate.css">
+<link rel="stylesheet" href="/resources/styles/vendor/animate.css">
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="/resources/css/main.css">
+<link rel="stylesheet" href="/resources/styles/vendor/main.css">
 <!-- Main Responsive -->
-<link rel="stylesheet" href="/resources/css/responsive.css">
+<link rel="stylesheet" href="/resources/styles/vendor/responsive.css">
 
 
 <!-- Modernizer Script for old Browsers -->
@@ -55,6 +45,7 @@
 <script src="/resources/js/angular2/http.dev.js"></script>
 <script src="/resources/js/angular2/router.dev.js"></script>
 <script src="/resources/js/angular2/router.dev.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/resources/css/css/index.css"> -->
 <script>
 	System.config({
 
@@ -75,47 +66,7 @@
 </head>
 
 <body>
-	<header id="navigation" class="navbar-fixed-top">
-		<div class="container">
-
-			<div class="navbar-header">
-				<!-- responsive nav button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<!-- /responsive nav button -->
-
-				<!-- logo -->
-				<h1 class="navbar-brand">
-					<a href="#body"> <img src="/resources/img/logo.png"
-						alt="Kasper Logo">
-					</a>
-				</h1>
-				<!-- /logo -->
-
-			</div>
-
-			<!-- main nav -->
-			<nav class="collapse navigation navbar-collapse navbar-right"
-				role="navigation">
-				<ul id="nav" class="nav navbar-nav">
-					<li class="current"><a href="#home">Home</a></li>
-					<li><a href="#service">Service</a></li>
-					<li><a href="#portfolio">portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="/login">Login</a></li>
-					<li><a href="/login">Sign up</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
-			<!-- /main nav -->
-		</div>
-
-		</div>
-	</header>
+	
 
 	<app></app>
 

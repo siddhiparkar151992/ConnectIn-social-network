@@ -6,16 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign in and Sign up - Single Form</title>
+<title>ConnectIn</title>
 
 
 <link rel='stylesheet prefetch'
 	href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600'>
 <script type="text/javascript"
 	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="/resources/css/css/login.css">
-<script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/resources/styles/css/login.css">
+<script type="text/javascript" src="/resources/js/vendor/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css" />
 </head>
 
 <body>

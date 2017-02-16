@@ -1,7 +1,9 @@
 import { Component, OnInit} from 'angular2/core';
 
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS,Route,  Router} from 'angular2/router';
-import {DashboardComponent} from './dashboard/dashboard.component';
+import {DashboardComponent} from './modules/dashboard/dashboard.component';
+import {HeaderComponent} from './common/header/header.component';
+import {FooterComponent} from './common/footer/footer.component';
 
 declare var $: any;
 declare var userData:any;
@@ -9,8 +11,8 @@ declare var logActivity:any;
 
 @Component({
 	selector: 'app',
-	template: "<div><router-outlet></router-outlet></div>",
-	directives: [ROUTER_DIRECTIVES],
+	template: " <index-header></index-header><div><router-outlet></router-outlet></div><index-footer></index-footer>",
+	directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
 	providers: [],
 	
 	
@@ -33,7 +35,11 @@ declare var logActivity:any;
 ])
 
 export class AppComponent implements OnInit{
-	
-
+	ngOnInit(){
+		$('#home-carousel').carousel({
+           interval: 500
+        });
+	}
+  
 }
 

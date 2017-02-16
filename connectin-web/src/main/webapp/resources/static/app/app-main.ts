@@ -1,5 +1,5 @@
 import {bootstrap} from 'angular2/platform/browser';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './modules/home/home.component';
 import {RouteConfig, ROUTER_PROVIDERS,LocationStrategy, HashLocationStrategy} from 'angular2/router';
 import { XHRBackend } from 'angular2/http';
 import { HTTP_PROVIDERS } from 'angular2/http';

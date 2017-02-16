@@ -26,13 +26,13 @@ import com.connectin.domain.user.User;
 
 
 @Controller
-@RequestMapping("${Application.Api.Auth}")
+
 public class LoginController{
 	
 	@Autowired
 	private ApplicationConfig appConfig;
 	
-	@RequestMapping(value="/registration", method= RequestMethod.POST)
+	@RequestMapping(value="/api/registration", method= RequestMethod.POST)
 	public ResponseEntity<Object> register(@RequestBody User user){
 		
 		return null;
