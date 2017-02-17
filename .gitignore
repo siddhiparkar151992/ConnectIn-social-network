@@ -1,0 +1,13 @@
+connectin-web/target/*
+connectin-auth/target/*
+connectin-core/target/*
+connectin-config/target/*
+connectin-demain/target/*
+target/*
+.settings/*
+.classpath
+.project
+.idea
+*.iml
+/target
+_site/

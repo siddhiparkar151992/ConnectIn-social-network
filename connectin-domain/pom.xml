@@ -5,10 +5,11 @@
    <version>1.0</version>
   <url>http://maven.apache.org</url>
   <parent>
-    <groupId>com.connectin</groupId>
-    <artifactId>connectin</artifactId>
-    <version>1.0</version>
-  </parent>
-  
+		<groupId>com.connectin</groupId>
+		<artifactId>connectin</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+  <packaging>jar</packaging>
   <artifactId>connectin-domain</artifactId>
 </project>
