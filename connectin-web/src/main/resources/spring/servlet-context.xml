@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 	<annotation-driven />
-	 <beans:bean
+	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -39,14 +39,20 @@
 			</beans:props>
 		</beans:property>
 	</beans:bean>
+	<!-- <beans:bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<beans:property name="location">
+			<beans:value>application.properties</beans:value>
+		</beans:property>
+	</beans:bean> -->
 
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="driverClassName" value="${Application.Database.MySql.DriverClassName}" />
 		<beans:property name="url"
-			value="jdbc:mysql://localhost:3306/db_connectin" />
-		<beans:property name="username" value="root" />
-		<beans:property name="password" value="root" />
+			value="${Application.Database.MySql.Url}" />
+		<beans:property name="username" value="${Application.Database.MySql.Password}" />
+		<beans:property name="password" value="${Application.Database.MySql.Username}" />
 	</beans:bean>
 
 
@@ -54,9 +60,9 @@
 		class="org.springframework.orm.jpa.JpaTransactionManager">
 		<beans:property name="entityManagerFactory" ref="entityManagerFactoryBean" />
 	</beans:bean>
-	<annotation-driven/>
+	<annotation-driven />
 	<resources location="/resources/" mapping="/resources/**"></resources>
 	<resources location="/WEB-INF/static/" mapping="/static/**"></resources>
 	<tx:annotation-driven />
-	
+
 </beans:beans>
