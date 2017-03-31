@@ -46,6 +46,25 @@
 
 
 </script>
+	<div class="container">
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/logo.gif"> </a></h1>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+              <ul class="nav sf-menu sf-js-enabled">
+                <li><a href="index.html">Home</a></li>
+                <li class="sub-menu active"><a href="services.html" class="sf-with-ul">Services<b class="sf-sub-indicator"></b></a>
+                  <ul style="display: none;">
+                    <li><a href="#">Dolore </a></li>
+                    <li><a href="#">Consecte</a></li>
+                    <li><a href="#">Conseq</a></li>
+                  </ul>
+                </li>
+                <li><a href="folio.html">Folio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
 
 	<home></home>
 	<footer>
