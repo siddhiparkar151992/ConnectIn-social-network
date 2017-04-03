@@ -9,8 +9,8 @@ module.exports = function(grunt) {
       compass: {
           dist: {
               options: {
-                  sassDir: 'src/main/webapp/resources/styles/scss',
-                  cssDir: 'src/main/webapp/resources/styles/css',
+                  sassDir: 'src/main/webapp/resources/styles/**/scss',
+                  cssDir: 'src/main/webapp/resources/styles/**/css',
                   environment: 'development',
                   
               }
