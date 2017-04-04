@@ -9,6 +9,26 @@
 							<li class="notification notification-chat"><a href="#">
 								<i class="fa fa-comment"></i>
 								<span class="badge">0</span>
+								
+								<div class="dropdown-menu animated fadeInDown" id="notification-dropdown" style="display: block;">
+		              <div class="dropdown-header">
+		                <span class="triangle"></span>
+		                <span class="heading">Notifications</span>
+		                <span class="count ng-binding" id="dd-notifications-count">54</span>
+		              </div>
+		              <div class="dropdown-body">
+		               <div class="notification new ng-scope" ng-repeat="notification in newNotifications.slice().reverse() track by notification.timestamp">
+		                  <div class="notification-image-wrapper">
+		                  	<div class="notification-image">
+			                  	<img src="https://imagemoved.files.wordpress.com/2011/07/no-strings-attached-natalie-portman-19128381-850-1280.jpg" alt="" width="32">
+			                  </div>
+		                  </div>
+		                  <div class="notification-text ng-binding">
+		                     <span class="highlight ng-binding">Natalie Portman</span> upvoted your question
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
 							</a></li>
 							<li class="notification notification-msg"><a href="#">
 								<i class="glyphicon glyphicon-envelope"></i>
@@ -22,13 +42,7 @@
 							<li class="profile-dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown" role="button" aria-haspopup="true"
 								aria-expanded="false"><img src="http://goo.gl/vswgSn" class="profile-image"/></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul></li>
+								</li>
 						</ul>
 					</div>
 				</div>

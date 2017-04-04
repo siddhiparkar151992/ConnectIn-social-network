@@ -1,4 +1,6 @@
 .custom-navbar{
+    background-color: #121025 !important;
+    box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
     .notification{
         font-size: 20px;  
         .badge{
@@ -41,6 +43,10 @@
         .profile-dropdown{
             .profile-image{
                 border-radius: 100px;
+                    border-radius: 100px;
+    height: 38px;
+    object-fit: cover;
+    width: 38px;
             }
         }
     

@@ -1,8 +1,13 @@
-/* line 2, ../../scss/headers/profile-header.scss */
+/* line 1, ../../scss/headers/profile-header.scss */
+.custom-navbar {
+  background-color: #121025 !important;
+  box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 4, ../../scss/headers/profile-header.scss */
 .custom-navbar .notification {
   font-size: 20px;
 }
-/* line 4, ../../scss/headers/profile-header.scss */
+/* line 6, ../../scss/headers/profile-header.scss */
 .custom-navbar .notification .badge {
   position: absolute;
   min-width: 20px;
@@ -19,19 +24,23 @@
   left: 22px;
   z-index: 1;
 }
-/* line 25, ../../scss/headers/profile-header.scss */
+/* line 27, ../../scss/headers/profile-header.scss */
 .custom-navbar .navbar-container .notification-bar .notification-chat .badge {
   background: #E94B3B;
 }
-/* line 32, ../../scss/headers/profile-header.scss */
+/* line 34, ../../scss/headers/profile-header.scss */
 .custom-navbar .navbar-container .notification-bar .notification-msg .badge {
   background: #1C7EBB;
 }
-/* line 37, ../../scss/headers/profile-header.scss */
+/* line 39, ../../scss/headers/profile-header.scss */
 .custom-navbar .navbar-container .notification-bar .notification-not .badge {
   background: #E94B3B;
 }
-/* line 42, ../../scss/headers/profile-header.scss */
+/* line 44, ../../scss/headers/profile-header.scss */
 .custom-navbar .navbar-container .notification-bar .profile-dropdown .profile-image {
   border-radius: 100px;
+  border-radius: 100px;
+  height: 38px;
+  object-fit: cover;
+  width: 38px;
 }
