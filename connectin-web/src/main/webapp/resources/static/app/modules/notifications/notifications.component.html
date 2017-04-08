@@ -1,0 +1,19 @@
+<div class="dropdown-menu animated fadeInDown" id="notification-dropdown" style="display: block;">
+		              <div class="dropdown-header">
+		                <span class="triangle"></span>
+		                <span class="heading">Notifications</span>
+		                <span class="count ng-binding" id="dd-notifications-count">54</span>
+		              </div>
+		              <div class="dropdown-body">
+		               <div class="notification new ng-scope" ng-repeat="notification in newNotifications.slice().reverse() track by notification.timestamp">
+		                  <div class="notification-image-wrapper">
+		                  	<div class="notification-image">
+			                  	<img src="https://imagemoved.files.wordpress.com/2011/07/no-strings-attached-natalie-portman-19128381-850-1280.jpg" alt="" width="32">
+			                  </div>
+		                  </div>
+		                  <div class="notification-text ng-binding">
+		                     <span class="highlight ng-binding">Natalie Portman</span> upvoted your question
+		                  </div>
+		                </div>
+		              </div>
+		            </div>

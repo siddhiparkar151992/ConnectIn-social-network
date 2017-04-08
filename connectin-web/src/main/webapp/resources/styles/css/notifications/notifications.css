@@ -1,0 +1,111 @@
+/* line 1, ../../scss/notifications/notifications.scss */
+#notification-dropdown {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: -130px;
+  top: 60px;
+  min-height: 10px;
+  min-width: 10px;
+  width: 280px;
+}
+/* line 11, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-header {
+  background: #FFF;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  color: #747F8B;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  border: 0px;
+  border-style: solid;
+  border-bottom-width: 1px;
+  -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
+  -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
+  border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
+  box-shadow: 0px 2px 10px -2px #cedae0;
+}
+/* line 27, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-header .triangle {
+  position: absolute;
+  top: -8px;
+  left: 134px;
+  height: 15px;
+  width: 15px;
+  border-radius: 6px 0px 0px 0px;
+  transform: rotate(45deg);
+  background: #FFF;
+}
+/* line 38, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-header .heading {
+  text-align: center;
+  color: #747F8B;
+  font-weight: bold;
+}
+/* line 44, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-header .count {
+  overflow: hidden;
+  background: #21B7B7;
+  color: #FFF;
+  text-align: center;
+  border-radius: 100%;
+  font-weight: bold;
+  top: -6px;
+  right: -1px;
+  position: static;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 8px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+/* line 64, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body {
+  max-height: 292px;
+  background: #e9f0f3;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 69, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body .notification {
+  transition: all 500ms ease;
+  background: #e9f0f3;
+  padding: 15px;
+  border: 0px;
+  border-style: solid;
+  border-bottom-width: 1px;
+  -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
+  -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
+  border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
+}
+/* line 80, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body .notification .notification-image-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 83, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body .notification .notification-image-wrapper .notification-image {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+/* line 92, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body .notification .notification-text {
+  display: table-cell;
+  padding-left: 15px;
+  vertical-align: middle;
+  color: #747F8B;
+  cursor: pointer;
+  font-size: 14px;
+  word-spacing: 2px;
+  line-height: 21px;
+}
+/* line 102, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-body .notification .notification-text .highlight {
+  font-weight: bold;
+}

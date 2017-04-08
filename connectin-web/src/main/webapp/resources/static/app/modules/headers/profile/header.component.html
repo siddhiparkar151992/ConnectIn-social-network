@@ -6,43 +6,66 @@
 					<div class="col-xs-8"></div>
 					<div class="col-xs-4">
 						<ul class="notification-bar nav navbar-nav navbar-right">
-							<li class="notification notification-chat"><a href="#">
-								<i class="fa fa-comment"></i>
-								<span class="badge">0</span>
+							<li class="notification notification-chat dropdown"><a href="#"
+								class="dropdown-toggle" data-toggle="dropdown"
+								aria-expanded="false"> <i class="fa fa-comment"></i> <span
+									class="badge">0</span> 
 								
-								<div class="dropdown-menu animated fadeInDown" id="notification-dropdown" style="display: block;">
-		              <div class="dropdown-header">
-		                <span class="triangle"></span>
-		                <span class="heading">Notifications</span>
-		                <span class="count ng-binding" id="dd-notifications-count">54</span>
-		              </div>
-		              <div class="dropdown-body">
-		               <div class="notification new ng-scope" ng-repeat="notification in newNotifications.slice().reverse() track by notification.timestamp">
-		                  <div class="notification-image-wrapper">
-		                  	<div class="notification-image">
-			                  	<img src="https://imagemoved.files.wordpress.com/2011/07/no-strings-attached-natalie-portman-19128381-850-1280.jpg" alt="" width="32">
-			                  </div>
-		                  </div>
-		                  <div class="notification-text ng-binding">
-		                     <span class="highlight ng-binding">Natalie Portman</span> upvoted your question
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
+							</a>
+							<notification-list class="dropdown-menu"></notification-list>
+							</li>
+							<li class="notification notification-msg"><a href="#"> <i
+									class="glyphicon glyphicon-envelope"></i> <span class="badge">0</span>
 							</a></li>
-							<li class="notification notification-msg"><a href="#">
-								<i class="glyphicon glyphicon-envelope"></i>
-								<span class="badge">0</span>
+							<li class="notification notification-not"><a href="#"> <i
+									class="fa fa-bell"></i> <span class="badge">0</span>
 							</a></li>
-							<li class="notification notification-not"><a href="#">
-								<i class="fa fa-bell"></i>
-								<span class="badge">0</span>
-							</a></li>
-							
-							<li class="profile-dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown" role="button" aria-haspopup="true"
-								aria-expanded="false"><img src="http://goo.gl/vswgSn" class="profile-image"/></a>
-								</li>
+
+							<li class="profile-dropdown"><a href="#"
+								class="dropdown-toggle" data-toggle="dropdown"
+								aria-expanded="false"> <span class="user-avatar pull-left"
+									style="margin-right: 8px; margin-top: -5px;"> <img
+										src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+										class="img-responsive img-circle" title="John Doe"
+										alt="John Doe" width="30px" height="30px">
+								</span> <span class="user-name"> John Doe </span> <b class="caret"></b></a>
+
+								<ul class="container profile-links dropdown-menu">
+									<li class="row">
+										<div class="col-xs-12 profile-popup">
+
+
+											<div class="">
+												<a href="#"> <img class="profile-image media-object"
+													src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+													alt="...">
+												</a>
+											</div>
+											<div class="">
+												<h5 class="">
+													<div class="profile-link">
+														john doe <a href="">View profile</a>
+													</div>
+												</h5>
+												<div class="divider"></div>
+												<div class="nav-links list-group">
+
+													<div class="link-item list-group-item">Settings</div>
+													<div class="link-item list-group-item">Account and
+														privacy</div>
+													<div class="link-item list-group-item">Help center</div>
+													<div class="link-item list-group-item">Admin request</div>
+
+
+												</div>
+											</div>
+
+
+
+										</div>
+									</li>
+
+								</ul></li>
 						</ul>
 					</div>
 				</div>

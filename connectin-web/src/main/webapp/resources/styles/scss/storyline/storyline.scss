@@ -1,6 +1,11 @@
 @import url("//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
+.container{
+  .feeds{
+        margin-left: 14px;
+  }
+}
 .feed-info{
 
   .feed-stack {
@@ -240,6 +245,7 @@
 .feeds-status {
   position: relative;
   background: #fff;
+  padding: 18px;
 
   .type { display: block; background: #57CBC8; color: #fff; font-size: 14pt; width: 40px; height: 40px; text-align: center; line-height: 40px; position: absolute; top: 30px; left: 0; }
   
