@@ -1,19 +1,29 @@
-/* line 1, ../../scss/notifications/notifications.scss */
+/* line 2, ../../scss/notifications/notifications.scss */
 #notification-dropdown {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  left: -130px;
-  top: 60px;
-  min-height: 10px;
-  min-width: 10px;
-  width: 280px;
+  background-color: #121025 !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  border-radius: 10px;
 }
-/* line 11, ../../scss/notifications/notifications.scss */
+/* line 6, ../../scss/notifications/notifications.scss */
+#notification-dropdown .animated {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 12, ../../scss/notifications/notifications.scss */
+#notification-dropdown .triangle {
+  position: absolute;
+  top: -8px;
+  left: 134px;
+  height: 15px;
+  width: 15px;
+  border-radius: 6px 0px 0px 0px;
+  transform: rotate(45deg);
+}
+/* line 22, ../../scss/notifications/notifications.scss */
 #notification-dropdown .dropdown-header {
-  background: #FFF;
   padding: 15px;
-  position: relative;
   text-align: center;
   color: #747F8B;
   font-weight: bold;
@@ -23,79 +33,49 @@
   border-bottom-width: 1px;
   -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
   -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-  border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
   box-shadow: 0px 2px 10px -2px #cedae0;
 }
-/* line 27, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-header .triangle {
-  position: absolute;
-  top: -8px;
-  left: 134px;
-  height: 15px;
-  width: 15px;
-  border-radius: 6px 0px 0px 0px;
-  transform: rotate(45deg);
-  background: #FFF;
+/* line 35, ../../scss/notifications/notifications.scss */
+#notification-dropdown .dropdown-header .heading {
+  font-size: large;
 }
 /* line 38, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-header .heading {
-  text-align: center;
-  color: #747F8B;
-  font-weight: bold;
-}
-/* line 44, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-header .count {
-  overflow: hidden;
+#notification-dropdown .dropdown-header .badge {
+  font-size: 12px;
   background: #21B7B7;
   color: #FFF;
   text-align: center;
   border-radius: 100%;
-  font-weight: bold;
-  top: -6px;
-  right: -1px;
-  position: static;
-  height: 25px;
-  width: 25px;
-  display: inline-block;
-  line-height: 24px;
-  margin-left: 8px;
-  font-size: 12px;
-  vertical-align: middle;
 }
-/* line 64, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body {
-  max-height: 292px;
-  background: #e9f0f3;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-/* line 69, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body .notification {
+/* line 46, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
   transition: all 500ms ease;
-  background: #e9f0f3;
-  padding: 15px;
-  border: 0px;
-  border-style: solid;
-  border-bottom-width: 1px;
-  -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-  -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-  border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
 }
-/* line 80, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body .notification .notification-image-wrapper {
+/* line 52, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-itemhover {
+  background-color: #2b2754 !important;
+}
+/* line 55, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item .notification-image-wrapper {
   display: table-cell;
-  vertical-align: middle;
 }
-/* line 83, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body .notification .notification-image-wrapper .notification-image {
+/* line 57, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item .notification-image-wrapper .notification-image {
   display: inline-block;
-  height: 32px;
-  width: 32px;
   overflow: hidden;
   border-radius: 100%;
+  float: left;
 }
-/* line 92, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body .notification .notification-text {
+/* line 62, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item .notification-image-wrapper .notification-image img {
+  max-width: 30px;
+}
+/* line 67, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item .text {
   display: table-cell;
   padding-left: 15px;
   vertical-align: middle;
@@ -104,8 +84,4 @@
   font-size: 14px;
   word-spacing: 2px;
   line-height: 21px;
-}
-/* line 102, ../../scss/notifications/notifications.scss */
-#notification-dropdown .dropdown-body .notification .notification-text .highlight {
-  font-weight: bold;
 }

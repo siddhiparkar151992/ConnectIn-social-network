@@ -1,17 +1,27 @@
-#notification-dropdown{
-	display: block;
-    position: absolute;
-    z-index: 1;
-    left: -130px;
-    top: 60px;
-    min-height: 10px;
-    min-width: 10px;
-    width: 280px;
 
-    .dropdown-header{
-    	background: #FFF;
-	    padding: 15px;
-	    position: relative;
+#notification-dropdown{
+	background-color: #121025 !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	    border-radius: 10px;
+	    .animated{
+	    	-webkit-animation-duration: 500ms;
+		    animation-duration: 500ms;
+		    -webkit-animation-fill-mode: both;
+		    animation-fill-mode: both;
+	    }
+	.triangle{
+		position: absolute;
+	    top: -8px;
+	    left: 134px;
+	    height: 15px;
+	    width: 15px;
+	    border-radius: 6px 0px 0px 0px;
+	    transform: rotate(45deg);
+	    
+	}
+	.dropdown-header{
+		padding: 15px;
+		
 	    text-align: center;
 	    color: #747F8B;
 	    font-weight: bold;
@@ -21,89 +31,49 @@
 	    border-bottom-width: 1px;
 	    -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
 	    -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-	    border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
 	    box-shadow: 0px 2px 10px -2px #cedae0;
-
-	    .triangle{
-	    	    position: absolute;
-			    top: -8px;
-			    left: 134px;
-			    height: 15px;
-			    width: 15px;
-			    border-radius: 6px 0px 0px 0px;
-			    transform: rotate(45deg);
-			    background: #FFF;
-
-	    }
 	    .heading{
-	    	text-align: center;
-		    color: #747F8B;
-		    font-weight: bold;
+	    	font-size: large;
 	    }
-
-	    .count{
-	    	overflow: hidden;
+	    .badge{
+	    	font-size: 12px;
 		    background: #21B7B7;
 		    color: #FFF;
 		    text-align: center;
 		    border-radius: 100%;
-		    font-weight: bold;
-		    top: -6px;
-		    right: -1px;
-		    position: static;
-		    height: 25px;
-		    width: 25px;
-		    display: inline-block;
-		    line-height: 24px;
-		    margin-left: 8px;
-		    font-size: 12px;
+	    }
+	}
+	.notification-item{
+		-webkit-transition: all 500ms ease;
+	    -moz-transition: all 500ms ease;
+	    -ms-transition: all 500ms ease;
+	    -o-transition: all 500ms ease;
+	    transition: all 500ms ease;
+	    &hover{
+	    	background-color: #2b2754 !important;
+	    }
+	    .notification-image-wrapper{
+	    	display: table-cell;
+			.notification-image{
+				display: inline-block;
+			    overflow: hidden;
+			    border-radius: 100%;
+				float: left;
+				img{
+					    max-width: 30px;
+				}
+			}
+		}
+		.text{
+			display: table-cell;
+		    padding-left: 15px;
 		    vertical-align: middle;
-	    }
-    }
-
-    .dropdown-body{
-    	max-height: 292px;
-	    background: #e9f0f3;
-	    overflow-y: auto;
-	    overflow-x: hidden;
-	    .notification{
-	    	transition: all 500ms ease;
-		    background: #e9f0f3;
-		    padding: 15px;
-		    border: 0px;
-		    border-style: solid;
-		    border-bottom-width: 1px;
-		    -moz-border-image: -moz-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-		    -o-border-image: -o-linear-gradient(right, white, #cedae0, #cedae0, white) 1 20%;
-		    border-image: linear-gradient(to right, white 0%, #cedae0 40%, #cedae0 60%, white 100%) 1 20%;
-
-		    .notification-image-wrapper{
-		    	display: table-cell;
-    			vertical-align: middle;
-    			.notification-image{
-    				display: inline-block;
-				    height: 32px;
-				    width: 32px;
-				    overflow: hidden;
-				    border-radius: 100%;
-    			}
-		    }
-
-		    .notification-text {
-		    	display: table-cell;
-			    padding-left: 15px;
-			    vertical-align: middle;
-			    color: #747F8B;
-			    cursor: pointer;
-			    font-size: 14px;
-			    word-spacing: 2px;
-			    line-height: 21px;
-
-			    .highlight{
-			    	    font-weight: bold;
-			    }
-		    }
-
-	    }
-    }
+		    color: #747F8B;
+		    cursor: pointer;
+		    font-size: 14px;
+		    word-spacing: 2px;
+		    line-height: 21px;
+		}
+	}
+	
 }
