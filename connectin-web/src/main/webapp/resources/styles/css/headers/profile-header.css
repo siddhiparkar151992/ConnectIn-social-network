@@ -1,0 +1,82 @@
+/* line 1, ../../scss/headers/profile-header.scss */
+.custom-navbar {
+  background-color: #121025 !important;
+  border: none;
+  box-shadow: 0 0px 9px 4px rgba(100, 111, 162, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 5, ../../scss/headers/profile-header.scss */
+.custom-navbar .notification {
+  font-size: 20px;
+}
+/* line 8, ../../scss/headers/profile-header.scss */
+.custom-navbar .notification .badge {
+  position: absolute;
+  min-width: 20px;
+  min-height: 20px;
+  /* line-height: 20px; */
+  font-weight: bold;
+  color: white;
+  border-radius: 100%;
+  font-size: 12px;
+  box-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  text-align: center;
+  top: -1px;
+  left: 22px;
+  z-index: 1;
+}
+/* line 27, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar {
+  display: flex;
+  align-items: center;
+}
+/* line 30, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .icon-comment {
+  color: #45c1ae;
+}
+/* line 33, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .icon-envelope {
+  color: #da6f7d;
+}
+/* line 36, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .icon-bell {
+  color: #f15f4c;
+}
+/* line 40, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .notification-chat .badge {
+  background: #E94B3B;
+}
+/* line 45, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .notification-msg .badge {
+  background: #1C7EBB;
+}
+/* line 50, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .notification-not .badge {
+  background: #E94B3B;
+}
+/* line 56, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .profile-dropdown .profile-links {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #121025 !important;
+  color: white;
+  box-shadow: 0 0px 9px 4px rgba(106, 107, 123, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 63, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .profile-dropdown .profile-image {
+  border-radius: 100px;
+  border-radius: 100px;
+  height: 38px;
+  object-fit: cover;
+  width: 38px;
+}
+/* line 72, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .profile-dropdown .nav-links .link-item {
+  background-color: #121025 !important;
+  border: none;
+  border-bottom: 2px solid #4f4f5d;
+}
+/* line 73, ../../scss/headers/profile-header.scss */
+.custom-navbar .navbar-container .notification-bar .profile-dropdown .nav-links .link-item .fa {
+  padding-right: 11px;
+}

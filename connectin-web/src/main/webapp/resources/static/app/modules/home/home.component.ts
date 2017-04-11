@@ -1,13 +1,13 @@
 import {Component,OnInit} from "angular2/core";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS,Route,  Router} from 'angular2/router';
 import {StorylineComponent} from "../storyline/storyline.component";
-
+import {ProfileHeaderComponent} from "../headers/profile/header.component";
 declare var $:any;
 
 @Component({
 	selector:'home',
-	template:'<div><router-outlet></router-outlet></div>',
-	directives:[ROUTER_DIRECTIVES],
+	template:'<profile-header></profile-header><div><router-outlet></router-outlet></div>',
+	directives:[ROUTER_DIRECTIVES, ProfileHeaderComponent],
 	providers:[]
 	
 })

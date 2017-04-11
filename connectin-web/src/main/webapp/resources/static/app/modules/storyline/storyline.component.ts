@@ -5,7 +5,7 @@ import {StoryComponent} from './components/story/story.component';
 	selector:'storyline',
 	templateUrl:'/resources/static/app/modules/storyline/storyline.component.html',
 	directives:[StoryComponent]
-	styleUrls: ['resources/styles/css/storyline.css']
+	styleUrls: ['resources/styles/css/storyline/storyline.css']
 })
 export class StorylineComponent{
 	
