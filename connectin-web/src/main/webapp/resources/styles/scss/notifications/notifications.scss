@@ -44,13 +44,14 @@
 	    }
 	}
 	.notification-item{
+		color: white;
 		-webkit-transition: all 500ms ease;
 	    -moz-transition: all 500ms ease;
 	    -ms-transition: all 500ms ease;
 	    -o-transition: all 500ms ease;
 	    transition: all 500ms ease;
-	    &hover{
-	    	background-color: #2b2754 !important;
+	    :hover{
+	    	background-color: #272938;
 	    }
 	    .notification-image-wrapper{
 	    	display: table-cell;

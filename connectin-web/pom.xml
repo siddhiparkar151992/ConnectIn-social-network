@@ -28,7 +28,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.connectin</groupId>
-			<artifactId>connectin-domain</artifactId>
+			<artifactId>connectin-config</artifactId>
 			<version>1.0</version>
 		</dependency>
 

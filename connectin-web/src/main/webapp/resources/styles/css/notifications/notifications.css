@@ -49,32 +49,33 @@
 }
 /* line 46, ../../scss/notifications/notifications.scss */
 #notification-dropdown .notification-item {
+  color: white;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease;
 }
-/* line 52, ../../scss/notifications/notifications.scss */
-#notification-dropdown .notification-itemhover {
-  background-color: #2b2754 !important;
+/* line 53, ../../scss/notifications/notifications.scss */
+#notification-dropdown .notification-item :hover {
+  background-color: #272938;
 }
-/* line 55, ../../scss/notifications/notifications.scss */
+/* line 56, ../../scss/notifications/notifications.scss */
 #notification-dropdown .notification-item .notification-image-wrapper {
   display: table-cell;
 }
-/* line 57, ../../scss/notifications/notifications.scss */
+/* line 58, ../../scss/notifications/notifications.scss */
 #notification-dropdown .notification-item .notification-image-wrapper .notification-image {
   display: inline-block;
   overflow: hidden;
   border-radius: 100%;
   float: left;
 }
-/* line 62, ../../scss/notifications/notifications.scss */
+/* line 63, ../../scss/notifications/notifications.scss */
 #notification-dropdown .notification-item .notification-image-wrapper .notification-image img {
   max-width: 30px;
 }
-/* line 67, ../../scss/notifications/notifications.scss */
+/* line 68, ../../scss/notifications/notifications.scss */
 #notification-dropdown .notification-item .text {
   display: table-cell;
   padding-left: 15px;

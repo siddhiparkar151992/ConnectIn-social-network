@@ -185,7 +185,6 @@
 	</build>
 	<modules>
 		<module>connectin-core</module>
-		<module>connectin-domain</module>
 		<module>connectin-web</module>
 		<module>connectin-config</module>
 		<module>connectin-auth</module>
