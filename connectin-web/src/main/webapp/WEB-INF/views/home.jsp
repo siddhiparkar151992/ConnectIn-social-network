@@ -7,6 +7,7 @@
 <script type="text/javascript"
 	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="../../resources/styles/css/storyline.css">
+<link rel="stylesheet" href="../../resources/styles/css/home.css">
 <!-- main jQuery -->
 	<script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap -->
@@ -46,6 +47,7 @@
 
 
 </script>
+	
 
 	<home></home>
 	<footer>
