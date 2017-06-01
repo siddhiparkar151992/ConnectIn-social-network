@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.connectin.business.post.entity.Post;
 import com.connectin.business.post.service.PostService;
-
+import com.connectin.domain.post.PostDTO;
 import com.connectin.utils.Response;
 
 @RestController
@@ -24,10 +24,10 @@ public class PostController {
 	private PostService postService;
 
 	@RequestMapping("/list")
-	public Response<List<Post>> getPostsByUser(@RequestParam int userId, HttpServletRequest request,
+	public Response<List<PostDTO>> getPostsByUser(@RequestParam int userId, HttpServletRequest request,
 			HttpServletResponse response) {
 		String token = request.getHeader("token");
-		Response<List<Post>> postResponse = postService.getPostByUser(userId);
+		Response<List<PostDTO>> postResponse = postService.getPostByUser(userId);
 		return postResponse;
 		
 	}
