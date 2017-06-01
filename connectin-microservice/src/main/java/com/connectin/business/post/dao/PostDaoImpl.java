@@ -4,16 +4,15 @@
 package com.connectin.business.post.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.jboss.logging.annotations.Pos;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.connectin.business.post.entity.Post;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
 
@@ -33,8 +32,8 @@ public class PostDaoImpl implements IPostDao {
 		List<PostDTO> posts = new ArrayList<>();
 		try {
 			posts = (List<PostDTO>) entityManager
-					.createQuery("select new com.connectin.domain.post.PostDTO(p.id,"
-							+ " p.categoryId.categoryName, p.visibility, p.tags, " + "p.createdTime) "
+					.createQuery("select new com.connectin.domain.post.PostDTO(p.id, p.category.categoryName, "
+							+ "p.visibility, p.tags, p.createdTime, p.text) "
 							+ "from post p where p.user.id=:userId")
 					.setParameter("userId", userId).getResultList();
 			return posts;

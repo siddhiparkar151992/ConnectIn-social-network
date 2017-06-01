@@ -4,7 +4,11 @@ connectin-core/target/*
 connectin-config/target/*
 connectin-demain/target/*
 target/*
+/**/*.class
+connectin-microservice/target/**/*.class
 .settings/*
+*.class
+*/.git/*
 .classpath
 .project
 .idea

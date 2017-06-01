@@ -1,7 +1,7 @@
 package com.connectin.domain.comments;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import com.connectin.domain.like.LikeDTO;
@@ -9,16 +9,16 @@ import com.connectin.domain.user.UserDTO;
 
 public class CommentDTO implements Serializable{
 
-	private Date createdDate;
+	private Date createdTime;
 	private UserDTO user;
 	private String text;
 	private List<LikeDTO> likes;
 	private int id;
 	public Date getCreatedDate() {
-		return createdDate;
+		return createdTime;
 	}
 	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+		this.createdTime = createdDate;
 	}
 	public UserDTO getUser() {
 		return user;
@@ -40,17 +40,29 @@ public class CommentDTO implements Serializable{
 	}
 	public CommentDTO(Date createdDate, UserDTO user, String text, List<LikeDTO> likes, int id) {
 		super();
-		this.createdDate = createdDate;
+		this.createdTime = createdDate;
 		this.user = user;
 		this.text = text;
 		this.likes = likes;
 		this.id = id;
 	}
+	
+	public CommentDTO(Date createdDate, int userId, String firstName,String lastName,
+			String email, String text, int id) {
+		super();
+		this.createdTime = createdDate;
+		this.text = text;
+		this.id = id;
+		
+		this.user = new UserDTO(userId, firstName, lastName, email);
+	}
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((createdDate == null) ? 0 : createdDate.hashCode());
+		result = prime * result + ((createdTime == null) ? 0 : createdTime.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((likes == null) ? 0 : likes.hashCode());
 		result = prime * result + ((text == null) ? 0 : text.hashCode());
@@ -66,10 +78,10 @@ public class CommentDTO implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		CommentDTO other = (CommentDTO) obj;
-		if (createdDate == null) {
-			if (other.createdDate != null)
+		if (createdTime == null) {
+			if (other.createdTime != null)
 				return false;
-		} else if (!createdDate.equals(other.createdDate))
+		} else if (!createdTime.equals(other.createdTime))
 			return false;
 		if (id != other.id)
 			return false;
@@ -98,12 +110,12 @@ public class CommentDTO implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "CommentDTO [createdDate=" + createdDate + ", user=" + user + ", text=" + text + ", likes=" + likes
+		return "CommentDTO [createdDate=" + createdTime + ", user=" + user + ", text=" + text + ", likes=" + likes
 				+ ", id=" + id + "]";
 	}
 	public CommentDTO(Date createdDate, UserDTO user, String text, int id) {
 		super();
-		this.createdDate = createdDate;
+		this.createdTime = createdDate;
 		this.user = user;
 		this.text = text;
 		this.id = id;
