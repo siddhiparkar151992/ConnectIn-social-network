@@ -1,0 +1,9 @@
+/* line 1, ../scss/index.scss */
+body {
+  background-color: #0b1e2f;
+}
+
+/* line 4, ../scss/index.scss */
+#home .item {
+  height: 500px;
+}

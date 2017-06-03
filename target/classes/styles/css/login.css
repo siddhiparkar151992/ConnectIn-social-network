@@ -1,0 +1,406 @@
+/* line 1, ../scss/login.scss */
+html, body {
+  background-image: url("/resources/img/slider/bg2.jpg");
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  height: 100%;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 9, ../scss/login.scss */
+a, a:hover, a:focus, focus {
+  outline: none !important;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 14, ../scss/login.scss */
+.container {
+  max-width: 800px;
+  width: 36% !important;
+}
+
+/* line 18, ../scss/login.scss */
+li, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*Global CSS*/
+/*Main CSS*/
+/*Login Signup Page*/
+/* line 28, ../scss/login.scss */
+.bg-image {
+  background: url(http://jskrishna.com/work/merkury/images/background-login.jpg) no-repeat 0 0/cover;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+}
+
+/* line 38, ../scss/login.scss */
+.login-header {
+  display: inline-block;
+  width: 100%;
+  background: #0e1a35;
+}
+
+/* line 44, ../scss/login.scss */
+.login-signup {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 50, ../scss/login.scss */
+.login-logo img {
+  cursor: pointer;
+  max-width: 171px;
+  padding: 23px 15px 22px;
+  width: 100%;
+}
+
+/* line 57, ../scss/login.scss */
+.login-header .navbar-right {
+  margin-right: 0px;
+}
+
+/* line 61, ../scss/login.scss */
+.login-header .nav-tabs > li.active > a, .login-header .nav-tabs > li.active > a:focus,
+.login-header .nav-tabs > li.active > a:hover {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+/* line 68, ../scss/login.scss */
+.login-header .nav-tabs > li > a {
+  border: medium none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 48px;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+/* line 78, ../scss/login.scss */
+.login-header .nav-tabs {
+  border-bottom: none;
+}
+
+/* line 82, ../scss/login.scss */
+.login-header .nav-tabs > li {
+  margin-bottom: 0px;
+}
+
+/* line 86, ../scss/login.scss */
+.login-header .nav > li > a:focus, .login-header .nav > li > a:hover {
+  background: none;
+  text-decoration: none;
+}
+
+/* line 91, ../scss/login.scss */
+.login-header .nav-tabs > li.active {
+  border-bottom: 6px solid #5584ff;
+}
+
+/* line 95, ../scss/login.scss */
+.login-inner h3 {
+  color: #8492af;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* line 103, ../scss/login.scss */
+.login-inner h3 span {
+  color: #5584ff;
+}
+
+/* line 107, ../scss/login.scss */
+.login-form {
+  text-align: center;
+}
+
+/* line 111, ../scss/login.scss */
+.login-form input {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: transparent none repeat scroll 0 0;
+  border-color: -moz-use-text-color -moz-use-text-color #d4d9e3;
+  border-image: none;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  font-size: 13px;
+  font-weight: 300;
+  width: 100%;
+  color: #8492af;
+  padding: 5px 47px;
+  font-size: 17px;
+  max-width: 550px;
+}
+
+/* line 130, ../scss/login.scss */
+.login-form label {
+  margin-bottom: 30px;
+  width: 72%;
+}
+
+/* line 135, ../scss/login.scss */
+.form-details .input-group {
+  width: 72%;
+}
+
+/* line 139, ../scss/login.scss */
+.login-userinput {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* line 145, ../scss/login.scss */
+.user input {
+  background: transparent url("http://jskrishna.com/work/merkury/images/user.png") no-repeat scroll 7px 12px;
+}
+
+/* line 151, ../scss/login.scss */
+.pass input {
+  background: transparent url("http://jskrishna.com/work/merkury/images/password.png") no-repeat scroll 7px 12px;
+}
+
+/* line 157, ../scss/login.scss */
+.mail input {
+  background: transparent url("http://jskrishna.com/work/merkury/images/mail.png") no-repeat scroll 4px 12px;
+}
+
+/* line 163, ../scss/login.scss */
+.login-signup .tab-content {
+  background: #ffffff none repeat scroll 0 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  display: inline-block;
+  margin-top: -8px;
+  width: 100%;
+}
+
+/* line 171, ../scss/login.scss */
+.form-btn {
+  background: #0e1a35;
+  border: medium none;
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: 400;
+  max-width: 250px;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px #d2d2d2;
+  -moz-box-shadow: 0 2px 8px #d2d2d2;
+  -webkit-box-shadow: 0 2px 8px #d2d2d2;
+}
+
+/* line 189, ../scss/login.scss */
+.form-details {
+  padding: 35px 0;
+}
+
+/* line 193, ../scss/login.scss */
+.tab-content .tab-pane {
+  padding: 35px 0;
+}
+
+/*Login Signup Page*/
+@media only screen and (max-device-width: 767px) {
+  /* line 199, ../scss/login.scss */
+  .login-logo img {
+    margin: 0 auto;
+  }
+
+  /* line 202, ../scss/login.scss */
+  .login-details .nav-tabs > li {
+    text-align: center;
+    width: 50%;
+  }
+
+  /* line 206, ../scss/login.scss */
+  .login-signup .login-inner h3 {
+    font-size: 26px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  /* line 211, ../scss/login.scss */
+  .login-inner .login-form input {
+    font-size: 15px;
+    max-width: 100%;
+    padding: 15px 45px;
+  }
+
+  /* line 216, ../scss/login.scss */
+  .login-inner .form-details {
+    padding: 25px;
+  }
+
+  /* line 219, ../scss/login.scss */
+  .login-inner .login-form label {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /* line 223, ../scss/login.scss */
+  .login-inner .form-btn {
+    margin: 0;
+    max-width: 180px;
+  }
+
+  /* line 227, ../scss/login.scss */
+  .tab-content .tab-pane {
+    padding: 20px 0;
+  }
+
+  /* line 230, ../scss/login.scss */
+  #navigation .navi a {
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* line 235, ../scss/login.scss */
+  #navigation .navi i {
+    margin-right: 0px;
+  }
+
+  /* line 238, ../scss/login.scss */
+  #navigation .navi a:hover, #navigation .navi .active a {
+    background: #122143 none repeat scroll 0 0;
+    border-left: none;
+    display: block;
+    padding-left: 20px;
+  }
+
+  /* line 244, ../scss/login.scss */
+  header .header-top img {
+    max-width: 38px !important;
+  }
+
+  /* line 247, ../scss/login.scss */
+  .v-align header {
+    padding: 12px 15px;
+  }
+
+  /* line 250, ../scss/login.scss */
+  header .header-top li {
+    padding-left: 13px;
+    padding-right: 6px;
+  }
+
+  /* line 254, ../scss/login.scss */
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+
+  /* line 257, ../scss/login.scss */
+  .navbar-header .navbar-toggle {
+    float: left;
+    margin: 0;
+    padding: 0;
+    top: 12px;
+  }
+
+  /* line 263, ../scss/login.scss */
+  button, html [type="button"], [type="reset"], [type="submit"] {
+    outline: medium none;
+    background: #0e1a35;
+  }
+
+  /* line 267, ../scss/login.scss */
+  .user-dashboard .sales h2 {
+    color: #8492af;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    padding: 13px 0 0;
+  }
+
+  /* line 275, ../scss/login.scss */
+  .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 11px;
+  }
+
+  /* line 278, ../scss/login.scss */
+  .user-dashboard .sales button {
+    font-size: 11px;
+    padding-right: 23px;
+  }
+
+  /* line 282, ../scss/login.scss */
+  .user-dashboard .sales h2 {
+    font-size: 12px;
+  }
+
+  /* line 285, ../scss/login.scss */
+  .gutter {
+    padding: 0;
+  }
+}
+@media only screen and (max-device-width: 992px) {
+  /* line 291, ../scss/login.scss */
+  header .header-top li {
+    padding-left: 20px !important;
+    padding-right: 0;
+  }
+
+  /* line 295, ../scss/login.scss */
+  header .logo img {
+    max-width: 125px !important;
+  }
+}
+@media only screen and (min-device-width: 767px) and (max-device-width: 998px) {
+  /* line 302, ../scss/login.scss */
+  .user-dashboard .header-top {
+    padding-top: 5px;
+  }
+
+  /* line 305, ../scss/login.scss */
+  .user-dashboard .header-rightside {
+    display: inline-block;
+    float: left;
+    width: 100%;
+  }
+
+  /* line 310, ../scss/login.scss */
+  .user-dashboard .header-rightside .header-top img {
+    max-width: 41px !important;
+  }
+
+  /* line 313, ../scss/login.scss */
+  .user-dashboard .sales button {
+    font-size: 10px;
+  }
+
+  /* line 316, ../scss/login.scss */
+  .user-dashboard .btn.btn-secondary.btn-lg.dropdown-toggle > span {
+    font-size: 12px;
+  }
+
+  /* line 319, ../scss/login.scss */
+  .user-dashboard .sales h2 {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-device-width: 998px) and (max-device-width: 1350px) {
+  /* line 326, ../scss/login.scss */
+  #navigation .logo img {
+    max-width: 130px;
+    padding: 16px 0 17px;
+    width: 100%;
+  }
+}
