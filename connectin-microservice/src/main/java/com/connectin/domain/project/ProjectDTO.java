@@ -1,15 +1,21 @@
 package com.connectin.domain.project;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class ProjectDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String title;
 	private Date startDate;
 	private Date endDate;
 	private String functions;
 	private int teamSize;
+	private String imageUrl;
+	
 	/**
 	 * @param id
 	 * @param title
@@ -18,15 +24,24 @@ public class ProjectDTO implements Serializable{
 	 * @param functions
 	 * @param teamSize
 	 */
-	public ProjectDTO(int id, String title, Date startDate, Date endDate, String functions, int teamSize) {
+	public ProjectDTO(int id, String title, Date startDate, Date endDate, String functions, int teamSize, String imageUrl) {
 		super();
 		this.id = id;
+		this.imageUrl = imageUrl;
 		this.title = title;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.functions = functions;
 		this.teamSize = teamSize;
 	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	
 	/**
 	 * @return the id
 	 */

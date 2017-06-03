@@ -10,6 +10,9 @@
         <dependent-module archiveName="connectin-auth-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/connectin-auth/connectin-auth">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="connectin-domain-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/connectin-domain/connectin-domain">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="connectin-web"/>
         <property name="java-output-path" value="/connectin-web/target/classes"/>
     </wb-module>

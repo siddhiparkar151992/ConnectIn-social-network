@@ -16,7 +16,7 @@ import com.connectin.utils.Response;
 import com.connectin.utils.ResponseGenerator;
 
 @Service
-public class AccountServiceImpl implements PostService {
+public class AccountServiceImpl implements AccountService {
 
 	@Autowired
 	IAccountDao accountDao;

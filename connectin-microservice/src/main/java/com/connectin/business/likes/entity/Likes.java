@@ -22,6 +22,7 @@ import com.connectin.business.post.entity.Post;
 import com.connectin.business.user.entity.User;
 import com.connectin.common.entity.Category;
 import com.connectin.constants.Visibility;
+import com.connectin.domain.like.LikeType;
 
 
 @Table
@@ -48,7 +49,40 @@ public class Likes implements Serializable{
 	@JoinColumn(name= "user_id")
 	private User user;
 	
+	@Column(name="type", columnDefinition = "varchar(11)")
+	@Enumerated(EnumType.STRING)
+	private LikeType type;
 	
+	public Post getPostLike() {
+		return postLike;
+	}
+
+
+	public void setPostLike(Post postLike) {
+		this.postLike = postLike;
+	}
+
+
+	public Comment getComment() {
+		return comment;
+	}
+
+
+	public void setComment(Comment comment) {
+		this.comment = comment;
+	}
+
+
+	public LikeType getType() {
+		return type;
+	}
+
+
+	public void setType(LikeType type) {
+		this.type = type;
+	}
+
+
 	@Column(name="created_timestamp")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdTime;
@@ -89,46 +123,6 @@ public class Likes implements Serializable{
 	}
 
 
-//	@Override
-//	public String toString() {
-//		return "Likes [id=" + id + ", user=" + user + ", createdTime=" + createdTime + "]";
-//	}
-//
-//
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((createdTime == null) ? 0 : createdTime.hashCode());
-//		result = prime * result + id;
-//		result = prime * result + ((user == null) ? 0 : user.hashCode());
-//		return result;
-//	}
-//
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Likes other = (Likes) obj;
-//		if (createdTime == null) {
-//			if (other.createdTime != null)
-//				return false;
-//		} else if (!createdTime.equals(other.createdTime))
-//			return false;
-//		if (id != other.id)
-//			return false;
-//		if (user == null) {
-//			if (other.user != null)
-//				return false;
-//		} else if (!user.equals(other.user))
-//			return false;
-//		return true;
-//	}
 	
 	
 }

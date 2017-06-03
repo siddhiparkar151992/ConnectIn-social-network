@@ -3,45 +3,45 @@
  */
 package com.connectin.business.comments.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import org.jboss.logging.annotations.Pos;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.connectin.business.post.entity.Post;
+import com.connectin.business.comments.dao.ICommentsDao;
+import com.connectin.constants.Message;
 import com.connectin.domain.comments.CommentDTO;
-import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
+import com.connectin.utils.Response;
+import com.connectin.utils.ResponseGenerator;
 
 /**
  * @author Dell
  *
  */
-@Repository
-@Transactional
+
+@Service
 public class CommentsServiceImpl implements CommentService {
-
-	@PersistenceContext
-	EntityManager entityManager;
-
+	
+	@Autowired
+	private ICommentsDao commentsDao;
+	
+	@Autowired
+	ResponseGenerator<List<CommentDTO>> responseGenerator;
+	
 	@Override
-	public List<CommentDTO> getCommentsByPostId(int postId) throws ConnectinBaseException {
-		List<CommentDTO> comments = new ArrayList<>();
+	public Response<List<CommentDTO>> getCommentsByPostId(int postId) throws ConnectinBaseException {
+		List<CommentDTO> post = null;
 		try {
-			comments = (List<CommentDTO>) entityManager
-					.createQuery("select new com.connectin.domain.post.PostDTO(p.id,"
-							+ " p.categoryId.categoryName, p.visibility, p.tags, " + "p.createdTime) "
-							+ "from post p where p.user.id=:userId")
-					.setParameter("postId", postId).getResultList();
-			return comments;
-		} catch (Exception e) {
-			throw new ConnectinBaseException("Could not load posts!");
-
+			post = commentsDao.getCommentsByPost(postId);
+			
+			if(!post.equals(null)){
+				
+				return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, post);
+			}
+		} catch (ConnectinBaseException e) {
+			return responseGenerator.generateErrorResponse(e.getMessage(), Message.ERROR_CODE, post);
 		}
+		return null;
 	}
 }
