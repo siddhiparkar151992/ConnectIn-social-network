@@ -29,26 +29,38 @@ CREATE TABLE Category(
 	parent INT,
 	PRIMARY KEY (cat_id)
 );
-
-create table Post(
-	id varchar(16) primary key,
-	category_id int references Category(cat_id),
-	visibility varchar(12) default 'public' check(visibility in ('public','private','friends')),
-	tags varchar(300),
-	user_id int references User(user_id),
-	created_time datetime default  current_timestamp,
-	updatedTime datetime default  current_timestamp on update current_timestamp,
-	feed_id bigint references feeds(id)
-);
-
+CREATE TABLE `post` (
+  `visibility` varchar(12) DEFAULT 'public',
+  `tags` varchar(300) DEFAULT NULL,
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  
+  `category_id` int(11) DEFAULT NULL,
+  `feed_id` int(11) DEFAULT NULL,
+  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `text` varchar(3000) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_user_id` (`user_id`),
+  KEY `fk_category_id` (`category_id`),
+  KEY `fk_feed_id` (`feed_id`),
+  CONSTRAINT `post_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `post_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`cat_id`) ON DELETE CASCADE,
+  CONSTRAINT `post_ibfk_3` FOREIGN KEY (`feed_id`) REFERENCES `feeds` (`id`) ON DELETE CASCADE
+) 
 
 create table comments(
-	id int primary key AUTO_INCREMENT,
-	post_id varchar(16) references Post(id),
-	created_time datetime not null default current_timestamp,
-	posted_to int references User(id),
-	commentText text not null
-);
+id int primary key auto_increment,
+post_id int not null references post(id),
+text varchar(3000) not null,
+created_timestamp datetime default current_timestamp, 
+likes varhcar(3000),
+updated_timestamp datetime default current_timestamp on update current_timestamp,
+user_id int references user(id));
+
+create table likes(id int primary key auto_increment not null,
+user_id int references user(id), 
+created_timestamp datetime default current_timestamp);
 
 
 create table employment(

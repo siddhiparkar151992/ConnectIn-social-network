@@ -1,0 +1,384 @@
+@import url("//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+/* line 5, ../scss/storyline.scss */
+.container .feeds {
+  margin-left: 14px;
+}
+
+/* line 11, ../scss/storyline.scss */
+.feed-info .feed-stack {
+  padding: 5px;
+  color: #71747A;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+/* line 21, ../scss/storyline.scss */
+.feed-info .feed-more-comments {
+  padding: 9px;
+}
+/* line 25, ../scss/storyline.scss */
+.feed-info .feed-panel {
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25) !important;
+  padding: 20px 0 0;
+}
+/* line 28, ../scss/storyline.scss */
+.feed-info .feed-panel .feed-heading {
+  background-color: white !important;
+}
+/* line 32, ../scss/storyline.scss */
+.feed-info .feed-new-comment img {
+  border-radius: 100px;
+  float: left;
+  height: 40px;
+  margin: 0;
+  object-fit: cover;
+  width: 40px;
+}
+/* line 40, ../scss/storyline.scss */
+.feed-info .feed-comment {
+  font-size: 13px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+/* line 47, ../scss/storyline.scss */
+.feed-info .feed-comment .comment-text {
+  padding-left: 20px;
+  border-radius: 51px;
+}
+/* line 51, ../scss/storyline.scss */
+.feed-info .feed-more-comments {
+  padding: 9px;
+}
+/* line 54, ../scss/storyline.scss */
+.feed-info .feed-comment .time {
+  color: #9197A3;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+/* line 61, ../scss/storyline.scss */
+.feed-info .feed-comment p {
+  color: #4B4D53;
+}
+/* line 64, ../scss/storyline.scss */
+.feed-info .feed-comment img {
+  border-radius: 100px;
+  float: left;
+  height: 33px;
+  margin: 0;
+  object-fit: cover;
+  width: 33px;
+}
+/* line 73, ../scss/storyline.scss */
+.feed-info .feed-heading.content a {
+  color: #337ab7;
+  text-decoration: none;
+}
+/* line 77, ../scss/storyline.scss */
+.feed-info .feed-status p {
+  margin: 0;
+}
+/* line 81, ../scss/storyline.scss */
+.feed-info .feed-comments {
+  padding: 0 !important;
+}
+/* line 84, ../scss/storyline.scss */
+.feed-info .feed-comments .list-group-item {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  /* padding: 0; */
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 91, ../scss/storyline.scss */
+.feed-info .feed-comments .list-group {
+  margin: 0;
+}
+/* line 94, ../scss/storyline.scss */
+.feed-info .feed-stack {
+  padding: 5px;
+  color: #71747A;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+/* line 105, ../scss/storyline.scss */
+.feed-info .feed-likes {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 111, ../scss/storyline.scss */
+.feed-info .feed-likes > .row > span {
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 2px 0 0;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 118, ../scss/storyline.scss */
+.feed-info .cfeed-likes > .row:first-child {
+  float: left;
+  width: 60%;
+}
+/* line 122, ../scss/storyline.scss */
+.feed-info .feed-likes > .row:last-child {
+  float: left;
+  text-align: end;
+  width: 40%;
+}
+/* line 127, ../scss/storyline.scss */
+.feed-info .feed-likes > .row:first-child > span:nth-child(4) {
+  background: #4D679F;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0 8px 0 6px;
+}
+/* line 133, ../scss/storyline.scss */
+.feed-info .feed-likes > .row:first-child > span:nth-child(4) > a {
+  color: #FFF;
+}
+/* line 136, ../scss/storyline.scss */
+.feed-info .feed-likes > .row:first-child > span,
+.feed-info .feed-likes > .row:last-child > span {
+  color: #9197A3;
+}
+/* line 140, ../scss/storyline.scss */
+.feed-info .feed-likes > .row:last-child > span {
+  display: inline-block;
+  verrtical-align: middle;
+}
+/* line 144, ../scss/storyline.scss */
+.feed-info .feed-likes > .row img {
+  border-radius: 100px;
+  height: 28px;
+  object-fit: cover;
+  width: 28px;
+}
+
+/* line 152, ../scss/storyline.scss */
+.container {
+  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+}
+
+/* line 156, ../scss/storyline.scss */
+.menu {
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+  font-size: 12pt;
+}
+
+/* line 162, ../scss/storyline.scss */
+.toggle, .mainmenu, .search, .social, .user {
+  float: left;
+}
+
+/* line 166, ../scss/storyline.scss */
+.search, .social, .user {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* line 171, ../scss/storyline.scss */
+.menuright {
+  float: right;
+  color: #C5CDD0;
+}
+/* line 175, ../scss/storyline.scss */
+.menuright a {
+  color: #C5CDD0;
+  transition: 0.3s;
+}
+/* line 176, ../scss/storyline.scss */
+.menuright a:hover, .menuright a.active {
+  color: #57CBC8;
+}
+
+/* line 179, ../scss/storyline.scss */
+.toggle {
+  width: 60px;
+  font-size: 20pt;
+  text-align: center;
+  background: #57CBC8;
+  color: #fff;
+}
+
+/* line 187, ../scss/storyline.scss */
+.mainmenu {
+  margin-left: 10px;
+}
+/* line 190, ../scss/storyline.scss */
+.mainmenu a {
+  text-decoration: none;
+  color: #475258;
+  transition: 0.3s;
+}
+/* line 191, ../scss/storyline.scss */
+.mainmenu a:hover {
+  color: #57CBC8;
+}
+/* line 192, ../scss/storyline.scss */
+.mainmenu li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/* line 196, ../scss/storyline.scss */
+.search input {
+  display: none;
+  border: 1px solid #C5CDD0;
+  padding: 5px;
+  font-size: 12pt;
+  outline: none;
+}
+
+/* line 199, ../scss/storyline.scss */
+.social {
+  border-left: 1px solid #e1e5e7;
+  border-right: 1px solid #e1e5e7;
+}
+/* line 203, ../scss/storyline.scss */
+.social li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+/* line 206, ../scss/storyline.scss */
+.new-latest-container {
+  overflow: hidden;
+  margin-top: 1.5%;
+}
+
+/* line 211, ../scss/storyline.scss */
+.news-bar {
+  padding-bottom: 1.5%;
+  background: #fff;
+  color: #475258;
+}
+/* line 217, ../scss/storyline.scss */
+.news-bar .news-item {
+  padding: 6%;
+}
+/* line 221, ../scss/storyline.scss */
+.news-bar .news-content h4 {
+  font-size: medium;
+  color: #475258;
+}
+/* line 223, ../scss/storyline.scss */
+.news-bar .news-content span {
+  display: block;
+  margin-top: 6%;
+  color: #919fa7;
+  font-size: 8pt;
+}
+
+/* line 228, ../scss/storyline.scss */
+.content {
+  float: right;
+  width: 66.5%;
+  background: #fff;
+}
+
+/* line 234, ../scss/storyline.scss */
+.image {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+/* line 238, ../scss/storyline.scss */
+.image img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  display: block;
+  height: auto;
+  transition: 0.3s;
+}
+/* line 239, ../scss/storyline.scss */
+.image img:hover {
+  opacity: 0.8;
+}
+/* line 242, ../scss/storyline.scss */
+.image span {
+  background: #EA6060;
+  display: block;
+  position: absolute;
+  font-size: 16pt;
+  width: 20%;
+  color: #fff;
+  text-align: center;
+  padding: 20% 10% 2%;
+  transform: rotateZ(-45deg);
+  top: -25%;
+  left: -20%;
+  z-index: 1;
+}
+
+/* line 245, ../scss/storyline.scss */
+.feeds-status {
+  position: relative;
+  background: #fff;
+  padding: 18px;
+}
+/* line 250, ../scss/storyline.scss */
+.feeds-status .type {
+  display: block;
+  background: #57CBC8;
+  color: #fff;
+  font-size: 14pt;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+/* line 252, ../scss/storyline.scss */
+.feeds-status h1 {
+  font-size: 19pt;
+  color: #475258;
+  margin-bottom: 3%;
+}
+/* line 254, ../scss/storyline.scss */
+.feeds-status p {
+  line-height: 1.5em;
+  color: #999;
+  font-weight: 300;
+}
+/* line 256, ../scss/storyline.scss */
+.feeds-status a {
+  color: #EA6060;
+  text-decoration: none;
+  transition: 0.3s;
+}
+/* line 257, ../scss/storyline.scss */
+.feeds-status a:hover {
+  color: #9c1515;
+}
+
+/* line 261, ../scss/storyline.scss */
+.share {
+  margin-top: 5%;
+}
+/* line 264, ../scss/storyline.scss */
+.share li {
+  display: inline-block;
+  margin-right: 5%;
+  font-weight: 300;
+}
+/* line 266, ../scss/storyline.scss */
+.share a {
+  color: #999;
+  transition: 0.3s;
+}
+/* line 267, ../scss/storyline.scss */
+.share a i, .share a:hover {
+  color: #57CBC8;
+}

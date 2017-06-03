@@ -14,17 +14,15 @@ import com.connectin.authenticate.entity.Role;
 import com.connectin.authenticate.entity.User;
 import com.connectin.authenticate.entity.user.UserCred;
 import com.connectin.authenticate.entity.user.UserCredentials;
+import com.connectin.authenticate.service.AuthenticationManager;
 import com.connectin.authenticate.service.IAuthenticator;
 import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
 
 
 
 
-@Service
+@Service("userDetailsService")
 public class UserDetailServiceImpl implements UserDetailsService {
-	
-	@Autowired
-	private IAuthenticator authService;
 	
 	
 	public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
@@ -37,8 +35,5 @@ public class UserDetailServiceImpl implements UserDetailsService {
         return user;
         
 	}
-	
-	public HashMap<String,UserCredentials> authenticate(String id, String password) throws InvalidCredentialsException, Exception{
-		return  authService.login(new UserCred(id, password));
-	}
+
 }
