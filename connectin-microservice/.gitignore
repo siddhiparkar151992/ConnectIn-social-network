@@ -21,3 +21,4 @@ connectin-microservice/target/**/*.properties
 *.iml
 /target
 _site/
+/bin/
