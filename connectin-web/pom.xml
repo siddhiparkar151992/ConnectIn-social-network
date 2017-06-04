@@ -5,7 +5,7 @@
 		<groupId>com.connectin</groupId>
 		<artifactId>connectin</artifactId>
 		<version>1.0</version>
-		
+
 	</parent>
 	<!-- <packaging>war</packaging> -->
 	<artifactId>connectin-web</artifactId>
@@ -18,17 +18,18 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.connectin</groupId>
+			<artifactId>connectin-config</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.connectin</groupId>
 			<artifactId>connectin-core</artifactId>
 			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.connectin</groupId>
 			<artifactId>connectin-auth</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.connectin</groupId>
-			<artifactId>connectin-config</artifactId>
 			<version>1.0</version>
 		</dependency>
 
@@ -38,7 +39,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>		
+			</plugin>
 		</plugins>
 	</build>
 </project>
