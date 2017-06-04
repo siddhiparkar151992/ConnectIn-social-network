@@ -2,12 +2,33 @@ package com.connectin.domain.like;
 
 import java.util.Date;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
 import com.connectin.domain.user.UserDTO;
 
 public class LikeDTO {
 	private int id;
 	private UserDTO user;
-	private Date createdDate;
+	private Date createdTime;
+	private LikeType type;
+	
+	public Date getCreatedTime() {
+		return createdTime;
+	}
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
+	
+	@Enumerated(EnumType.STRING)
+	public LikeType getType() {
+		return type;
+	}
+	
+	@Enumerated(EnumType.STRING)
+	public void setType(LikeType type) {
+		this.type = type;
+	}
 	public int getId() {
 		return id;
 	}
@@ -21,16 +42,16 @@ public class LikeDTO {
 		this.user = user;
 	}
 	public Date getCreatedDate() {
-		return createdDate;
+		return createdTime;
 	}
 	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+		this.createdTime = createdDate;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((createdDate == null) ? 0 : createdDate.hashCode());
+		result = prime * result + ((createdTime == null) ? 0 : createdTime.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
@@ -44,10 +65,10 @@ public class LikeDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		LikeDTO other = (LikeDTO) obj;
-		if (createdDate == null) {
-			if (other.createdDate != null)
+		if (createdTime == null) {
+			if (other.createdTime != null)
 				return false;
-		} else if (!createdDate.equals(other.createdDate))
+		} else if (!createdTime.equals(other.createdTime))
 			return false;
 		if (id != other.id)
 			return false;
@@ -58,11 +79,13 @@ public class LikeDTO {
 			return false;
 		return true;
 	}
-	public LikeDTO(int id, UserDTO user, Date createdDate) {
+	public LikeDTO(int id, int userId, String firstName,String lastName,
+			String email, Date createdDate, LikeType type) {
 		super();
 		this.id = id;
-		this.user = user;
-		this.createdDate = createdDate;
+		this.type = type;
+		this.user = new UserDTO(userId, firstName, lastName, email);
+		this.createdTime = createdDate;
 	}
 	
 	

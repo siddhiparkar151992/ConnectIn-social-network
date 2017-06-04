@@ -1,117 +1,80 @@
 package com.connectin.domain.profile;
 
 import java.io.Serializable;
+import java.util.List;
 
-import com.connectin.common.domain.Image;
-import com.connectin.domain.employmenthistory.EmploymentHistoryDTO;
-import com.connectin.domain.user.UserDTO;
+import com.connectin.domain.education.EducationDTO;
+import com.connectin.domain.employmenthistory.employment.EmploymentHistoryDTO;
 
 
 public class ProfileDTO implements Serializable{
-	private UserDTO user;
-	private EmploymentHistoryDTO empHistory;
-	private Image profileImage;
-	private Image coverImage;
-	/**
-	 * @param user
-	 * @param empHistory
-	 * @param profileImage
-	 * @param coverImage
-	 */
-	public ProfileDTO(UserDTO user, EmploymentHistoryDTO empHistory, Image profileImage, Image coverImage) {
-		super();
-		this.user = user;
-		this.empHistory = empHistory;
-		this.profileImage = profileImage;
-		this.coverImage = coverImage;
+	private int id;
+	private List<EmploymentHistoryDTO> empHistory;
+	private List<EducationDTO> eudcationalHistory;
+	private String profileImage;
+	private String coverImage;
+	private int totalExp;
+	private String address;
+	private String currentCompany;
+	
+	
+	public int getId() {
+		return id;
 	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#clone()
-	 */
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
-		return super.clone();
+	public void setId(int id) {
+		this.id = id;
 	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object arg0) {
-		// TODO Auto-generated method stub
-		return super.equals(arg0);
-	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#finalize()
-	 */
-	@Override
-	protected void finalize() throws Throwable {
-		// TODO Auto-generated method stub
-		super.finalize();
-	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
-	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
-	}
-	/**
-	 * @return the user
-	 */
-	public UserDTO getUser() {
-		return user;
-	}
-	/**
-	 * @param user the user to set
-	 */
-	public void setUser(UserDTO user) {
-		this.user = user;
-	}
-	/**
-	 * @return the empHistory
-	 */
-	public EmploymentHistoryDTO getEmpHistory() {
+	public List<EmploymentHistoryDTO> getEmpHistory() {
 		return empHistory;
 	}
-	/**
-	 * @param empHistory the empHistory to set
-	 */
-	public void setEmpHistory(EmploymentHistoryDTO empHistory) {
+	public void setEmpHistory(List<EmploymentHistoryDTO> empHistory) {
 		this.empHistory = empHistory;
 	}
-	/**
-	 * @return the profileImage
-	 */
-	public Image getProfileImage() {
+	public List<EducationDTO> getEudcationalHistory() {
+		return eudcationalHistory;
+	}
+	public void setEudcationalHistory(List<EducationDTO> eudcationalHistory) {
+		this.eudcationalHistory = eudcationalHistory;
+	}
+	public String getCurrentCompany() {
+		return currentCompany;
+	}
+	public void setCurrentCompany(String currentCompany) {
+		this.currentCompany = currentCompany;
+	}
+	public ProfileDTO(int id, String profileImage, String coverImage, int totalExp, String address,
+			String currentCompany) {
+		super();
+		this.id = id;
+		this.profileImage = profileImage;
+		this.coverImage = coverImage;
+		this.totalExp = totalExp;
+		this.address = address;
+		this.currentCompany = currentCompany;
+	}
+	public String getProfileImage() {
 		return profileImage;
 	}
-	/**
-	 * @param profileImage the profileImage to set
-	 */
-	public void setProfileImage(Image profileImage) {
+	public void setProfileImage(String profileImage) {
 		this.profileImage = profileImage;
 	}
-	/**
-	 * @return the coverImage
-	 */
-	public Image getCoverImage() {
+	public String getCoverImage() {
 		return coverImage;
 	}
-	/**
-	 * @param coverImage the coverImage to set
-	 */
-	public void setCoverImage(Image coverImage) {
+	public void setCoverImage(String coverImage) {
 		this.coverImage = coverImage;
+	}
+	public int getTotalExp() {
+		return totalExp;
+	}
+	public void setTotalExp(int totalExp) {
+		this.totalExp = totalExp;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 	

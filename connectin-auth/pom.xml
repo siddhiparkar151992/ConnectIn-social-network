@@ -20,10 +20,14 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>com.connectin</groupId>
-			<artifactId>connectin-config</artifactId>
+			<artifactId>connectin-core</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.connectin</groupId>
+			<artifactId>connectin-domain</artifactId>
 			<version>1.0</version>
 		</dependency>
 	</dependencies>

@@ -7,8 +7,9 @@ import com.connectin.business.post.entity.Post;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
+import com.connectin.utils.Response;
 
 public interface CommentService{
-	List<CommentDTO> getCommentsByPostId(int postId) throws ConnectinBaseException;
+	Response<List<CommentDTO>> getCommentsByPostId(int postId) throws ConnectinBaseException;
 	
 }
