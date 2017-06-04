@@ -1,3 +1,4 @@
+/**/*.classpath
 /connectin-web/target/*
 /connectin-auth/target/*
 /connectin-core/target/*
