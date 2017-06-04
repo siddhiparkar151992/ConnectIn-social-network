@@ -2,15 +2,10 @@
 /connectin-auth/target/*
 /connectin-core/target/*
 /connectin-config/target/*
-/connectin-demain/target/*
+/connectin-domain/target/*
+/connectin-microsrvice/target/*
 /target/*
-/connectin-microservice/target/**/*.lst
-*.classpath
-/connectin-microservice/target/**/*.java
-connectin-microservice/target/**/*.properties
-
 .settings/*
-**/target/**
 **/*.class
 *.classpath
 .project
