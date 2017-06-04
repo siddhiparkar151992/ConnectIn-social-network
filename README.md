@@ -1,4 +1,4 @@
-# Connectin A Social network for anyone and everyone [![Build Status]]
+# Connectin A Social network for anyone and everyone
 
 ## A Social network application form users who wish to enlarge their social life with friends connected throughout the world
 
