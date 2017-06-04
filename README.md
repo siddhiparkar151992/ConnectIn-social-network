@@ -1,40 +1,58 @@
-#Connectin A Social network for everyone to connect with their loved ones.
+# Connectin A Social network for anyone and everyone [![Build Status]]
 
-Includes  interdependent maven projects to package it into one Connectin Spring boot project.
-Following application will provide user to create or manage account for social network ConnectIn.
-A comprehensive project which constitues of latest technologies like spring-boot , Angular 2 and BootStrap.
-A responsive UI along with user friendly views and functions on views.
+## A Social network application form users who wish to enlarge their social life with friends connected throughout the world
+
+## Technology Stack
+Includes interdependent maven projects to package it into one Connectin Spring boot project. Following application will provide user to create or manage account for social network ConnectIn. A comprehensive project which constitues of latest technologies like spring-boot , Angular 2 and BootStrap. A responsive UI along with user friendly views and functions on views.
+
+## Application 
+* Application Architecture
+	For modularity web services have been packaged in connectin-microservice package which focuses on Sr principle of handling RestAPI and transactions with database.
+	UI code has been seperated into another project names connectin-web which focuses on login and other view rendring with security.
+	Authentication has been a part of connectin-auth of whcih sole purpose is Two way authentication to UI and RestAPI's.
 
 * Security
+	For security pusrpose authentication has been added using spring security.
+	The application manages security of users with statelessness and two way token generation using JWt token based authentication.
 
+* Modularity
+    The code has been following with strict guidelines and naming conventions according to airbnb
 
-To get the code:
-
-Clone the repository:
+## Running Connectin locally
 ```
-    $ git clone git://github.com/SpringSource/spring-mvc-showcase.git
+	git clone https://github.com/siddhiparkar151992/ConnectIn.git
+	cd connectin
+	mvn clean install
+	(for running UI application)
+	cd connectin-web
+	mvn clean spring-boot:run
+
 ```
-If this is your first time using Github, review http://help.github.com to learn the basics.
 
-To run the application:
 
-From the command line with Maven:
+
+## Database configuration
+
+In its default configuration, Connectin uses an MySQL database and Redis for caching to some extent.
+gets populated at startup with data. A similar setup is provided for MySql in case a persistent database configuration is needed.
+Note that whenever the database type is changed, the application.properties file needs to be updated and the mysql-connector-java artifact from the pom.xml needs to be uncommented.
+
+for creating database configrations run database.sql file at root folder
+
+## Working with ConnectIn in Eclipse/STS
+
+### prerequisites
+The following items should be installed in your system:
+* Maven 3 (http://www.sonatype.com/books/mvnref-book/reference/installation.html)
+* git command line tool (https://help.github.com/articles/set-up-git)
+* Eclipse with the m2e plugin (m2e is installed by default when using the STS (http://www.springsource.org/sts) distribution of Eclipse)
+
+Note: when m2e is available, there is an m2 icon in Help -> About dialog.
+If m2e is not there, just follow the install process here: http://eclipse.org/m2e/download/
+
+
+### Steps:
+Inside Eclipse
 ```
-    $ cd spring-mvc-showcase
-    $ mvn tomcat7:run [-Dmaven.tomcat.port=<port no.>] (In case 8080 is busy] 
+File -> Import -> Maven -> Existing Maven project
 ```
-or
-
-In your preferred IDE such as SpringSource Tool Suite (STS) or IDEA:
-
-* Import spring-mvc-showcase as a Maven Project
-* Drag-n-drop the project onto the "SpringSource tc Server Developer Edition" or another Servlet 2.5 or > Server to run, such as Tomcat.
-
-Access the deployed web application at: http://localhost:8080/spring-mvc-showcase/
-
-Note:
--------------------
-
-This showcase originated from a [blog post](http://blog.springsource.com/2010/07/22/spring-mvc-3-showcase/) and was adapted into a SpringOne presentation called [Mastering MVC 3](http://www.infoq.com/presentations/Mastering-Spring-MVC-3).
-
-A screen cast showing the showcase in action is [available in QuickTime format](http://s3.springsource.org/MVC/mvc-showcase-screencast.mov).
