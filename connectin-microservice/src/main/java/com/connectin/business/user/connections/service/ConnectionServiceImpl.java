@@ -1,4 +1,4 @@
-package com.connectin.business.user.service;
+package com.connectin.business.user.connections.service;
 
 import java.util.List;
 
@@ -21,22 +21,19 @@ import com.connectin.utils.Response;
 import com.connectin.utils.ResponseGenerator;
 
 @Service
-public class UserServiceImpl implements UserService {
-
-	@Autowired
-	IUserDao userDao;
+public class ConnectionServiceImpl implements ConnectionService {
 	
 	@Autowired
 	private IConnectionsDao connectionDao;
 
 	@Autowired
-	ResponseGenerator<User> responseGenerator;
-	
+	ResponseGenerator<List<User>> responseGenerator;
+
 	@Override
-	public Response<User> getUser(String userName, String hashToken) {
-		User user = null;
+	public Response<List<User>> getConnectionsPerUser(int userId, String hashToken) {
+		List<User> user = null;
 		try {
-			user = userDao.getByName(userName);
+			user = connectionDao.getConnectionByUserId(userId);
 			
 			if(!user.equals(null)){
 				
@@ -48,8 +45,6 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 	
-	
-	
-	
+
 
 }

@@ -9,5 +9,6 @@ import com.connectin.exceptions.ConnectinBaseException;
 
 public interface IPostDao{
 	List<PostDTO> getPostsByUser(int userId) throws ConnectinBaseException;
+	List<PostDTO> getPostsByFeed(int[] connections) throws ConnectinBaseException;
 	
 }

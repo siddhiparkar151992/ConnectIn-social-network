@@ -1,3 +1,7 @@
+create table connections(id int(255) primary key not null auto_increment,conn_id int(255) references user(id) user_id int(255) references user(id));
+insert into user(firstName, lastName, email, gender, birthdate, user_name) values('gaurang', 'Raote','gaurang@gmail.com','m','1990-06-26', 'gra
+ote_123');
+insert into connections(user_id, conn_id) values(1,2);
 insert into post(category_id, visibility, tags, user_id,feed_id, text) values(2, 'friends', 'trending,news,weekend',1, 1101, 'Weekend had fun with my lovelies');
 insert into feeds(feedType) values('user_feed');
 

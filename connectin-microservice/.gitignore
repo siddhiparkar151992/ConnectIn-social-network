@@ -18,7 +18,6 @@ connectin-microservice/target/**/*.properties
 *.prefs
 .idea
 *.class
-/connectin-microservice/target/**/*.class
 *.iml
 /target
 _site/

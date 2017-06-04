@@ -1,12 +1,12 @@
 package com.connectin.domain.feed;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import com.connectin.domain.post.PostDTO;
 
 public class FeedDTO {
-	private long id;
+	private int id;
 	private Date createdDate;
 	private Date updatedDate;
 	private FeedType feedType;
@@ -18,13 +18,23 @@ public class FeedDTO {
 	 * @param feedType
 	 * @param posts
 	 */
-	public FeedDTO(long id, Date createdDate, Date updatedDate, FeedType feedType, List<PostDTO> posts) {
+	public FeedDTO(int id, Date createdDate, Date updatedDate, FeedType feedType, List<PostDTO> posts) {
 		super();
 		this.id = id;
 		this.createdDate = createdDate;
 		this.updatedDate = updatedDate;
 		this.feedType = feedType;
 		this.posts = posts;
+	}
+	public FeedDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	public FeedDTO(int id, Date createdDate, Date updatedDate, FeedType feedType) {
+		super();
+		this.id = id;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
+		this.feedType = feedType;
 	}
 	/**
 	 * @return the id
@@ -35,7 +45,7 @@ public class FeedDTO {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	/**
