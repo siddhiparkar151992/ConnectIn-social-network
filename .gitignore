@@ -1,5 +1,6 @@
 /**/*.classpath
 /connectin-web/target/*
+/connectin-web/node_modules/*
 /connectin-auth/target/*
 /connectin-core/target/*
 /connectin-config/target/*
