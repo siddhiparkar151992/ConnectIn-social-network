@@ -9,4 +9,5 @@ import com.connectin.exceptions.ConnectinBaseException;
 
 public interface IPostManager {
 	public List<PostDTO> populatePosts(int userId) throws ConnectinBaseException;
+	public List<PostDTO> getPostsForUserFeed(int[] connections) throws ConnectinBaseException;
 }

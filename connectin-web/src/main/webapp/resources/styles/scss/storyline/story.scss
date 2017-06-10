@@ -1,5 +1,15 @@
 
 .component-post {
+  .icon-visibility{
+    float: right;
+    font-size: medium;
+  }
+  .img-user{
+    border-radius: 100px;
+    height: 28px;
+    object-fit: cover;
+    width: 28px;
+  }
   position: relative;
   background: #fff;
   padding: 18px;

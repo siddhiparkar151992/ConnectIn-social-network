@@ -1,4 +1,5 @@
-<div>
+<div class="no-user-feed" *ngIf="!userFeed">No user feed found</div>
+<div *ngIf="userFeed">
 	<div class="storyline container">
 		<div class="row">
 			<news-feed class="storyline-component news-feed"></news-feed>
@@ -8,19 +9,7 @@
                 <div class="panel-body">
                     <span>
                        
-                        <div class="storyline-component visibility-dropdown dropdown pull-right">
-                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Friends
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Familly</a></li>
-                                <li><a href="#"><i class="fa fa-fw fa-check" aria-hidden="true"></i> Friends</a></li>
-                                <li><a href="#">Work</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="fa fa-fw fa-plus" aria-hidden="true"></i> Add a new aspect</a></li>
-                            </ul>
-                        </div>
+                        <dropdown></dropdown>
                     </span>
                     <br><br>
                    <hr>
@@ -37,7 +26,10 @@
                    
                 </div>
             </div>
-			<story-card class="storyline-component story-card"></story-card>
+            <div *ngFor="#p of userFeed.posts">
+                <story-card [post]='p' class="storyline-component story-card"></story-card>
+                
+            </div>
 			</div>
 		</div>
 	</div>

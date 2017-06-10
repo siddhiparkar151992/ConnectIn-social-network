@@ -27,13 +27,7 @@ public class PostManagerImpl implements IPostManager {
 	@Override
 	public List<PostDTO> populatePosts(int userId) throws ConnectinBaseException{
 		List<PostDTO> posts = postDao.getPostsByUser(userId);
-		for(PostDTO post: posts ){
-			List<CommentDTO> comments = this.getCommentsByPost(post.getId());
-			List<LikeDTO> likes = this.getLikesPerPost(post.getId());
-			post.setLikes(likes);
-			post.setComments(comments);
-		}
-		return posts;
+		return this.populatePostWithComments(posts);
 	}
 	
 	private List<CommentDTO> getCommentsByPost(int postId) throws ConnectinBaseException{
@@ -45,5 +39,21 @@ public class PostManagerImpl implements IPostManager {
 	private List<LikeDTO> getLikesPerPost(int postId) throws ConnectinBaseException{
 		List<LikeDTO> likes = likesDao.getLikesbyPost(postId);
 		return likes;
+	}
+	
+	private List<PostDTO> populatePostWithComments(List<PostDTO> posts) throws ConnectinBaseException{
+		for(PostDTO post: posts ){
+			List<CommentDTO> comments = this.getCommentsByPost(post.getId());
+			List<LikeDTO> likes = this.getLikesPerPost(post.getId());
+			post.setLikes(likes);
+			post.setComments(comments);
+		}
+		return posts;
+	}
+	@Override
+	public List<PostDTO> getPostsForUserFeed(int[] connections) throws ConnectinBaseException {
+		List<PostDTO> posts = postDao.getPostsByFeed(connections);
+		return this.populatePostWithComments(posts);
+		
 	}
 }

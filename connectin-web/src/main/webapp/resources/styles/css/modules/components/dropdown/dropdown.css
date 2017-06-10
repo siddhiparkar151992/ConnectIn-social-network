@@ -1,0 +1,23 @@
+/* line 1, ../../../../scss/modules/components/dropdown/dropdown.scss */
+.dropdown {
+  font-size: medium;
+}
+
+/* line 4, ../../../../scss/modules/components/dropdown/dropdown.scss */
+.dropdown-selected {
+  background-color: #121025 !important;
+}
+
+/* line 8, ../../../../scss/modules/components/dropdown/dropdown.scss */
+.dropdown-menu {
+  background-color: #121025;
+}
+/* line 11, ../../../../scss/modules/components/dropdown/dropdown.scss */
+.dropdown-menu li a {
+  color: white;
+}
+/* line 13, ../../../../scss/modules/components/dropdown/dropdown.scss */
+.dropdown-menu li a:hover {
+  background-color: #121025;
+  color: white;
+}

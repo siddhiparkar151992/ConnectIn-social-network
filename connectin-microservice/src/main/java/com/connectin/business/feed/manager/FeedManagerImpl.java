@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.connectin.business.feed.dao.IFeedDao;
 import com.connectin.business.post.dao.IPostDao;
+import com.connectin.business.post.manager.IPostManager;
 import com.connectin.business.user.connections.dao.IConnectionsDao;
 import com.connectin.business.user.entity.User;
 import com.connectin.domain.feed.FeedDTO;
@@ -24,7 +25,7 @@ public class FeedManagerImpl implements IFeedManager{
 	private IConnectionsDao connectionDao;
 	
 	@Autowired
-	private IPostDao postDao;
+	private IPostManager postManager;
 	
 	@Override
 	public FeedDTO getFeedByUser(int userId) throws ConnectinBaseException {
@@ -34,7 +35,7 @@ public class FeedManagerImpl implements IFeedManager{
 		for(User user: connections){
 			userIds[userIds.length-1] = user.getId();
 		}
-		List<PostDTO> posts = postDao.getPostsByFeed(userIds);
+		List<PostDTO> posts = postManager.getPostsForUserFeed(userIds);
 		feed.setPosts(posts);
 		return feed;
 	}

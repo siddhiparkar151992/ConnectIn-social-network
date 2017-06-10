@@ -1,12 +1,14 @@
 		<div class="story-card component-post">
 					
 
-					<h1>What is the meaning of life?</h1>
+					<h3><img class="img img-responsive img-circle img-user" src="http://goo.gl/vswgSn" alt="" />
+						Ayesha Thakur posted on {{post.createdTime}}
+						<i *ngIf="post.visibility=='public'" class="icon-visibility fa fa-globe"></i>
+						<i *ngIf="post.visibility=='friends'" class="icon-visibility fa fa-users"></i>
+						<i *ngIf="post.visibility=='me'" class="icon-visibility fa fa-lock"></i>
+					</h3>
 					<p>
-						Life is beautiful but not always easy, it has problems, too, and the challenge lies in facing them with courage, letting the beauty of life act like a balm, which makes the pain bearable, during trying times, by providing hope
-
-
-Happiness, sorrow, victory, defeat, day-night are the two sides of the me coin. Similarly life is full of moments of joy, pleasure, success and comfort punctuated by misery, defeat, failures and problems. There is no human being on Earth, strong, powerful, wise or rich, who has not experienced, struggle, suffering or failure.... <a href="#">Read
+						{{post.text}}.... <a href="#">Read
 							more</a>
 					</p>
 
@@ -18,7 +20,7 @@ Happiness, sorrow, victory, defeat, day-night are the two sides of the me coin. 
 								<span><a href="#"><img src="http://goo.gl/oM0Y8G"
 										alt="" /></a></span> <span><a href="#"><img
 										src="http://goo.gl/vswgSn" alt="" /></a></span> <span><a href="#"><img
-										src="http://goo.gl/oM0Y8G" alt="" /></a></span> <span><a href="#">+99</a></span>
+										src="http://goo.gl/oM0Y8G" alt="" /></a></span> <span><a href="#">{{post.likes.length}}</a></span>
 								<span>Like this</span>
 							</div>
 							<div class="col-xs-4 pull-right post post-actions">
@@ -36,13 +38,13 @@ Happiness, sorrow, victory, defeat, day-night are the two sides of the me coin. 
 						</div>
 						<div class="panel-body post post-more-comments">
 							<span class="glyphicon glyphicon-comment"></span> <a
-								data-toggle="collapse" href="#collapse1"><span>145
+								data-toggle="collapse" href="#collapse1"><span>{{post.comments.length}}
 									comments</span></a>
 						</div>
 						<div id="collapse1"
 							class="panel-body panel-collapse collapse post post-comments ">
 							<ul class="list-group">
-								<li class="list-group-item">
+								<li *ngFor="#comment of post.comments" class="list-group-item">
 									<div class="post post-comment">
 										<div class="col-xs-6">
 											<div class="media">
@@ -53,7 +55,7 @@ Happiness, sorrow, victory, defeat, day-night are the two sides of the me coin. 
 												</div>
 												<div class="media-body">
 
-													<a href="">Emily Rudd</a>
+													<a href="">{{comment.firstName}} {{comment.lastName}} </a>
 													<div>
 														<span class="time"> 1 hr - </span><span
 															class="glyphicon glyphicon-thumbs-up"></span>
@@ -63,35 +65,11 @@ Happiness, sorrow, victory, defeat, day-night are the two sides of the me coin. 
 											</div>
 										</div>
 										<div class="col-xs-6">
-											<p>Wow irealy, i love here. Nice pic</p>
+											<p>comment.text</p>
 										</div>
 									</div>
 								</li>
-								<li class="list-group-item">
-									<div class="post post-comment">
-										<div class="col-xs-6">
-											<div class="media">
-												<div class="media-left">
-													<a href="#"> <img class="media-object image-responsive"
-														src="http://goo.gl/vswgSn" alt="...">
-													</a>
-												</div>
-												<div class="media-body">
-
-													<a href="">Emily Rudd</a>
-													<div>
-														<span class="time"> 1 hr - </span><span
-															class="glyphicon glyphicon-thumbs-up"></span>
-													</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6">
-											<p>Wow irealy, i love here. Nice pic</p>
-										</div>
-									</div>
-								</li>
+								
 							</ul>
 
 							<div class="panel-body post-new-comment">

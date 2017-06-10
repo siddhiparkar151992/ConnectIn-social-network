@@ -39,20 +39,20 @@
 			</beans:props>
 		</beans:property>
 	</beans:bean>
-	<!-- <beans:bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<beans:property name="location">
-			<beans:value>application.properties</beans:value>
-		</beans:property>
-	</beans:bean> -->
+	<!-- <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+		<beans:property name="location"> <beans:value>application.properties</beans:value> 
+		</beans:property> </beans:bean> -->
 
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<beans:property name="driverClassName" value="${Application.Database.MySql.DriverClassName}" />
+		<beans:property name="driverClassName"
+			value="${Application.Database.MySql.DriverClassName}" />
 		<beans:property name="url"
 			value="${Application.Database.MySql.Url}" />
-		<beans:property name="username" value="${Application.Database.MySql.Password}" />
-		<beans:property name="password" value="${Application.Database.MySql.Username}" />
+		<beans:property name="username"
+			value="${Application.Database.MySql.Password}" />
+		<beans:property name="password"
+			value="${Application.Database.MySql.Username}" />
 	</beans:bean>
 
 
@@ -64,5 +64,10 @@
 	<resources location="/resources/" mapping="/resources/**"></resources>
 	<resources location="/WEB-INF/static/" mapping="/static/**"></resources>
 	<tx:annotation-driven />
+	<cors>
 
+		<mapping path="/**" allowed-origins="*"
+			allowed-headers="Content-Type, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Authorization, X-Requested-With, requestId, Correlation-Id"
+			allowed-methods="GET, PUT, POST, DELETE" />
+	</cors>
 </beans:beans>
