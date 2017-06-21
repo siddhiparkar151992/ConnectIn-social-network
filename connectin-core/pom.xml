@@ -14,11 +14,5 @@
 	<artifactId>connectin-core</artifactId>
 	<name>connectin-core Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<dependencies>
-		<dependency>
-			<groupId>com.connectin</groupId>
-			<artifactId>connectin-domain</artifactId>
-			<version>1.0</version>
-		</dependency>
-	</dependencies>
+	
 </project>
