@@ -19,6 +19,7 @@
 	<context:component-scan base-package="com.connectin"></context:component-scan>
 
 	<beans:bean id="objectUtil" class="com.connectin.utils.ObjectUtil"></beans:bean>
+	<beans:bean id="authProvider" class="com.connectin.authenticate.security.provider.AuthProvider"></beans:bean>
 	<beans:bean id="stringUtil" class="com.connectin.utils.StringUtil"></beans:bean>
 
 	<beans:bean id="entityManagerFactoryBean"

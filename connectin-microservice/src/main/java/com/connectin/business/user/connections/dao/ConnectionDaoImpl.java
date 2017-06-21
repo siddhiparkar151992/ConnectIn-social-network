@@ -26,11 +26,11 @@ public class ConnectionDaoImpl implements IConnectionsDao {
 
 	@Override
 	public List<User> getConnectionByUserId(int userId) throws ConnectinBaseException {
-		List<User> posts = new ArrayList<>();
+		List<User> connections = new ArrayList<>();
 		try {
-			posts = (List<User>) entityManager.createQuery("select p.connection from Connection p where p.user.id=:userId")
+			connections = (List<User>) entityManager.createQuery("select p.connection from Connection p where p.user.id=:userId")
 					.setParameter("userId", userId).getResultList();
-			return posts;
+			return connections;
 		} catch (Exception e) {
 			throw new ConnectinBaseException("Could not load posts!");
 

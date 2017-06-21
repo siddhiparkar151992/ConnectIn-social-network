@@ -1,6 +1,8 @@
 package com.connectin.business.post.entity;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -28,143 +30,144 @@ import com.connectin.constants.Visibility;
 @Entity(name = "post")
 public class Post implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    
+    
+    @Id
+    @Column(name = "id")
+    private int id;
 
-	@Id
-	@Column(name = "id")
-	private int id;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User user;
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    private List<Comment> comments;
 
-	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-	private List<Comment> comments;
-	
-	@OneToMany(mappedBy = "postLike", cascade = CascadeType.ALL)
-	private List<Likes> likes;
-	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
+    @OneToMany(mappedBy = "postLike", cascade = CascadeType.ALL)
+    private List<Likes> likes;
 
-	@Enumerated(EnumType.STRING)
-	@Column(name = "visibility", columnDefinition = "varchar(12)")
-	private Visibility visibility;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
-	@Column(name = "tags")
-	private String tags;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "visibility", columnDefinition = "varchar(12)")
+    private Visibility visibility;
 
-	@Column(name = "created_time")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdTime;
+    @Column(name = "tags")
+    private String tags;
 
-	@Column(name = "updated_time")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date updatedTime;
+    @Column(name = "created_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdTime;
 
-	@ManyToOne
-	@JoinColumn(name = "feed_id")
-	private Feed feedId;
-	
-	@ManyToOne
-	@JoinColumn(name = "owner_id")
-	private User ownerId;
+    @Column(name = "updated_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedTime;
 
-	public User getOwnerId() {
-		return ownerId;
-	}
+    @ManyToOne
+    @JoinColumn(name = "feed_id")
+    private Feed feedId;
 
-	public void setOwnerId(User ownerId) {
-		this.ownerId = ownerId;
-	}
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User ownerId;
 
-	@Column(name = "text")
-	private String text;
+    public User getOwnerId() {
+        return ownerId;
+    }
 
-	public Feed getFeedId() {
-		return feedId;
-	}
+    public void setOwnerId(User ownerId) {
+        this.ownerId = ownerId;
+    }
 
-	public void setFeedId(Feed feedId) {
-		this.feedId = feedId;
-	}
+    @Column(name = "text")
+    private String text;
 
-	public int getId() {
-		return id;
-	}
+    public Feed getFeedId() {
+        return feedId;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setFeedId(Feed feedId) {
+        this.feedId = feedId;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setUser(User userId) {
-		this.user = userId;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public Category getCategoryId() {
-		return category;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public void setCategoryId(Category categoryId) {
-		this.category = categoryId;
-	}
+    public void setUser(User userId) {
+        this.user = userId;
+    }
 
-	@Enumerated(EnumType.STRING)
-	public Visibility getVisibility() {
-		return visibility;
-	}
+    public Category getCategoryId() {
+        return category;
+    }
 
-	@Enumerated(EnumType.STRING)
-	public void setVisibility(Visibility visibility) {
-		this.visibility = visibility;
-	}
+    public void setCategoryId(Category categoryId) {
+        this.category = categoryId;
+    }
 
-	public String getTags() {
-		return tags;
-	}
+    @Enumerated(EnumType.STRING)
+    public Visibility getVisibility() {
+        return visibility;
+    }
 
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
+    @Enumerated(EnumType.STRING)
+    public void setVisibility(Visibility visibility) {
+        this.visibility = visibility;
+    }
 
-	public Date getCreatedTime() {
-		return createdTime;
-	}
+    public String getTags() {
+        return tags;
+    }
 
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 
-	public Date getUpdatedTime() {
-		return updatedTime;
-	}
+    public Date getCreatedTime() {
 
-	public void setUpdatedTime(Date updatedTime) {
-		this.updatedTime = updatedTime;
-	}
+        return createdTime;
+    }
 
-	public Feed getFeed() {
-		return feedId;
-	}
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
 
-	public void setFeed(Feed feedId) {
-		this.feedId = feedId;
-	}
+    public Date getUpdatedTime() {
+        return updatedTime;
+    }
 
-	public String getText() {
-		return text;
-	}
+    public void setUpdatedTime(Date updatedTime) {
+        this.updatedTime = updatedTime;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public Feed getFeed() {
+        return feedId;
+    }
 
-	
+    public void setFeed(Feed feedId) {
+        this.feedId = feedId;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
 
 //	@Override
 //	public String toString() {
@@ -246,11 +249,11 @@ public class Post implements Serializable {
 //		return true;
 //	}
 
-	public List<Comment> getComments() {
-		return comments;
-	}
+    public List<Comment> getComments() {
+        return comments;
+    }
 
-	public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }

@@ -1,22 +1,30 @@
 package com.connectin.domain.like;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.connectin.config.AppConfig;
 import com.connectin.domain.user.UserDTO;
 
 public class LikeDTO {
+	@Autowired
+	private AppConfig appConfig;
 	private int id;
 	private UserDTO user;
-	private Date createdTime;
+	private String createdTime;
 	private LikeType type;
+	private DateFormat dateformat;
 	
-	public Date getCreatedTime() {
+	public String getCreatedTime() {
 		return createdTime;
 	}
-	public void setCreatedTime(Date createdTime) {
+	public void setCreatedTime(String createdTime) {
 		this.createdTime = createdTime;
 	}
 	
@@ -41,10 +49,10 @@ public class LikeDTO {
 	public void setUser(UserDTO user) {
 		this.user = user;
 	}
-	public Date getCreatedDate() {
+	public String getCreatedDate() {
 		return createdTime;
 	}
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(String createdDate) {
 		this.createdTime = createdDate;
 	}
 	@Override
@@ -82,10 +90,11 @@ public class LikeDTO {
 	public LikeDTO(int id, int userId, String firstName,String lastName,
 			String email, Date createdDate, LikeType type) {
 		super();
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
 		this.id = id;
 		this.type = type;
 		this.user = new UserDTO(userId, firstName, lastName, email);
-		this.createdTime = createdDate;
+		this.createdTime = dateformat.format(createdDate);
 	}
 	
 	

@@ -29,7 +29,7 @@ public class Image {
 	
 	@ManyToOne
 	@JoinColumn(name= "user_id")
-	private User userId;
+	private User user;
 	
 	@Column(name="type", columnDefinition = "varchar(20)")
 	@Enumerated(EnumType.STRING)
@@ -59,11 +59,11 @@ public class Image {
 	}
 
 	public User getUserId() {
-		return userId;
+		return user;
 	}
 
 	public void setUserId(User userId) {
-		this.userId = userId;
+		this.user = userId;
 	}
 	@Enumerated(EnumType.STRING)
 	public ImageOwnerType getType() {

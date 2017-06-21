@@ -39,7 +39,7 @@ public class CommentsDaoImpl implements ICommentsDao {
 			.setParameter("postId", postId).getResultList();
 			return posts;
 		} catch (Exception e) {
-			throw new ConnectinBaseException("Could not load posts!");
+			throw new ConnectinBaseException("Could not load comments!");
 
 		}
 	}

@@ -41,7 +41,7 @@ public class LikesDaoImpl implements ILikesDao {
 					.setParameter("likeType", LikeType.comment).getResultList();
 			return likes;
 		} catch (Exception e) {
-			throw new ConnectinBaseException("Could not load posts!");
+			throw new ConnectinBaseException("Could not load likes!");
 
 		}
 	}

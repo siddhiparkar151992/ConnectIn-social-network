@@ -1,14 +1,26 @@
 
 .component-post {
+  .component-header{
+    .post-header{
+      .sub-header{
+        font-size: small;
+        color: #5e5e5e;
+      }
+    }
+    .img-user{
+      float: left;
+    }
+    .icon-visibility{
+      float: right;
+      color: #757780;
+    }
+  }
   .icon-visibility{
     float: right;
     font-size: medium;
   }
   .img-user{
-    border-radius: 100px;
-    height: 28px;
-    object-fit: cover;
-    width: 28px;
+    width: 85px;
   }
   position: relative;
   background: #fff;

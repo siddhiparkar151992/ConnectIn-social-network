@@ -8,6 +8,7 @@
 /connectin-domain/target/*
 /connectin-microsrvice/target/*
 /target/*
+/connectin-web/src/main/webapp/resources/static/**/*.js
 .settings/*
 **/*.class
 *.classpath

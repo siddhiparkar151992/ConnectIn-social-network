@@ -1,16 +1,27 @@
 package com.connectin.domain.feed;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.connectin.config.AppConfig;
 import com.connectin.domain.post.PostDTO;
 
 public class FeedDTO {
+	
+	@Autowired
+	private AppConfig appConfig;
+	
 	private int id;
-	private Date createdDate;
-	private Date updatedDate;
+	private String createdDate;
+	private String updatedDate;
 	private FeedType feedType;
 	private List<PostDTO> posts;
+	
+	private DateFormat dateformat;
 	/**
 	 * @param id
 	 * @param createdDate
@@ -20,9 +31,10 @@ public class FeedDTO {
 	 */
 	public FeedDTO(int id, Date createdDate, Date updatedDate, FeedType feedType, List<PostDTO> posts) {
 		super();
+		dateformat = new SimpleDateFormat(appConfig.getDateFormat());
 		this.id = id;
-		this.createdDate = createdDate;
-		this.updatedDate = updatedDate;
+		this.createdDate = dateformat.format(createdDate);
+		this.updatedDate = dateformat.format(updatedDate);
 		this.feedType = feedType;
 		this.posts = posts;
 	}
@@ -31,9 +43,10 @@ public class FeedDTO {
 	}
 	public FeedDTO(int id, Date createdDate, Date updatedDate, FeedType feedType) {
 		super();
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
 		this.id = id;
-		this.createdDate = createdDate;
-		this.updatedDate = updatedDate;
+		this.createdDate = dateformat.format(createdDate);
+		this.updatedDate = dateformat.format(updatedDate);
 		this.feedType = feedType;
 	}
 	/**
@@ -51,25 +64,25 @@ public class FeedDTO {
 	/**
 	 * @return the createdDate
 	 */
-	public Date getCreatedDate() {
+	public String getCreatedDate() {
 		return createdDate;
 	}
 	/**
 	 * @param createdDate the createdDate to set
 	 */
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
 	/**
 	 * @return the updatedDate
 	 */
-	public Date getUpdatedDate() {
+	public String getUpdatedDate() {
 		return updatedDate;
 	}
 	/**
 	 * @param updatedDate the updatedDate to set
 	 */
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(String updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	/**

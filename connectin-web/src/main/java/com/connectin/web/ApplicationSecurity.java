@@ -53,7 +53,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 	private SimpleUrlAuthenticationSuccessHandler authenticationSuccessHandler;
 	
 	@Autowired
-	private AuthenticationProvider authProvider;
+	private AuthProvider authProvider;
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {

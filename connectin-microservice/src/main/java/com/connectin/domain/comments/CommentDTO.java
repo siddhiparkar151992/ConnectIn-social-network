@@ -1,23 +1,34 @@
 package com.connectin.domain.comments;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.connectin.config.AppConfig;
 import com.connectin.domain.like.LikeDTO;
 import com.connectin.domain.user.UserDTO;
 
 public class CommentDTO implements Serializable{
-
-	private Date createdTime;
+	
+	@Autowired
+	private AppConfig appConfig;
+	
+	private String createdTime;
 	private UserDTO user;
 	private String text;
 	private List<LikeDTO> likes;
 	private int id;
-	public Date getCreatedDate() {
+	
+	private DateFormat dateformat;
+	
+	public String getCreatedDate() {
 		return createdTime;
 	}
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(String createdDate) {
 		this.createdTime = createdDate;
 	}
 	public UserDTO getUser() {
@@ -39,8 +50,10 @@ public class CommentDTO implements Serializable{
 		this.likes = likes;
 	}
 	public CommentDTO(Date createdDate, UserDTO user, String text, List<LikeDTO> likes, int id) {
+		
 		super();
-		this.createdTime = createdDate;
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
+		this.createdTime = dateformat.format(createdDate);
 		this.user = user;
 		this.text = text;
 		this.likes = likes;
@@ -50,7 +63,8 @@ public class CommentDTO implements Serializable{
 	public CommentDTO(Date createdDate, int userId, String firstName,String lastName,
 			String email, String text, int id) {
 		super();
-		this.createdTime = createdDate;
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
+		this.createdTime = dateformat.format(createdDate);
 		this.text = text;
 		this.id = id;
 		
@@ -115,7 +129,7 @@ public class CommentDTO implements Serializable{
 	}
 	public CommentDTO(Date createdDate, UserDTO user, String text, int id) {
 		super();
-		this.createdTime = createdDate;
+		this.createdTime = dateformat.format(createdDate);
 		this.user = user;
 		this.text = text;
 		this.id = id;

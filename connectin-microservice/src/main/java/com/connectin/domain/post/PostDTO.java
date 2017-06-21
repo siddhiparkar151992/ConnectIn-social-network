@@ -1,32 +1,45 @@
 package com.connectin.domain.post;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import com.connectin.business.comments.entity.Comment;
-import com.connectin.common.domain.Category;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.connectin.business.user.entity.User;
+import com.connectin.config.AppConfig;
 import com.connectin.constants.Visibility;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
-import com.connectin.domain.user.UserDTO;
 
 public class PostDTO implements Serializable{
+	@Autowired
+	private AppConfig appConfig;
 	
 	private int id;
 	private String category;
 	private Visibility visibility;
 	private String tags;
 	private List<CommentDTO> comments;
-	private Date createdTime;
+	private String createdTime;
 	private List<LikeDTO> likes;
 	private String text;
+	private User user;
+	private DateFormat dateformat;
 	
-	public Date getCreatedTime() {
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public String getCreatedTime() {
 		return createdTime;
 	}
-	public void setCreatedTime(Date createdTime) {
+	public void setCreatedTime(String createdTime) {
 		this.createdTime = createdTime;
 	}
 	public String getText() {
@@ -40,25 +53,28 @@ public class PostDTO implements Serializable{
 		return "PostDTO [id=" + id + ", category=" + category + ", visibility=" + visibility + ", tags=" + tags
 				+ ", comments=" + comments + ", creadteDate=" + createdTime + ", likes=" + likes + "]";
 	}
-	public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text) {
+	public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text, User user) {
 		super();
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
 		this.id = id;
 		this.category = category;
 		this.visibility = visibility;
 		this.tags = tags;
-		this.createdTime = creadteDate;
+		this.createdTime = dateformat.format(creadteDate);
 		this.text = text;
+		this.user = user;
 	}
 	
 	public PostDTO(int id, String category, Visibility visibility, String tags, List<CommentDTO> comments,
 			Date creadteDate, List<LikeDTO> likes) {
 		super();
+		dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
 		this.id = id;
 		this.category = category;
 		this.visibility = visibility;
 		this.tags = tags;
 		this.comments = comments;
-		this.createdTime = creadteDate;
+		this.createdTime = dateformat.format(creadteDate);
 		this.likes = likes;
 	}
 	@Override
@@ -144,10 +160,10 @@ public class PostDTO implements Serializable{
 	public void setComments(List<CommentDTO> comments) {
 		this.comments = comments;
 	}
-	public Date getCreadteDate() {
+	public String getCreadteDate() {
 		return createdTime;
 	}
-	public void setCreadteDate(Date creadteDate) {
+	public void setCreadteDate(String creadteDate) {
 		this.createdTime = creadteDate;
 	}
 	public Collection getLikes() {

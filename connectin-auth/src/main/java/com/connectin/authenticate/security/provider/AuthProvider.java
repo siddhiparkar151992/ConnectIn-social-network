@@ -22,7 +22,7 @@ import com.connectin.authenticate.service.IAuthenticator;
 import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
 
  
-@Service
+@Service("authProvider")
 public class AuthProvider implements AuthenticationProvider{
  
 	@Autowired

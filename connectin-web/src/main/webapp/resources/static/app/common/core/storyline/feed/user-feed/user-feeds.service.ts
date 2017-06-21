@@ -16,7 +16,7 @@ export class UserFeedService{
 		this.urlConfigService = urlConfig;
 		this.headers = new Headers();
 		this.headers.append('Content-Type', 'application/json');
-		this.headers = new Headers({ 'Content-Type': 'text/json', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Origin': '*' });
+		this.headers = new Headers({ 'Content-Type': 'application/json'});
 		this.options = new RequestOptions({ headers: this.headers});
 	}
 
@@ -31,7 +31,7 @@ export class UserFeedService{
   //   }
 
 	getUserFeeds(userId){
-		return this.http.post(this.urlConfig.getUserFeedUrl() + '?userId='+userId, this.options)
+		return this.http.get(this.urlConfig.getUserFeedUrl() + '?userId='+userId)
             // .then(this.extractData)
             // .catch(this.handleErrorPromise);
 	}

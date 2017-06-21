@@ -2,17 +2,23 @@ package com.connectin.business.user.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 
 import org.hibernate.jpamodelgen.xml.jaxb.TemporalType;
 
+import com.connectin.business.comments.entity.Comment;
+import com.connectin.business.images.entity.Image;
 import com.connectin.common.domain.AccountAvailibility;
 import com.connectin.constants.Gender;
 import com.connectin.domain.account.AccountType;
@@ -25,6 +31,19 @@ public class User implements Serializable{
 	@Column(name="id")
 	private int id;
 	
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Image profileImage;
+
+	
+
+	public Image getImages() {
+		return profileImage;
+	}
+
+	public void setImages(Image images) {
+		this.profileImage = images;
+	}
+
 	@Column(name="firstName")
 	private String firstName;
 	
