@@ -17,12 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.connectin.authenticate.entity.AuthErrors;
 import com.connectin.authenticate.entity.Response;
+import com.connectin.authenticate.entity.User;
 import com.connectin.authenticate.entity.user.UserCred;
 import com.connectin.authenticate.entity.user.UserCredentials;
 import com.connectin.authenticate.service.IAuthenticator;
 import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
 import com.connectin.config.ApplicationConfig;
-import com.connectin.domain.user.User;
+
 
 
 @Controller
