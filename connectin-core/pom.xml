@@ -14,7 +14,7 @@
 	<artifactId>connectin-core</artifactId>
 	<name>connectin-core Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -27,5 +27,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 </project>

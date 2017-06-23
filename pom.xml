@@ -153,7 +153,7 @@
 					<target>${java-version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 
@@ -164,8 +164,8 @@
                         <goals><goal>copy-dependencies</goal></goals>
                     </execution>
                 </executions>
-            </plugin>
-			<plugin>
+            </plugin> -->
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 				
@@ -178,7 +178,7 @@
 				<configuration>
 					<skip>true</skip>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
