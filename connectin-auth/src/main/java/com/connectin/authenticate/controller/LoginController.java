@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 import javax.persistence.NoResultException;
 
-import org.apache.catalina.core.ApplicationFilterConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

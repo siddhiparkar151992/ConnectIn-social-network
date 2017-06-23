@@ -9,7 +9,7 @@
 		<version>1.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	 <packaging>jar</packaging>
+	<packaging>jar</packaging>
 	<artifactId>connectin-auth</artifactId>
 	<name>connectin-auth Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -30,22 +30,7 @@
 			<artifactId>connectin-core</artifactId>
 			<version>1.0</version>
 		</dependency>
-		
+
 	</dependencies>
-	<build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 </project>
