@@ -81,7 +81,7 @@
 												id="password">
 											</label>
 										</div>
-										<button type="submit" class="form-btn">Login</button>
+										<button type="submit" class="form-btn">Register</button>
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 												name="password" placeholder="Password" id="password">
 											</label>
 										</div>
-										<button type="submit" class="form-btn">Register</button>
+										<button type="submit" class="form-btn">Login</button>
 									</div>
 								</form>
 							</div>
