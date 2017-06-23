@@ -333,3 +333,51 @@
 2017-06-23T18:26:32.444036+00:00 heroku[web.1]: State changed from starting to crashed
 2017-06-23T18:26:42.418957+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sleepy-wave-95325.herokuapp.com request_id=6adcc398-69eb-4d21-b45f-755072042f81 fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
 2017-06-23T18:26:43.593701+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sleepy-wave-95325.herokuapp.com request_id=c87460e3-450d-4f0b-8334-a22197447182 fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:29:48.394540+00:00 heroku[web.1]: State changed from crashed to starting
+2017-06-23T18:29:58.672432+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=15370 -jar connectin-web/target/connectin-web-1.0.jar -Dspring.datasource.url`
+2017-06-23T18:30:01.821390+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2017-06-23T18:30:02.034620+00:00 app[web.1]: Error: A JNI error has occurred, please check your installation and try again
+2017-06-23T18:30:01.827444+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xss512k -Dfile.encoding=UTF-8
+2017-06-23T18:30:02.035845+00:00 app[web.1]: Exception in thread "main" java.lang.NoClassDefFoundError: org/springframework/security/core/userdetails/UserDetailsService
+2017-06-23T18:30:02.036074+00:00 app[web.1]: 	at java.lang.Class.getDeclaredMethods0(Native Method)
+2017-06-23T18:30:02.036208+00:00 app[web.1]: 	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+2017-06-23T18:30:02.036282+00:00 app[web.1]: 	at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+2017-06-23T18:30:02.036427+00:00 app[web.1]: 	at java.lang.Class.getMethod(Class.java:1784)
+2017-06-23T18:30:02.036349+00:00 app[web.1]: 	at java.lang.Class.getMethod0(Class.java:3018)
+2017-06-23T18:30:02.036567+00:00 app[web.1]: 	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:526)
+2017-06-23T18:30:02.036499+00:00 app[web.1]: 	at sun.launcher.LauncherHelper.validateMainClass(LauncherHelper.java:544)
+2017-06-23T18:30:02.036746+00:00 app[web.1]: Caused by: java.lang.ClassNotFoundException: org.springframework.security.core.userdetails.UserDetailsService
+2017-06-23T18:30:02.037489+00:00 app[web.1]: 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+2017-06-23T18:30:02.037576+00:00 app[web.1]: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+2017-06-23T18:30:02.037650+00:00 app[web.1]: 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+2017-06-23T18:30:02.038182+00:00 app[web.1]: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+2017-06-23T18:30:02.038263+00:00 app[web.1]: 	... 7 more
+2017-06-23T18:30:02.181295+00:00 heroku[web.1]: Process exited with status 1
+2017-06-23T18:30:02.196158+00:00 heroku[web.1]: State changed from starting to crashed
+2017-06-23T18:30:05.381877+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sleepy-wave-95325.herokuapp.com request_id=c142218b-9f87-4082-b4d5-8d76ee04c687 fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:30:06.635316+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sleepy-wave-95325.herokuapp.com request_id=fbeb5ae2-03e0-4ff2-95c8-1621bbaccb9b fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:35:13.806224+00:00 heroku[web.1]: State changed from crashed to starting
+2017-06-23T18:35:17.377047+00:00 heroku[web.1]: Starting process with command `java -Dserver.port=9987 -jar connectin-web/target/connectin-web-1.0.jar -Dspring.datasource.url`
+2017-06-23T18:35:19.312957+00:00 heroku[web.1]: Process exited with status 1
+2017-06-23T18:35:19.160055+00:00 app[web.1]: Setting JAVA_TOOL_OPTIONS defaults based on dyno size. Custom settings will override them.
+2017-06-23T18:35:19.163479+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xss512k -Dfile.encoding=UTF-8
+2017-06-23T18:35:19.242648+00:00 app[web.1]: Exception in thread "main" java.lang.NoClassDefFoundError: org/springframework/security/core/userdetails/UserDetailsService
+2017-06-23T18:35:19.241974+00:00 app[web.1]: Error: A JNI error has occurred, please check your installation and try again
+2017-06-23T18:35:19.242782+00:00 app[web.1]: 	at java.lang.Class.getDeclaredMethods0(Native Method)
+2017-06-23T18:35:19.242850+00:00 app[web.1]: 	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+2017-06-23T18:35:19.242895+00:00 app[web.1]: 	at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+2017-06-23T18:35:19.242939+00:00 app[web.1]: 	at java.lang.Class.getMethod0(Class.java:3018)
+2017-06-23T18:35:19.242985+00:00 app[web.1]: 	at java.lang.Class.getMethod(Class.java:1784)
+2017-06-23T18:35:19.243031+00:00 app[web.1]: 	at sun.launcher.LauncherHelper.validateMainClass(LauncherHelper.java:544)
+2017-06-23T18:35:19.243077+00:00 app[web.1]: 	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:526)
+2017-06-23T18:35:19.243185+00:00 app[web.1]: Caused by: java.lang.ClassNotFoundException: org.springframework.security.core.userdetails.UserDetailsService
+2017-06-23T18:35:19.243272+00:00 app[web.1]: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+2017-06-23T18:35:19.243228+00:00 app[web.1]: 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+2017-06-23T18:35:19.243320+00:00 app[web.1]: 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+2017-06-23T18:35:19.243453+00:00 app[web.1]: 	... 7 more
+2017-06-23T18:35:19.243394+00:00 app[web.1]: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+2017-06-23T18:35:19.323795+00:00 heroku[web.1]: State changed from starting to crashed
+2017-06-23T18:36:35.106397+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sleepy-wave-95325.herokuapp.com request_id=6a1982e4-f175-4e28-8cc2-159e25deb5cc fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:36:36.351527+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sleepy-wave-95325.herokuapp.com request_id=afcdab85-6a05-4f72-84df-2b5a3bd60a9e fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:37:46.228489+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sleepy-wave-95325.herokuapp.com request_id=e821e979-31d7-43a9-ba68-4eac7790d769 fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
+2017-06-23T18:37:47.496948+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sleepy-wave-95325.herokuapp.com request_id=88e0b9d4-f0ec-42ac-968d-7ed19f7b7ad6 fwd="202.177.237.103" dyno= connect= service= status=503 bytes= protocol=https
