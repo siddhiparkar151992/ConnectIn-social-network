@@ -21,6 +21,7 @@
 <body>
 
 	<script type="text/javascript">
+	$('.datepicker').datepicker();
 		var login = function() {
 			var data = {};
 			$.ajax({
@@ -70,16 +71,31 @@
 								<div class="login-form">
 									<div onsubmit="login()">
 										<div class="form-details">
-											<label class="user"> <input type="text"
-												name="username" placeholder="Full Name" id="username">
-											</label> <label class="mail"> <input type="email" name="mail"
+											<label class="fname"> <input type="text"
+												name="fname" placeholder="First Name" id="fname-input">
+											</label>
+											<label class="lname"> <input type="text"
+												name="lname" placeholder="Last Name" id="lname-input">
+											</label>
+											<div class="input-group date" data-provide="datepicker">
+											    <input type="text" placeholder="birthdate" class="form-control">
+											    <div class="input-group-addon">
+											        <span class="glyphicon glyphicon-th"></span>
+											    </div>
+											</div>
+											 <label class="username"> <input type="username" name="username"
+												placeholder="Username" id="username">
+											</label> 
+											 <label class="mail"> <input type="email" name="mail"
 												placeholder="Email Address" id="mail">
 											</label> <label class="pass"> <input type="password"
 												name="passsword" placeholder="Password" id="password">
 											</label> <label class="pass"> <input type="password"
 												name="passsword" placeholder="Confirm Password"
 												id="password">
+
 											</label>
+
 										</div>
 										<button type="submit" class="form-btn">Register</button>
 									</div>

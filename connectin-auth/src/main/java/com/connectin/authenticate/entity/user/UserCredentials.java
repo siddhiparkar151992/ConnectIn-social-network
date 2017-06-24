@@ -29,7 +29,7 @@ public class UserCredentials implements Serializable{
 	private String userName;
 	
 	@Column(name="user_id")
-	private String userId;
+	private int userId;
 	
 	@Column(name="password")
 	private String password;

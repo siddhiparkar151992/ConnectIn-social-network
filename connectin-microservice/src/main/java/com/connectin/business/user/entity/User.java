@@ -50,7 +50,7 @@ public class User implements Serializable{
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", gender=" + gender + ", createdDate=" + createdDate + ", userName=" + userName + "]";
+				+ ", gender=" + gender + ", createdDate=" + birthDate + ", userName=" + userName + "]";
 	}
 
 	@Column(name="lastName")
@@ -64,9 +64,17 @@ public class User implements Serializable{
 	private Gender gender;
 	
 
+	public Image getProfileImage() {
+		return profileImage;
+	}
+
+	public void setProfileImage(Image profileImage) {
+		this.profileImage = profileImage;
+	}
+
 	@Column(name="birthDate")
 	@Temporal(javax.persistence.TemporalType.DATE)
-	private Date createdDate;
+	private Date birthDate;
 	
 	@Column(name="user_name")
 	private String userName;
@@ -112,11 +120,11 @@ public class User implements Serializable{
 	}
 
 	public Date getCreatedDate() {
-		return createdDate;
+		return birthDate;
 	}
 
 	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+		this.birthDate = createdDate;
 	}
 
 	public String getUserName() {
