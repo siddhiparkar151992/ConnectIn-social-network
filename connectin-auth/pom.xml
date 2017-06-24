@@ -32,6 +32,9 @@
 		</dependency>
 
 	</dependencies>
+	<build>
+		<finalName>connectin-auth</finalName>
+	</build>
 	<!-- <build>
 		<plugins>
 			<plugin>

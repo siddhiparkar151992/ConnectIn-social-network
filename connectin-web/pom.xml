@@ -34,18 +34,10 @@
 		</dependency>
 
 	</dependencies>
-	<!-- <build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-deploy</id>
-						<phase>deploy</phase>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build> -->
+	<build>
+		<finalName>connectin-web</finalName>
+	</build>
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-deploy-plugin</artifactId> <executions> <execution> <id>default-deploy</id> 
+		<phase>deploy</phase> </execution> </executions> </plugin> </plugins> </build> -->
 </project>

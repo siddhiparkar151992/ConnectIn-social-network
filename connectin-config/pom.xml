@@ -9,6 +9,9 @@
 	</parent>
 	<packaging>jar</packaging>
   <artifactId>connectin-config</artifactId>
+  <build>
+		<finalName>connectin-config</finalName>
+	</build>
  <!--  <build>
 		<plugins>
 			<plugin>
