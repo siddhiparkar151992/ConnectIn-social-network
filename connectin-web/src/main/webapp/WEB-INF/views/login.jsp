@@ -14,13 +14,21 @@
 <script type="text/javascript"
 	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="/resources/styles/css/login.css">
-<script type="text/javascript" src="/resources/js/vendor/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/css/bootstrap-datepicker.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 
 <body>
 
 	<script type="text/javascript">
+        $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+        });
+
 	$('.datepicker').datepicker();
 		var login = function() {
 			var data = {};
@@ -39,101 +47,87 @@
 			});
 		}
 	</script>
-	<div class="login-area">
+	
 
-		<div class="bg-image">
-			<div class="login-signup">
-				<div class="container">
-					<div class="login-header">
-						<div class="row">
-
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="login-details">
-									<ul class="nav nav-tabs navbar-right">
-										<li><a data-toggle="tab" href="#register">Register</a></li>
-										<li class="active"><a data-toggle="tab" href="#login">Login</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+		<div class="login-area bg-image">
 
 
-					</div>
+		<div class="row">
+            <div class="col-sm-4 col-sm-offset-4 login-page-container">
+            <ul  class="nav nav-tabs form-header">
+            <li class="tab-list item ">
+        		<a  class="tab-link login" href="#1a" data-toggle="tab">Register</a>
+			</li>
+			<li class="tab-list item active">
+        		<a  class="tab-link reg" href="#2a" data-toggle="tab">Login</a>
+			</li>
+			</ul>
+			<div class="tab-content">
+			  <div class="tab-pane" id="1a">
+			  	<form role="form">
+                    <label class="form-group float-label-control">
+                        
+                        <input type="text" class="input" placeholder="First Name">
+                    </label>
+                    <label class="form-group float-label-control">
 
-					<div class="tab-content">
-						<div id="register" class="tab-pane">
-							<div class="login-inner">
-								<div class="title">
-									<h3>
-										Sign <span>up!</span>
-									</h3>
-								</div>
-								<div class="login-form">
-									<div onsubmit="login()">
-										<div class="form-details">
-											<label class="fname"> <input type="text"
-												name="fname" placeholder="First Name" id="fname-input">
-											</label>
-											<label class="lname"> <input type="text"
-												name="lname" placeholder="Last Name" id="lname-input">
-											</label>
-											<div class="input-group date" data-provide="datepicker">
-											    <input type="text" placeholder="birthdate" class="form-control">
-											    <div class="input-group-addon">
-											        <span class="glyphicon glyphicon-th"></span>
-											    </div>
-											</div>
-											 <label class="username"> <input type="username" name="username"
-												placeholder="Username" id="username">
-											</label> 
-											 <label class="mail"> <input type="email" name="mail"
-												placeholder="Email Address" id="mail">
-											</label> <label class="pass"> <input type="password"
-												name="passsword" placeholder="Password" id="password">
-											</label> <label class="pass"> <input type="password"
-												name="passsword" placeholder="Confirm Password"
-												id="password">
+                        <input type="text" class="input" placeholder="Last Name">
+                    </label>
+                    <label class="form-group float-label-control">
+                        
+                         <input type="text" class="input" placeholder="Email">
+                    </label>
+                    <label class="form-group float-label-control">
+                        
+                        <input type="text" class="input" placeholder="Gender">
+                    </label>
+                    <label class="form-group float-label-control">
 
-											</label>
+                        <input type="text" class="input" placeholder="Birthdate">
+                    </label>
+                    <label class="form-group float-label-control">
+                        
+                         <input type="text" class="input" placeholder="Username">
+                    </label>
+                    <label class="form-group float-label-control">
+                        
+                         <input type="password" class="input" placeholder="Password">
+                    </label>
+                     <label class="form-group float-label-control">
+                        
+                         <input type="password" class="input" placeholder="Confirm Password">
+                    </label>
+                    <button type="button" class="btn-form btn btn-primary btn-lg">Register</button>
+                </form>
 
-										</div>
-										<button type="submit" class="form-btn">Register</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<c:url var="loginUrl" value="/login" />
+			  </div>
+                <c:url var="loginUrl" value="/login" />
+			  <div class="tab-pane active" id="2a" >
+                  <c:if test="${error!=null}">
+                      <div class="login-error alert alert-error"><strong>Error:
+                      </strong>${error}</div>
+                  </c:if>
+			  	<form role="form" action="/login" method="POST">
+                    <label class="form-group float-label-control">
+                        
+                        <input name="username" type="text" class="input" placeholder="Username">
+                    </label>
+                    <label class="form-group float-label-control">
 
-						<div id="login" class="tab-pane fade in active">
+                        <input name="password" type="password" class="input" placeholder="password">
+                    </label>
 
-							<div class="login-inner">
-								<c:if test="${error!=null}">
-									<div class="login-error alert alert-error"><strong>Error:
-										</strong>${error}</div>
-								</c:if>
-								<div class="title">
-									<h3>
-										Sign <span>in!</span>
-									</h3>
-								</div>
-								<form action="/login" method="POST" class="login-form">
-									<div>
-										<div class="form-details">
+                    <button type="submit" class="btn-form btn btn-primary btn-lg">Login</button>
+                </form>
 
-											<label class="pass"> <input type="text"
-												name="username" placeholder="User name" id="username">
-											</label> <label class="pass"> <input type="password"
-												name="password" placeholder="Password" id="password">
-											</label>
-										</div>
-										<button type="submit" class="form-btn">Login</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			  </div>
+			  </div>
+                
+                
+                </div>
+                </div>
+			
+
 		</div>
 	</div>
 
