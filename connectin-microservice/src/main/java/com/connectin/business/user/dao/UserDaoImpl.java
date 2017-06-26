@@ -1,5 +1,6 @@
 package com.connectin.business.user.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -86,6 +87,21 @@ public class UserDaoImpl extends DataAccessor<User> implements IUserDao {
 			return user;
 		} catch (Exception e) {
 			throw new ConnectinBaseException(Message.DATA_NOT_FOUND);
+		}
+	}
+
+	@Override
+	public void insertUserAuthenticationDetails(String userName, String password, Date lastLoggedIn, int userId) throws ConnectinBaseException {
+		try{
+			entityManager.
+			createNativeQuery("insert into UserCredentials(userName, userId,password,lastLoogedIn) "
+					+ "values(:userName,:userId,:password,:lastLoogedIn)")
+			.setParameter("userName", userName)
+			.setParameter("userId", userId)
+			.setParameter("password", password)
+			.setParameter("lastLoogedIn",lastLoggedIn).executeUpdate();
+		}catch(Exception e){
+			throw new ConnectinBaseException("Could not create user account! Please check for user data.");
 		}
 	}
 

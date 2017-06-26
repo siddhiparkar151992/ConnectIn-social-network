@@ -1,12 +1,16 @@
 package com.connectin.business.account.registration.service;
-
+import com.connectin.security.encypt.Encryptor;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.connectin.business.account.registration.dao.IRegistrationDao;
+import com.connectin.business.user.dao.IUserDao;
 import com.connectin.business.user.entity.User;
+import com.connectin.constants.Gender;
 import com.connectin.constants.Message;
 import com.connectin.domain.user.UserRequest;
 import com.connectin.exceptions.ConnectinBaseException;
@@ -21,7 +25,14 @@ public class RegistrationServiceImpl implements RegistrationService {
 
 	@Autowired
 	private IRegistrationDao registrationDao;
-
+	
+	
+	@Autowired
+	Encryptor encryptor;
+	
+	@Autowired
+	private IUserDao userDao;
+	
 	@Autowired
 	private ResponseGenerator<Object> responseGenerator;
 
@@ -54,17 +65,23 @@ public class RegistrationServiceImpl implements RegistrationService {
 			return responseGenerator.generateErrorResponse("Invalid user details ", Message.ERROR_CODE, null);
 		}
 		User usertoInsert = new User();
-		usertoInsert.setCreatedDate(Calendar.getInstance().getTime());
+		SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd");
+		try {
+			usertoInsert.setCreatedDate(dt.parse(user.getBirthDate()));
+		} catch (ParseException e1) {
+			return responseGenerator.generateErrorResponse("Invalid birthdate", Message.ERROR_CODE, null);
+		}
 		usertoInsert.setEmail(user.getEmail());
 		usertoInsert.setFirstName(user.getFirstName());
 		usertoInsert.setLastName(user.getLastName());
-		usertoInsert.setGender(user.getGender());
+		usertoInsert.setGender(user.getGender()=="f" ? Gender.f: Gender.m);
 		usertoInsert.setUserName(user.getUserName());
 		try {
 
-			boolean isUserRegistered = registrationDao.registerUser(usertoInsert);
-			if (isUserRegistered) {
-
+			User userCreated = registrationDao.registerUser(usertoInsert);
+			if (userCreated!=null) {
+				userDao.insertUserAuthenticationDetails(userCreated.getUserName(),
+						user.getCassword(), lastLoggedIn, userId);
 				return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE,
 						"User account created succesfully!");
 			}

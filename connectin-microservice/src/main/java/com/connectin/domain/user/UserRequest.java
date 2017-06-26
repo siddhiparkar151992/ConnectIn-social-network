@@ -5,18 +5,38 @@ import java.util.Date;
 import com.connectin.constants.Gender;
 
 public class UserRequest {
+	
+	/**
+	 * 
+	 */
+	public UserRequest() {
+		super();
+	}
 	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
-	private Gender gender;
-	private Date birthDate;
+	private String gender;
+	private String birthDate;
 	private String userName;
 	private String password;
+	private String cassword;
 	
-	public UserRequest(String firstName, String lastName, String email, Gender gender, Date birthDate, String userName,
-			String password) {
+	/**
+	 * @param id
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param gender
+	 * @param birthDate
+	 * @param userName
+	 * @param password
+	 * @param cassword
+	 */
+	public UserRequest(String firstName, String lastName, String email, String gender, String birthDate,
+			String userName, String password, String cassword) {
 		super();
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -24,7 +44,15 @@ public class UserRequest {
 		this.birthDate = birthDate;
 		this.userName = userName;
 		this.password = password;
+		this.cassword = cassword;
 	}
+	public String getCassword() {
+		return cassword;
+	}
+	public void setCassword(String cassword) {
+		this.cassword = cassword;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -108,16 +136,16 @@ public class UserRequest {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Gender getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(Gender gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 	public String getUserName() {

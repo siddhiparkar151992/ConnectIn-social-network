@@ -31,12 +31,23 @@
 
 	$('.datepicker').datepicker();
 		var login = function() {
-			var data = {};
+
+            var data = {};
+           data.firstName = document.getElementById("login-form").elements[0].value;
+            data.lastName = document.getElementById("login-form").elements[1].value;
+            data.email = document.getElementById("login-form").elements[2].value;
+            data.gender = document.getElementById("login-form").elements[3].value;
+            data.birthDate = new Date();
+            data.userName = document.getElementById("login-form").elements[5].value;
+            data.password = document.getElementById("login-form").elements[6].value;
+
+            data.cpassword = document.getElementById("login-form").elements[7].value;
+
 			$.ajax({
 				type : "POST",
 				contentType : "application/json",
-				url : "/login",
-				data : JSON.stringify(data),
+				url : "http://localhost:9091/connectin/api/account/register" ,
+				data : JSON.stringify({userRequest: data}),
 				dataType : 'json',
 				success : function(data) {
 					alert("success")
@@ -64,40 +75,40 @@
 			</ul>
 			<div class="tab-content">
 			  <div class="tab-pane" id="1a">
-			  	<form role="form">
+			  	<form role="form" id="login-form">
                     <label class="form-group float-label-control">
                         
-                        <input type="text" class="input" placeholder="First Name">
+                        <input name="firstName" type="text" class="input" placeholder="First Name">
                     </label>
                     <label class="form-group float-label-control">
 
-                        <input type="text" class="input" placeholder="Last Name">
+                        <input name="lastName"  type="text" class="input" placeholder="Last Name">
                     </label>
                     <label class="form-group float-label-control">
                         
-                         <input type="text" class="input" placeholder="Email">
+                         <input name="email"  type="text" class="input" placeholder="Email">
                     </label>
                     <label class="form-group float-label-control">
                         
-                        <input type="text" class="input" placeholder="Gender">
+                        <input name="gender"  type="text" class="input" placeholder="Gender">
                     </label>
                     <label class="form-group float-label-control">
 
-                        <input type="text" class="input" placeholder="Birthdate">
+                        <input name="birthdate"  type="text" class="input" placeholder="Birthdate">
                     </label>
                     <label class="form-group float-label-control">
                         
-                         <input type="text" class="input" placeholder="Username">
+                         <input name="username" type="text" class="input" placeholder="Username">
                     </label>
                     <label class="form-group float-label-control">
                         
-                         <input type="password" class="input" placeholder="Password">
+                         <input name="password" type="password" class="input" placeholder="Password">
                     </label>
                      <label class="form-group float-label-control">
                         
-                         <input type="password" class="input" placeholder="Confirm Password">
+                         <input name="cpassword" type="password" class="input" placeholder="Confirm Password">
                     </label>
-                    <button type="button" class="btn-form btn btn-primary btn-lg">Register</button>
+                    <button type="button" onclick="login()" class="btn-form btn btn-primary btn-lg">Register</button>
                 </form>
 
 			  </div>
