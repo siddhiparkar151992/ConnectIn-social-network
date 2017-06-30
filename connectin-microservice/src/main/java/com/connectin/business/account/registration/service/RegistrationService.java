@@ -4,5 +4,5 @@ import com.connectin.domain.user.UserRequest;
 import com.connectin.utils.Response;
 
 public interface RegistrationService {
-	public Response registerUser(UserRequest user);
+    public Response registerUser(UserRequest user);
 }

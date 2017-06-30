@@ -1,138 +1,100 @@
 package com.connectin.business.user.entity;
 
+import com.connectin.constants.Gender;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-
-import org.hibernate.jpamodelgen.xml.jaxb.TemporalType;
-
-import com.connectin.business.comments.entity.Comment;
-import com.connectin.business.images.entity.Image;
-import com.connectin.common.domain.AccountAvailibility;
-import com.connectin.constants.Gender;
-import com.connectin.domain.account.AccountType;
 
 
 @Entity
-@Table(name="user")
-public class User implements Serializable{
-	@Id
-	@Column(name="id")
-	private int id;
-	
-	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private Image profileImage;
+@Table(name = "user")
+public class User implements Serializable {
+    @Id
+    @Column(name = "id")
+    private int id;
 
-	
+    @Column(name = "firstName")
+    private String firstName;
 
-	public Image getImages() {
-		return profileImage;
-	}
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+                + ", gender=" + gender + ", createdDate=" + birthDate + ", userName=" + userName + "]";
+    }
 
-	public void setImages(Image images) {
-		this.profileImage = images;
-	}
+    @Column(name = "lastName")
+    private String lastName;
 
-	@Column(name="firstName")
-	private String firstName;
-	
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", gender=" + gender + ", createdDate=" + birthDate + ", userName=" + userName + "]";
-	}
+    @Column(name = "email")
+    private String email;
 
-	@Column(name="lastName")
-	private String lastName;
-	
-	@Column(name="email")
-	private String email;
-	
-	@Enumerated(EnumType.STRING)
-	@Column(name="gender", columnDefinition="varchar(1)" )
-	private Gender gender;
-	
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender", columnDefinition = "varchar(1)")
+    private Gender gender;
 
-	public Image getProfileImage() {
-		return profileImage;
-	}
 
-	public void setProfileImage(Image profileImage) {
-		this.profileImage = profileImage;
-	}
+    @Column(name = "birthDate")
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date birthDate;
 
-	@Column(name="birthDate")
-	@Temporal(javax.persistence.TemporalType.DATE)
-	private Date birthDate;
-	
-	@Column(name="user_name")
-	private String userName;
-	
-	public int getId() {
-		return id;
-	}
+    @Column(name = "user_name")
+    private String userName;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public Gender getGender() {
-		return gender;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setGender(Gender gender) {
-		this.gender = gender;
-	}
+    public Gender getGender() {
+        return gender;
+    }
 
-	public Date getCreatedDate() {
-		return birthDate;
-	}
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-	public void setCreatedDate(Date createdDate) {
-		this.birthDate = createdDate;
-	}
+    public Date getCreatedDate() {
+        return birthDate;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setCreatedDate(Date createdDate) {
+        this.birthDate = createdDate;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
 }

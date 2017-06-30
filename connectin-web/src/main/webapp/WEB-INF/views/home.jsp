@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring MVC Serve HTML</title>
+<title>Connectin - A social network for all</title>
 
 <script type="text/javascript"
 	src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
