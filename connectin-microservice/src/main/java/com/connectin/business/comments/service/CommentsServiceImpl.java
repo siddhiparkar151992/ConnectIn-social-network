@@ -22,10 +22,9 @@ import java.util.List;
 public class CommentsServiceImpl implements CommentService {
 
     @Autowired
-    private ICommentsDao commentsDao;
-
-    @Autowired
     ResponseGenerator<List<CommentDTO>> responseGenerator;
+    @Autowired
+    private ICommentsDao commentsDao;
 
     @Override
     public Response<List<CommentDTO>> getCommentsByPostId(int postId) throws ConnectinBaseException {

@@ -1,105 +1,113 @@
 /* line 1, ../scss/login.scss */
 html, body {
-  background-image: url("/resources/img/slider/bg2.jpg");
-  background-repeat: no-repeat;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  height: 100%;
-  background-repeat: no-repeat;
-  font-family: 'Roboto', sans-serif;
+    background-image: url("/resources/img/slider/bg2.jpg");
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    height: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* line 12, ../scss/login.scss */
 .login-area .tab-content {
-  padding: 64px;
-  background: #ffffff none repeat scroll 0 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
-  display: inline-block;
-  margin-top: -8px;
-  width: 100%;
+    padding: 64px;
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: inline-block;
+    margin-top: -8px;
+    width: 100%;
 }
+
 /* line 13, ../scss/login.scss */
 .login-area .tab-content .btn-form {
-  background: #0e1a35;
-  border: medium none;
-  border-radius: 100px;
-  color: #ffffff;
-  font-weight: 400;
-  max-width: 250px;
-  padding: 10px 0;
-  position: relative;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px #d2d2d2;
-  -moz-box-shadow: 0 2px 8px #d2d2d2;
-  -webkit-box-shadow: 0 2px 8px #d2d2d2;
+    background: #0e1a35;
+    border: medium none;
+    border-radius: 100px;
+    color: #ffffff;
+    font-weight: 400;
+    max-width: 250px;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px #d2d2d2;
+    -moz-box-shadow: 0 2px 8px #d2d2d2;
+    -webkit-box-shadow: 0 2px 8px #d2d2d2;
 }
+
 /* line 29, ../scss/login.scss */
 .login-area .tab-content .form-group {
-  width: 100%;
-  margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 30px;
 }
+
 /* line 32, ../scss/login.scss */
 .login-area .tab-content .form-group .input {
-  background: transparent none repeat scroll 0 0;
-  border-color: -moz-use-text-color -moz-use-text-color #d4d9e3;
-  border-image: none;
-  border-style: none none solid;
-  border-width: medium medium 1px;
-  font-size: 13px;
-  font-weight: 300;
-  width: 100%;
-  color: #8492af;
-  padding: 5px 47px;
-  font-size: 17px;
-  max-width: 550px;
+    background: transparent none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #d4d9e3;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    font-size: 13px;
+    font-weight: 300;
+    width: 100%;
+    color: #8492af;
+    padding: 5px 47px;
+    font-size: 17px;
+    max-width: 550px;
 }
+
 /* line 53, ../scss/login.scss */
 .login-area .tab-content .input {
-  border-image: none;
-  border-style: none none solid;
-  border-width: medium medium 1px;
-  font-size: 13px;
-  font-weight: 300;
-  width: 100%;
-  color: #8492af;
-  padding: 5px 47px;
-  font-size: 17px;
-  max-width: 550px;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    font-size: 13px;
+    font-weight: 300;
+    width: 100%;
+    color: #8492af;
+    padding: 5px 47px;
+    font-size: 17px;
+    max-width: 550px;
 }
+
 /* line 67, ../scss/login.scss */
 .login-area .form-header {
-  background-color: #0e1a35;
-  height: 80px;
+    background-color: #0e1a35;
+    height: 80px;
 }
+
 /* line 71, ../scss/login.scss */
 .login-area .form-header .tab-list {
-  width: 25%;
-  height: 100%;
+    width: 25%;
+    height: 100%;
 }
+
 /* line 75, ../scss/login.scss */
 .login-area .form-header .tab-list .tab-link {
-  cursor: pointer;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  color: white;
-  font-size: larger;
-  border-radius: 0px;
-  line-height: 54px;
-  background-color: inherit;
-  height: 100%;
-  border-bottom: 6px solid #5584ff;
+    cursor: pointer;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+    font-size: larger;
+    border-radius: 0px;
+    line-height: 54px;
+    background-color: inherit;
+    height: 100%;
+    border-bottom: 6px solid #5584ff;
 }
+
 /* line 83, ../scss/login.scss */
 .login-area .form-header .tab-list .tab-link:active {
-  color: white;
+    color: white;
 }
 
 /* line 100, ../scss/login.scss */
 .login-page-container {
-  align-items: center;
-  display: inline-block;
-  vertical-align: middle;
+    align-items: center;
+    display: inline-block;
+    vertical-align: middle;
 }

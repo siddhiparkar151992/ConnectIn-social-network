@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public abstract class BaseRepository<T, ID extends Serializable> {
     /*@PersistenceContext
-	EntityManager entityManager;
+    EntityManager entityManager;
 
 	*//**
      * @return the entityManger

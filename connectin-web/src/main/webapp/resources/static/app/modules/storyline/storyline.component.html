@@ -1,38 +1,40 @@
 <div class="no-user-feed" *ngIf="!userFeed">No user feed found</div>
 <div *ngIf="userFeed">
-	<div class="storyline container">
-		<div class="row">
-			<news-feed class="storyline-component news-feed"></news-feed>
+    <div class="storyline container">
+        <div class="row">
+            <news-feed class="storyline-component news-feed"></news-feed>
 
-			<div class="col-xs-6 storyline-component feeds">
-				<div class="panel panel-default">
-                <div class="panel-body">
+            <div class="col-xs-6 storyline-component feeds">
+                <div class="panel panel-default">
+                    <div class="panel-body">
                     <span>
                        
                         <dropdown></dropdown>
                     </span>
-                    <br><br>
-                   <hr>
-                    <div class="media storyline-component user-post">
-                        <div class="pull-left">
-                            <a href="#">
-                                <img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="35px" height="35px" style="margin-left:3px; margin-right:-5px;">
-                            </a>
+                        <br><br>
+                        <hr>
+                        <div class="media storyline-component user-post">
+                            <div class="pull-left">
+                                <a href="#">
+                                    <img class="media-object img-circle"
+                                         src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="35px" height="35px"
+                                         style="margin-left:3px; margin-right:-5px;">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <textarea class="form-control" rows="1" placeholder="Post"></textarea>
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <textarea class="form-control" rows="1" placeholder="Post"></textarea>
-                        </div>
+
                     </div>
-                   
+                </div>
+                <div *ngFor="#p of userFeed.posts">
+                    <story-card [post]='p' class="storyline-component story-card"></story-card>
+
                 </div>
             </div>
-            <div *ngFor="#p of userFeed.posts">
-                <story-card [post]='p' class="storyline-component story-card"></story-card>
-                
-            </div>
-			</div>
-		</div>
-	</div>
-	
+        </div>
+    </div>
+
 </div>
 

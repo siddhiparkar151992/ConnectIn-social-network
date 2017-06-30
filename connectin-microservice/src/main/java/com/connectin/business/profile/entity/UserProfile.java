@@ -5,7 +5,6 @@ import com.connectin.business.employmenthistory.employment.entity.EmploymentHist
 import com.connectin.business.images.entity.Image;
 import com.connectin.business.user.entity.User;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 

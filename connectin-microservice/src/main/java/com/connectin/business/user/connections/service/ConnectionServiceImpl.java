@@ -15,10 +15,9 @@ import java.util.List;
 public class ConnectionServiceImpl implements ConnectionService {
 
     @Autowired
-    private IConnectionsDao connectionDao;
-
-    @Autowired
     ResponseGenerator<List<User>> responseGenerator;
+    @Autowired
+    private IConnectionsDao connectionDao;
 
     @Override
     public Response<List<User>> getConnectionsPerUser(int userId, String hashToken) {

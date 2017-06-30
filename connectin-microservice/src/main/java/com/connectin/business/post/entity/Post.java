@@ -7,7 +7,6 @@ import com.connectin.business.user.entity.User;
 import com.connectin.common.entity.Category;
 import com.connectin.constants.Visibility;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -59,6 +58,8 @@ public class Post implements Serializable {
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private User ownerId;
+    @Column(name = "text")
+    private String text;
 
     public User getOwnerId() {
         return ownerId;
@@ -67,9 +68,6 @@ public class Post implements Serializable {
     public void setOwnerId(User ownerId) {
         this.ownerId = ownerId;
     }
-
-    @Column(name = "text")
-    private String text;
 
     public Feed getFeedId() {
         return feedId;

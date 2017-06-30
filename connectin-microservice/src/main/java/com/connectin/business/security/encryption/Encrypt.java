@@ -13,14 +13,15 @@ public class Encrypt implements Encryptor {
     private final static String IV_P = "fedcba9876543210";
     private final static String KEY_SPEC = "AES";
     private final static String CYPHER_SPEC = "AES/CBC/PKCS5Padding";
-
-
-    private String secretKey;
-
-
     private static final String ALGORITHM = "AES";
     private static final byte[] keyValue =
             new byte[]{'T', 'h', 'i', 's', 'I', 's', 'A', 'S', 'e', 'c', 'r', 'e', 't', 'K', 'e', 'y'};
+    private String secretKey;
+
+    private static Key generateKey() throws Exception {
+        Key key = new SecretKeySpec(keyValue, ALGORITHM);
+        return key;
+    }
 
     public String encrypt(String valueToEnc) throws Exception {
         Key key = generateKey();
@@ -39,10 +40,5 @@ public class Encrypt implements Encryptor {
         byte[] decValue = c.doFinal(decordedValue);
         String decryptedValue = new String(decValue);
         return decryptedValue;
-    }
-
-    private static Key generateKey() throws Exception {
-        Key key = new SecretKeySpec(keyValue, ALGORITHM);
-        return key;
     }
 }

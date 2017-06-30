@@ -2,7 +2,6 @@ package com.connectin.business.user.connections.entity;
 
 import com.connectin.business.user.entity.User;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 

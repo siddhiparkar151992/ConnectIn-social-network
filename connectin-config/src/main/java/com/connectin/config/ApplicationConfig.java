@@ -5,27 +5,26 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ApplicationConfig {
-	
-	@Value("${Application.BaseUrl.Home}")
-	private String homeUrl;
-	
-	public String getHomeUrl() {
-		return homeUrl;
-	}
 
-	public void setHomeUrl(String homeUrl) {
-		this.homeUrl = homeUrl;
-	}
+    @Value("${Application.BaseUrl.Home}")
+    private String homeUrl;
+    @Value("${Application.BaseUrl}")
+    private String baseUrl;
 
-	public String getBaseUrl() {
-		return baseUrl;
-	}
+    public String getHomeUrl() {
+        return homeUrl;
+    }
 
-	public void setBaseUrl(String baseUrl) {
-		this.baseUrl = baseUrl;
-	}
+    public void setHomeUrl(String homeUrl) {
+        this.homeUrl = homeUrl;
+    }
 
-	@Value("${Application.BaseUrl}")
-	private String baseUrl;
-	
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
+
 }

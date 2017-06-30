@@ -5,7 +5,6 @@ import com.connectin.business.post.entity.Post;
 import com.connectin.business.user.entity.User;
 import com.connectin.domain.like.LikeType;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -37,74 +36,60 @@ public class Likes implements Serializable {
     @Column(name = "type", columnDefinition = "varchar(11)")
     @Enumerated(EnumType.STRING)
     private LikeType type;
+    @Column(name = "created_timestamp")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdTime;
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
     public Post getPostLike() {
         return postLike;
     }
 
-
     public void setPostLike(Post postLike) {
         this.postLike = postLike;
     }
-
 
     public Comment getComment() {
         return comment;
     }
 
-
     public void setComment(Comment comment) {
         this.comment = comment;
     }
-
 
     public LikeType getType() {
         return type;
     }
 
-
     public void setType(LikeType type) {
         this.type = type;
     }
-
-
-    @Column(name = "created_timestamp")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdTime;
-
 
     public int getId() {
         return id;
     }
 
-
     public void setId(int id) {
         this.id = id;
     }
-
 
     public User getUser() {
         return user;
     }
 
-
     public void setUser(User user) {
         this.user = user;
     }
-
 
     public Date getCreatedTime() {
         return createdTime;
     }
 
-
     public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
-    }
-
-
-    public static long getSerialversionuid() {
-        return serialVersionUID;
     }
 
 

@@ -1,21 +1,21 @@
 /* line 1, ../scss/home.scss */
 body {
-  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   background-color: #0b1e2f !important;
 }
 
-/* line 6, ../scss/home.scss */
+/* line 7, ../scss/home.scss */
 .navbar-custom {
   position: relative !important;
   background-color: #fff;
   padding: 10px 0;
 }
-/* line 12, ../scss/home.scss */
+/* line 13, ../scss/home.scss */
 .navbar-custom .nav li a {
   font-weight: 400;
   letter-spacing: 1px;
 }
-/* line 17, ../scss/home.scss */
+/* line 18, ../scss/home.scss */
 .navbar-custom .nav .active a {
   border-radius: 5px;
 }

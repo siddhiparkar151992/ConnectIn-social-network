@@ -15,12 +15,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     IUserDao userDao;
-
-    @Autowired
-    private IConnectionsDao connectionDao;
-
     @Autowired
     ResponseGenerator<User> responseGenerator;
+    @Autowired
+    private IConnectionsDao connectionDao;
 
     @Override
     public Response<User> getUser(String userName, String hashToken) {

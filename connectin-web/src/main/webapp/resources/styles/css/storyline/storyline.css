@@ -4,12 +4,12 @@
   margin-left: 14px;
 }
 
-/* line 11, ../../scss/storyline/storyline.scss */
+/* line 10, ../../scss/storyline/storyline.scss */
 .container {
-  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
 
-/* line 15, ../../scss/storyline/storyline.scss */
+/* line 14, ../../scss/storyline/storyline.scss */
 .menu {
   background: #fff;
   height: 60px;
@@ -38,12 +38,12 @@
   color: #C5CDD0;
   transition: 0.3s;
 }
-/* line 35, ../../scss/storyline/storyline.scss */
+/* line 38, ../../scss/storyline/storyline.scss */
 .menuright a:hover, .menuright a.active {
   color: #57CBC8;
 }
 
-/* line 38, ../../scss/storyline/storyline.scss */
+/* line 43, ../../scss/storyline/storyline.scss */
 .toggle {
   width: 60px;
   font-size: 20pt;
@@ -52,27 +52,27 @@
   color: #fff;
 }
 
-/* line 46, ../../scss/storyline/storyline.scss */
+/* line 51, ../../scss/storyline/storyline.scss */
 .mainmenu {
   margin-left: 10px;
 }
-/* line 49, ../../scss/storyline/storyline.scss */
+/* line 54, ../../scss/storyline/storyline.scss */
 .mainmenu a {
   text-decoration: none;
   color: #475258;
   transition: 0.3s;
 }
-/* line 50, ../../scss/storyline/storyline.scss */
+/* line 59, ../../scss/storyline/storyline.scss */
 .mainmenu a:hover {
   color: #57CBC8;
 }
-/* line 51, ../../scss/storyline/storyline.scss */
+/* line 62, ../../scss/storyline/storyline.scss */
 .mainmenu li {
   display: inline-block;
   margin-left: 40px;
 }
 
-/* line 55, ../../scss/storyline/storyline.scss */
+/* line 69, ../../scss/storyline/storyline.scss */
 .search input {
   display: none;
   border: 1px solid #C5CDD0;
@@ -81,39 +81,39 @@
   outline: none;
 }
 
-/* line 58, ../../scss/storyline/storyline.scss */
+/* line 78, ../../scss/storyline/storyline.scss */
 .social {
   border-left: 1px solid #e1e5e7;
   border-right: 1px solid #e1e5e7;
 }
-/* line 62, ../../scss/storyline/storyline.scss */
+/* line 82, ../../scss/storyline/storyline.scss */
 .social li {
   display: inline-block;
   margin: 0 6px;
 }
 
-/* line 65, ../../scss/storyline/storyline.scss */
+/* line 88, ../../scss/storyline/storyline.scss */
 .new-latest-container {
   overflow: hidden;
   margin-top: 1.5%;
 }
 
-/* line 70, ../../scss/storyline/storyline.scss */
+/* line 93, ../../scss/storyline/storyline.scss */
 .news-bar {
   padding-bottom: 1.5%;
   background: #fff;
   color: #475258;
 }
-/* line 76, ../../scss/storyline/storyline.scss */
+/* line 99, ../../scss/storyline/storyline.scss */
 .news-bar .news-item {
   padding: 6%;
 }
-/* line 80, ../../scss/storyline/storyline.scss */
+/* line 105, ../../scss/storyline/storyline.scss */
 .news-bar .news-content h4 {
   font-size: medium;
   color: #475258;
 }
-/* line 82, ../../scss/storyline/storyline.scss */
+/* line 110, ../../scss/storyline/storyline.scss */
 .news-bar .news-content span {
   display: block;
   margin-top: 6%;
@@ -121,20 +121,20 @@
   font-size: 8pt;
 }
 
-/* line 87, ../../scss/storyline/storyline.scss */
+/* line 120, ../../scss/storyline/storyline.scss */
 .content {
   float: right;
   width: 66.5%;
   background: #fff;
 }
 
-/* line 93, ../../scss/storyline/storyline.scss */
+/* line 126, ../../scss/storyline/storyline.scss */
 .image {
   background: #fff;
   position: relative;
   overflow: hidden;
 }
-/* line 97, ../../scss/storyline/storyline.scss */
+/* line 131, ../../scss/storyline/storyline.scss */
 .image img {
   position: relative;
   z-index: 0;
@@ -143,11 +143,11 @@
   height: auto;
   transition: 0.3s;
 }
-/* line 98, ../../scss/storyline/storyline.scss */
+/* line 138, ../../scss/storyline/storyline.scss */
 .image img:hover {
   opacity: 0.8;
 }
-/* line 101, ../../scss/storyline/storyline.scss */
+/* line 143, ../../scss/storyline/storyline.scss */
 .image span {
   background: #EA6060;
   display: block;
@@ -163,22 +163,22 @@
   z-index: 1;
 }
 
-/* line 105, ../../scss/storyline/storyline.scss */
+/* line 159, ../../scss/storyline/storyline.scss */
 .share {
   margin-top: 5%;
 }
-/* line 108, ../../scss/storyline/storyline.scss */
+/* line 162, ../../scss/storyline/storyline.scss */
 .share li {
   display: inline-block;
   margin-right: 5%;
   font-weight: 300;
 }
-/* line 110, ../../scss/storyline/storyline.scss */
+/* line 168, ../../scss/storyline/storyline.scss */
 .share a {
   color: #999;
   transition: 0.3s;
 }
-/* line 111, ../../scss/storyline/storyline.scss */
+/* line 171, ../../scss/storyline/storyline.scss */
 .share a i, .share a:hover {
   color: #57CBC8;
 }

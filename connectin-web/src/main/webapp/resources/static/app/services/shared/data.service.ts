@@ -1,21 +1,8 @@
-import {Injectable, Inject}    from 'angular2/core';
-import {Headers, Http} from 'angular2/http';
-import 'rxjs/add/operator/toPromise';
-import {RestAPI} from './restapi.service';
-import {Config} from '../app-conf';
-
-import {
-    LoanDetails,
-    FundTransferList,
-    AuthFundTrans,
-    AuthOTPFundTransfer,
-    AuthOTPlinkAcct,
-    AccountList,
-    TransDetails,
-    AccountSummary,
-    Transaction,
-    LinkedAccount
-} from './data-model'
+import {Inject, Injectable} from "angular2/core";
+import {Headers, Http} from "angular2/http";
+import "rxjs/add/operator/toPromise";
+import {RestAPI} from "./restapi.service";
+import {Config} from "../app-conf";
 
 @Injectable()
 export class DataService {

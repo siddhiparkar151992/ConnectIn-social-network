@@ -4,7 +4,6 @@ import com.connectin.business.profile.entity.UserProfile;
 import com.connectin.business.project.entity.Project;
 import com.connectin.domain.employmenthistory.EmploymentType;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -35,6 +34,17 @@ public class EmploymentHistory implements Serializable {
 
     @Column(name = "achievement_desc")
     private String achievmentDescription;
+    @Column(name = "comp_name")
+    private String companyName;
+    @OneToMany(mappedBy = "employmentHistory", cascade = CascadeType.ALL)
+    private List<Project> projects;
+    @ManyToOne
+    @JoinColumn(name = "prof_id")
+    private UserProfile profiles;
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 
     @Enumerated(EnumType.STRING)
     public EmploymentType getType() {
@@ -45,17 +55,6 @@ public class EmploymentHistory implements Serializable {
     public void setType(EmploymentType type) {
         this.type = type;
     }
-
-    @Column(name = "comp_name")
-    private String companyName;
-
-    @OneToMany(mappedBy = "employmentHistory", cascade = CascadeType.ALL)
-    private List<Project> projects;
-
-    @ManyToOne
-    @JoinColumn(name = "prof_id")
-    private UserProfile profiles;
-
 
     public List<Project> getProjects() {
         return projects;
@@ -119,10 +118,6 @@ public class EmploymentHistory implements Serializable {
 
     public void setAchievmentDescription(String achievmentDescription) {
         this.achievmentDescription = achievmentDescription;
-    }
-
-    public static long getSerialversionuid() {
-        return serialVersionUID;
     }
 
 

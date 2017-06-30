@@ -2,7 +2,6 @@ package com.connectin.business.project.entity;
 
 import com.connectin.business.employmenthistory.employment.entity.EmploymentHistory;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

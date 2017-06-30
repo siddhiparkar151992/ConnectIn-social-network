@@ -2,7 +2,7 @@
 
 /connectin-web/.sass-cache/*
 /connectin-web/node_modules/*
-
+/**/.settings
 /target/*
 /connectin-web/src/main/webapp/resources/static/**/*.js
 .settings/*

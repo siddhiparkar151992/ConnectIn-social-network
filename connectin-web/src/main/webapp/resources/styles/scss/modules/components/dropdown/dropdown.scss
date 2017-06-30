@@ -1,19 +1,21 @@
- .dropdown{
- 	font-size: medium;
- }
- .dropdown-selected{
- 	background-color: #121025 !important;
+.dropdown {
+  font-size: medium;
+}
 
- }
- .dropdown-menu{
- 		background-color: #121025;
- 		li{
- 			a{
- 				color: white;
- 				&:hover{
- 					background-color: #121025;
- 					color: white;
- 				}
- 			}
- 		}
- 	}
+.dropdown-selected {
+  background-color: #121025 !important;
+
+}
+
+.dropdown-menu {
+  background-color: #121025;
+  li {
+    a {
+      color: white;
+      &:hover {
+        background-color: #121025;
+        color: white;
+      }
+    }
+  }
+}

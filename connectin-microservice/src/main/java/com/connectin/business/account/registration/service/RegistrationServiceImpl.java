@@ -23,12 +23,9 @@ import java.text.SimpleDateFormat;
 public class RegistrationServiceImpl implements RegistrationService {
 
     @Autowired
-    private IRegistrationDao registrationDao;
-
-
-    @Autowired
     Encryptor encryptor;
-
+    @Autowired
+    private IRegistrationDao registrationDao;
     @Autowired
     private IUserDao userDao;
 

@@ -2,7 +2,6 @@ package com.connectin.business.user.entity;
 
 import com.connectin.constants.Gender;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,30 +15,24 @@ public class User implements Serializable {
 
     @Column(name = "firstName")
     private String firstName;
+    @Column(name = "lastName")
+    private String lastName;
+    @Column(name = "email")
+    private String email;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender", columnDefinition = "varchar(1)")
+    private Gender gender;
+    @Column(name = "birthDate")
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date birthDate;
+    @Column(name = "user_name")
+    private String userName;
 
     @Override
     public String toString() {
         return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
                 + ", gender=" + gender + ", createdDate=" + birthDate + ", userName=" + userName + "]";
     }
-
-    @Column(name = "lastName")
-    private String lastName;
-
-    @Column(name = "email")
-    private String email;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "gender", columnDefinition = "varchar(1)")
-    private Gender gender;
-
-
-    @Column(name = "birthDate")
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date birthDate;
-
-    @Column(name = "user_name")
-    private String userName;
 
     public int getId() {
         return id;

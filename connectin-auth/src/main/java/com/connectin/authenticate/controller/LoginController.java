@@ -1,45 +1,28 @@
 package com.connectin.authenticate.controller;
 
-import java.util.HashMap;
-
-import javax.persistence.NoResultException;
-
+import com.connectin.authenticate.entity.User;
+import com.connectin.config.ApplicationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.connectin.authenticate.entity.AuthErrors;
-import com.connectin.authenticate.entity.Response;
-import com.connectin.authenticate.entity.User;
-import com.connectin.authenticate.entity.user.UserCred;
-import com.connectin.authenticate.entity.user.UserCredentials;
-import com.connectin.authenticate.service.IAuthenticator;
-import com.connectin.authenticate.util.exceptions.InvalidCredentialsException;
-import com.connectin.config.ApplicationConfig;
-
 
 
 @Controller
 
-public class LoginController{
-	
-	@Autowired
-	private ApplicationConfig appConfig;
-	
-	@RequestMapping(value="/api/registration", method= RequestMethod.POST)
-	public ResponseEntity<Object> register(@RequestBody User user){
-		
-		return null;
-		
-	}
-	
-	
-	
+public class LoginController {
+
+    @Autowired
+    private ApplicationConfig appConfig;
+
+    @RequestMapping(value = "/api/registration", method = RequestMethod.POST)
+    public ResponseEntity<Object> register(@RequestBody User user) {
+
+        return null;
+
+    }
+
 
 }
