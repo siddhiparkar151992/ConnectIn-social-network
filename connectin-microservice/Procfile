@@ -1,2 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.war  -Dspring.datasource.url
-mysql://siddhipa_1234:siddhiparkar15@johnny.heliohost.org:3306/siddhipa_connectin
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.war  -Dspring.datasource.url mysql://siddhipa_1234:siddhiparkar15@johnny.heliohost.org:3306/siddhipa_connectin
