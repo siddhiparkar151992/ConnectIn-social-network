@@ -2,6 +2,7 @@ package com.connectin.business.education.entity;
 
 import com.connectin.business.profile.entity.UserProfile;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Table(name = "edu_details")

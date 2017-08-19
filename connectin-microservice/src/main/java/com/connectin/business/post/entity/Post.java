@@ -7,6 +7,7 @@ import com.connectin.business.user.entity.User;
 import com.connectin.common.entity.Category;
 import com.connectin.constants.Visibility;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

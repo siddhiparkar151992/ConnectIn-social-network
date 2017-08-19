@@ -4,6 +4,8 @@ import com.connectin.business.post.entity.Post;
 import com.connectin.business.user.entity.User;
 import com.connectin.constants.ImageOwnerType;
 
+import javax.persistence.*;
+
 
 @Table
 @Entity(name = "image_db")

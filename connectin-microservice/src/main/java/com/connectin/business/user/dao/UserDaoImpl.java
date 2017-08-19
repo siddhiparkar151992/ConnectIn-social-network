@@ -88,13 +88,16 @@ public class UserDaoImpl extends DataAccessor<User> implements IUserDao {
     @Override
     public void insertUserAuthenticationDetails(String userName, String password, int userId) throws ConnectinBaseException {
         try {
-            entityManager.
-                    createNativeQuery("insert into UserCredentials(userName, userId,password) "
-                            + "values(:userName,:userId,:password,:lastLoogedIn)")
-                    .setParameter("userName", userName)
-                    .setParameter("userId", userId)
-                    .setParameter("password", password)
-                    .executeUpdate();
+        	int status = entityManager.
+            createNativeQuery("insert into usr_auth(user_name, user_id,password) "
+                    + "values(:userName,:userId,:password)")
+            .setParameter("userName", userName)
+            .setParameter("userId", userId)
+            .setParameter("password", password)
+            .executeUpdate();
+        	if(status!=1){
+        		throw new ConnectinBaseException("Please check username or password");
+        	}
         } catch (Exception e) {
             throw new ConnectinBaseException("Could not create user account! Please check for user data.");
         }

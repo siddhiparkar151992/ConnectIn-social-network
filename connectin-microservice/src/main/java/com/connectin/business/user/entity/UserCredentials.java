@@ -1,5 +1,6 @@
 package com.connectin.business.user.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +16,7 @@ public class UserCredentials implements Serializable {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private int id;
 
     @Column(name = "user_name")
     private String userName;
@@ -71,6 +72,13 @@ public class UserCredentials implements Serializable {
     public UserCredentials(int id, String userName, String password, Date lastLoogedIn) {
         super();
         this.id = id;
+        this.userName = userName;
+        this.password = password;
+        this.lastLoogedIn = lastLoogedIn;
+    }
+    
+    public UserCredentials(String userName, String password, Date lastLoogedIn) {
+        super();
         this.userName = userName;
         this.password = password;
         this.lastLoogedIn = lastLoogedIn;

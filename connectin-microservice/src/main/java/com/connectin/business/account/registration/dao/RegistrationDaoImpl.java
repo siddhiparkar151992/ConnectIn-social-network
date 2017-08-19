@@ -6,39 +6,46 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 @Repository
 @Transactional
 public class RegistrationDaoImpl implements IRegistrationDao {
 
-    @PersistenceContext
-    EntityManager entityManager;
+	@PersistenceContext
+	EntityManager entityManager;
 
+	public User returnIfUserExists(String userName) {
+		User userCreated = null;
+		try {
 
-    @Override
+			userCreated = (User) entityManager.createQuery("Select a from User a where a.userName=:userName")
+					.setParameter("userName", userName).getSingleResult();
+			return userCreated;
+		} catch (NoResultException e) {
+			return userCreated;
+		}
+	}
 
-    public User registerUser(User user) throws ConnectinBaseException {
-        try {
-            entityManager.
-                    createNativeQuery("insert into User(firstName, lastName,email,gender, birthDate, user_name) "
-                            + "values(:firstName,:two,:three,:four,:five,:six)")
-                    .setParameter("firstName", user.getFirstName())
-                    .setParameter("lastName", user.getLastName())
-                    .setParameter("email", user.getEmail())
-                    .setParameter("gender", user.getGender().getText())
-                    .setParameter("birthDate", user.getCreatedDate())
-                    .setParameter("user_name", user.getUserName()).executeUpdate();
+	@Override
 
-            User userCreated = null;
-            userCreated = (User) entityManager.createQuery("Select a from User a where a.userName=:userName")
-                    .setParameter("userName", user.getUserName()).getSingleResult();
-            return userCreated;
-        } catch (Exception e) {
+	public User registerUser(User user) throws ConnectinBaseException {
 
-            throw new ConnectinBaseException("Could not create user account! Please check for user data.");
-        }
+		User existingUser = returnIfUserExists(user.getUserName());
+		if(existingUser!=null){
+			throw new ConnectinBaseException("User already exists!");
+		}
+		entityManager
+				.createNativeQuery("insert into User(firstName, lastName,email,gender, birthDate, user_name) "
+						+ "values(:firstName,:lastName,:email,:gender,:birthDate,:user_name)")
+				.setParameter("firstName", user.getFirstName()).setParameter("lastName", user.getLastName())
+				.setParameter("email", user.getEmail()).setParameter("gender", user.getGender().getText())
+				.setParameter("birthDate", user.getCreatedDate()).setParameter("user_name", user.getUserName())
+				.executeUpdate();
 
-    }
+		return returnIfUserExists(user.getUserName());
+
+	}
 
 }

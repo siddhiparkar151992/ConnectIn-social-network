@@ -3,6 +3,7 @@ package com.connectin.business.feed.entity;
 import com.connectin.business.user.entity.User;
 import com.connectin.domain.feed.FeedType;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

@@ -32,6 +32,13 @@
     });
 
     $('.datepicker').datepicker();
+
+    var updateCookies = function () {
+        var id = document.getElementById("login-f").elements[0].value;
+        var password = document.getElementById("login-f").elements[1].value;
+        var ud = {id: id, password: password};
+        localStorage.setItem("ud", JSON.stringify(ud));
+    };
     var login = function () {
 
         var data = {};
@@ -121,14 +128,15 @@
                         <div class="login-error alert alert-error"><strong>Error:
                         </strong>${error}</div>
                     </c:if>
-                    <form role="form" action="/login" method="POST">
+                    <form role="form" action="/login" id="login-f" method="POST">
                         <label class="form-group float-label-control">
 
-                            <input name="username" type="text" class="input" placeholder="Username">
+                            <input onchange="updateCookies()" name="username" type="text" class="input"
+                                   placeholder="Username">
                         </label>
                         <label class="form-group float-label-control">
 
-                            <input name="password" type="password" class="input" placeholder="password">
+                            <input onchange="updateCookies()" name="password" type="password" class="input" placeholder="password">
                         </label>
 
                         <button type="submit" class="btn-form btn btn-primary btn-lg">Login</button>

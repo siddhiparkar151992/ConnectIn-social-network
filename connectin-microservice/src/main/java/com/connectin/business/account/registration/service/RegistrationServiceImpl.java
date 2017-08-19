@@ -76,7 +76,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
             User userCreated = registrationDao.registerUser(usertoInsert);
             if (userCreated != null) {
-                String encryptedPassword = encryptor.encrypt(user.getCassword());
+                String encryptedPassword = encryptor.encrypt(user.getPassword());
                 userDao.insertUserAuthenticationDetails(userCreated.getUserName(),
                         encryptedPassword, userCreated.getId());
                 return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE,
@@ -86,7 +86,7 @@ public class RegistrationServiceImpl implements RegistrationService {
             return responseGenerator.generateErrorResponse(e.getMessage(), Message.ERROR_CODE, null);
         } catch (Exception e) {
             // TODO Auto-generated catch block
-            return responseGenerator.generateErrorResponse("Could not register user password is not proper!", Message.ERROR_CODE, null);
+            return responseGenerator.generateErrorResponse("Could not register user "+e.getMessage(), Message.ERROR_CODE, null);
         }
         return responseGenerator.generateErrorResponse("Could not register user!", Message.ERROR_CODE, null);
 

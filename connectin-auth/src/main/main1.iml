@@ -15,5 +15,6 @@
     <orderEntry type="module" module-name="main3" />
     <orderEntry type="module" module-name="main4" />
     <orderEntry type="module" module-name="connectin" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.1.1.RELEASE" level="project" />
   </component>
 </module>

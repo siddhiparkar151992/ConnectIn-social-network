@@ -20,7 +20,7 @@ public class FeedController {
     @Autowired
     private FeedService feedService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value="", method = RequestMethod.POST)
     public Response<FeedDTO> getUserFeed(@RequestParam("userId") int userId, HttpServletRequest request,
                                          HttpServletResponse response) {
         Response<FeedDTO> feeds = feedService.getPostByUser(userId);

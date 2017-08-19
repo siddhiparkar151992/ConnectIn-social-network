@@ -5,6 +5,7 @@ import com.connectin.business.post.entity.Post;
 import com.connectin.business.user.entity.User;
 import com.connectin.domain.like.LikeType;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

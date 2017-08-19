@@ -5,6 +5,7 @@ import com.connectin.domain.user.UserRequest;
 import com.connectin.exceptions.account.AccountException;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

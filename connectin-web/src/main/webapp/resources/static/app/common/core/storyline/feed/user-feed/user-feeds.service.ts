@@ -1,6 +1,7 @@
 import {Inject, Injectable, OnInit} from "angular2/core";
 import {Headers, Http, Request, RequestOptions} from "angular2/http";
 import {UrlConfigService} from "../../../../../config/url-config.service";
+import {TokenService} from "../../../security/token/token.service";
 
 declare var $: any;
 
@@ -12,17 +13,16 @@ export class UserFeedService {
     private options;
     private urlConfigService;
 
-    constructor(private http: Http, @Inject(UrlConfigService) private urlConfig: UrlConfig) {
+    constructor(private http: Http, @Inject(UrlConfigService) private urlConfig: UrlConfigService,@Inject(TokenService)  private tokenService: TokenService) {
         this.urlConfigService = urlConfig;
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
-        this.headers = new Headers({'Content-Type': 'application/json'});
-        this.options = new RequestOptions({headers: this.headers});
+
     }
 
     private extractData(res: Response) {
         let body = res.json();
-        return body.data || {};
+        return body.hasOwnProperty('data') ? body.data : {};
     }
 
     //   private handleErrorPromise (error: Response | any) {
@@ -31,9 +31,12 @@ export class UserFeedService {
     //   }
 
     getUserFeeds(userId) {
-        return this.http.get(this.urlConfig.getUserFeedUrl() + '?userId=' + userId)
-        // .then(this.extractData)
-        // .catch(this.handleErrorPromise);
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json')
+        headers.append('Authorization', this.tokenService.getUserToken());
+        let options = new RequestOptions({headers: headers});
+        return this.http.post(this.urlConfig.getUserFeedUrl() + '?userId=' + userId, "",options)
+
     }
 
 }

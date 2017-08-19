@@ -2,6 +2,7 @@ package com.connectin.business.user.entity;
 
 import com.connectin.constants.Gender;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 

@@ -23,6 +23,8 @@ public class TokenAuthenticationService {
 
     public void addAuthentication(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
         final Object user = authentication.getDetails();
+        response.addHeader(AUTH_HEADER_NAME, tokenHandler.createTokenForUser(
+                new User(request.getParameter("username"), (List<Role>) authentication.getAuthorities())));
         response.setHeader(AUTH_HEADER_NAME, tokenHandler.createTokenForUser(
                 new User(request.getParameter("username"), (List<Role>) authentication.getAuthorities())));
     }

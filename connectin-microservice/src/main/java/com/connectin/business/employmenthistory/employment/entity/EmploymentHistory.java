@@ -4,6 +4,7 @@ import com.connectin.business.profile.entity.UserProfile;
 import com.connectin.business.project.entity.Project;
 import com.connectin.domain.employmenthistory.EmploymentType;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

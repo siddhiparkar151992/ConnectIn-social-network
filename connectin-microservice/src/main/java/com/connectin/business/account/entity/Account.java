@@ -3,6 +3,7 @@ package com.connectin.business.account.entity;
 import com.connectin.common.domain.AccountAvailibility;
 import com.connectin.domain.account.AccountType;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
