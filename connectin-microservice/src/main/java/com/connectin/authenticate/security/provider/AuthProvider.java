@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-@Component("authProvider")
+@Service("authProvider")
 public class AuthProvider implements AuthenticationProvider {
 
     @Autowired

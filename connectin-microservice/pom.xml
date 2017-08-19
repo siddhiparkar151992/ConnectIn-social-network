@@ -4,6 +4,7 @@
     <groupId>com.connectin</groupId>
     <artifactId>connectin-microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>Connectin Microservice</name>
     <description>A maven project containing rest endpoints</description>
     <parent>
@@ -169,5 +170,4 @@
             </plugin>
         </plugins>
     </build>
-    <packaging>war</packaging>
 </project>

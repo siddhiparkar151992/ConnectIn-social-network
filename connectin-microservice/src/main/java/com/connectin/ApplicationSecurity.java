@@ -42,11 +42,11 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         return new UserDetailServiceImpl();
     }
 
-
-    @Bean(name = "authProvider")
-    public AuthenticationProvider authProvider() {
-        return new AuthProvider();
-    }
+//
+//    @Bean(name = "authProvider")
+//    public AuthenticationProvider authProvider() {
+//        return new AuthProvider();
+//    }
 
     @Bean(name = "authenticationSuccessHandler")
     public SimpleUrlAuthenticationSuccessHandler authenticationSuccessHandler() {

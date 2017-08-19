@@ -9,17 +9,17 @@ export class UrlConfigService {
     public port = 9091;
     public appPort = 8080;
     public appBaseUrl;
-    public mainHost = "//connectin-social.herokuapp.com";
+    public mainHost = "//connectin-multimodule.herokuapp.com";
     public host = "localhost";
     public apiBaseUrl = "/connectin/api/";
     public userFeedUrl = "user/feed";
     public tokenUrl = "token";
 
     constructor() {
-        this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
-        this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;
-//		this.baseUrl = this.mainHost+this.apiBaseUrl;
-//         this.appBaseUrl =  this.mainHost+ this.apiBaseUrl
+        // this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
+        // this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;
+		this.baseUrl = this.mainHost+this.apiBaseUrl;
+        this.appBaseUrl =  this.mainHost+ this.apiBaseUrl
 
     }
 
