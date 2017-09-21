@@ -17,10 +17,10 @@ export class UrlConfigService {
     public tokenUrl = "token";
 
     constructor() {
-        this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
-        this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;
-        // this.baseUrl = this.mainAPIBaseUrl+this.apiBaseUrl;
-        // this.appBaseUrl =  this.mainHost+ this.apiBaseUrl
+        // this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
+        // this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;
+        this.baseUrl = this.mainAPIBaseUrl+this.apiBaseUrl;
+        this.appBaseUrl =  this.mainHost+ this.apiBaseUrl
 
     }
 
