@@ -1,5 +1,5 @@
 package com.connectin.domain.feed;
 
 public enum FeedType {
-	group, user, company, news, recent, trending
+    group, user, company, news, recent, trending
 }

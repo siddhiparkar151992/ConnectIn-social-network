@@ -1,25 +1,29 @@
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
 var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-var core_1 = require('angular2/core');
-var http_1 = require('angular2/http');
-var util_service_1 = require('../Util/util.service');
-require('rxjs/add/operator/toPromise');
-require('rxjs/add/operator/map');
+        return function (target, key) {
+            decorator(target, key, paramIndex);
+        }
+    };
+Object.defineProperty(exports, "__esModule", {value: true});
+var core_1 = require("angular2/core");
+var http_1 = require("angular2/http");
+var util_service_1 = require("../Util/util.service");
+require("rxjs/add/operator/toPromise");
+require("rxjs/add/operator/map");
 var RestAPI = (function () {
     function RestAPI(http, conf, util) {
         this.http = http;
         this.util = util;
         this.baseURL = '';
         this.config = conf.getConfig();
-        this.getparams = { 'userId': this.config.userId, 'tokenId': this.config.tokenId };
+        this.getparams = {'userId': this.config.userId, 'tokenId': this.config.tokenId};
         this.baseURL = this.config.baseURL;
         this.baseIP = this.config.baseIP;
         this.port = this.config.port;
@@ -29,13 +33,57 @@ var RestAPI = (function () {
         this.promiseToken = Promise;
         this.headers = new http_1.Headers();
         this.headers.append('Content-Type', 'application/json');
-        this.headers = new http_1.Headers({ 'Content-Type': 'text/json', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Origin': '*' });
-        this.options = new http_1.RequestOptions({ headers: this.headers, body: JSON.stringify({ 'userID': '7578133' }) });
+        this.headers = new http_1.Headers({
+            'Content-Type': 'text/json',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': '*'
+        });
+        this.options = new http_1.RequestOptions({headers: this.headers, body: JSON.stringify({'userID': '7578133'})});
         this.endPointAPI = this.start + this.baseIP + ':' + this.port + '/' + this.baseURL + '/';
     }
+
     RestAPI.prototype.encryptParams = function (params) {
         var encParams = btoa(params);
         return encParams;
+    };
+    RestAPI.prototype.getLoanCertificate = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.getLoanCertificateAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
+    RestAPI.prototype.getLoanStatement = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.getLoanStatementAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
+    RestAPI.prototype.getFutureDetails = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.getFutureDetailsAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
     };
     RestAPI.prototype.chequeStatusRequest = function () {
         var that = this;
@@ -77,6 +125,19 @@ var RestAPI = (function () {
             contentType: 'application/json'
         });
     };
+    RestAPI.prototype.get32DigitAccNum = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.Digit32ACcNumberAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
     RestAPI.prototype.chequeBookRequest = function (params) {
         var that = this;
         var paramsStr = JSON.stringify(params);
@@ -110,7 +171,7 @@ var RestAPI = (function () {
             url: "http://10.19.188.18:9191/swiftcore/faces/services/Transaction/personToAccount_P2A/",
             contentType: "text/xml",
             dataType: 'xml',
-            data: xmlStr
+            data: xmlStr,
         });
     };
     RestAPI.prototype.impSsPersonToPerson = function (params) {
@@ -120,7 +181,7 @@ var RestAPI = (function () {
             url: "http://10.19.188.18:9191/swiftcore/faces/services/Transaction/personToPerson_P2P/",
             contentType: "text/xml",
             dataType: 'xml',
-            data: xmlStr
+            data: xmlStr,
         });
     };
     RestAPI.prototype.updateSession = function () {
@@ -133,24 +194,24 @@ var RestAPI = (function () {
         });
     };
     RestAPI.prototype.addActivity = function (activityName) {
-        /*console.log(params)
-        params.userID = userData.userId;
-        params.brCode = userData.acctNumber.slice(0,3);
-        params.sessionId= userData.sessionId.slice(0,4)
-        let paramsStr = JSON.stringify(params)
-        let encParams = this.encryptParams(paramsStr)
-        $.ajax({
-            type:'POST',
-            crossDomain: true,
-            url:this.urlSource.addActivityAPI,
-            dataType:'json',
-            contentType:'application/json',
-            data: encParams,
-        })*/
         var session = userData.sessionId.slice(4, userData.sessionId.length);
         var brCode = userData.acctNumber.slice(0, 3);
         var activity = new logActivity();
         activity.addActivity(userData.userId, brCode, session, activityName);
+    };
+    RestAPI.prototype.listActivity = function (params) {
+        this.addActivity('Activity Log Report');
+        params.userID = userData.userId;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            url: this.urlSource.listActivityAPI,
+            dataType: 'json',
+            data: encParams,
+            contentType: 'application/json'
+        });
     };
     RestAPI.prototype.generatePDF = function (params) {
         params.userID = userData.userId;
@@ -217,7 +278,7 @@ var RestAPI = (function () {
             type: 'post',
             crossDomain: true,
             url: this.urlSource.changePasswordAPI,
-            data: JSON.stringify({ 'userId': userId, 'oldPwd': oldPwd, 'newPwd': newPwd, 'pwdType': pwdType }),
+            data: JSON.stringify({'userId': userId, 'oldPwd': oldPwd, 'newPwd': newPwd, 'pwdType': pwdType}),
             dataType: 'json',
             contentType: 'application/json'
         });
@@ -229,13 +290,13 @@ var RestAPI = (function () {
             crossDomain: true,
             url: this.urlSource.forgotPasswordAPI,
             dataType: 'json',
-            data: JSON.stringify({ "userId": userId, 'challengeResponse': challengeResponse }),
+            data: JSON.stringify({"userId": userId, 'challengeResponse': challengeResponse}),
             contentType: 'application/json'
         });
     };
     RestAPI.prototype.getAccountList = function (params) {
         var that = this;
-        params = { "userID": userData.userId };
+        params = {"userID": userData.userId};
         var paramsStr = JSON.stringify(params);
         var encParams = this.encryptParams(paramsStr);
         return $.ajax({
@@ -248,26 +309,14 @@ var RestAPI = (function () {
         });
     };
     RestAPI.prototype.getAcctSummary = function (params) {
-        //return this.http.get(this.start +this.baseIP+':'+this.port+'/'+ this.urlSource['accountSummary'], { headers: this.headers }).toPromise()
+        //return this.http.get(this.start this.baseIP+':'+this.port+'/'+ this.urlSource['accountSummary'], { headers: this.headers }).toPromise()
         var that = this;
-        // var request ={
-        // 	"userID" : '5883005',//userData.userId,
-        // 	"acctNos" : "149200100015361",
-        // 	"noOfMonths" : "9"
-        // 	}
-        // request['acctNos'] =params.acctNos
-        var request = {
-            'userID': userData.userId,
-            'acctNos': userData.acctNumber,
-            'noOfMonths': "9"
-        };
-        var paramsStr = JSON.stringify(request);
+        var paramsStr = JSON.stringify(params);
         var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: 'POST',
             crossDomain: true,
             url: that.config.apiEndPoint + this.urlSource.accountSummaryAPI,
-            // url:that.config.apiEndPoint+ 'getAccountSummary',
             dataType: 'json',
             data: encParams,
             contentType: 'application/json'
@@ -275,13 +324,6 @@ var RestAPI = (function () {
     };
     RestAPI.prototype.getAcctTransaction = function (params) {
         var that = this;
-        // params.userID = userData.userId
-        // params = {
-        // 	'userID' : "3356618",
-        // 	'acctNumber' : "012100100004676",
-        // 	'startDate' : "20140131",
-        // 	'endDate' : "20160131"
-        // }
         this.addActivity('Statement of A/C');
         var paramsStr = JSON.stringify(params);
         var encParams = this.encryptParams(paramsStr);
@@ -469,58 +511,69 @@ var RestAPI = (function () {
         });
     };
     RestAPI.prototype.updateEmailId = function (params) {
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
         var that = this;
         return $.ajax({
             type: 'POST',
             crossDomain: true,
             url: that.config.apiEndPoint + that.urlSource.ibUpdateEmailIDAPI,
             dataType: 'json',
-            data: JSON.stringify(params),
+            data: encParams,
             contentType: 'application/json'
         });
     };
     RestAPI.prototype.fundTransToOwnAcc = function (params) {
         var that = this;
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: 'POST',
             crossDomain: true,
             url: that.config.apiEndPoint + that.urlSource.ibFundTransferInOwnAccountAPI,
             dataType: 'json',
-            data: JSON.stringify(params),
+            data: encParams,
             contentType: 'application/json'
         });
     };
     RestAPI.prototype.fundTransToSameBank = function (params) {
         var that = this;
         var xmlStr = this.util.parseJSONToXml(params);
+        var paramsStr = JSON.stringify({'xml': xmlStr});
+        var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: 'POST',
             crossDomain: true,
             url: that.config.apiEndPoint + that.urlSource.ibFundTransferInSameBankAPI,
             dataType: 'json',
-            data: JSON.stringify({ 'xml': xmlStr }),
+            data: encParams,
             contentType: 'application/json'
         });
     };
     RestAPI.prototype.fundTransToOtherBank = function (params) {
         var that = this;
         var xmlStr = this.util.parseJSONToXml(params);
+        var paramsStr = JSON.stringify({'xml': xmlStr});
+        var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: "POST",
             url: that.config.apiEndPoint + that.urlSource.ibFundTransferToOthrBankAPI,
             contentType: 'application/json',
             dataType: 'json',
-            data: JSON.stringify({ 'xml': xmlStr })
+            data: encParams,
         });
     };
     RestAPI.prototype.linkAdharCard = function (params) {
         var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: 'POST',
             crossDomain: true,
             url: that.config.apiEndPoint + that.urlSource.ibLinkAadharCardNoAPI,
             dataType: 'json',
-            data: JSON.stringify(params),
+            data: encParams,
             contentType: 'application/json'
         });
     };
@@ -540,7 +593,7 @@ var RestAPI = (function () {
     RestAPI.prototype.impsPersonToPerson = function (params) {
         var that = this;
         var xmlStr = this.util.parseJSONToXml(params);
-        var paramsStr = JSON.stringify({ "xml": xmlStr });
+        var paramsStr = JSON.stringify({"xml": xmlStr});
         var encParams = this.encryptParams(paramsStr);
         return $.ajax({
             type: 'POST',
@@ -562,14 +615,62 @@ var RestAPI = (function () {
             .toPromise()
             .catch(this.handleError);
     };
+    RestAPI.prototype.cardlessCashRequest = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.cardlessCashRequestAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
+    RestAPI.prototype.cardlessCashCancelRequest = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.cardlessCashCancelRequestAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
+    RestAPI.prototype.cardlessCashStatementRequest = function (params) {
+        var that = this;
+        var paramsStr = JSON.stringify(params);
+        var encParams = this.encryptParams(paramsStr);
+        return $.ajax({
+            type: 'POST',
+            crossDomain: true,
+            data: encParams,
+            url: that.config.apiEndPoint + that.urlSource.cardlessCashStatementlRequestAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
     RestAPI.prototype.handleError = function (error) {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
-    RestAPI = __decorate([
-        core_1.Injectable(),
-        __param(2, core_1.Inject(util_service_1.Utility))
-    ], RestAPI);
+    RestAPI.prototype.getActivityTypes = function () {
+        return $.ajax({
+            type: 'GET',
+            crossDomain: true,
+            url: this.urlSource.activityTypesAPI,
+            dataType: 'json',
+            contentType: 'application/json'
+        });
+    };
     return RestAPI;
 }());
+RestAPI = __decorate([
+    core_1.Injectable(),
+    __param(2, core_1.Inject(util_service_1.Utility))
+], RestAPI);
 exports.RestAPI = RestAPI;

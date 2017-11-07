@@ -1,65 +1,47 @@
 package com.connectin.business.comments.entity;
 
+import com.connectin.business.likes.entity.Likes;
+import com.connectin.business.post.entity.Post;
+import com.connectin.business.user.entity.User;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.SecondaryTable;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import com.connectin.business.feed.entity.Feed;
-import com.connectin.business.likes.entity.Likes;
-import com.connectin.business.post.entity.Post;
-import com.connectin.business.user.entity.User;
-import com.connectin.common.entity.Category;
-import com.connectin.constants.Visibility;
-
 
 @Table
-@Entity(name="comments")
-public class Comment implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+@Entity(name = "comments")
+public class Comment implements Serializable {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name="id")
-	private int id;
-	
-	@ManyToOne
-	@JoinColumn(name= "user_id")
-	private User user;
-	
-	@OneToMany(mappedBy = "comment", cascade = CascadeType.ALL)
-	private List<Likes> likes;  
-	
-	@Column(name="created_timestamp")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdTime;
-	
-	@ManyToOne
-	@JoinColumn(name= "post_id")
-	private Post post;
-	
-	
-	@Column(name="text")
-	private String text;
-	
+    @Id
+    @Column(name = "id")
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @OneToMany(mappedBy = "comment", cascade = CascadeType.ALL)
+    private List<Likes> likes;
+
+    @Column(name = "created_timestamp")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdTime;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id")
+    private Post post;
+
+
+    @Column(name = "text")
+    private String text;
+
 //	@Override
 //	public String toString() {
 //		return "Comment [id=" + id + ", user=" + user + ", createdTime=" + createdTime + ", post=" + post + ", text="
@@ -118,57 +100,55 @@ public class Comment implements Serializable{
 //		return true;
 //	}
 
-	
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-	public Date getCreatedTime() {
-		return createdTime;
-	}
+    public Date getCreatedTime() {
+        return createdTime;
+    }
 
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
 
-	public Post getPost() {
-		return post;
-	}
+    public Post getPost() {
+        return post;
+    }
 
-	public void setPost(Post post) {
-		this.post = post;
-	}
+    public void setPost(Post post) {
+        this.post = post;
+    }
 
-	public String getText() {
-		return text;
-	}
+    public String getText() {
+        return text;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	public Collection getLikes() {
-		return likes;
-	}
+    public Collection getLikes() {
+        return likes;
+    }
 
-	public void setLikes(List<Likes> likes) {
-		this.likes = likes;
-	}
+    public void setLikes(List<Likes> likes) {
+        this.likes = likes;
+    }
 
-	
-	
+
 }
 

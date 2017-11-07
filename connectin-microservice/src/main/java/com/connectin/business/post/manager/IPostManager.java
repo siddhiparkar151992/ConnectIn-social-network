@@ -1,12 +1,13 @@
 package com.connectin.business.post.manager;
 
-import java.util.List;
-
-import com.connectin.domain.comments.CommentDTO;
-import com.connectin.domain.like.LikeDTO;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
 
+import java.util.List;
+
 public interface IPostManager {
-	public List<PostDTO> populatePosts(int userId) throws ConnectinBaseException;
+    List<PostDTO> populatePosts(int userId) throws ConnectinBaseException;
+
+    List<PostDTO> getPostsForUserFeed(int[] connections) throws ConnectinBaseException;
+    String addPost(PostDTO post, int feedId) throws ConnectinBaseException;
 }

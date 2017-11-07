@@ -1,18 +1,38 @@
 package com.connectin;
 
+import com.connectin.authenticate.security.tokenmanager.service.TokenAuthenticationService;
+import com.connectin.authenticate.security.tokenmanager.util.JwtUtil;
+import com.connectin.authenticate.security.userdetails.UserDetailServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.context.annotation.*;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.connectin" })
-@ImportResource({ "classpath:/spring/root-context.xml", "classpath:/spring/servlet-context.xml", })
+//@EnableWebSecurity
+@EnableAspectJAutoProxy(proxyTargetClass = true)
+@ComponentScan(basePackages = {"com.connectin"})
+//@PropertySource("classpath:urlconfig.properties")
+@ImportResource({"classpath:/spring/root-context.xml", "classpath:/spring/servlet-context.xml",})
 public class Application {
+    @Bean(name = "userDetailsService")
+    public UserDetailsService loginService() {
+        return new UserDetailServiceImpl();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    @Bean(name = "tokenService")
+    public TokenAuthenticationService tokenService() {
+        return new TokenAuthenticationService();
+    }
+
+    @Bean(name = "jwtUtil")
+    public JwtUtil jwtUtil() {
+        return new JwtUtil();
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
 }

@@ -6,5 +6,5 @@ import com.connectin.exceptions.account.AccountException;
 
 
 public interface IAuthenticationService {
-	public UserCredentials login(String username, String password) throws AccountException, InvalidCredentialsException;
+    public UserCredentials login(String username, String password) throws AccountException, InvalidCredentialsException;
 }

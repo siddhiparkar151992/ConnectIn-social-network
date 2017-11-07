@@ -1,0 +1,257 @@
+/* line 2, ../../scss/storyline/story.scss */
+.component-post {
+    position: relative;
+    background: #fff;
+    padding: 18px;
+}
+
+/* line 5, ../../scss/storyline/story.scss */
+.component-post .component-header .post-header .sub-header {
+    font-size: small;
+    color: #5e5e5e;
+}
+
+/* line 10, ../../scss/storyline/story.scss */
+.component-post .component-header .img-user {
+    float: left;
+}
+
+/* line 13, ../../scss/storyline/story.scss */
+.component-post .component-header .icon-visibility {
+    float: right;
+    color: #757780;
+}
+
+/* line 18, ../../scss/storyline/story.scss */
+.component-post .icon-visibility {
+    float: right;
+    font-size: medium;
+}
+
+/* line 22, ../../scss/storyline/story.scss */
+.component-post .img-user {
+    width: 85px;
+}
+
+/* line 29, ../../scss/storyline/story.scss */
+.component-post .type {
+    display: block;
+    background: #57CBC8;
+    color: #fff;
+    font-size: 14pt;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+/* line 31, ../../scss/storyline/story.scss */
+.component-post h1 {
+    font-size: 19pt;
+    color: #475258;
+    margin-bottom: 3%;
+}
+
+/* line 33, ../../scss/storyline/story.scss */
+.component-post p {
+    line-height: 1.5em;
+    color: #999;
+    font-weight: 300;
+}
+
+/* line 35, ../../scss/storyline/story.scss */
+.component-post a {
+    color: #EA6060;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* line 36, ../../scss/storyline/story.scss */
+.component-post a:hover {
+    color: #9c1515;
+}
+
+/* line 41, ../../scss/storyline/story.scss */
+.component-post .post-info .post-stack {
+    padding: 5px;
+    color: #71747A;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+/* line 51, ../../scss/storyline/story.scss */
+.component-post .post-info .post-more-comments {
+    padding: 9px;
+}
+
+/* line 55, ../../scss/storyline/story.scss */
+.component-post .post-info .post-panel {
+    box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25) !important;
+    padding: 20px 0 0;
+}
+
+/* line 58, ../../scss/storyline/story.scss */
+.component-post .post-info .post-panel .post-heading {
+    background-color: white !important;
+}
+
+/* line 62, ../../scss/storyline/story.scss */
+.component-post .post-info .post-new-comment img {
+    border-radius: 100px;
+    float: left;
+    height: 40px;
+    margin: 0;
+    object-fit: cover;
+    width: 40px;
+}
+
+/* line 70, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comment {
+    font-size: 13px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* line 77, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comment .comment-text {
+    padding-left: 20px;
+    border-radius: 51px;
+}
+
+/* line 81, ../../scss/storyline/story.scss */
+.component-post .post-info .post-more-comments {
+    padding: 9px;
+}
+
+/* line 84, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comment .time {
+    color: #9197A3;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* line 91, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comment p {
+    color: #4B4D53;
+}
+
+/* line 94, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comment img {
+    border-radius: 100px;
+    float: left;
+    height: 33px;
+    margin: 0;
+    object-fit: cover;
+    width: 33px;
+}
+
+/* line 103, ../../scss/storyline/story.scss */
+.component-post .post-info .post-heading.content a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+/* line 107, ../../scss/storyline/story.scss */
+.component-post .post-info .post-status p {
+    margin: 0;
+}
+
+/* line 111, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comments {
+    padding: 0 !important;
+}
+
+/* line 114, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comments .list-group-item {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.075);
+    /* padding: 0; */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* line 121, ../../scss/storyline/story.scss */
+.component-post .post-info .post-comments .list-group {
+    margin: 0;
+}
+
+/* line 124, ../../scss/storyline/story.scss */
+.component-post .post-info .post-stack {
+    padding: 5px;
+    color: #71747A;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+/* line 135, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* line 141, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row > span {
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 2px 0 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* line 148, ../../scss/storyline/story.scss */
+.component-post .post-info .cpost-likes > .row:first-child {
+    float: left;
+    width: 60%;
+}
+
+/* line 152, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row:last-child {
+    float: left;
+    text-align: end;
+    width: 40%;
+}
+
+/* line 157, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span:nth-child(4) {
+    background: #4D679F;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 0 8px 0 6px;
+}
+
+/* line 163, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span:nth-child(4) > a {
+    color: #FFF;
+}
+
+/* line 166, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span,
+.component-post .post-info .post-likes > .row:last-child > span {
+    color: #9197A3;
+}
+
+/* line 170, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row:last-child > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* line 174, ../../scss/storyline/story.scss */
+.component-post .post-info .post-likes > .row img {
+    border-radius: 100px;
+    height: 28px;
+    object-fit: cover;
+    width: 28px;
+}

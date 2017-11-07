@@ -1,12 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <version>0.0.1-SNAPSHOT</version>
-  <parent>
-		<groupId>com.connectin</groupId>
-		<artifactId>connectin</artifactId>
-		<version>1.0</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
-	<packaging>jar</packaging>
-  <artifactId>connectin-config</artifactId>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <version>1.0</version>
+    <parent>
+        <groupId>com.connectin</groupId>
+        <artifactId>connectin</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <packaging>jar</packaging>
+    <artifactId>connectin-config</artifactId>
+    <build>
+        <finalName>connectin-config</finalName>
+    </build>
+    <!--  <build>
+           <plugins>
+               <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-deploy-plugin</artifactId>
+                   <executions>
+                       <execution>
+                           <id>default-deploy</id>
+                           <phase>deploy</phase>
+                       </execution>
+                   </executions>
+               </plugin>
+           </plugins>
+       </build> -->
 </project>

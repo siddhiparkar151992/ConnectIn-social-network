@@ -1,10 +1,11 @@
-/connectin-web/target/*
-/connectin-auth/target/*
-/connectin-core/target/*
-/connectin-config/target/*
-/connectin-domain/target/*
-/connectin-microsrvice/target/*
+/**/*.classpath
+
+/connectin-web/.sass-cache/*
+/connectin-web/node_modules/*
+/**/.settings
 /target/*
+/.metadata/*
+/connectin-web/src/main/webapp/resources/static/**/*.js
 .settings/*
 **/*.class
 *.classpath
@@ -12,8 +13,6 @@
 **/*.prefs
 *.prefs
 .idea
-*.class
-/connectin-microservice/target/**/*.class
-*.iml
+
 /target
 _site/

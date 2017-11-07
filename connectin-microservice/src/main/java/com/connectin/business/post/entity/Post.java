@@ -1,22 +1,5 @@
 package com.connectin.business.post.entity;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import com.connectin.business.comments.entity.Comment;
 import com.connectin.business.feed.entity.Feed;
 import com.connectin.business.likes.entity.Likes;
@@ -24,147 +7,152 @@ import com.connectin.business.user.entity.User;
 import com.connectin.common.entity.Category;
 import com.connectin.constants.Visibility;
 
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
 @Table
 @Entity(name = "post")
 public class Post implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name = "id")
-	private int id;
 
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User user;
+    @Id
+    @Column(name = "id")
+    private int id;
 
-	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-	private List<Comment> comments;
-	
-	@OneToMany(mappedBy = "postLike", cascade = CascadeType.ALL)
-	private List<Likes> likes;
-	
-	@ManyToOne
-	@JoinColumn(name = "category_id")
-	private Category category;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-	@Enumerated(EnumType.STRING)
-	@Column(name = "visibility", columnDefinition = "varchar(12)")
-	private Visibility visibility;
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    private List<Comment> comments;
 
-	@Column(name = "tags")
-	private String tags;
+    @OneToMany(mappedBy = "postLike", cascade = CascadeType.ALL)
+    private List<Likes> likes;
 
-	@Column(name = "created_time")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdTime;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
-	@Column(name = "updated_time")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date updatedTime;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "visibility", columnDefinition = "varchar(12)")
+    private Visibility visibility;
 
-	@ManyToOne
-	@JoinColumn(name = "feed_id")
-	private Feed feedId;
-	
-	@ManyToOne
-	@JoinColumn(name = "owner_id")
-	private User ownerId;
+    @Column(name = "tags")
+    private String tags;
 
-	public User getOwnerId() {
-		return ownerId;
-	}
+    @Column(name = "created_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdTime;
 
-	public void setOwnerId(User ownerId) {
-		this.ownerId = ownerId;
-	}
+    @Column(name = "updated_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date updatedTime;
 
-	@Column(name = "text")
-	private String text;
+    @ManyToOne
+    @JoinColumn(name = "feed_id")
+    private Feed feedId;
 
-	public Feed getFeedId() {
-		return feedId;
-	}
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private User ownerId;
+    @Column(name = "text")
+    private String text;
 
-	public void setFeedId(Feed feedId) {
-		this.feedId = feedId;
-	}
+    public User getOwnerId() {
+        return ownerId;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setOwnerId(User ownerId) {
+        this.ownerId = ownerId;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public Feed getFeedId() {
+        return feedId;
+    }
 
-	public User getUser() {
-		return user;
-	}
+    public void setFeedId(Feed feedId) {
+        this.feedId = feedId;
+    }
 
-	public void setUser(User userId) {
-		this.user = userId;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public Category getCategoryId() {
-		return category;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setCategoryId(Category categoryId) {
-		this.category = categoryId;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	@Enumerated(EnumType.STRING)
-	public Visibility getVisibility() {
-		return visibility;
-	}
+    public void setUser(User userId) {
+        this.user = userId;
+    }
 
-	@Enumerated(EnumType.STRING)
-	public void setVisibility(Visibility visibility) {
-		this.visibility = visibility;
-	}
+    public Category getCategoryId() {
+        return category;
+    }
 
-	public String getTags() {
-		return tags;
-	}
+    public void setCategoryId(Category categoryId) {
+        this.category = categoryId;
+    }
 
-	public void setTags(String tags) {
-		this.tags = tags;
-	}
+    @Enumerated(EnumType.STRING)
+    public Visibility getVisibility() {
+        return visibility;
+    }
 
-	public Date getCreatedTime() {
-		return createdTime;
-	}
+    @Enumerated(EnumType.STRING)
+    public void setVisibility(Visibility visibility) {
+        this.visibility = visibility;
+    }
 
-	public void setCreatedTime(Date createdTime) {
-		this.createdTime = createdTime;
-	}
+    public String getTags() {
+        return tags;
+    }
 
-	public Date getUpdatedTime() {
-		return updatedTime;
-	}
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
 
-	public void setUpdatedTime(Date updatedTime) {
-		this.updatedTime = updatedTime;
-	}
+    public Date getCreatedTime() {
 
-	public Feed getFeed() {
-		return feedId;
-	}
+        return createdTime;
+    }
 
-	public void setFeed(Feed feedId) {
-		this.feedId = feedId;
-	}
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
 
-	public String getText() {
-		return text;
-	}
+    public Date getUpdatedTime() {
+        return updatedTime;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public void setUpdatedTime(Date updatedTime) {
+        this.updatedTime = updatedTime;
+    }
 
-	
+    public Feed getFeed() {
+        return feedId;
+    }
+
+    public void setFeed(Feed feedId) {
+        this.feedId = feedId;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
 
 //	@Override
 //	public String toString() {
@@ -246,11 +234,11 @@ public class Post implements Serializable {
 //		return true;
 //	}
 
-	public List<Comment> getComments() {
-		return comments;
-	}
+    public List<Comment> getComments() {
+        return comments;
+    }
 
-	public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }

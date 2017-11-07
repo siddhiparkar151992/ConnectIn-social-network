@@ -1,0 +1,12 @@
+<div class="storyline-component visibility-dropdown dropdown pull-right">
+    <button class="dropdown-selected btn btn-success dropdown-toggle" type="button" id="dropdownMenu1"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{selectedItem.title}}
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li *ngFor="#item of items" (click)="onSelect(item)">
+            <a ><i [className]="item.icon" aria-hidden="true"></i>{{item.title}}</a>
+        </li>
+    </ul>
+</div>

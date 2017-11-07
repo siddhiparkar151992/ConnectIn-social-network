@@ -1,3 +1,4 @@
+/.git/**
 /connectin-web/target/*
 /connectin-auth/target/*
 /connectin-core/target/*
@@ -21,3 +22,4 @@ connectin-microservice/target/**/*.properties
 *.iml
 /target
 _site/
+/bin/
