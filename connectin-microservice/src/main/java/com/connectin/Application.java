@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 //@EnableWebSecurity
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan(basePackages = {"com.connectin"})
-@PropertySource("classpath:urlconfig.properties")
+//@PropertySource("classpath:urlconfig.properties")
 @ImportResource({"classpath:/spring/root-context.xml", "classpath:/spring/servlet-context.xml",})
 public class Application {
     @Bean(name = "userDetailsService")

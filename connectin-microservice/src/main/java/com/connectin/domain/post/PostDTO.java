@@ -5,6 +5,7 @@ import com.connectin.config.AppConfig;
 import com.connectin.constants.Visibility;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -23,12 +24,16 @@ public class PostDTO implements Serializable {
     private Visibility visibility;
     private String tags;
     private List<CommentDTO> comments;
-    private String createdTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date createdTime;
     private List<LikeDTO> likes;
     private String text;
     private User user;
     private DateFormat dateformat;
 
+    public PostDTO() {
+
+    }
     public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text, User user) {
         super();
         dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
@@ -36,7 +41,7 @@ public class PostDTO implements Serializable {
         this.category = category;
         this.visibility = visibility;
         this.tags = tags;
-        this.createdTime = dateformat.format(creadteDate);
+        this.createdTime = creadteDate;
         this.text = text;
         this.user = user;
     }
@@ -50,7 +55,7 @@ public class PostDTO implements Serializable {
         this.visibility = visibility;
         this.tags = tags;
         this.comments = comments;
-        this.createdTime = dateformat.format(creadteDate);
+        this.createdTime = creadteDate;
         this.likes = likes;
     }
 
@@ -62,11 +67,11 @@ public class PostDTO implements Serializable {
         this.user = user;
     }
 
-    public String getCreatedTime() {
+    public Date getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(String createdTime) {
+    public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
     }
 
@@ -179,11 +184,11 @@ public class PostDTO implements Serializable {
         this.comments = comments;
     }
 
-    public String getCreadteDate() {
+    public Date getCreadteDate() {
         return createdTime;
     }
 
-    public void setCreadteDate(String creadteDate) {
+    public void setCreadteDate(Date creadteDate) {
         this.createdTime = creadteDate;
     }
 

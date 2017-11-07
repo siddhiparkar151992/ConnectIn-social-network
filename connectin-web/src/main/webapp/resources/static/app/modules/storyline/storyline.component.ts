@@ -7,7 +7,7 @@ import {UserFeedService} from "../../common/core/storyline/feed/user-feed/user-f
 import {UrlConfigService} from "../../config/url-config.service";
 import {TokenService} from "../../common/core/security/token/token.service";
 import {TokenResolver} from "../../common/core/resolver/token.resolver.service";
-import 'rxjs/Rx';
+import "rxjs/Rx";
 @Component({
     selector: 'storyline',
     templateUrl: '/resources/static/app/modules/storyline/storyline.component.html',
@@ -19,16 +19,25 @@ export class StorylineComponent implements OnInit {
     private token;
     private userFeed;
     private userFeedService;
-
+    private privacyDropdown;
 
     constructor(private route: Router,
                 private tokenService: TokenService,
                 @Inject(UserFeedService) private userFeedServ: UserFeedService) {
         this.userFeedService = userFeedServ;
-
+        this.privacyDropdown = {
+            selectedItem: {'title': 'Public', 'icon': 'fa fa-globe'},
+            items: [
+                {'title': 'Public', 'icon': 'fa fa-globe'},
+                {'title': 'Friends','icon': 'fa fa-users'},
+                {'title': 'Me','icon': 'fa fa-lock'}
+            ]
+        }
     }
 
+    addPost() {
 
+    }
     ngOnInit() {
         var that = this;
         const userData = JSON.parse(localStorage.getItem('ud'));

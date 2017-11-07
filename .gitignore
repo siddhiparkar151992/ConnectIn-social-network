@@ -4,6 +4,7 @@
 /connectin-web/node_modules/*
 /**/.settings
 /target/*
+/.metadata/*
 /connectin-web/src/main/webapp/resources/static/**/*.js
 .settings/*
 **/*.class

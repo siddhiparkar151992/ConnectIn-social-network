@@ -14,10 +14,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     IAccountDao accountDao;
-
-    @Autowired
-    ResponseGenerator<Account> responseGenerator;
-
     public void createAccount(Account account) {
         // TODO Auto-generated method stub
 
@@ -36,6 +32,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Response<Account> getAccount(int userId, String hashToken) {
         Account account = null;
+        ResponseGenerator<Account> responseGenerator = new ResponseGenerator<>();
         try {
             account = accountDao.getAccountById(userId);
 

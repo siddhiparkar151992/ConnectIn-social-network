@@ -30,9 +30,6 @@ public class RegistrationServiceImpl implements RegistrationService {
     private IUserDao userDao;
 
     @Autowired
-    private ResponseGenerator<Object> responseGenerator;
-
-    @Autowired
     private PasswordValidator passwordValidator;
 
     private ValidationResult validateUser(UserRequest user) {
@@ -55,7 +52,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public Response<Object> registerUser(UserRequest user) {
-
+        ResponseGenerator<Object> responseGenerator = new ResponseGenerator<>();
         ValidationResult result = validateUser(user);
         if (!result.isValid()) {
             return responseGenerator.generateErrorResponse("Invalid user details ", Message.ERROR_CODE, null);

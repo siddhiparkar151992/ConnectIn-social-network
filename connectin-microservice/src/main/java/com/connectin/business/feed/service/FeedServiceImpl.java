@@ -16,13 +16,10 @@ public class FeedServiceImpl implements FeedService {
     @Autowired
     IFeedManager feedManager;
 
-    @Autowired
-    ResponseGenerator<FeedDTO> responseGenerator;
-
-
     @Override
     public Response<FeedDTO> getPostByUser(int userId) {
         FeedDTO post = null;
+        ResponseGenerator<FeedDTO> responseGenerator = new ResponseGenerator<>();
         try {
             post = feedManager.getFeedByUser(userId);
 

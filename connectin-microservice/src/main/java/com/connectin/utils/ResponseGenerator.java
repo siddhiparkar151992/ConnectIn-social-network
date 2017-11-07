@@ -2,7 +2,7 @@ package com.connectin.utils;
 
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class ResponseGenerator<T> {
     public Response<T> generateSuccessResponse(String message, int statusCode,
                                                T data) {

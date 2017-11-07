@@ -4,9 +4,7 @@ import com.connectin.business.post.service.PostService;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,5 +24,12 @@ public class PostController {
         Response<List<PostDTO>> postResponse = postService.getPostByUser(userId);
         return postResponse;
 
+    }
+
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public Response<String> addPostForUser(@RequestBody PostDTO post, @RequestParam("feedId") Integer feedId, HttpServletRequest httpServletRequest,
+                                           HttpServletResponse httpServletResponse) {
+        Response<String> response = postService.addPost(post, feedId);
+        return response;
     }
 }

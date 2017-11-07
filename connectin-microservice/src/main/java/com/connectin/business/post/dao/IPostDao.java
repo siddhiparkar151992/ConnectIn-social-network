@@ -1,5 +1,6 @@
 package com.connectin.business.post.dao;
 
+import com.connectin.business.post.entity.Post;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
 
@@ -10,4 +11,5 @@ public interface IPostDao {
 
     List<PostDTO> getPostsByFeed(int[] connections) throws ConnectinBaseException;
 
+    String addPost(Post post, int feedId);
 }

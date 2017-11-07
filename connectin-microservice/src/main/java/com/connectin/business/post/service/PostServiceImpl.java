@@ -16,15 +16,13 @@ import java.util.List;
 public class PostServiceImpl implements PostService {
 
     @Autowired
-    IPostManager postManager;
-
-    @Autowired
-    ResponseGenerator<List<PostDTO>> responseGenerator;
+    private IPostManager postManager;
 
 
     @Override
     public Response<List<PostDTO>> getPostByUser(int userId) {
         List<PostDTO> post = null;
+        ResponseGenerator<List<PostDTO>> responseGenerator = new ResponseGenerator<>();
         try {
             post = postManager.populatePosts(userId);
 
@@ -39,5 +37,21 @@ public class PostServiceImpl implements PostService {
 
     }
 
+    @Override
+    public Response<String> addPost(PostDTO post, int feedId) {
+        String result = null;
+        ResponseGenerator<String> responseGenerator = new ResponseGenerator<>();
+        try {
+            result = postManager.addPost(post, feedId);
 
+            if (!post.equals(null)) {
+
+                return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, result);
+            }
+        } catch (ConnectinBaseException e) {
+            return responseGenerator.generateErrorResponse(e.getMessage(), Message.ERROR_CODE, result);
+        }
+        return null;
+
+    }
 }

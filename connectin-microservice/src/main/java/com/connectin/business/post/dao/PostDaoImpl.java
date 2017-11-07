@@ -3,6 +3,9 @@
  */
 package com.connectin.business.post.dao;
 
+import com.connectin.business.feed.entity.Feed;
+import com.connectin.business.post.entity.Post;
+import com.connectin.common.entity.Category;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.exceptions.ConnectinBaseException;
 import org.springframework.stereotype.Repository;
@@ -24,6 +27,9 @@ public class PostDaoImpl implements IPostDao {
     @PersistenceContext
     EntityManager entityManager;
 
+    public EntityManager getEntityManager() {
+        return entityManager;
+    }
     @Override
     public List<PostDTO> getPostsByUser(int userId) throws ConnectinBaseException {
         List<PostDTO> posts = new ArrayList<>();
@@ -55,5 +61,12 @@ public class PostDaoImpl implements IPostDao {
             throw new ConnectinBaseException("Could not load posts!");
 
         }
+    }
+
+    @Override
+    @Transactional
+    public String addPost(Post postEntity, int feedId) {
+        entityManager.persist(postEntity);
+        return new String("Success");
     }
 }

@@ -10,6 +10,7 @@
 .dropdown-menu {
   background-color: #121025;
   li {
+    cursor: pointer;
     a {
       color: white;
       &:hover {

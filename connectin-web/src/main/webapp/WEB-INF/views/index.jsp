@@ -22,7 +22,7 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="/resources/styles/vendor/font-awesome.min.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css">
+    <%--<link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css">--%>
     <!-- Fancybox -->
     <!-- <link rel="stylesheet" href="/resources/css/jquery.fancybox.css">
     <!-- owl carousel -->
@@ -109,7 +109,10 @@
 
 
 <script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
-<script src="/resources/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<%--<script src="/resources/js/bootstrap.min.js"></script>--%>
 <script src="/resources/js/jquery.nav.js"></script>
+
 </body>
 </html>

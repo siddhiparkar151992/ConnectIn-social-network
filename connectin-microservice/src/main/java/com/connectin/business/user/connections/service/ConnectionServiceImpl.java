@@ -14,13 +14,13 @@ import java.util.List;
 @Service
 public class ConnectionServiceImpl implements ConnectionService {
 
-    @Autowired
-    ResponseGenerator<List<User>> responseGenerator;
+
     @Autowired
     private IConnectionsDao connectionDao;
 
     @Override
     public Response<List<User>> getConnectionsPerUser(int userId, String hashToken) {
+        ResponseGenerator<List<User>> responseGenerator = new ResponseGenerator<>();
         List<User> user = null;
         try {
             user = connectionDao.getConnectionByUserId(userId);

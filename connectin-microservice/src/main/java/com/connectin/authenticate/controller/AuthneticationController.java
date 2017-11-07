@@ -23,11 +23,10 @@ public class AuthneticationController {
     @Autowired
     private AuthProvider authProvider;
 
-    @Autowired
-    ResponseGenerator<Object> responseGenerator;
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public Response<Object> register(@RequestBody UserCred user) {
         String token;
+        ResponseGenerator<Object> responseGenerator = new ResponseGenerator<>();
         try {
             token = authProvider.authenticateUser(user.getId(), user.getPassword());
             if(token != null){

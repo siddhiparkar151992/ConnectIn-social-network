@@ -15,14 +15,14 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     IUserDao userDao;
-    @Autowired
-    ResponseGenerator<User> responseGenerator;
+
     @Autowired
     private IConnectionsDao connectionDao;
 
     @Override
     public Response<User> getUser(String userName, String hashToken) {
         User user = null;
+        ResponseGenerator<User> responseGenerator = new ResponseGenerator<>();
         try {
             user = userDao.getByName(userName);
 

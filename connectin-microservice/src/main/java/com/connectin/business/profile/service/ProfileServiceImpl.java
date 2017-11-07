@@ -15,12 +15,11 @@ public class ProfileServiceImpl implements ProfileService {
     @Autowired
     IProfileManager profileManager;
 
-    @Autowired
-    ResponseGenerator<ProfileDTO> responseGenerator;
 
     @Override
     public Response<ProfileDTO> getUserProfileByUserId(int userId) {
         ProfileDTO profile = null;
+        ResponseGenerator<ProfileDTO> responseGenerator = new ResponseGenerator<>();
         try {
             profile = profileManager.getProfileByUser(userId);
 
