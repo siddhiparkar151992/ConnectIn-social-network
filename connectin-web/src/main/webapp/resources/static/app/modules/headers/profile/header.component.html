@@ -1,85 +1,52 @@
-<section>
-    <header>
-        <nav class="custom-navbar navbar navbar-default navbar-static-top">
-            <div class="container navbar-container">
-                <div class="row">
-                    <div class="col-xs-8"></div>
-                    <div class="col-xs-4">
-                        <ul class="notification-bar nav navbar-nav navbar-right">
-                            <li class="notification notification-chat dropdown"><a href="#"
-                                                                                   class="dropdown-toggle"
-                                                                                   class="dropdown"
-                                                                                   data-toggle="dropdown"
-                                                                                   aria-expanded="false"> <i
-                                    class="icon-comment fa fa-comment"></i> <span
-                                    class="badge">0</span>
+<nav class="custom-navbar navbar navbar-toggleable-md navbar-inverse bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand brand-name" href="#">Connectin</a>
+    <div class="collapse navbar-collapse nav-header" id="navbarNavDropdown">
+        <ul class="navbar-nav nav-list">
 
-                            </a>
-                                <notification-list style="display:none"></notification-list>
-                            </li>
-                            <li class="notification notification-msg"><a href="#"> <i
-                                    class="fa fa-envelope icon-envelope"></i> <span class="badge">0</span>
-                            </a></li>
-                            <li class="notification notification-not"><a href="#"> <i
-                                    class="fa fa-bell icon-bell"></i> <span class="badge">0</span>
-                            </a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> <i
+                        class="icon-comment fa fa-comment"></i> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i
+                        class="fa fa-envelope icon-envelope"></i></a>
+            </li>
+            <notification-list></notification-list>
+            <li class="nav-item dropdown dropdown-profile-link">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="profileLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                   <span class="user-avatar pull-left"
+                         style="margin-right: 8px; margin-top: -5px;"> <img
+                           src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+                           class="img-responsive img-circle" title="John Doe"
+                           alt="John Doe" width="30px" height="30px">
+                        </span> <span class="user-name"> John Doe </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="profileLink">
+                    <a class="dropdown-item  item-row" href="#">
 
-                            <li class="profile-dropdown"><a href="#"
-                                                            class="dropdown-toggle" data-toggle="dropdown"
-                                                            aria-expanded="false"> <span class="user-avatar pull-left"
-                                                                                         style="margin-right: 8px; margin-top: -5px;"> <img
-                                    src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
-                                    class="img-responsive img-circle" title="John Doe"
-                                    alt="John Doe" width="30px" height="30px">
-								</span> <span class="user-name"> John Doe </span> <b class="caret"></b></a>
-
-                                <ul class="container profile-links dropdown-menu">
-                                    <li class="row">
-                                        <div class="col-xs-12 profile-popup">
-
-
-                                            <div class="">
-                                                <a href="#"> <img class="profile-image media-object"
-                                                                  src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
-                                                                  alt="...">
-                                                </a>
-                                            </div>
-                                            <div class="">
-                                                <h5 class="">
-                                                    <div class="profile-link">
-                                                        john doe <a href="">View profile</a>
-                                                    </div>
-                                                </h5>
-                                                <div class="divider"></div>
-                                                <div class="nav-links list-group">
-
-                                                    <div class="link-item list-group-item"><i class="fa fa-gears"></i>Settings
-                                                    </div>
-                                                    <div class="link-item list-group-item"><i class="fa fa-user"></i>Account
-                                                        and
-                                                        privacy
-                                                    </div>
-                                                    <div class="link-item list-group-item"><i
-                                                            class="fa fa-phone-square"></i>Help center
-                                                    </div>
-                                                    <div class="link-item list-group-item"><i class="fa fa-group"></i>Admin
-                                                        request
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                        <i class="fa fa-user"></i>View profile
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item item-row" href="#"><i class="fa fa-gears"></i>Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item item-row" href="#"><i class="fa fa-lock"></i>Account
+                        and
+                        privacy</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item item-row" href="#"><i
+                            class="fa fa-phone-square"></i>Help center</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item item-row" href="#"><i class="fa fa-group"></i>Admin
+                        request</a>
+                    <div class="dropdown-divider"></div>
                 </div>
-            </div>
-        </nav>
-    </header>
-</section>
+            </li>
+        </ul>
+    </div>
+</nav>

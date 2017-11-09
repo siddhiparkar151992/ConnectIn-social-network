@@ -2,13 +2,13 @@
 <div *ngIf="userFeed">
     <div class="storyline container">
         <div class="row">
-            <news-feed class="storyline-component news-feed"></news-feed>
+            <news-feed class="col-4 storyline-component news-feed"></news-feed>
 
-            <div class="col-xs-6 storyline-component feeds">
+            <div class="col-6 storyline-component feeds">
                 <div class="panel panel-default">
                     <div class="panel-body">
                     <span>
-                       
+
                         <dropdown [(selectedItem)]="privacyDropdown.selectedItem" [(items)]="privacyDropdown.items" ></dropdown>
                     </span>
                         <br><br>
