@@ -70,7 +70,7 @@
     <div class="dropdown-divider mr-divider-0"></div>
     <div id="commentDrpdown" class="collapse story card-block story-comment-section">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item row">
+            <li *ngFor="#comment of post.comments" class="comment-row list-group-item row">
                 <div class="col-4"> <a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
                                                       src="http://goo.gl/oM0Y8G" alt="...">
                 </a><a href="">{{comment.firstName}} {{comment.lastName}} </a>
@@ -78,11 +78,10 @@
                         <span class="time"> 1 hr - </span> <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
                     </div></div>
                 <div class="col-6 float-right">
-                    <p>{{comment.text}}</p>
+                    <div class="comment-section comment-text">{{comment.text}}</div>
                 </div>
             </li>
-            <li class="list-group-item">kjj</li>
-            <li class="list-group-item">loipi</li>
+
         </ul>
     </div>
 </div>

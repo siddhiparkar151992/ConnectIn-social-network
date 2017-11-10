@@ -65,6 +65,15 @@
     }
   }
   .story-comment-section{
+    .comment-row{
+      padding: 5px 10px 5px 10px;
+      .comment-text {
+        line-height: 1.5em;
+        font-weight: 300;
+        color: #4B4D53;
+        font-size: 13px;
+      }
+    }
     .time{
       padding: 0 1.1rem;
       color: #9197A3;
