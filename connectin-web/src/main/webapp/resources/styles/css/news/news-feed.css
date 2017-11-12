@@ -1,0 +1,17 @@
+/* line 3, ../../scss/news/news-feed.scss */
+.section-new-feed {
+  background: #fff;
+  color: #475258;
+}
+/* line 6, ../../scss/news/news-feed.scss */
+.section-new-feed .news-bar {
+  padding: 1rem;
+}
+/* line 8, ../../scss/news/news-feed.scss */
+.section-new-feed .news-bar .media {
+  margin-bottom: 1rem;
+}
+/* line 10, ../../scss/news/news-feed.scss */
+.section-new-feed .news-bar .media .media-body {
+  font-size: 14px;
+}

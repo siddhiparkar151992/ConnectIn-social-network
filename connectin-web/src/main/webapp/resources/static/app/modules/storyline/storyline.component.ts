@@ -7,12 +7,14 @@ import {UserFeedService} from "../../common/core/storyline/feed/user-feed/user-f
 import {UrlConfigService} from "../../config/url-config.service";
 import {TokenService} from "../../common/core/security/token/token.service";
 import {TokenResolver} from "../../common/core/resolver/token.resolver.service";
+import {StorylineService} from "./service/storyline.service";
+
 import "rxjs/Rx";
 @Component({
     selector: 'storyline',
     templateUrl: '/resources/static/app/modules/storyline/storyline.component.html',
     directives: [StoryComponent, NewsComponent, DropdownComponent],
-    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver],
+    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService],
     styleUrls: ['resources/styles/css/storyline/storyline.css']
 })
 export class StorylineComponent implements OnInit {
@@ -20,24 +22,36 @@ export class StorylineComponent implements OnInit {
     private userFeed;
     private userFeedService;
     private privacyDropdown;
+    private post;
 
     constructor(private route: Router,
                 private tokenService: TokenService,
-                @Inject(UserFeedService) private userFeedServ: UserFeedService) {
+                @Inject(UserFeedService) private userFeedServ: UserFeedService,
+                @Inject(StorylineService) private storylineService: StorylineService) {
         this.userFeedService = userFeedServ;
+        this.post = {'text': ''};
         this.privacyDropdown = {
             selectedItem: {'title': 'Public', 'icon': 'fa fa-globe'},
             items: [
                 {'title': 'Public', 'icon': 'fa fa-globe'},
-                {'title': 'Friends','icon': 'fa fa-users'},
-                {'title': 'Me','icon': 'fa fa-lock'}
+                {'title': 'Friends', 'icon': 'fa fa-users'},
+                {'title': 'Me', 'icon': 'fa fa-lock'}
             ]
         }
     }
 
-    addPost() {
-
+    onPostClick() {
+        if (this.post.text != null && this.post.text != "") {
+            this.storylineService.addPost({
+                'category': '',
+                'visibility': this.privacyDropdown.selectedItem.title,
+                'tags': this.post.tags,
+                'comments': [],
+                'createdTime':
+            })
+        }
     }
+
     ngOnInit() {
         var that = this;
         const userData = JSON.parse(localStorage.getItem('ud'));

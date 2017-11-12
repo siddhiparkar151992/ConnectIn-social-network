@@ -1,22 +1,7 @@
-.dropdown {
-  font-size: medium;
-}
-
-.dropdown-selected {
-  background-color: #121025 !important;
-
-}
-
-.dropdown-menu {
-  background-color: #121025;
-  li {
-    cursor: pointer;
-    a {
-      color: white;
-      &:hover {
-        background-color: #121025;
-        color: white;
-      }
+.custom-dropdown {
+  .drp-selected {
+    .dropdown-item, button{
+      cursor: pointer;
     }
   }
 }
