@@ -6,5 +6,5 @@ import com.connectin.exceptions.ConnectinBaseException;
 import java.util.List;
 
 public interface IConnectionsDao {
-    public List<User> getConnectionByUserId(int id) throws ConnectinBaseException;
+    public List<User> getConnectionByUserId(String userName) throws ConnectinBaseException;
 }

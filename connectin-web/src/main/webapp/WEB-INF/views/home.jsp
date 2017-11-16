@@ -6,6 +6,7 @@
 
     <script type="text/javascript"
             src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="/resources/js/vendor/moment.min.js"></script>
     <link rel="stylesheet"
           href="/resources/styles/vendor/font-awesome.min.css">
     <link rel="stylesheet" href="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" >

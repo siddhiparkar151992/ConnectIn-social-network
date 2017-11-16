@@ -4,12 +4,16 @@
   padding: 30px;
 }
 
-/* line 10, ../../scss/storyline/storyline.scss */
+/* line 9, ../../scss/storyline/storyline.scss */
+.container .feeds .post-card {
+  margin-bottom: 10px;
+}
+/* line 11, ../../scss/storyline/storyline.scss */
 .container .feeds .post-card .btn-post {
   cursor: pointer;
 }
 
-/* line 17, ../../scss/storyline/storyline.scss */
+/* line 18, ../../scss/storyline/storyline.scss */
 .container {
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }

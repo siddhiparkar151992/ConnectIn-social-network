@@ -10,6 +10,7 @@ import com.connectin.exceptions.ConnectinBaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service("feedManager")
@@ -25,13 +26,14 @@ public class FeedManagerImpl implements IFeedManager {
     private IPostManager postManager;
 
     @Override
-    public FeedDTO getFeedByUser(int userId) throws ConnectinBaseException {
-        FeedDTO feed = feedDao.getFeedByUserId(userId);
-        List<User> connections = connectionDao.getConnectionByUserId(userId);
-        int[] userIds = new int[connections.size()];
+    public FeedDTO getFeedByUser(String userName) throws ConnectinBaseException {
+        FeedDTO feed = feedDao.getFeedByUserId(userName);
+        List<User> connections = connectionDao.getConnectionByUserId(userName);
+        List<String> userIds = new ArrayList<>();
         for (User user : connections) {
-            userIds[userIds.length - 1] = user.getId();
+            userIds.add(user.getUserName());
         }
+        userIds.add(userName);
         List<PostDTO> posts = postManager.getPostsForUserFeed(userIds);
         feed.setPosts(posts);
         return feed;

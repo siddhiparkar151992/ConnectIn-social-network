@@ -26,12 +26,12 @@ public class FeedDaoImpl extends DataAccessor<Feed> implements IFeedDao {
     EntityManager entityManager;
 
     @Override
-    public FeedDTO getFeedByUserId(int userId) throws ConnectinBaseException {
+    public FeedDTO getFeedByUserId(String userName) throws ConnectinBaseException {
         FeedDTO feed;
         try {
             feed = (FeedDTO) entityManager.createQuery("select new com.connectin.domain.feed.FeedDTO("
                     + "p.id, p.createdDate, p.updatedDate, p.feedType)"
-                    + " from Feed p where p.user.id=:userId").setParameter("userId", userId).getSingleResult();
+                    + " from Feed p where p.user.userName=:userName").setParameter("userName", userName).getSingleResult();
             return feed;
         } catch (Exception e) {
             throw new ConnectinBaseException("Could not load feed!");

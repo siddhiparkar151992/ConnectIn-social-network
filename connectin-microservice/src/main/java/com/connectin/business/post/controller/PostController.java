@@ -1,13 +1,16 @@
 package com.connectin.business.post.controller;
 
+import com.connectin.authenticate.entity.User;
 import com.connectin.business.post.service.PostService;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -18,10 +21,11 @@ public class PostController {
     private PostService postService;
 
     @RequestMapping("/list")
-    public Response<List<PostDTO>> getPostsByUser(@RequestParam int userId, HttpServletRequest request,
+    public Response<List<PostDTO>> getPostsByUser(HttpServletRequest request,
                                                   HttpServletResponse response) {
-        String token = request.getHeader("token");
-        Response<List<PostDTO>> postResponse = postService.getPostByUser(userId);
+        User principal = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String username = principal.getUsername();
+        Response<List<PostDTO>> postResponse = postService.getPostByUser(username);
         return postResponse;
 
     }

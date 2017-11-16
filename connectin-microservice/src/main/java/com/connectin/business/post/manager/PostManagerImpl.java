@@ -6,6 +6,7 @@ import com.connectin.business.likes.dao.ILikesDao;
 import com.connectin.business.post.dao.IPostDao;
 import com.connectin.business.post.entity.Post;
 import com.connectin.common.entity.Category;
+import com.connectin.config.AppConfig;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
 import com.connectin.domain.post.PostDTO;
@@ -13,12 +14,17 @@ import com.connectin.exceptions.ConnectinBaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class PostManagerImpl implements IPostManager {
 
+    @Autowired
+    private AppConfig appConfig;
     @Autowired
     private IPostDao postDao;
 
@@ -29,19 +35,26 @@ public class PostManagerImpl implements IPostManager {
     private ILikesDao likesDao;
 
     @Override
-    public List<PostDTO> populatePosts(int userId) throws ConnectinBaseException {
-        List<PostDTO> posts = postDao.getPostsByUser(userId);
+    public List<PostDTO> populatePosts(String userName) throws ConnectinBaseException {
+        List<PostDTO> posts = postDao.getPostsByUser(userName);
         return this.populatePostWithComments(posts);
     }
 
     private Post constructPostEntity(PostDTO post, int feedId) throws ConnectinBaseException {
+        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Post postEntity = new Post();
         Category category = new Category();
         category.setCategoryId(1);
+        postEntity.setText(post.getText());
         postEntity.setCategoryId(category);
         postEntity.setComments(new ArrayList());
-        postEntity.setCreatedTime(post.getCreatedTime());
-        postEntity.setUpdatedTime(post.getCreatedTime());
+        try {
+            postEntity.setCreatedTime(dateformat.parse(post.getCreatedTime()));
+            postEntity.setUpdatedTime(dateformat.parse(post.getCreatedTime()));
+        } catch (ParseException e) {
+            throw new ConnectinBaseException("could not parse date!");
+        }
+
         Feed feed = new Feed();
         feed.setId(feedId);
         postEntity.setFeed(feed);
@@ -74,7 +87,7 @@ public class PostManagerImpl implements IPostManager {
     }
 
     @Override
-    public List<PostDTO> getPostsForUserFeed(int[] connections) throws ConnectinBaseException {
+    public List<PostDTO> getPostsForUserFeed(List<String> connections) throws ConnectinBaseException {
         List<PostDTO> posts = postDao.getPostsByFeed(connections);
         return this.populatePostWithComments(posts);
 
@@ -83,7 +96,8 @@ public class PostManagerImpl implements IPostManager {
     @Override
     public String addPost(PostDTO post, int feedId) throws ConnectinBaseException {
         try{
-            constructPostEntity(post, feedId);
+            Post postEntity = constructPostEntity(post, feedId);
+            postDao.addPost(postEntity, feedId);
         }catch (ConnectinBaseException e) {
             return "adding post failed "+e.getMessage();
         }

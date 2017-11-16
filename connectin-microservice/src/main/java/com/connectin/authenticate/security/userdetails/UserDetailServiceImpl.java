@@ -15,13 +15,14 @@ import java.util.List;
 public class UserDetailServiceImpl implements UserDetailsService {
 
 
-    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String uname) throws UsernameNotFoundException {
         User user = null;
         Role r = new Role();
         r.setName("ROLE_USER");
         List<Role> roles = new ArrayList<Role>();
         roles.add(r);
         user = new User(roles);
+        user.setUsername(uname);
         return user;
 
     }

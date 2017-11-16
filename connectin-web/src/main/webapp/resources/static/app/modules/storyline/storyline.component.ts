@@ -8,13 +8,13 @@ import {UrlConfigService} from "../../config/url-config.service";
 import {TokenService} from "../../common/core/security/token/token.service";
 import {TokenResolver} from "../../common/core/resolver/token.resolver.service";
 import {StorylineService} from "./service/storyline.service";
-
+import {DatetimeService} from '../../common/core/utilities/datetime.service';
 import "rxjs/Rx";
 @Component({
     selector: 'storyline',
     templateUrl: '/resources/static/app/modules/storyline/storyline.component.html',
     directives: [StoryComponent, NewsComponent, DropdownComponent],
-    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService],
+    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService, DatetimeService],
     styleUrls: ['resources/styles/css/storyline/storyline.css']
 })
 export class StorylineComponent implements OnInit {
@@ -27,7 +27,9 @@ export class StorylineComponent implements OnInit {
     constructor(private route: Router,
                 private tokenService: TokenService,
                 @Inject(UserFeedService) private userFeedServ: UserFeedService,
-                @Inject(StorylineService) private storylineService: StorylineService) {
+                @Inject(StorylineService) private storylineService: StorylineService,
+                @Inject(DatetimeService) private datetimeService) {
+        this.datetimeService = datetimeService;
         this.userFeedService = userFeedServ;
         this.post = {'text': ''};
         this.privacyDropdown = {
@@ -47,21 +49,30 @@ export class StorylineComponent implements OnInit {
                 'visibility': this.privacyDropdown.selectedItem.title,
                 'tags': this.post.tags,
                 'comments': [],
-                'createdTime':
-            })
+                'createdTime': this.datetimeService.getCurrentDateTime(),
+                'text': this.post.text,
+                'user': {'id':1}
+            }, 1).subscribe(response => {
+                this.populateFeed();
+            });
         }
     }
 
+
+    populateFeed() {
+        var that = this;
+        this.userFeedService.getUserFeeds().subscribe(response => {
+            response = response.json();
+            that.userFeed = response.data;
+        });
+    }
     ngOnInit() {
         var that = this;
         const userData = JSON.parse(localStorage.getItem('ud'));
         this.tokenService.getToken(userData.id, userData.password).subscribe(res => {
             let data = res.json();
             that.tokenService.setUserToken(data.data.token);
-            this.userFeedService.getUserFeeds(1).subscribe(response => {
-                response = response.json();
-                that.userFeed = response.data;
-            });
+            this.populateFeed();
         });
     }
 }

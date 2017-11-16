@@ -15,16 +15,16 @@ export class UserFeedService {
         this.urlConfigService = urlConfig;
         this.headers = new Headers();
         this.headers.append('Content-Type', 'application/json');
-
+        this.http = http;
     }
 
 
-    getUserFeeds(userId) {
+    getUserFeeds() {
         let headers = new Headers();
-        headers.append('Content-Type', 'application/json')
+        headers.append('Content-Type', 'application/json');
         headers.append('Authorization', this.tokenService.getUserToken());
         let options = new RequestOptions({headers: headers});
-        return this.http.post(this.urlConfig.getUserFeedUrl() + '?userId=' + userId, "", options)
+        return this.http.post(this.urlConfig.getUserFeedUrl(), "", options)
 
     }
 

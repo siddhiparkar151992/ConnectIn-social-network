@@ -6,5 +6,5 @@ import com.connectin.utils.Response;
 import java.util.List;
 
 public interface ConnectionService {
-    public Response<List<User>> getConnectionsPerUser(int userId, String hashToken);
+    public Response<List<User>> getConnectionsPerUser(String userName, String hashToken);
 }

@@ -19,11 +19,11 @@ public class ConnectionServiceImpl implements ConnectionService {
     private IConnectionsDao connectionDao;
 
     @Override
-    public Response<List<User>> getConnectionsPerUser(int userId, String hashToken) {
+    public Response<List<User>> getConnectionsPerUser(String userName, String hashToken) {
         ResponseGenerator<List<User>> responseGenerator = new ResponseGenerator<>();
         List<User> user = null;
         try {
-            user = connectionDao.getConnectionByUserId(userId);
+            user = connectionDao.getConnectionByUserId(userName);
 
             if (!user.equals(null)) {
 

@@ -14,6 +14,7 @@ export class UrlConfigService {
     public host = "localhost";
     public apiBaseUrl = "/connectin/api/";
     public userFeedUrl = "user/feed";
+    public postUrl = 'posts/add';
     public tokenUrl = "token";
 
     constructor() {
@@ -26,6 +27,9 @@ export class UrlConfigService {
 
     getUserFeedUrl() {
         return this.baseUrl + this.userFeedUrl;
+    }
+    getAddPostUrl() {
+        return this.baseUrl + this.postUrl;
     }
 
     getTokenUrl() {

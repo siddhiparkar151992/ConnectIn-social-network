@@ -9,7 +9,7 @@
 
                     <div class="card-block">
                         <dropdown [(selectedItem)]="privacyDropdown.selectedItem" [(items)]="privacyDropdown.items" ></dropdown>
-                        <textarea class="form-control" rows="5">{{post.text}}</textarea>
+                        <textarea class="form-control" [(ngModel)]="post.text"  rows="5"></textarea>
                         <button (click)="onPostClick()" type="button" class="float-right btn btn-outline-primary btn-post">Post</button>
                     </div>
                 </div>
