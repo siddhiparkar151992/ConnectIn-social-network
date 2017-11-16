@@ -5,5 +5,5 @@ import com.connectin.exceptions.ConnectinBaseException;
 
 
 public interface IFeedManager {
-    FeedDTO getFeedByUser(int userId) throws ConnectinBaseException;
+    FeedDTO getFeedByUser(String userName) throws ConnectinBaseException;
 }

@@ -17,11 +17,11 @@ public class FeedServiceImpl implements FeedService {
     IFeedManager feedManager;
 
     @Override
-    public Response<FeedDTO> getPostByUser(int userId) {
+    public Response<FeedDTO> getPostByUser(String userName) {
         FeedDTO post = null;
         ResponseGenerator<FeedDTO> responseGenerator = new ResponseGenerator<>();
         try {
-            post = feedManager.getFeedByUser(userId);
+            post = feedManager.getFeedByUser(userName);
 
             if (!post.equals(null)) {
 

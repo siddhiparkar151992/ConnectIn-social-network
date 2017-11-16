@@ -18,14 +18,14 @@ public class ConnectionDaoImpl implements IConnectionsDao {
     EntityManager entityManager;
 
     @Override
-    public List<User> getConnectionByUserId(int userId) throws ConnectinBaseException {
+    public List<User> getConnectionByUserId(String userName) throws ConnectinBaseException {
         List<User> connections = new ArrayList<>();
         try {
-            connections = (List<User>) entityManager.createQuery("select p.connection from Connection p where p.user.id=:userId")
-                    .setParameter("userId", userId).getResultList();
+            connections = (List<User>) entityManager.createQuery("select p.connection from Connection p where p.user.userName=:userName")
+                    .setParameter("userName", userName).getResultList();
             return connections;
         } catch (Exception e) {
-            throw new ConnectinBaseException("Could not load posts!");
+            throw new ConnectinBaseException("Could not load connections!");
 
         }
     }

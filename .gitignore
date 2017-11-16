@@ -13,6 +13,6 @@
 **/*.prefs
 *.prefs
 .idea
-
+*.bat
 /target
 _site/

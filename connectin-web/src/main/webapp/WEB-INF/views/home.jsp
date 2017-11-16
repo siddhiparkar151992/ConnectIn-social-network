@@ -6,20 +6,21 @@
 
     <script type="text/javascript"
             src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="/resources/js/vendor/moment.min.js"></script>
+    <link rel="stylesheet"
+          href="/resources/styles/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" >
+    <script type="application/javascript" src="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" ></script>
     <link rel="stylesheet" href="../../resources/styles/css/storyline.css">
     <link rel="stylesheet" href="../../resources/styles/css/home.css">
     <!-- main jQuery -->
-    <script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
     <!-- Bootstrap -->
-    <script src="/resources/js/vendor/bootstrap.min.js"></script>
-    <link rel="stylesheet"
-          href="/resources/styles/vendor/font-awesome.min.css">
+
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css">
     <link
             href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
             rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css"/>
+
     <!-- Modernizer Script for old Browsers -->
     <script src="/resources/js/angular2/angular2-polyfills.js"></script>
     <script src="/resources/js/angular2/system.js"></script>
@@ -27,7 +28,6 @@
     <script src="/resources/js/angular2/Rx.js"></script>
     <script src="/resources/js/angular2/angular2.dev.js"></script>
     <script src="/resources/js/angular2/http.dev.js"></script>
-    <script src="/resources/js/angular2/router.dev.js"></script>
     <script src="/resources/js/angular2/router.dev.js"></script>
 </head>
 <body>

@@ -20,11 +20,11 @@ public class PostServiceImpl implements PostService {
 
 
     @Override
-    public Response<List<PostDTO>> getPostByUser(int userId) {
+    public Response<List<PostDTO>> getPostByUser(String userName) {
         List<PostDTO> post = null;
         ResponseGenerator<List<PostDTO>> responseGenerator = new ResponseGenerator<>();
         try {
-            post = postManager.populatePosts(userId);
+            post = postManager.populatePosts(userName);
 
             if (!post.equals(null)) {
 

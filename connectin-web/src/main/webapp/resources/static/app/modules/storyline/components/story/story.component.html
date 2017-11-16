@@ -1,95 +1,87 @@
-0
-<div class="story-card component-post">
+<div class="card story-card">
+    <div class="card-block story story-header">
+        <div class="media">
+            <img height="5%" width="5%" src="http://goo.gl/vswgSn" class="d-flex mr-3 rounded-circle float-left"
+                 alt="Generic placeholder image">
+            <div class="media-body story-header name">
+                <div class="mt-0">
+                    {{post.user.firstName}} {{post.user.lastName}}
 
-    <div class="component-header row">
-        <img class="col-xs-2 img img-responsive img-circle img-user" src="http://goo.gl/vswgSn" alt=""/>
-        <div class="col-xs-8 post-header">{{post.user.firstName}} {{post.user.lastName}}
-            <div class="sub-header">posted on {{post.createdTime}}</div>
+                </div>
+                <div class="story-header sub-header">posted on {{post.createdTime}}</div>
+
+            </div>
+            <div class="float-right privacy-icon">
+                <i *ngIf="post.visibility=='Public'" class="col-xs-2  icon-visibility fa fa-globe"></i>
+                <i *ngIf="post.visibility=='Friends'" class="col-xs-2  icon-visibility fa fa-users"></i>
+                <i *ngIf="post.visibility=='Me'" class="col-xs-2 icon-visibility fa fa-lock"></i>
+            </div>
         </div>
-        <i *ngIf="post.visibility=='public'" class="col-xs-2  icon-visibility fa fa-globe"></i>
-        <i *ngIf="post.visibility=='friends'" class="col-xs-2  icon-visibility fa fa-users"></i>
-        <i *ngIf="post.visibility=='me'" class="col-xs-2 icon-visibility fa fa-lock"></i>
+
+
     </div>
-    <p>
-        {{post.text}}.... <a href="#">Read
-        more</a>
-    </p>
-
-
-    <div class="post-info">
-
-        <div class="panel-body post-stack post-likes">
-            <div class="col-xs-8 row">
-								<span><a href="#"><img src="http://goo.gl/oM0Y8G"
-                                                       alt=""/></a></span> <span><a href="#"><img
-                    src="http://goo.gl/vswgSn" alt=""/></a></span> <span><a href="#"><img
-                    src="http://goo.gl/oM0Y8G" alt=""/></a></span> <span><a href="#">{{post.likes.length}}</a></span>
-                <span>Like this</span>
-            </div>
-            <div class="col-xs-4 pull-right post post-actions">
-                <div class="col-xs-4 post-action-like">
-                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                </div>
-                <div class="col-xs-4 post-action-comment">
-                    <a data-toggle="collapse" href="#collapse1"><span
-                            class="glyphicon glyphicon-comment"></span></a>
-                </div>
-                <div class="col-xs-4 post-action-share">
-                    <span class="glyphicon glyphicon-share-alt"></span>
-                </div>
-            </div>
-        </div>
-        <div class="panel-body post post-more-comments">
-            <span class="glyphicon glyphicon-comment"></span> <a
-                data-toggle="collapse" href="#collapse1"><span>{{post.comments.length}}
-									comments</span></a>
-        </div>
-        <div id="collapse1"
-             class="panel-body panel-collapse collapse post post-comments ">
-            <ul class="list-group">
-                <li *ngFor="#comment of post.comments" class="list-group-item">
-                    <div class="post post-comment">
-                        <div class="col-xs-6">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#"> <img class="media-object image-responsive"
-                                                      src="http://goo.gl/oM0Y8G" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-
-                                    <a href="">{{comment.firstName}} {{comment.lastName}} </a>
-                                    <div>
-                                        <span class="time"> 1 hr - </span><span
-                                            class="glyphicon glyphicon-thumbs-up"></span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6">
-                            <p>{{comment.text}}</p>
-                        </div>
-                    </div>
+    <div class="card-block story story-text">
+        <div class="card-title story-title">Hurray!= Going to Vegassssssss</div>
+        <p class="card-text">
+            {{post.text}}.... <a href="#">Read
+            more</a>
+        </p>
+    </div>
+    <div class="card-block story story-likes row">
+        <div class="image-pills col-4">
+            <ul class="list-inline like-list">
+                <li class="list-inline-item like-list-item">
+                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+                         alt="Generic placeholder image">
                 </li>
+                <li class="list-inline-item like-list-item">
+                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+                         alt="Generic placeholder image">
 
+                </li>
+                <li class="list-inline-item like-list-item">
+                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+                         alt="Generic placeholder image">
+
+                </li>
             </ul>
 
-            <div class="panel-body post-new-comment">
-                <div class="">
-                    <img class="image-responsive pull left"
-                         src="http://goo.gl/oOD0V2">
-                </div>
-                <div class="input-group" style="padding: 2px;">
+        </div>
+        <div class="likes col-4">
+            <span class="badge badge-pill badge-primary">4</span>
+            <span class="card-text">Likes</span>
+        </div>
 
-                    <input type="text" class="form-control comment-text"
-                           placeholder="Username" aria-describedby="basic-addon1">
-                    <span class="input-group-addon glyphicon glyphicon-plane"
-                          id="basic-addon1"></span>
-                </div>
+        <div class="col-4 float-right links">
+            <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
+            <a class="link-action" data-toggle="collapse" href="#collapse1"><i class="fa fa-comment-o"></i></a>
+            <a class="link-action" href=""><i class="fa fa-mail-reply"></i></a>
 
-            </div>
         </div>
     </div>
+    <div class="dropdown-divider mr-divider-0"></div>
+    <div class="story card-block story-comment-link">
+        <a class="comment-text"
+           data-toggle="collapse"
+           data-target="#commentDrpdown" aria-controls="commentDrpdown" aria-expanded="false"
+           aria-label="Toggle navigation"><span>{{post.comments.length}}
+									comments</span></a>
+    </div>
+    <div class="dropdown-divider mr-divider-0"></div>
+    <div id="commentDrpdown" class="collapse story card-block story-comment-section">
+        <ul class="list-group list-group-flush">
+            <li *ngFor="#comment of post.comments" class="comment-row list-group-item row">
+                <div class="col-4"> <a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
+                                                      src="http://goo.gl/oM0Y8G" alt="...">
+                </a><a href="">{{comment.firstName}} {{comment.lastName}} </a>
+                    <div>
+                        <span class="time"> 1 hr </span> <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
+                    </div></div>
+                <div class="col-6 float-right">
+                    <div class="comment-section comment-text">{{comment.text}}</div>
+                </div>
+            </li>
 
+        </ul>
+    </div>
 </div>

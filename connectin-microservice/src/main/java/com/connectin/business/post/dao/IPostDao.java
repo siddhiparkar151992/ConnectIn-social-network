@@ -7,9 +7,9 @@ import com.connectin.exceptions.ConnectinBaseException;
 import java.util.List;
 
 public interface IPostDao {
-    List<PostDTO> getPostsByUser(int userId) throws ConnectinBaseException;
+    List<PostDTO> getPostsByUser(String userName) throws ConnectinBaseException;
 
-    List<PostDTO> getPostsByFeed(int[] connections) throws ConnectinBaseException;
+    List<PostDTO> getPostsByFeed(List<String> connections) throws ConnectinBaseException;
 
     String addPost(Post post, int feedId);
 }

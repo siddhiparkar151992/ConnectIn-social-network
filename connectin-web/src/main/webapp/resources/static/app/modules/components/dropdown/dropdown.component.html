@@ -1,12 +1,9 @@
-<div class="storyline-component visibility-dropdown dropdown pull-right">
-    <button class="dropdown-selected btn btn-success dropdown-toggle" type="button" id="dropdownMenu1"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        {{selectedItem.title}}
-        <span class="caret"></span>
+<div class="dropdown custom-dropdown float-right">
+    <button id="privacyDrpDown" class="drp-selected btn btn-secondary btn-sm dropdown-toggle" type="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i [className]="selectedItem.icon"></i>{{selectedItem.title}}
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li *ngFor="#item of items" (click)="onSelect(item)">
-            <a ><i [className]="item.icon" aria-hidden="true"></i>{{item.title}}</a>
-        </li>
-    </ul>
+    <div class="dropdown-menu" aria-labelledby="privacyDrpDown">
+        <div (click)="onSelect(item)" *ngFor="#item of items" class="dropdown-item"><i [className]="item.icon"></i>{{item.title}}</div>
+    </div>
 </div>

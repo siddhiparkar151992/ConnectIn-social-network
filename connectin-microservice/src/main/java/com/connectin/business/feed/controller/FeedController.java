@@ -1,9 +1,11 @@
 package com.connectin.business.feed.controller;
 
+import com.connectin.authenticate.entity.User;
 import com.connectin.business.feed.service.FeedService;
 import com.connectin.domain.feed.FeedDTO;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,9 +23,11 @@ public class FeedController {
     private FeedService feedService;
 
     @RequestMapping(value="", method = RequestMethod.POST)
-    public Response<FeedDTO> getUserFeed(@RequestParam("userId") int userId, HttpServletRequest request,
+    public Response<FeedDTO> getUserFeed(HttpServletRequest request,
                                          HttpServletResponse response) {
-        Response<FeedDTO> feeds = feedService.getPostByUser(userId);
+        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String username = principal.getUsername();
+        Response<FeedDTO> feeds = feedService.getPostByUser(username);
         return feeds;
     }
 }

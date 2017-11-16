@@ -1,0 +1,15 @@
+.section{
+}
+.section-new-feed{
+  background: #fff;
+  color: #475258;
+  .news-bar{
+    padding: 1rem;
+    .media{
+      margin-bottom: 1rem;
+      .media-body {
+        font-size: 14px;
+      }
+    }
+  }
+}

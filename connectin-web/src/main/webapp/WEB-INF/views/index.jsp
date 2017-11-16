@@ -34,7 +34,12 @@
     <!-- Main Responsive -->
     <link rel="stylesheet" href="/resources/styles/vendor/responsive.css">
 
-
+    <script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" >
+    <script src="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" ></script>
+    <script src="/resources/js/vendor/moment.min.js"></script>
+    <%--<script src="/resources/js/bootstrap.min.js"></script>--%>
+    <script src="/resources/js/jquery.nav.js"></script>
     <!-- Modernizer Script for old Browsers -->
     <script src="/resources/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="/resources/js/angular2/angular2-polyfills.js"></script>
@@ -106,13 +111,6 @@
         </div>
     </div>
 </footer>
-
-
-<script src="/resources/js/vendor/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<%--<script src="/resources/js/bootstrap.min.js"></script>--%>
-<script src="/resources/js/jquery.nav.js"></script>
 
 </body>
 </html>

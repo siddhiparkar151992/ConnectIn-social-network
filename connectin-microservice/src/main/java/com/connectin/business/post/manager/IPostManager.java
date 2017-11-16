@@ -6,8 +6,8 @@ import com.connectin.exceptions.ConnectinBaseException;
 import java.util.List;
 
 public interface IPostManager {
-    List<PostDTO> populatePosts(int userId) throws ConnectinBaseException;
+    List<PostDTO> populatePosts(String userName) throws ConnectinBaseException;
 
-    List<PostDTO> getPostsForUserFeed(int[] connections) throws ConnectinBaseException;
+    List<PostDTO> getPostsForUserFeed(List<String> connections) throws ConnectinBaseException;
     String addPost(PostDTO post, int feedId) throws ConnectinBaseException;
 }

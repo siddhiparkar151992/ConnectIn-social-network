@@ -25,7 +25,7 @@ public class PostDTO implements Serializable {
     private String tags;
     private List<CommentDTO> comments;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date createdTime;
+    private String createdTime;
     private List<LikeDTO> likes;
     private String text;
     private User user;
@@ -41,9 +41,20 @@ public class PostDTO implements Serializable {
         this.category = category;
         this.visibility = visibility;
         this.tags = tags;
-        this.createdTime = creadteDate;
+        this.createdTime = dateformat.format(creadteDate);
         this.text = text;
         this.user = user;
+    }
+
+    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text) {
+        super();
+        dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
+        this.id = id;
+        this.category = category;
+        this.visibility = visibility;
+        this.tags = tags;
+        this.createdTime = dateformat.format(creadteDate);
+        this.text = text;
     }
 
     public PostDTO(int id, String category, Visibility visibility, String tags, List<CommentDTO> comments,
@@ -55,7 +66,7 @@ public class PostDTO implements Serializable {
         this.visibility = visibility;
         this.tags = tags;
         this.comments = comments;
-        this.createdTime = creadteDate;
+        this.createdTime = dateformat.format(creadteDate);;
         this.likes = likes;
     }
 
@@ -67,13 +78,6 @@ public class PostDTO implements Serializable {
         this.user = user;
     }
 
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
-    }
 
     public String getText() {
         return text;
@@ -144,6 +148,14 @@ public class PostDTO implements Serializable {
         return true;
     }
 
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
     public int getId() {
         return id;
     }
@@ -184,13 +196,7 @@ public class PostDTO implements Serializable {
         this.comments = comments;
     }
 
-    public Date getCreadteDate() {
-        return createdTime;
-    }
 
-    public void setCreadteDate(Date creadteDate) {
-        this.createdTime = creadteDate;
-    }
 
     public Collection getLikes() {
         return likes;

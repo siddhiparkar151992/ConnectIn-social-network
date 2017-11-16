@@ -9,6 +9,8 @@ import {UserFeedService} from "./common/core/storyline/feed/user-feed/user-feeds
 import {UrlConfigService} from './config/url-config.service';
 import  {TokenService} from './common/core/security/token/token.service';
 import {UserService} from "./common/core/security/user.service";
+import {DatetimeService} from "./common/core/utilities/datetime.service";
+import {StorylineService} from "./modules/storyline/service/storyline.service";
 declare var $: any;
 declare var userData: any;
 declare var logActivity: any;
@@ -17,7 +19,7 @@ declare var logActivity: any;
     selector: 'app',
     template: " <index-header></index-header><div><router-outlet></router-outlet></div><index-footer></index-footer>",
     directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
-    providers: [UrlConfigService, UserFeedService, TokenService, UserService],
+    providers: [UrlConfigService, UserFeedService, TokenService, UserService, DatetimeService, StorylineService ],
 
 })
 
