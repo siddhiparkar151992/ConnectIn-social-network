@@ -42,65 +42,6 @@ public class Comment implements Serializable {
     @Column(name = "text")
     private String text;
 
-//	@Override
-//	public String toString() {
-//		return "Comment [id=" + id + ", user=" + user + ", createdTime=" + createdTime + ", post=" + post + ", text="
-//				+ text + ", likes=" + likes + "]";
-//	}
-//
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((createdTime == null) ? 0 : createdTime.hashCode());
-//		result = prime * result + id;
-//		result = prime * result + ((likes == null) ? 0 : likes.hashCode());
-//		result = prime * result + ((post == null) ? 0 : post.hashCode());
-//		result = prime * result + ((text == null) ? 0 : text.hashCode());
-//		result = prime * result + ((user == null) ? 0 : user.hashCode());
-//		return result;
-//	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Comment other = (Comment) obj;
-//		if (createdTime == null) {
-//			if (other.createdTime != null)
-//				return false;
-//		} else if (!createdTime.equals(other.createdTime))
-//			return false;
-//		if (id != other.id)
-//			return false;
-//		if (likes == null) {
-//			if (other.likes != null)
-//				return false;
-//		} else if (!likes.equals(other.likes))
-//			return false;
-//		if (post == null) {
-//			if (other.post != null)
-//				return false;
-//		} else if (!post.equals(other.post))
-//			return false;
-//		if (text == null) {
-//			if (other.text != null)
-//				return false;
-//		} else if (!text.equals(other.text))
-//			return false;
-//		if (user == null) {
-//			if (other.user != null)
-//				return false;
-//		} else if (!user.equals(other.user))
-//			return false;
-//		return true;
-//	}
-
-
     public int getId() {
         return id;
     }

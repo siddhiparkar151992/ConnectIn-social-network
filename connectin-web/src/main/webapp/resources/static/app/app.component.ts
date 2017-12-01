@@ -11,6 +11,8 @@ import  {TokenService} from './common/core/security/token/token.service';
 import {UserService} from "./common/core/security/user.service";
 import {DatetimeService} from "./common/core/utilities/datetime.service";
 import {StorylineService} from "./modules/storyline/service/storyline.service";
+import {RequestHeaderService} from "./common/core/security/request-header.service";
+import {CommentService} from "./modules/comment/comment.service";
 declare var $: any;
 declare var userData: any;
 declare var logActivity: any;
@@ -19,7 +21,8 @@ declare var logActivity: any;
     selector: 'app',
     template: " <index-header></index-header><div><router-outlet></router-outlet></div><index-footer></index-footer>",
     directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
-    providers: [UrlConfigService, UserFeedService, TokenService, UserService, DatetimeService, StorylineService ],
+    providers: [UrlConfigService, UserFeedService, TokenService, UserService, DatetimeService,
+        StorylineService, RequestHeaderService,CommentService],
 
 })
 

@@ -1,11 +1,10 @@
 package com.connectin.domain.user;
 
-import com.connectin.common.domain.Image;
+import com.connectin.common.domain.ImageDTO;
 import com.connectin.constants.Gender;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 @SuppressWarnings("serial")
 public class UserDTO implements Serializable {
@@ -15,15 +14,23 @@ public class UserDTO implements Serializable {
     private String email;
     private Gender gender;
     private Date date;
-    private List<Image> images;
-    public UserDTO(int id, String firstName, String lastName, String email, List<Image> images) {
+    private ImageDTO image;
+    public UserDTO(int id, String firstName, String lastName, String email, ImageDTO images) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.images = images;
+        this.image = images;
     }
+
+    public UserDTO() {
+    }
+
+    public UserDTO(int id) {
+        this.id = id;
+    }
+
     public UserDTO(int id, String firstName, String lastName, String email) {
         super();
         this.id = id;
@@ -41,13 +48,13 @@ public class UserDTO implements Serializable {
      * @param firstName
      * @param email
      */
-    public UserDTO(Gender gender, String lastName, Date date, int id, List<Image> images, String firstName, String email) {
+    public UserDTO(Gender gender, String lastName, Date date, int id, ImageDTO images, String firstName, String email) {
         super();
         this.gender = gender;
         this.lastName = lastName;
         this.date = date;
         this.id = id;
-        this.images = images;
+        this.image = images;
         this.firstName = firstName;
         this.email = email;
     }
@@ -139,86 +146,46 @@ public class UserDTO implements Serializable {
     /**
      * @return the images
      */
-    public List<Image> getImages() {
-        return images;
+    public ImageDTO getImages() {
+        return image;
     }
 
     /**
      * @param images the images to set
      */
-    public void setImages(List<Image> images) {
-        this.images = images;
+    public void setImages(ImageDTO images) {
+        this.image = images;
     }
 
     /* (non-Javadoc)
      * @see java.lang.Object#hashCode()
      */
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserDTO userDTO = (UserDTO) o;
+
+        if (id != userDTO.id) return false;
+        if (firstName != null ? !firstName.equals(userDTO.firstName) : userDTO.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(userDTO.lastName) : userDTO.lastName != null) return false;
+        if (email != null ? !email.equals(userDTO.email) : userDTO.email != null) return false;
+        if (gender != userDTO.gender) return false;
+        if (date != null ? !date.equals(userDTO.date) : userDTO.date != null) return false;
+        return image != null ? image.equals(userDTO.image) : userDTO.image == null;
+    }
+
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((date == null) ? 0 : date.hashCode());
-        result = prime * result + ((email == null) ? 0 : email.hashCode());
-        result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-        result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-        result = prime * result + id;
-        result = prime * result + ((images == null) ? 0 : images.hashCode());
-        result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+        int result = id;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (gender != null ? gender.hashCode() : 0);
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (image != null ? image.hashCode() : 0);
         return result;
     }
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        UserDTO other = (UserDTO) obj;
-        if (date == null) {
-            if (other.date != null)
-                return false;
-        } else if (!date.equals(other.date))
-            return false;
-        if (email == null) {
-            if (other.email != null)
-                return false;
-        } else if (!email.equals(other.email))
-            return false;
-        if (firstName == null) {
-            if (other.firstName != null)
-                return false;
-        } else if (!firstName.equals(other.firstName))
-            return false;
-        if (gender != other.gender)
-            return false;
-        if (id != other.id)
-            return false;
-        if (images == null) {
-            if (other.images != null)
-                return false;
-        } else if (!images.equals(other.images))
-            return false;
-        if (lastName == null) {
-            if (other.lastName != null)
-                return false;
-        } else if (!lastName.equals(other.lastName))
-            return false;
-        return true;
-    }
-
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-                + ", gender=" + gender + ", date=" + date + ", images=" + images + "]";
-    }
-
-
 }

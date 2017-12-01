@@ -16,6 +16,7 @@ export class UrlConfigService {
     public userFeedUrl = "user/feed";
     public postUrl = 'posts/add';
     public tokenUrl = "token";
+    public commentAddUrl= "comment/add";
 
     constructor() {
         this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl

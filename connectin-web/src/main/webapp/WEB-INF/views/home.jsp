@@ -13,10 +13,6 @@
     <script type="application/javascript" src="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" ></script>
     <link rel="stylesheet" href="../../resources/styles/css/storyline.css">
     <link rel="stylesheet" href="../../resources/styles/css/home.css">
-    <!-- main jQuery -->
-    <!-- Bootstrap -->
-
-    <!-- Bootstrap -->
     <link
             href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
             rel="stylesheet" type="text/css">

@@ -6,10 +6,8 @@ import {TokenService} from "../../../security/token/token.service";
 @Injectable()
 export class UserFeedService {
 
-
-    private headers;
     private urlConfigService;
-
+    private headers;
     constructor(private http: Http, @Inject(UrlConfigService) private urlConfig: UrlConfigService,
                 @Inject(TokenService) private tokenService: TokenService) {
         this.urlConfigService = urlConfig;

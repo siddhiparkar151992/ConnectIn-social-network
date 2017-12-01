@@ -41,11 +41,11 @@ public class AuthProvider implements AuthenticationProvider {
 
         try {
             HashMap<String, UserCredentials> userData = authenticate(username, password);
-            UserDetails user = userDetailsService.loadUserByUsername(username);
-
+            User user = (User) userDetailsService.loadUserByUsername(username);
+            user.setId(userData.get("userData").getId());
             Collection<? extends GrantedAuthority> authorities = user.getAuthorities();
             String token = tokenHandler.createTokenForUser(
-                    new User(username, (List<Role>) authorities));
+                    new User(username, (List<Role>) authorities, userData.get("userData").getId()) );
             return token;
         } catch (Exception e) {
             System.out.println(e.getMessage());

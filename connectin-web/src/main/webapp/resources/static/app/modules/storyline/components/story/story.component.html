@@ -1,8 +1,8 @@
 <div class="card story-card">
     <div class="card-block story story-header">
         <div class="media">
-            <img height="5%" width="5%" src="http://goo.gl/vswgSn" class="d-flex mr-3 rounded-circle float-left"
-                 alt="Generic placeholder image">
+            <img height="5%" width="5%" [src]="post.user.profileImage.url" class="d-flex mr-3 rounded-circle float-left"
+                 alt="logo">
             <div class="media-body story-header name">
                 <div class="mt-0">
                     {{post.user.firstName}} {{post.user.lastName}}
@@ -21,7 +21,6 @@
 
     </div>
     <div class="card-block story story-text">
-        <div class="card-title story-title">Hurray!= Going to Vegassssssss</div>
         <p class="card-text">
             {{post.text}}.... <a href="#">Read
             more</a>
@@ -63,12 +62,13 @@
     <div class="story card-block story-comment-link">
         <a class="comment-text"
            data-toggle="collapse"
-           data-target="#commentDrpdown" aria-controls="commentDrpdown" aria-expanded="false"
+           [attr.data-target]="'#commentDrp' + post.id"
+           data-target="#post.id+post.createdDate" [attr.aria-controls]="'commentDrp' + post.id" aria-expanded="false"
            aria-label="Toggle navigation"><span>{{post.comments.length}}
 									comments</span></a>
     </div>
     <div class="dropdown-divider mr-divider-0"></div>
-    <div id="commentDrpdown" class="collapse story card-block story-comment-section">
+    <div [id]="'commentDrp' + post.id" class="collapse story card-block story-comment-section">
         <ul class="list-group list-group-flush">
             <li *ngFor="#comment of post.comments" class="comment-row list-group-item row">
                 <div class="col-4"> <a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
@@ -81,6 +81,10 @@
                     <div class="comment-section comment-text">{{comment.text}}</div>
                 </div>
             </li>
+            <div class="comment-post row" style="padding: 10px;">
+                <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment" class="form-control col">
+                <button class="btn btn-outline-alert" (click)="postComment()" type="button">Post</button>
+            </div>
 
         </ul>
     </div>

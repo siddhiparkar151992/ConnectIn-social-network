@@ -1,13 +1,13 @@
 package com.connectin.business.account.registration.service;
 
 import com.connectin.business.account.registration.dao.IRegistrationDao;
-import com.connectin.business.security.encryption.Encryptor;
 import com.connectin.business.user.dao.IUserDao;
 import com.connectin.business.user.entity.User;
 import com.connectin.constants.Gender;
 import com.connectin.constants.Message;
 import com.connectin.domain.user.UserRequest;
 import com.connectin.exceptions.ConnectinBaseException;
+import com.connectin.security.encypt.Encryptor;
 import com.connectin.utils.Response;
 import com.connectin.utils.ResponseGenerator;
 import com.connectin.utils.validation.EmailValidation;

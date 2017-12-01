@@ -8,6 +8,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -65,7 +66,12 @@ public class JwtUtil {
     }
 
     private Date generateExpirationDate() {
-        return new Date(System.currentTimeMillis() + expiration* 1000);
+        Date dt = new Date();
+        Calendar c = Calendar.getInstance();
+        c.setTime(dt);
+        c.add(Calendar.DATE, 1);
+        dt = c.getTime();
+        return dt;
     }
 
     public Boolean isTokenExpired(String token) {
@@ -111,10 +117,12 @@ public class JwtUtil {
     public String generateToken(User u) {
         Claims claims = Jwts.claims().setSubject(u.getUsername());
         claims.put("userId", u.getUsername() + "");
+        claims.put("id", u.getId());
         claims.put("role", u.getAuthorities().get(0).getAuthority());
         claims.put("created", this.generateCurrentDate());
         return Jwts.builder()
                 .setClaims(claims)
+                .setIssuedAt(new Date())
                 .setExpiration(this.generateExpirationDate())
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();

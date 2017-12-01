@@ -3,6 +3,7 @@ package com.connectin.business.images.entity;
 import com.connectin.business.post.entity.Post;
 import com.connectin.business.user.entity.User;
 import com.connectin.constants.ImageOwnerType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
@@ -14,12 +15,13 @@ public class Image {
     @Column(name = "id")
     private int id;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "post_id")
     private Post post;
 
-
-    @ManyToOne
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -46,6 +48,7 @@ public class Image {
         return post;
     }
 
+    @JsonIgnore
     public void setPost(Post post) {
         this.post = post;
     }
@@ -53,7 +56,7 @@ public class Image {
     public User getUserId() {
         return user;
     }
-
+    @JsonIgnore
     public void setUserId(User userId) {
         this.user = userId;
     }

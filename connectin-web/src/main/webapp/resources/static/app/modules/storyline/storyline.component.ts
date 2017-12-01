@@ -8,13 +8,16 @@ import {UrlConfigService} from "../../config/url-config.service";
 import {TokenService} from "../../common/core/security/token/token.service";
 import {TokenResolver} from "../../common/core/resolver/token.resolver.service";
 import {StorylineService} from "./service/storyline.service";
-import {DatetimeService} from '../../common/core/utilities/datetime.service';
+import {DatetimeService} from "../../common/core/utilities/datetime.service";
 import "rxjs/Rx";
+import {RequestHeaderService} from "../../common/core/security/request-header.service";
+import {CommentService} from "../comment/comment.service";
 @Component({
     selector: 'storyline',
     templateUrl: '/resources/static/app/modules/storyline/storyline.component.html',
     directives: [StoryComponent, NewsComponent, DropdownComponent],
-    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService, DatetimeService],
+    providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService,
+        DatetimeService, RequestHeaderService, CommentService, RequestHeaderService],
     styleUrls: ['resources/styles/css/storyline/storyline.css']
 })
 export class StorylineComponent implements OnInit {
@@ -51,7 +54,7 @@ export class StorylineComponent implements OnInit {
                 'comments': [],
                 'createdTime': this.datetimeService.getCurrentDateTime(),
                 'text': this.post.text,
-                'user': {'id':1}
+                'user': {'id': 1}
             }, 1).subscribe(response => {
                 this.populateFeed();
             });
@@ -66,6 +69,7 @@ export class StorylineComponent implements OnInit {
             that.userFeed = response.data;
         });
     }
+
     ngOnInit() {
         var that = this;
         const userData = JSON.parse(localStorage.getItem('ud'));

@@ -7,6 +7,7 @@ import com.connectin.business.post.dao.IPostDao;
 import com.connectin.business.post.entity.Post;
 import com.connectin.common.entity.Category;
 import com.connectin.config.AppConfig;
+import com.connectin.constants.DateUtil;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
 import com.connectin.domain.post.PostDTO;
@@ -41,7 +42,7 @@ public class PostManagerImpl implements IPostManager {
     }
 
     private Post constructPostEntity(PostDTO post, int feedId) throws ConnectinBaseException {
-        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateFormat dateformat = new SimpleDateFormat(DateUtil.dateformat);
         Post postEntity = new Post();
         Category category = new Category();
         category.setCategoryId(1);

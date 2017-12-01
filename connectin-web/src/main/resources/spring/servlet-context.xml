@@ -61,6 +61,7 @@
         <beans:property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
     </beans:bean>
     <annotation-driven/>
+    <resources location="/WEB-INF/data/" mapping="/images/**"></resources>
     <resources location="/resources/" mapping="/resources/**"></resources>
     <resources location="/WEB-INF/static/" mapping="/static/**"></resources>
     <tx:annotation-driven/>

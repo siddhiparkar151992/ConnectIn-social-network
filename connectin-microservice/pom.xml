@@ -24,7 +24,11 @@
         <start-class>com.connectin.Application</start-class>
     </properties>
     <dependencies>
-
+        <dependency>
+            <groupId>com.connectin</groupId>
+            <artifactId>connectin-auth</artifactId>
+            <version>1.0</version>
+        </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>

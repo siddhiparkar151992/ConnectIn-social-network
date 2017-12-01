@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface CommentService {
     Response<List<CommentDTO>> getCommentsByPostId(int postId) throws ConnectinBaseException;
-
+    Response<Object> addComment(CommentDTO comment, String userName) ;
 }
