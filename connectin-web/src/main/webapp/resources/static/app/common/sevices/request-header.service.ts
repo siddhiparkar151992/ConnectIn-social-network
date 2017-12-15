@@ -4,7 +4,7 @@
 
 import {Inject, Injectable, OnInit} from "angular2/core";
 import {Headers, Http, Request, RequestOptions} from "angular2/http";
-import {TokenService} from "./token/token.service";
+import {TokenService} from "../../core/security/token/token.service";
 
 @Injectable()
 export class RequestHeaderService {

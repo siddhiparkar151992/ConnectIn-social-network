@@ -81,11 +81,13 @@
                     <div class="comment-section comment-text">{{comment.text}}</div>
                 </div>
             </li>
-            <div class="comment-post row" style="padding: 10px;">
-                <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment" class="form-control col">
-                <button class="btn btn-outline-alert" (click)="postComment()" type="button">Post</button>
-            </div>
+
 
         </ul>
+
+    </div>
+    <div class="comment-post row" style="padding: 10px;">
+        <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment.text" class="form-control col">
+        <button class="btn btn-outline-primary btn-post" style="cursor: pointer;" (click)="postComment()" type="button">Post</button>
     </div>
 </div>

@@ -41,6 +41,11 @@ public class PostManagerImpl implements IPostManager {
         return this.populatePostWithComments(posts);
     }
 
+    @Override
+    public boolean checkIfPostBelongsToTheUser(int userId, int postId) {
+        return false;
+    }
+
     private Post constructPostEntity(PostDTO post, int feedId) throws ConnectinBaseException {
         DateFormat dateformat = new SimpleDateFormat(DateUtil.dateformat);
         Post postEntity = new Post();
@@ -59,11 +64,25 @@ public class PostManagerImpl implements IPostManager {
         Feed feed = new Feed();
         feed.setId(feedId);
         postEntity.setFeed(feed);
-        postEntity.setOwnerId(post.getUser());
+        postEntity.setOwner(post.getUser());
         postEntity.setTags(post.getTags());
         postEntity.setVisibility(post.getVisibility());
         postEntity.setUser(post.getUser());
         return postEntity;
+    }
+
+    public boolean checkIfPostBelongsToTheUser(int ownerId, int userId, int postId) {
+
+        return false;
+    }
+
+    @Override
+    public PostDTO getPostById(int postId) {
+        try {
+            return postDao.getPostById(postId);
+        } catch (ConnectinBaseException e) {
+            return null;
+        }
     }
 
     private List<CommentDTO> getCommentsByPost(int postId) throws ConnectinBaseException {
@@ -96,11 +115,11 @@ public class PostManagerImpl implements IPostManager {
 
     @Override
     public String addPost(PostDTO post, int feedId) throws ConnectinBaseException {
-        try{
+        try {
             Post postEntity = constructPostEntity(post, feedId);
             postDao.addPost(postEntity, feedId);
-        }catch (ConnectinBaseException e) {
-            return "adding post failed "+e.getMessage();
+        } catch (ConnectinBaseException e) {
+            return "adding post failed " + e.getMessage();
         }
         return "Success";
     }

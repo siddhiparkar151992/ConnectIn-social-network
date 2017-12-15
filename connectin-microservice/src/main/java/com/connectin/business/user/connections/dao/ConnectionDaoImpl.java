@@ -30,5 +30,16 @@ public class ConnectionDaoImpl implements IConnectionsDao {
         }
     }
 
+    @Override
+    public List<User> getConnectionsByUserId(int userId) throws ConnectinBaseException {
+        List<User> connections = new ArrayList<>();
+        try {
+            connections = (List<User>) entityManager.createQuery("select p.connection from Connection p where p.user.id=:userId")
+                    .setParameter("userId", userId).getResultList();
+            return connections;
+        } catch (Exception e) {
+            throw new ConnectinBaseException("Could not load connections!");
 
+        }
+    }
 }

@@ -6,13 +6,11 @@ import com.connectin.domain.comments.CommentDTO;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * Created by Siddhi Parkar on 26-11-2017.
@@ -29,8 +27,17 @@ public class CommentController {
     public Response<Object> addComment(@RequestBody CommentDTO comment, HttpServletRequest request, HttpServletResponse response){
         Response<Object> serviceResponse = null;
         User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        String username = principal.getUsername();
-        serviceResponse = commentService.addComment(comment, username);
+        int userId = principal.getId();
+        serviceResponse = commentService.addComment(comment, userId);
+        return serviceResponse;
+    }
+
+    @RequestMapping(value="/", method = RequestMethod.POST)
+    public Response<List<CommentDTO>> getCommentsBypost(@RequestParam("postId") int postId, HttpServletResponse response, HttpServletRequest request){
+        Response<List<CommentDTO>> serviceResponse = null;
+        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        int userId = principal.getId();
+        serviceResponse = commentService.getCommentsByPostId(postId, userId);
         return serviceResponse;
     }
 }

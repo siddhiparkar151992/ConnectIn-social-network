@@ -12,8 +12,12 @@ export class CommentService {
 
     }
 
+    getCommentByPost(postId) {
+        let options = new RequestOptions({headers: this.requestHeaderService.getBasicAuthHeader()});
+        return this.http.post(this.urlConfig.baseUrl+this.urlConfig.commentGetUrl+"?postId="+postId, options);
+    }
     addComment(comment) {
         let options = new RequestOptions({headers: this.requestHeaderService.getBasicAuthHeader()});
-        return this.http.post(this.urlConfig.apiBaseUrl+this.urlConfig.commentAddUrl, comment, options);
+        return this.http.post(this.urlConfig.baseUrl+this.urlConfig.commentAddUrl, JSON.stringify(comment), options);
     }
 }

@@ -1,20 +1,20 @@
 import {Component, Inject, OnInit} from "angular2/core";
 import {ActivatedRoute, Router} from "angular2/router";
-import {StoryComponent} from "./components/story/story.component";
+import {StoryComponent} from "../storyline/components/story/story.component";
 import {NewsComponent} from "../news/news.component";
-import {DropdownComponent} from "../../modules/components/dropdown/dropdown.component";
+import {DropdownComponent} from "../components/dropdown/dropdown.component";
 import {UserFeedService} from "../../common/core/storyline/feed/user-feed/user-feeds.service";
 import {UrlConfigService} from "../../config/url-config.service";
 import {TokenService} from "../../common/core/security/token/token.service";
-import {TokenResolver} from "../../common/core/resolver/token.resolver.service";
-import {StorylineService} from "./service/storyline.service";
-import {DatetimeService} from "../../common/core/utilities/datetime.service";
+import {TokenResolver} from "../../security/token/token.resolver.service";
+import {StorylineService} from "./feed.service";
+import {DatetimeService} from "../../util/datetime.service";
 import "rxjs/Rx";
 import {RequestHeaderService} from "../../common/core/security/request-header.service";
 import {CommentService} from "../comment/comment.service";
 @Component({
     selector: 'storyline',
-    templateUrl: '/resources/static/app/modules/storyline/storyline.component.html',
+    templateUrl: '/resources/static/app/modules/storyline/feed.component.html',
     directives: [StoryComponent, NewsComponent, DropdownComponent],
     providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService,
         DatetimeService, RequestHeaderService, CommentService, RequestHeaderService],
@@ -44,7 +44,9 @@ export class StorylineComponent implements OnInit {
             ]
         }
     }
-
+    onDropdownChange(event) {
+        this.privacyDropdown.selectedItem = event.target.value;
+    }
     onPostClick() {
         if (this.post.text != null && this.post.text != "") {
             this.storylineService.addPost({

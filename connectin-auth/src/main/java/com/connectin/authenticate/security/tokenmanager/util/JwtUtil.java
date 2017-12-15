@@ -91,13 +91,12 @@ public class JwtUtil {
 
             u.setUsername(body.getSubject());
             u.setUsername((String) body.get("userId"));
-
+            u.setId((int)body.get("id"));
             List<Role> roles = new ArrayList<Role>();
             Role role = new Role();
             role.setName((String) body.get("role"));
             roles.add(role);
             u.setAuthorities(roles);
-            ;
 
             return u;
 

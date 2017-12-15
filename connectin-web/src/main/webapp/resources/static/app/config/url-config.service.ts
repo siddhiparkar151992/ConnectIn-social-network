@@ -17,6 +17,7 @@ export class UrlConfigService {
     public postUrl = 'posts/add';
     public tokenUrl = "token";
     public commentAddUrl= "comment/add";
+    public commentGetUrl= "comment/";
 
     constructor() {
         this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
@@ -26,6 +27,7 @@ export class UrlConfigService {
 
     }
 
+
     getUserFeedUrl() {
         return this.baseUrl + this.userFeedUrl;
     }
@@ -34,6 +36,6 @@ export class UrlConfigService {
     }
 
     getTokenUrl() {
-        return this.apiBaseUrl + this.tokenUrl;
+        return this.baseUrl + this.tokenUrl;
     }
 }

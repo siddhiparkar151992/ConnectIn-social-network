@@ -2,7 +2,6 @@ package com.connectin.business.post.entity;
 
 import com.connectin.business.comments.entity.Comment;
 import com.connectin.business.feed.entity.Feed;
-import com.connectin.business.images.entity.Image;
 import com.connectin.business.likes.entity.Likes;
 import com.connectin.business.user.entity.User;
 import com.connectin.common.entity.Category;
@@ -78,16 +77,16 @@ public class Post implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    private User ownerId;
+    private User owner;
     @Column(name = "text")
     private String text;
 
-    public User getOwnerId() {
-        return ownerId;
+    public User getOwner() {
+        return owner;
     }
 
-    public void setOwnerId(User ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
     public Feed getFeedId() {

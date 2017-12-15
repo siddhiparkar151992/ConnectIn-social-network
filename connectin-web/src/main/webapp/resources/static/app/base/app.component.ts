@@ -4,12 +4,12 @@ import {Route, RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "a
 import {DashboardComponent} from "./modules/dashboard/dashboard.component";
 import {HeaderComponent} from "./common/header/header.component";
 import {FooterComponent} from "./common/footer/footer.component";
-import {UrlConfigService} from "./config/url-config.service";
-import {UserFeedService} from "./common/core/storyline/feed/user-feed/user-feeds.service";
-import {UrlConfigService} from './config/url-config.service';
+import {UrlConfigService} from "../config/url-config.service";
+import {UserFeedService} from "../core/modules/feed/user-feeds.service";
+import {UrlConfigService} from '../config/url-config.service';
 import  {TokenService} from './common/core/security/token/token.service';
 import {UserService} from "./common/core/security/user.service";
-import {DatetimeService} from "./common/core/utilities/datetime.service";
+import {DatetimeService} from "../util/datetime.service";
 import {StorylineService} from "./modules/storyline/service/storyline.service";
 import {RequestHeaderService} from "./common/core/security/request-header.service";
 import {CommentService} from "./modules/comment/comment.service";

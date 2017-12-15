@@ -48,7 +48,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
         try {
             User user = tokenHandler.parseUserFromToken(token);
             UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
-            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(user, null, userDetails.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         } catch (final SignatureException e) {
             throw new ServletException("Invalid token.");

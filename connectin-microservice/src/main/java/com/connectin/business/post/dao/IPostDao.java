@@ -11,5 +11,9 @@ public interface IPostDao {
 
     List<PostDTO> getPostsByFeed(List<String> connections) throws ConnectinBaseException;
 
+    boolean checkIfPostBelongsToTheUser(int ownerId, int userId, int postId);
+
+    PostDTO getPostById(int postId) throws ConnectinBaseException;
+
     String addPost(Post post, int feedId);
 }
