@@ -3,7 +3,7 @@
  */
 import {Inject, Injectable, OnInit} from "angular2/core";
 import {Headers, Http, Request, RequestOptions} from "angular2/http";
-import {UrlConfigService} from "../../../../config/url-config.service";
+import {UrlConfigService} from "../../../config/url-config.service";
 
 declare var $: any;
 

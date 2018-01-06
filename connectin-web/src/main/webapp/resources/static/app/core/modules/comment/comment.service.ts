@@ -1,8 +1,7 @@
 import {Inject, Injectable} from "angular2/core";
 import {Http, RequestOptions} from "angular2/http";
-import {TokenService} from "../../../security/token/token.service";
-import {UrlConfigService} from "../../config/url-config.service";
-import {RequestHeaderService} from "../../common/core/security/request-header.service";
+import {RequestHeaderService} from "../../../common/sevices/request-header.service";
+import {UrlConfigService} from "../../../config/url-config.service";
 
 @Injectable()
 export class CommentService {

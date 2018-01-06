@@ -1,5 +1,5 @@
 import {Component, OnInit} from "angular2/core";
-import {NotificationComponent} from "../../notifications/notifications.component";
+import {NotificationComponent} from "../../../core/modules/notifications/notifications.component";
 
 
 declare var $: any;

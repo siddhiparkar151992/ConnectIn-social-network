@@ -4,7 +4,7 @@
 
 import {Injectable, Inject} from "angular2/core";
 import {ActivatedRouteSnapshot, Resolve, Router} from "angular2/router";
-import {TokenService} from "../security/token/token.service";
+import {TokenService} from "./token.service";
 
 
 @Injectable()

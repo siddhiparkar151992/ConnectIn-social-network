@@ -1,8 +1,7 @@
-import {Component, Input, OnInit} from "angular2/core";
-import {CommentService} from "../../../comment/comment.service";
-import {Component, Inject, OnInit} from "angular2/core";
-import {RequestHeaderService} from "../../../../common/core/security/request-header.service";
-import {DatetimeService} from "../../../../Util/datetime.service";
+import {Component, Inject, Input, OnInit} from "angular2/core";
+import {RequestHeaderService} from "../../../common/sevices/request-header.service";
+import {CommentService} from "../comment/comment.service";
+import {DatetimeService} from "../../../util/datetime.service";
 
 @Component({
     inputs: ['post'],

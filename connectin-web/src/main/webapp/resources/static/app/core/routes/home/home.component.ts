@@ -1,11 +1,12 @@
 import {Component, OnInit} from "angular2/core";
 import {Route, RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "angular2/router";
-import {StorylineComponent} from "../feed/feed.component";
-import {ProfileHeaderComponent} from "../headers/profile/header.component";
-import {UserService} from "../../common/core/security/user.service";
-import {TokenService} from "../../common/core/security/token/token.service";
-import {UrlConfigService} from "../../config/url-config.service";
+import {ProfileHeaderComponent} from "../../../layout/header/profile/header.component";
+import {UserService} from "../../security/user/user.service";
+import {TokenService} from "../../security/token/token.service";
 import {TokenResolver} from "../../security/token/token.resolver.service";
+import {UrlConfigService} from "../../../config/url-config.service";
+import {StorylineComponent} from "../../modules/feed/feed.component";
+
 declare var $: any;
 
 @Component({

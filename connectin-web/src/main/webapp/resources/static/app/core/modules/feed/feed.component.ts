@@ -1,16 +1,17 @@
 import {Component, Inject, OnInit} from "angular2/core";
 import {ActivatedRoute, Router} from "angular2/router";
-import {StoryComponent} from "../storyline/components/story/story.component";
+
+import "rxjs/Rx";
+import {StoryComponent} from "../post/story.component";
 import {NewsComponent} from "../news/news.component";
-import {DropdownComponent} from "../components/dropdown/dropdown.component";
-import {UserFeedService} from "../../common/core/storyline/feed/user-feed/user-feeds.service";
-import {UrlConfigService} from "../../config/url-config.service";
-import {TokenService} from "../../common/core/security/token/token.service";
+import {DropdownComponent} from "../../../common/components/dropdown/dropdown.component";
+import {UserFeedService} from "./user-feeds.service";
+import {UrlConfigService} from "../../../config/url-config.service";
+import {TokenService} from "../../security/token/token.service";
 import {TokenResolver} from "../../security/token/token.resolver.service";
 import {StorylineService} from "./feed.service";
-import {DatetimeService} from "../../util/datetime.service";
-import "rxjs/Rx";
-import {RequestHeaderService} from "../../common/core/security/request-header.service";
+import {RequestHeaderService} from "../../../common/sevices/request-header.service";
+import {DatetimeService} from "../../../util/datetime.service";
 import {CommentService} from "../comment/comment.service";
 @Component({
     selector: 'storyline',

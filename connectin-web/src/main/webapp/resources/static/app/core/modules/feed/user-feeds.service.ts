@@ -1,7 +1,7 @@
 import {Inject, Injectable} from "angular2/core";
 import {Headers, Http, Request, RequestOptions} from "angular2/http";
 import {UrlConfigService} from "../../../config/url-config.service";
-import {TokenService} from "../../../security/token/token.service";
+import {TokenService} from "../../security/token/token.service";
 
 @Injectable()
 export class UserFeedService {
