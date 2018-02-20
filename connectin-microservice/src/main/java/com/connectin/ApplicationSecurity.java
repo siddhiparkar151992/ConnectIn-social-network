@@ -66,6 +66,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 
                 .authenticationProvider(authProvider)
                 .authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/connectin/api/token**").permitAll()
                 .antMatchers(HttpMethod.POST, "/connectin/api/login**").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated().and()
@@ -89,7 +90,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
     }
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/connectin/api/login/").antMatchers("/connectin/api/login");
+        web.ignoring().antMatchers("/connectin/api/token/**").antMatchers("/connectin/api/login/").antMatchers("/connectin/api/login");
     }
 
 }

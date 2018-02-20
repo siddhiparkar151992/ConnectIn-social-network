@@ -30,8 +30,27 @@ public class Post implements Serializable {
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     private List<Comment> comments;
 
+
     @OneToMany(mappedBy = "postLike", cascade = CascadeType.ALL)
     private List<Likes> likes;
+
+
+
+    public List<Likes> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(List<Likes> likes) {
+        this.likes = likes;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -58,16 +77,16 @@ public class Post implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    private User ownerId;
+    private User owner;
     @Column(name = "text")
     private String text;
 
-    public User getOwnerId() {
-        return ownerId;
+    public User getOwner() {
+        return owner;
     }
 
-    public void setOwnerId(User ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
     public Feed getFeedId() {
@@ -152,87 +171,6 @@ public class Post implements Serializable {
     public void setText(String text) {
         this.text = text;
     }
-
-
-//	@Override
-//	public String toString() {
-//		return "Post [id=" + id + ", user=" + user + ", comments=" + comments + ", categoryId=" + categoryId
-//				+ ", visibility=" + visibility + ", tags=" + tags + ", createdTime=" + createdTime + ", updatedTime="
-//				+ updatedTime + ", feedId=" + feedId + ", text=" + text + "]";
-//	}
-//
-//	@Override
-//	public int hashCode() {
-//		final int prime = 31;
-//		int result = 1;
-//		result = prime * result + ((categoryId == null) ? 0 : categoryId.hashCode());
-//		result = prime * result + ((comments == null) ? 0 : comments.hashCode());
-//		result = prime * result + ((createdTime == null) ? 0 : createdTime.hashCode());
-//		result = prime * result + ((feedId == null) ? 0 : feedId.hashCode());
-//		result = prime * result + id;
-//		result = prime * result + ((tags == null) ? 0 : tags.hashCode());
-//		result = prime * result + ((text == null) ? 0 : text.hashCode());
-//		result = prime * result + ((updatedTime == null) ? 0 : updatedTime.hashCode());
-//		result = prime * result + ((user == null) ? 0 : user.hashCode());
-//		result = prime * result + ((visibility == null) ? 0 : visibility.hashCode());
-//		return result;
-//	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Post other = (Post) obj;
-//		if (categoryId == null) {
-//			if (other.categoryId != null)
-//				return false;
-//		} else if (!categoryId.equals(other.categoryId))
-//			return false;
-//		if (comments == null) {
-//			if (other.comments != null)
-//				return false;
-//		} else if (!comments.equals(other.comments))
-//			return false;
-//		if (createdTime == null) {
-//			if (other.createdTime != null)
-//				return false;
-//		} else if (!createdTime.equals(other.createdTime))
-//			return false;
-//		if (feedId == null) {
-//			if (other.feedId != null)
-//				return false;
-//		} else if (!feedId.equals(other.feedId))
-//			return false;
-//		if (id != other.id)
-//			return false;
-//		if (tags == null) {
-//			if (other.tags != null)
-//				return false;
-//		} else if (!tags.equals(other.tags))
-//			return false;
-//		if (text == null) {
-//			if (other.text != null)
-//				return false;
-//		} else if (!text.equals(other.text))
-//			return false;
-//		if (updatedTime == null) {
-//			if (other.updatedTime != null)
-//				return false;
-//		} else if (!updatedTime.equals(other.updatedTime))
-//			return false;
-//		if (user == null) {
-//			if (other.user != null)
-//				return false;
-//		} else if (!user.equals(other.user))
-//			return false;
-//		if (visibility != other.visibility)
-//			return false;
-//		return true;
-//	}
 
     public List<Comment> getComments() {
         return comments;

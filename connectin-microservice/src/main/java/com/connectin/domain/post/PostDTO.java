@@ -1,7 +1,10 @@
 package com.connectin.domain.post;
 
 import com.connectin.business.user.entity.User;
+import com.connectin.common.domain.ImageDTO;
 import com.connectin.config.AppConfig;
+import com.connectin.constants.DateUtil;
+import com.connectin.constants.ImageOwnerType;
 import com.connectin.constants.Visibility;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
@@ -24,32 +27,51 @@ public class PostDTO implements Serializable {
     private Visibility visibility;
     private String tags;
     private List<CommentDTO> comments;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = DateUtil.dateformat)
     private String createdTime;
     private List<LikeDTO> likes;
     private String text;
     private User user;
-    private DateFormat dateformat;
+    private ImageDTO profileImage;
 
+    public ImageDTO getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(ImageDTO profileImage) {
+        this.profileImage = profileImage;
+    }
+
+    private DateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");;
     public PostDTO() {
 
     }
-    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text, User user) {
-        super();
-        dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
+    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text){
+
         this.id = id;
-        this.category = category;
-        this.visibility = visibility;
-        this.tags = tags;
-        this.createdTime = dateformat.format(creadteDate);
-        this.text = text;
+        if(category!=null) this.category = category;
+        if(visibility!=null) this.visibility = visibility;
+        if(tags!=null) this.tags = tags;
+        if(creadteDate!=null) this.createdTime = dateformat.format(creadteDate);
+        if(text!=null) this.text = text;
+    }
+    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text, User user) {
+        this(id, category, visibility, tags, creadteDate, text);
         this.user = user;
     }
+    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate,
+                   String text, User user, ImageOwnerType type, String url, String alt) {
 
-    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text) {
+        this(id, category, visibility, tags, creadteDate, text, user);
+        this.profileImage = new ImageDTO(url,alt, type);
+    }
+
+    public PostDTO(int id, String category, Visibility visibility, String tags, Date creadteDate, String text,
+                   ImageOwnerType type, String url, String alt) {
         super();
         dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
         this.id = id;
+        this.profileImage = new ImageDTO(url,alt, type);
         this.category = category;
         this.visibility = visibility;
         this.tags = tags;

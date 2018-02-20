@@ -1,10 +1,13 @@
 package com.connectin.business.user.entity;
 
+import com.connectin.business.images.entity.Image;
+import com.connectin.business.likes.entity.Likes;
 import com.connectin.constants.Gender;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -28,6 +31,10 @@ public class User implements Serializable {
     private Date birthDate;
     @Column(name = "user_name")
     private String userName;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER)
+    private Image profileImage;
 
     @Override
     public String toString() {
@@ -85,6 +92,22 @@ public class User implements Serializable {
 
     public String getUserName() {
         return userName;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Image getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(Image profileImage) {
+        this.profileImage = profileImage;
     }
 
     public void setUserName(String userName) {

@@ -47,12 +47,4 @@ public class AuthController {
         return model;
 
     }
-
-    @RequestMapping(value = "/loginUser", method = RequestMethod.POST)
-    public String dummy() {
-        System.out.println("/loginUser");
-        return "";
-    }
-
-    ;
 }

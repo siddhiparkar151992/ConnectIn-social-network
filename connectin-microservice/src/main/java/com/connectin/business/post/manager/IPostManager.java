@@ -8,6 +8,8 @@ import java.util.List;
 public interface IPostManager {
     List<PostDTO> populatePosts(String userName) throws ConnectinBaseException;
 
+    boolean checkIfPostBelongsToTheUser(int userId, int postId);
+    PostDTO getPostById(int postId) throws ConnectinBaseException;
     List<PostDTO> getPostsForUserFeed(List<String> connections) throws ConnectinBaseException;
     String addPost(PostDTO post, int feedId) throws ConnectinBaseException;
 }

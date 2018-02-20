@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.List;
 
 public class User implements UserDetails {
-
+    private int id;
     private String username;
     private String password;
     private String email;
@@ -18,11 +18,19 @@ public class User implements UserDetails {
     private boolean accountNonLocked = true;
     private boolean credentialsNonExpired = true;
     private boolean enabled = true;
-    public User(String username, List<Role> authorities) {
+    public User(String username, List<Role> authorities, int id) {
         super();
         this.username = username;
-
+        this.id = id;
         this.authorities = authorities;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public User(List<Role> authorities) {

@@ -65,7 +65,14 @@
     }
   }
   .story-comment-section{
+    .comment-post{
+      padding: 10px;
+      button {
+        cursor: pointer;
+      }
+    }
     .comment-row{
+      cursor: pointer;
       padding: 5px 10px 5px 10px;
       .comment-text {
         line-height: 1.5em;

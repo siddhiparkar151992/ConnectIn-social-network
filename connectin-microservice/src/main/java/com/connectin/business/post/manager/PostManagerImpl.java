@@ -7,6 +7,7 @@ import com.connectin.business.post.dao.IPostDao;
 import com.connectin.business.post.entity.Post;
 import com.connectin.common.entity.Category;
 import com.connectin.config.AppConfig;
+import com.connectin.constants.DateUtil;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.domain.like.LikeDTO;
 import com.connectin.domain.post.PostDTO;
@@ -40,8 +41,13 @@ public class PostManagerImpl implements IPostManager {
         return this.populatePostWithComments(posts);
     }
 
+    @Override
+    public boolean checkIfPostBelongsToTheUser(int userId, int postId) {
+        return false;
+    }
+
     private Post constructPostEntity(PostDTO post, int feedId) throws ConnectinBaseException {
-        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateFormat dateformat = new SimpleDateFormat(DateUtil.dateformat);
         Post postEntity = new Post();
         Category category = new Category();
         category.setCategoryId(1);
@@ -58,11 +64,25 @@ public class PostManagerImpl implements IPostManager {
         Feed feed = new Feed();
         feed.setId(feedId);
         postEntity.setFeed(feed);
-        postEntity.setOwnerId(post.getUser());
+        postEntity.setOwner(post.getUser());
         postEntity.setTags(post.getTags());
         postEntity.setVisibility(post.getVisibility());
         postEntity.setUser(post.getUser());
         return postEntity;
+    }
+
+    public boolean checkIfPostBelongsToTheUser(int ownerId, int userId, int postId) {
+
+        return false;
+    }
+
+    @Override
+    public PostDTO getPostById(int postId) {
+        try {
+            return postDao.getPostById(postId);
+        } catch (ConnectinBaseException e) {
+            return null;
+        }
     }
 
     private List<CommentDTO> getCommentsByPost(int postId) throws ConnectinBaseException {
@@ -95,11 +115,11 @@ public class PostManagerImpl implements IPostManager {
 
     @Override
     public String addPost(PostDTO post, int feedId) throws ConnectinBaseException {
-        try{
+        try {
             Post postEntity = constructPostEntity(post, feedId);
             postDao.addPost(postEntity, feedId);
-        }catch (ConnectinBaseException e) {
-            return "adding post failed "+e.getMessage();
+        } catch (ConnectinBaseException e) {
+            return "adding post failed " + e.getMessage();
         }
         return "Success";
     }
