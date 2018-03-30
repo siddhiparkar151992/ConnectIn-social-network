@@ -5,6 +5,7 @@ import com.connectin.authenticate.security.tokenmanager.service.TokenHandler;
 import com.connectin.authenticate.security.userdetails.UserDetailServiceImpl;
 import io.jsonwebtoken.SignatureException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,12 +21,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-
+@Component("authFilter")
 public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private UserDetailsService userDetailsService= new UserDetailServiceImpl();
 
     private TokenHandler tokenHandler= new TokenHandler();
-
+    @Override
+    @Autowired
+    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
+        super.setAuthenticationManager(authenticationManager);
+    }
     @Override
     public void doFilter(final ServletRequest req,
                          final ServletResponse res,

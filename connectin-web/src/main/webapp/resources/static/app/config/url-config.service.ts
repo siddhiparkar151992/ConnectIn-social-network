@@ -7,7 +7,7 @@ export class UrlConfigService {
     public httpUrl = 'http://';
     public baseUrl;
     public port = 9091;
-    public appPort = 8080;
+    public appPort = 9092;
     public appBaseUrl;
     public mainAPIBaseUrl = "//connectin-microservice.herokuapp.com";
     public mainHost = "//connectin-multimodule.herokuapp.com";
@@ -20,7 +20,7 @@ export class UrlConfigService {
     public commentGetUrl= "comment/";
 
     constructor() {
-        this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl
+        this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl;
         this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;
         // this.baseUrl = this.mainAPIBaseUrl+this.apiBaseUrl;
         // this.appBaseUrl =  this.mainHost+ this.apiBaseUrl
@@ -36,6 +36,6 @@ export class UrlConfigService {
     }
 
     getTokenUrl() {
-        return this.baseUrl + this.tokenUrl;
+        return this.appBaseUrl + this.tokenUrl;
     }
 }

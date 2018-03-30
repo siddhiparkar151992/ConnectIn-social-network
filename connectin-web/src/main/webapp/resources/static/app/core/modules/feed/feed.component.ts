@@ -15,7 +15,7 @@ import {DatetimeService} from "../../../util/datetime.service";
 import {CommentService} from "../comment/comment.service";
 @Component({
     selector: 'storyline',
-    templateUrl: '/resources/static/app/modules/storyline/feed.component.html',
+    templateUrl: '/resources/static/app/core/modules/feed/feed.component.html',
     directives: [StoryComponent, NewsComponent, DropdownComponent],
     providers: [UserFeedService, UrlConfigService, TokenService, TokenResolver, StorylineService,
         DatetimeService, RequestHeaderService, CommentService, RequestHeaderService],

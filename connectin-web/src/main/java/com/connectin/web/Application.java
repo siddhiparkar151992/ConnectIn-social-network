@@ -54,22 +54,18 @@ public class Application {
     public JwtUtil jwtUtil() {
         return new JwtUtil();
     }
-
+    @Autowired
+     private AuthenticationFilter authFilter;
     @Bean
     public FilterRegistrationBean someFilterRegistration() {
 
         FilterRegistrationBean registration = new FilterRegistrationBean();
-        registration.setFilter(someFilter());
+        registration.setFilter(authFilter);
         registration.addUrlPatterns("/api/*");
 	    /*registration.addInitParameter("paramName", "paramValue");*/
         registration.setName("authFilter");
         registration.setOrder(1);
         return registration;
-    }
-
-    @Bean(name = "authFilter")
-    public Filter someFilter() {
-        return new AuthenticationFilter();
     }
 
 }

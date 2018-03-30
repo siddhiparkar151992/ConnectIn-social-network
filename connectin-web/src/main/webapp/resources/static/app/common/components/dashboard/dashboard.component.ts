@@ -6,7 +6,7 @@ declare var $: any;
 
 @Component({
     selector: 'dashboard',
-    templateUrl: '/resources/static/app/modules/dashboard/dashboard.component.html',
+    templateUrl: '/resources/static/app/common/dashboard/dashboard.component.html',
 })
 
 

@@ -6,7 +6,7 @@ declare var $: any;
 
 @Component({
     selector: 'profile-header',
-    templateUrl: '/resources/static/app/modules/headers/profile/header.component.html',
+    templateUrl: '/resources/static/app/layout/header/profile/header.component.html',
     providers: [],
     directives: [NotificationComponent],
     styleUrls: ['resources/styles/css/headers/profile-header.css']

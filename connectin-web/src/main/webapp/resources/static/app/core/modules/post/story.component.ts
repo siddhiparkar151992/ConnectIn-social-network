@@ -6,7 +6,7 @@ import {DatetimeService} from "../../../util/datetime.service";
 @Component({
     inputs: ['post'],
     selector: 'story-card',
-    templateUrl: '/resources/static/app/modules/storyline/components/story/story.component.html',
+    templateUrl: '/resources/static/app/core/modules/post/story.component.html',
     styleUrls: ['resources/styles/css/storyline/story.css'],
     providers: [RequestHeaderService, CommentService]
 
