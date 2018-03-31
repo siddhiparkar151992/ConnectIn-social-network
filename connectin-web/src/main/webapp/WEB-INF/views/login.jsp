@@ -137,8 +137,7 @@
                         </label>
                         <label class="form-group float-label-control">
 
-                            <input onchange="updateCookies()" name="password" type="password" class="input"
-                                   placeholder="password">
+                            <input onchange="updateCookies()" name="password" type="password" class="input" placeholder="password">
                         </label>
 
                         <button type="submit" class="btn-form btn btn-primary btn-lg">Login</button>
