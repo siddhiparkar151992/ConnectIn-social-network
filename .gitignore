@@ -18,3 +18,4 @@
 *.bat
 /target
 _site/
+*.iws
