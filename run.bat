@@ -1,6 +1,9 @@
 start cmd /k "call mvn clean"
-cd ./connectin-microservice
-start cmd /k "call mvn clean spring-boot:run"
 
-cd ./connectin-web
-start cmd /k "call mvn clean spring-boot:run"
+start cmd /k "cd connectin-microservice & call mvn clean spring-boot:run"
+
+
+start cmd /k "cd connectin-web & call mvn clean spring-boot:run"
+
+
+start cmd /k "cd connectin-web & npm install & grunt"
