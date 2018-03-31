@@ -20,6 +20,7 @@ public class ResponseGenerator<T> {
         response.setErrorCode(errorCode);
         response.setErrorMessage(errorMessage);
         response.setData(null);
+        response.setStatusCode(errorCode);
         return response;
 
     }

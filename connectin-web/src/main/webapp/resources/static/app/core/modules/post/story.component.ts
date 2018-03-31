@@ -8,7 +8,7 @@ import {LikeService} from "../likes/likes.service";
     inputs: ['post'],
     selector: 'story-card',
     templateUrl: '/resources/static/app/core/modules/post/story.component.html',
-    styleUrls: ['resources/styles/css/storyline/story.css'],
+    styleUrls: ['resources/styles/css/modules/post/story.css'],
     providers: [RequestHeaderService, CommentService, LikeService]
 
 })

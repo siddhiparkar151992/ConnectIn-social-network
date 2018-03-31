@@ -84,10 +84,11 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .accessDeniedPage("/403").and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                ;
+        ;
 
 
     }
+
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/connectin/api/token/**").antMatchers("/connectin/api/login/").antMatchers("/connectin/api/login");

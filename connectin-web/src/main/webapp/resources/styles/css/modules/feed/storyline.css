@@ -1,0 +1,19 @@
+@import url("//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+/* line 4, ../../../scss/modules/feed/storyline.scss */
+.storyline-container {
+  padding: 30px;
+}
+
+/* line 9, ../../../scss/modules/feed/storyline.scss */
+.container .feeds .post-card {
+  margin-bottom: 10px;
+}
+/* line 11, ../../../scss/modules/feed/storyline.scss */
+.container .feeds .post-card .btn-post {
+  cursor: pointer;
+}
+
+/* line 18, ../../../scss/modules/feed/storyline.scss */
+.container {
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+}

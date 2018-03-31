@@ -13,7 +13,6 @@ import com.connectin.domain.like.LikeType;
 import com.connectin.exceptions.ConnectinBaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
-import org.springframework.dao.TransientDataAccessException;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -73,12 +72,19 @@ public class LikesDaoImpl implements ILikesDao {
     @Override
     public void like(LikeType type, int id, int userId) throws ConnectinBaseException {
         try {
+
             Likes like = new Likes();
             if (type == LikeType.comment) {
+                if (this.likeRepository.isCommentLikedByUser(userId, id)) {
+                    throw new ConnectinBaseException("Comment already liked by user");
+                }
                 Comment comment = new Comment();
                 comment.setId(id);
                 like.setComment(comment);
             } else {
+                if (this.likeRepository.isPostLikedByUser(userId, id)) {
+                    throw new ConnectinBaseException("post already liked by user");
+                }
                 Post post = new Post();
                 post.setId(id);
                 like.setPostLike(post);
@@ -90,9 +96,9 @@ public class LikesDaoImpl implements ILikesDao {
             like.setType(type);
             entityManager.persist(like);
         } catch (InvalidDataAccessApiUsageException e) {
-            throw new ConnectinBaseException("could not like post with id "+ id+" with type "+ type);
+            throw new ConnectinBaseException("could not like post with id " + id + " with type " + type);
         } catch (Exception e) {
-            throw new ConnectinBaseException("could not like post with id "+ id+" with type "+ type);
+            throw new ConnectinBaseException("could not like post with id " + id + " with type " + type);
         }
 
     }

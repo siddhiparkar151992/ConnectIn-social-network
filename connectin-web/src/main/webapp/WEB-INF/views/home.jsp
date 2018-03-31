@@ -9,8 +9,9 @@
     <script src="/resources/js/vendor/moment.min.js"></script>
     <link rel="stylesheet"
           href="/resources/styles/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" >
-    <script type="application/javascript" src="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+    <script type="application/javascript"
+            src="/resources/js/vendor/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../../resources/styles/css/storyline.css">
     <link rel="stylesheet" href="../../resources/styles/css/home.css">
     <link
@@ -59,12 +60,12 @@
 
     // Colors
     var colorPalette = {
-        bg: {r:12,g:9,b:29},
+        bg: {r: 12, g: 9, b: 29},
         matter: [
-            {r:36,g:18,b:42}, // darkPRPL
-            {r:78,g:36,b:42}, // rockDust
-            {r:252,g:178,b:96}, // solorFlare
-            {r:253,g:238,b:152} // totesASun
+            {r: 36, g: 18, b: 42}, // darkPRPL
+            {r: 78, g: 36, b: 42}, // rockDust
+            {r: 252, g: 178, b: 96}, // solorFlare
+            {r: 253, g: 238, b: 152} // totesASun
         ]
     };
 
@@ -77,7 +78,7 @@
 // Draws the background for the canvas, because space
         drawBg = function (ctx, color) {
             ctx.fillStyle = "rgb(" + color.r + "," + color.g + "," + color.b + ")";
-            ctx.fillRect(0,0,canvas.width,canvas.height);
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
         };
 
     // Particle Constructor
@@ -89,7 +90,7 @@
         // Radius of the space dust
         this.r = Math.ceil(Math.random() * config.maxParticleSize);
         // Color of the rock, given some randomness
-        this.c = colorVariation(colorPalette.matter[Math.floor(Math.random() * colorPalette.matter.length)],true );
+        this.c = colorVariation(colorPalette.matter[Math.floor(Math.random() * colorPalette.matter.length)], true);
         // Speed of which the rock travels
         this.s = Math.pow(Math.ceil(Math.random() * config.maxSpeed), .7);
         // Direction the Rock flies
@@ -100,15 +101,15 @@
     // Accepts an rgba object
     // returns a modified rgba object or a rgba string if true is passed in for argument 2
     var colorVariation = function (color, returnString) {
-        var r,g,b,a, variation;
-        r = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.r);
-        g = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.g);
-        b = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation/2)) + color.b);
+        var r, g, b, a, variation;
+        r = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.r);
+        g = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.g);
+        b = Math.round(((Math.random() * config.colorVariation) - (config.colorVariation / 2)) + color.b);
         a = Math.random() + .5;
         if (returnString) {
             return "rgba(" + r + "," + g + "," + b + "," + a + ")";
         } else {
-            return {r,g,b,a};
+            return {r, g, b, a};
         }
     };
 
@@ -125,16 +126,19 @@
     var drawParticle = function (x, y, r, c) {
         ctx.beginPath();
         ctx.fillStyle = c;
-        ctx.arc(x, y, r, 0, 2*Math.PI, false);
+        ctx.arc(x, y, r, 0, 2 * Math.PI, false);
         ctx.fill();
         ctx.closePath();
     };
 
     // Remove particles that aren't on the canvas
     var cleanUpArray = function () {
-        particles = particles.filter((p) => {
-                return (p.x > -100 && p.y > -100);
-    });
+        particles = particles.filter((p) = > {
+                return (p.x > -100 && p.y > -100
+        )
+        ;
+    })
+        ;
     };
 
 
@@ -142,17 +146,20 @@
         for (let i = 0; i < numParticles; i++) {
             particles.push(new Particle(x, y));
         }
-        particles.forEach((p) => {
-            drawParticle(p.x, p.y, p.r, p.c);
-    });
+        particles.forEach((p) = > {
+            drawParticle(p.x, p.y, p.r, p.c
+        )
+        ;
+    })
+        ;
     };
 
     // That thing
-    window.requestAnimFrame = (function() {
+    window.requestAnimFrame = (function () {
         return window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
             window.mozRequestAnimationFrame ||
-            function(callback) {
+            function (callback) {
                 window.setTimeout(callback, 1000 / 60);
             };
     })();
@@ -163,13 +170,17 @@
         // Draw background first
         drawBg(ctx, colorPalette.bg);
         // Update Particle models to new position
-        particles.map((p) => {
+        particles.map((p) = > {
             return updateParticleModel(p);
-    });
+    })
+        ;
         // Draw em'
-        particles.forEach((p) => {
-            drawParticle(p.x, p.y, p.r, p.c);
-    });
+        particles.forEach((p) = > {
+            drawParticle(p.x, p.y, p.r, p.c
+        )
+        ;
+    })
+        ;
         // Play the same song? Ok!
         window.requestAnimFrame(frame);
     };
