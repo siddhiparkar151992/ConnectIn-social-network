@@ -1,5 +1,7 @@
 /**/*.classpath
-
+/**/*.iml
+*.iml
+*.iws
 /connectin-web/.sass-cache/*
 /connectin-web/node_modules/*
 /**/.settings
