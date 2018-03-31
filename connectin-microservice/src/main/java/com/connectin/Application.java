@@ -6,12 +6,14 @@ import com.connectin.authenticate.security.userdetails.UserDetailServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.*;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 @SpringBootApplication
 //@EnableWebSecurity
 @EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableJpaRepositories(basePackages = {"com.connectin"},entityManagerFactoryRef="entityManagerFactory")
 @ComponentScan(basePackages = {"com.connectin"})
 //@PropertySource("classpath:urlconfig.properties")
 @ImportResource({"classpath:/spring/root-context.xml", "classpath:/spring/servlet-context.xml",})

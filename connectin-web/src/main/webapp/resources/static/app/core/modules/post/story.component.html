@@ -47,12 +47,12 @@
 
         </div>
         <div class="likes col-4">
-            <span class="badge badge-pill badge-primary">4</span>
+            <span class="badge badge-pill badge-primary">{{post.likes ? post.likes.length : 0}}</span>
             <span class="card-text">Likes</span>
         </div>
 
         <div class="col-4 float-right links">
-            <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
+            <a class="link-action" ng-click="likePost()"><i class="fa fa-thumbs-o-up"></i></a>
             <a class="link-action" data-toggle="collapse" href="#collapse1"><i class="fa fa-comment-o"></i></a>
             <a class="link-action" href=""><i class="fa fa-mail-reply"></i></a>
 
@@ -75,7 +75,7 @@
                                                       src="http://goo.gl/oM0Y8G" alt="...">
                 </a><a href="">{{comment.firstName}} {{comment.lastName}} </a>
                     <div>
-                        <span class="time"> 1 hr </span> <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
+                        <span class="time"> 1 hr </span> <a class="link-action" ng-click="likeComment(comment)"><i class="fa fa-thumbs-o-up"></i></a>
                     </div></div>
                 <div class="col-6 float-right">
                     <div class="comment-section comment-text">{{comment.text}}</div>

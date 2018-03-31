@@ -18,6 +18,8 @@ export class UrlConfigService {
     public tokenUrl = "token";
     public commentAddUrl= "comment/add";
     public commentGetUrl= "comment/";
+    public likePostUrl = "user/likes/add/post/";
+    public likeCommentUrl = "user/likes/add/comment/";
 
     constructor() {
         this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl;

@@ -118,11 +118,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="connectin" target="1.7" />
-      <module name="connectin-auth" target="1.7" />
-      <module name="connectin-config" target="1.7" />
-      <module name="connectin-core" target="1.7" />
-      <module name="connectin-web" target="1.7" />
+      <module name="connectin" target="1.8" />
+      <module name="connectin-auth" target="1.8" />
+      <module name="connectin-config" target="1.8" />
+      <module name="connectin-core" target="1.8" />
+      <module name="connectin-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="Encoding">
