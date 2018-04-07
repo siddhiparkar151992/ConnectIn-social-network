@@ -57,7 +57,9 @@ public class CommentsServiceImpl implements CommentService {
             }
             if(requiredPost.getUser().getId() == userId || hasAccess){
                 comments = commentsDao.getCommentsByPost(postId);
+                for (CommentDTO commentDTO: comments) {
 
+                }
                 if (!comments.equals(null)) {
 
                     return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, comments);

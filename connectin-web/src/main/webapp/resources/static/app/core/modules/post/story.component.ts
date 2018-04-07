@@ -39,7 +39,8 @@ export class StoryComponent implements OnInit {
         this.likeService.likeComment(id).subscribe(response => {
             response = response.json();
             if (response.statusCode == 0) {
-                this.post.likes.push({ });
+                if(!comment.likes) comment.likes = [];
+                comment.likes.push({ });
             }
         });
     }

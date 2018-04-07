@@ -39,12 +39,7 @@ public class LikesDaoImpl implements ILikesDao {
     public List<LikeDTO> getLikesByComments(int commentId) throws ConnectinBaseException {
         List<LikeDTO> likes = new ArrayList<>();
         try {
-            likes = (List<LikeDTO>) entityManager
-                    .createQuery("select new " + "com.connectin.domain.like.LikeDTO(l.id, l.user.id, "
-                            + "l.user.firstName,l.user.lastName,l.user.email,l.createdDate) "
-                            + "from likes l where l.comment.id=:commentId and l.type=:likeType")
-                    .setParameter("postId", commentId)
-                    .setParameter("likeType", LikeType.comment).getResultList();
+            likes = likeRepository.getLikesByComments(commentId, LikeType.comment);
             return likes;
         } catch (Exception e) {
             throw new ConnectinBaseException("Could not load likes!");

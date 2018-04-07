@@ -71,16 +71,21 @@
     <div [id]="'commentDrp' + post.id" class="collapse story card-block story-comment-section">
         <ul class="list-group list-group-flush">
             <li *ngFor="#comment of post.comments" class="comment-row list-group-item row">
-                <div class="col-4"> <a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
-                                                      src="http://goo.gl/oM0Y8G" alt="...">
+                <div class="col-3"><a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
+                                                     src="http://goo.gl/oM0Y8G" alt="...">
                 </a><a href="">{{comment.firstName}} {{comment.lastName}} </a>
-                    <div>
-                        <span class="time"> 1 hr </span>
-                        <span class="time"> 1 hr </span> <a class="link-action" (click)="likeComment(comment)"><i class="fa fa-thumbs-o-up"></i></a>
-                    </div></div>
-                <div class="col-6 float-right">
-                    <div class="comment-section comment-text">{{comment.text}}</div>
                 </div>
+                <div class="float-right">
+                    <span class="comment-section comment-text">{{comment.text}}</span>
+                    <span class="time">
+
+                            <span class="badge badge-pill badge-primary">{{comment.likes ? comment.likes.length : 0}}</span>
+                            <span class="card-text">Likes</span>
+                        </span>
+                    <span class="time"> 1 hr </span> <a class="link-action" (click)="likeComment(comment)"><i
+                        class="fa fa-thumbs-o-up"></i></a>
+                </div>
+
             </li>
 
 
@@ -88,7 +93,10 @@
 
     </div>
     <div class="comment-post row" style="padding: 10px;">
-        <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment.text" class="form-control col">
-        <button class="btn btn-outline-primary btn-post" style="cursor: pointer;" (click)="postComment()" type="button">Post</button>
+        <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment.text"
+               class="form-control col">
+        <button class="btn btn-outline-primary btn-post" style="cursor: pointer;" (click)="postComment()" type="button">
+            Post
+        </button>
     </div>
 </div>

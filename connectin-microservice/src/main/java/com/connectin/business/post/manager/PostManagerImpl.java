@@ -71,10 +71,6 @@ public class PostManagerImpl implements IPostManager {
         return postEntity;
     }
 
-    public boolean checkIfPostBelongsToTheUser(int ownerId, int userId, int postId) {
-
-        return false;
-    }
 
     @Override
     public PostDTO getPostById(int postId) {
