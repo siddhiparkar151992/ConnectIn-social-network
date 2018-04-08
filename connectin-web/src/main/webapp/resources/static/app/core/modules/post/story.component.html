@@ -27,28 +27,36 @@
         </p>
     </div>
     <div class="card-block story story-likes row">
-        <div class="image-pills col-4">
+        <div *ngIf="post.likes && post.likes.length >= 3"  class="image-pills col-4">
             <ul class="list-inline like-list">
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+                <li *ngFor="#p of [1,2,3]"
+                    class="list-inline-item like-list-item">
+                    <img src="{{p.user.images}}" class="d-flex rounded-circle float-left img-fluid"
                          alt="Generic placeholder image">
                 </li>
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
-                         alt="Generic placeholder image">
 
-                </li>
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+            </ul>
+            <div class="likes">
+                <span class="badge badge-pill badge-primary">+ {{post.likes.length-3}}</span>
+                <span class="card-text">Likes</span>
+            </div>
+        </div>
+        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3"  class="image-pills col-4">
+            <ul class="list-inline like-list">
+                <li *ngFor="#p of post.likes"
+                    class="list-inline-item like-list-item">
+                    <img src="/resources/img/IMG_9522.JPG" class="d-flex rounded-circle float-left img-fluid"
                          alt="Generic placeholder image">
-
                 </li>
+
             </ul>
 
         </div>
-        <div class="likes col-4">
-            <span class="badge badge-pill badge-primary">{{post.likes ? post.likes.length : 0}}</span>
-            <span class="card-text">Likes</span>
+        <div *ngIf="!post.likes || post.likes.length == 0"  class="image-pills col-4">
+            <div class="likes">
+                <span class="badge badge-pill badge-primary">0</span>
+                <span class="card-text">Likes</span>
+            </div>
         </div>
 
         <div class="col-4 float-right links">
@@ -82,8 +90,9 @@
                             <span class="badge badge-pill badge-primary">{{comment.likes ? comment.likes.length : 0}}</span>
                             <span class="card-text">Likes</span>
                         </span>
-                    <span class="time"> 1 hr </span> <a class="link-action" (click)="likeComment(comment)"><i
-                        class="fa fa-thumbs-o-up"></i></a>
+                    <span class="time"> {{datetimeService.formatDate(comment.createdDate,"DD, MMM, YYYY HH:mm:ss")}} </span>
+                    <a class="link-action" (click)="likeComment(comment)"><i
+                            class="fa fa-thumbs-o-up"></i></a>
                 </div>
 
             </li>

@@ -4,6 +4,9 @@
         <i [className]="selectedItem.icon"></i>{{selectedItem.title}}
     </button>
     <div class="dropdown-menu" aria-labelledby="privacyDrpDown">
-        <div (click)="onSelect(item)" *ngFor="#item of items" class="dropdown-item"><i [className]="item.icon"></i>{{item.title}}</div>
+        <div style="cursor:pointer;" (click)="onSelect(item)" *ngFor="#item of items" class="dropdown-item">
+            <i [className]="item.icon"></i>
+            {{item.title}}
+        </div>
     </div>
 </div>

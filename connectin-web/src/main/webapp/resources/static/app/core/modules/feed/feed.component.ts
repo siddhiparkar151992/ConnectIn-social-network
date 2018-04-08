@@ -46,7 +46,7 @@ export class StorylineComponent implements OnInit {
         }
     }
     onDropdownChange(event) {
-        this.privacyDropdown.selectedItem = event.target.value;
+        this.privacyDropdown.selectedItem = event;
     }
     onPostClick() {
         if (this.post.text != null && this.post.text != "") {

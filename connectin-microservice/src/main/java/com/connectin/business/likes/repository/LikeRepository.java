@@ -25,7 +25,8 @@ public interface LikeRepository extends CrudRepository<Likes, Integer> {
     boolean isCommentLikedByUser(@Param("userId") int userId, @Param("commentId") int commentId);
 
     @Query("select new " + "com.connectin.domain.like.LikeDTO(l.id, l.user.id, "
-            + "l.user.firstName,l.user.lastName,l.user.email,l.createdDate) "
+            + "l.user.firstName,l.user.lastName,l.user.email,l.createdTime, l.type, l.user.profileImage.url," +
+            " l.user.profileImage.alt, l.user.profileImage.type) "
             + "from likes l where l.comment.id=:commentId and l.type=:likeType")
     List<LikeDTO> getLikesByComments(@Param("commentId") int commentId, @Param("likeType") LikeType likeType);
 }
