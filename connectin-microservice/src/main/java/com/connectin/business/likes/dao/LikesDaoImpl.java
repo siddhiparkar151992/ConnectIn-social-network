@@ -53,7 +53,8 @@ public class LikesDaoImpl implements ILikesDao {
         try {
             likes = (List<LikeDTO>) entityManager
                     .createQuery("select new com.connectin.domain.like.LikeDTO(l.id, l.user.id, "
-                            + "l.user.firstName,l.user.lastName,l.user.email,l.createdTime, l.type) "
+                            + "l.user.firstName,l.user.lastName,l.user.email,l.createdTime, l.type, l.user.profileImage.url," +
+                            " l.user.profileImage.alt, l.user.profileImage.type) "
                             + "from likes l where l.postLike.id=:postId and l.type=:likeType")
                     .setParameter("postId", postId)
                     .setParameter("likeType", LikeType.post).getResultList();

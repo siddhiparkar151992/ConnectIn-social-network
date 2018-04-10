@@ -13,6 +13,7 @@ import {FooterComponent} from "../layout/footer/footer.component";
 import {UserService} from "../core/security/user/user.service";
 import {TokenService} from "../core/security/token/token.service";
 import {RequestHeaderService} from "../common/sevices/request-header.service";
+import {UserDetailsService} from "../core/modules/user-details/user-details.service";
 declare var $: any;
 
 @Component({
@@ -20,7 +21,7 @@ declare var $: any;
     template: " <index-header></index-header><div><router-outlet></router-outlet></div><index-footer></index-footer>",
     directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
     providers: [UrlConfigService, UserFeedService, TokenService, UserService, DatetimeService,
-        StorylineService, RequestHeaderService,CommentService, LikeService],
+        StorylineService, RequestHeaderService,CommentService, LikeService, UserDetailsService],
 
 })
 
@@ -36,6 +37,11 @@ declare var $: any;
         component: DashboardComponent,
         useAsDefault: true
 
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: ProfileComponent
     }
 
 ])

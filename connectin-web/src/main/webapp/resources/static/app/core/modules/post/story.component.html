@@ -22,27 +22,26 @@
     </div>
     <div class="card-block story story-text">
         <p class="card-text">
-            {{post.text}}.... <a href="#">Read
-            more</a>
+            {{post.text}}.... <a href="#"></a>
         </p>
     </div>
     <div class="card-block story story-likes row">
-        <div *ngIf="post.likes && post.likes.length >= 3"  class="image-pills col-4">
-            <ul class="list-inline like-list">
-                <li *ngFor="#p of [1,2,3]"
+        <div *ngIf="post.likes && post.likes.length >= 3"  class="image-pills col-6 row">
+            <ul class="list-inline like-list col-6">
+                <li *ngFor="#p of [0,1,2]"
                     class="list-inline-item like-list-item">
-                    <img src="{{p.user.images}}" class="d-flex rounded-circle float-left img-fluid"
+                    <img src="{{post.likes[p].user.images.url}}" class="d-flex rounded-circle float-left img-fluid"
                          alt="Generic placeholder image">
                 </li>
 
             </ul>
-            <div class="likes">
+            <div class="likes col-6">
                 <span class="badge badge-pill badge-primary">+ {{post.likes.length-3}}</span>
                 <span class="card-text">Likes</span>
             </div>
         </div>
-        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3"  class="image-pills col-4">
-            <ul class="list-inline like-list">
+        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3"  class="image-pills col-6 row">
+            <ul class="list-inline like-list col-12">
                 <li *ngFor="#p of post.likes"
                     class="list-inline-item like-list-item">
                     <img src="/resources/img/IMG_9522.JPG" class="d-flex rounded-circle float-left img-fluid"
@@ -52,8 +51,8 @@
             </ul>
 
         </div>
-        <div *ngIf="!post.likes || post.likes.length == 0"  class="image-pills col-4">
-            <div class="likes">
+        <div *ngIf="!post.likes || post.likes.length == 0"  class="image-pills col-6">
+            <div class="likes col-12">
                 <span class="badge badge-pill badge-primary">0</span>
                 <span class="card-text">Likes</span>
             </div>
