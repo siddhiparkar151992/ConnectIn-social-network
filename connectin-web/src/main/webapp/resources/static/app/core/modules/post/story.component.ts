@@ -9,7 +9,7 @@ import {LikeService} from "../likes/likes.service";
     selector: 'story-card',
     templateUrl: '/resources/static/app/core/modules/post/story.component.html',
     styleUrls: ['resources/styles/css/modules/post/story.css'],
-    providers: [RequestHeaderService, CommentService, LikeService]
+    providers: [RequestHeaderService, CommentService, LikeService, DatetimeService]
 
 })
 export class StoryComponent implements OnInit {

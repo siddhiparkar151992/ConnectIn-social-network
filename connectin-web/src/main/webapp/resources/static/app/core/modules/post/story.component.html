@@ -1,7 +1,7 @@
 <div class="card story-card">
     <div class="card-block story story-header">
         <div class="media">
-            <img height="5%" width="5%" [src]="post.user.profileImage.url" class="d-flex mr-3 rounded-circle float-left"
+            <img *ngIf="post.user" height="5%" width="5%" [src]="post.user.profileImage.url" class="d-flex mr-3 rounded-circle float-left"
                  alt="logo">
             <div class="media-body story-header name">
                 <div class="mt-0">

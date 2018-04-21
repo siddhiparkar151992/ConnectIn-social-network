@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* line 7, ../../../scss/modules/user-profile/user-profile.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 12, ../../../scss/modules/user-profile/user-profile.scss */
+.fb-profile img.fb-image-lg {
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* line 17, ../../../scss/modules/user-profile/user-profile.scss */
+.fb-image-profile {
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  /* line 26, ../../../scss/modules/user-profile/user-profile.scss */
+  .fb-profile-text > h1 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* line 31, ../../../scss/modules/user-profile/user-profile.scss */
+  .fb-image-profile {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
+}
+/* FONTS */
+/* line 53, ../../../scss/modules/user-profile/user-profile.scss */
+body {
+  background-color: #EBEBEB;
+}
+
+/* line 57, ../../../scss/modules/user-profile/user-profile.scss */
+.container {
+  padding: 30px 0px 30px 0px;
+}
+
+/* NAVIGATION TABS*/
+/* line 64, ../../../scss/modules/user-profile/user-profile.scss */
+.nav {
+  background-color: #ffffff;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 4px #CECECE;
+}
+
+/* line 71, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs > li > a {
+  border: medium none;
+  color: #EBEBEB;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.5s ease;
+}
+/* line 76, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs > li > a:hover {
+  background-color: #dd5555 !important;
+  border: medium none;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 84, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus {
+  color: #dd5555;
+  border: transparent !important;
+}
+/* line 88, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus:hover {
+  color: #ffffff;
+}
+
+/* line 93, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs > li,
+.nav-pills > li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* for IE7*/
+  *zoom: 1;
+  /* for IE7*/
+}
+
+/* line 103, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs {
+  text-align: center;
+}
+
+/* ICONS */
+/* line 110, ../../../scss/modules/user-profile/user-profile.scss */
+i {
+  color: #EBEBEB;
+  transition: all 0.5s ease;
+}
+/* line 113, ../../../scss/modules/user-profile/user-profile.scss */
+i:hover {
+  color: #dd5555;
+}
+
+/* TABS CONTAINER */
+/* line 121, ../../../scss/modules/user-profile/user-profile.scss */
+.content {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 5px #CECECE;
+}
+
+/* line 129, ../../../scss/modules/user-profile/user-profile.scss */
+.btn,
+.btn:hover {
+  background-color: #dd5555;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 25px 5px 25px;
+}
+
+/* line 137, ../../../scss/modules/user-profile/user-profile.scss */
+.btn-more,
+.btn-more:hover {
+  font-size: 11px;
+  padding: 5px 15px 5px 15px;
+  background-color: #dd5555;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* line 146, ../../../scss/modules/user-profile/user-profile.scss */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #dd5555;
+  font-size: 22px;
+}
+
+/* line 152, ../../../scss/modules/user-profile/user-profile.scss */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #dd5555;
+  font-size: 18px;
+}
+
+/* line 158, ../../../scss/modules/user-profile/user-profile.scss */
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #EBEBEB;
+}
+
+/* line 163, ../../../scss/modules/user-profile/user-profile.scss */
+.social {
+  margin-top: 50px;
+}
+/* line 165, ../../../scss/modules/user-profile/user-profile.scss */
+.social li {
+  display: inline;
+  margin-right: 35px;
+}
+
+/* line 171, ../../../scss/modules/user-profile/user-profile.scss */
+.work {
+  padding: 20px;
+  margin-left: 20px;
+  border-left: 2px solid #dd5555;
+}
+/* line 175, ../../../scss/modules/user-profile/user-profile.scss */
+.work i {
+  color: #dd5555;
+}
+
+/* line 180, ../../../scss/modules/user-profile/user-profile.scss */
+.media {
+  margin-left: -29px;
+}
+
+/* CONTACT */
+/* line 187, ../../../scss/modules/user-profile/user-profile.scss */
+.contact i {
+  color: #ffffff;
+}
+
+/* line 191, ../../../scss/modules/user-profile/user-profile.scss */
+.form-horizontal {
+  padding: 15px;
+}
+
+/* line 195, ../../../scss/modules/user-profile/user-profile.scss */
+.form-control {
+  border: transparent !important;
+  background-color: #EBEBEB;
+}
+
+/* line 200, ../../../scss/modules/user-profile/user-profile.scss */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* line 204, ../../../scss/modules/user-profile/user-profile.scss */
+.input-group-addon {
+  background-color: #dd5555;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border: transparent !important;
+}

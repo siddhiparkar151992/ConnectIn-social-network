@@ -1,0 +1,167 @@
+<div class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="/resources/img/city-sunny-people-street-1.jpg"
+             alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail" src="/resources/img/IMG_9522.JPG"
+             alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <div class="">
+                <div class="">
+                    <div>
+                        <div class="tabs">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs col-6 row" role="tablist">
+                                <li role="presentation" class="active col-3">
+                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">About</a>
+                                </li>
+                                <li role="presentation" class="col-3"><a href="#profile" aria-controls="profile"
+                                                                         role="tab" data-toggle="tab">Feed</a></li>
+                                <li role="presentation" class="col-3"><a href="#work" aria-controls="messages"
+                                                                         role="tab" data-toggle="tab">Edit Profile</a></li>
+                                <li role="presentation" class="col-3"><a href="#contact" aria-controls="settings"
+                                                                         role="tab" data-toggle="tab">Friends</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="row content col-6">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active text-center" id="home">
+                                    <div *ngFor="#p of feed">
+                                        <story-card [post]='p' class="storyline-component story-card"></story-card>
+
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade" id="profile">
+                                    <h1>Lorem Ipsum</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem libero,
+                                        malesuada tincidunt mauris sed, pulvinar maximus enim. Aliquam erat volutpat.
+                                        Integer imperdiet malesuada diam, id viverra libero iaculis sit amet.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem libero,
+                                        malesuada tincidunt mauris sed, pulvinar maximus enim.</p>
+                                    <br>
+                                    <div class="row text-center">
+                                        <div class="col-md-4 about"><img
+                                                src="https://static.pexels.com/photos/7095/people-coffee-notes-tea-medium.jpg"
+                                                width="100%" class="img-responsive"/>
+                                            <a class="btn btn-more" href="#" role="button">view</a>
+                                        </div>
+
+                                        <div class="col-md-4 about"><img
+                                                src="https://static.pexels.com/photos/35550/ipad-tablet-technology-touch-medium.jpg"
+                                                width="100%" class="img-responsive">
+                                            <a class="btn btn-more" href="#" role="button">view</a>
+                                        </div>
+
+                                        <div class="col-md-4 about"><img
+                                                src="https://static.pexels.com/photos/7097/people-coffee-tea-meeting-medium.jpg"
+                                                width="100%" class="img-responsive">
+                                            <a class="btn btn-more" href="#" role="button">view</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row social text-center">
+                                        <ul>
+                                            <li><i class="fa fa-twitter  fa-3x" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-facebook  fa-3x" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-wordpress  fa-3x" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-instagram  fa-3x" aria-hidden="true"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div role="tabpanel" class="tab-pane fade" id="work">
+                                    <h1>Work experience</h1>
+                                    <div class="row work">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2011 - 2013</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2013 - 2016</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2016 - </h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade contact" id="contact">
+                                    <h1 class="text-center">Contact me</h1>
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"
+                                                                           aria-hidden="true"></i>
+                                        </span>
+                                                <input type="email" class="form-control" id="inputEmail3"
+                                                       placeholder="Email">
+                                            </div>
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                                <input type="email" class="form-control" id="inputEmail3"
+                                                       placeholder="Name">
+                                            </div>
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-align-left"
+                                                                           aria-hidden="true"></i>
+                                        </span>
+                                                <textarea class="form-control" rows="3"
+                                                          placeholder="Message"></textarea>
+                                            </div>
+                                            <div class="input-group pull-right">
+                                                <button type="submit" class="btn">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row text-center">
+                                        <div class="col-md-6">
+                                            <h2>How to reach me:</h2>
+                                            <p>Email: contact@email.com</p>
+                                            <p>Phone: +123 45 678 987</p>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <h2>Address</h2>
+                                            <p>Street name No.</p>
+                                            <p>Zip City, Country</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Girls just wanna go fun.</p>
+        </div>
+    </div>
+</div> <!-- /container -->

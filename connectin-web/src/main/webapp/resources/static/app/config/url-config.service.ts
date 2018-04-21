@@ -21,6 +21,7 @@ export class UrlConfigService {
     public likePostUrl = "user/likes/add/post/";
     public likeCommentUrl = "user/likes/add/comment/";
     public getUserDetailsUrl = "user/details?";
+    public getUserPostsUrl = "/posts/list";
     constructor() {
         this.appBaseUrl = this.httpUrl + this.host + ':' + this.appPort + this.apiBaseUrl;
         this.baseUrl = this.httpUrl + this.host + ':' + this.port + this.apiBaseUrl;

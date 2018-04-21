@@ -17,7 +17,8 @@ import java.util.List;
 @Transactional
 public interface PostRepository extends JpaRepository<Post, Integer> {
     @Query("select new com.connectin.domain.post.PostDTO(p.id, p.category.categoryName, "
-            + "p.visibility, p.tags, p.createdTime, p.text, i.type,i.url, i.alt) "
+            + "p.visibility, p.tags, p.createdTime,p.text,  p.owner, p.owner.profileImage.type," +
+            "p.owner.profileImage.url, p.owner.profileImage.alt) "
             + "from post p join  p.owner.profileImage i where p.owner.userName=:userName order by p.createdTime desc")
     List<PostDTO> getPostsByUser(@Param("userName") String userName);
 

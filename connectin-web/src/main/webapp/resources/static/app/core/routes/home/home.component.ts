@@ -6,6 +6,7 @@ import {TokenService} from "../../security/token/token.service";
 import {TokenResolver} from "../../security/token/token.resolver.service";
 import {UrlConfigService} from "../../../config/url-config.service";
 import {StorylineComponent} from "../../modules/feed/feed.component";
+import {UserProfileComponent} from "../../modules/user-profile/user-profile.component";
 
 declare var $: any;
 
@@ -24,10 +25,18 @@ declare var $: any;
 
     },
     {
-        path: '/storyline',
+        path: '/home',
         name: 'Storyline',
         component: StorylineComponent,
         useAsDefault: true,
+        resolve: {
+            token: TokenResolver
+        }
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: UserProfileComponent,
         resolve: {
             token: TokenResolver
         }

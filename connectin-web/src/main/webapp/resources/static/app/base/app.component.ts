@@ -14,6 +14,7 @@ import {UserService} from "../core/security/user/user.service";
 import {TokenService} from "../core/security/token/token.service";
 import {RequestHeaderService} from "../common/sevices/request-header.service";
 import {UserDetailsService} from "../core/modules/user-details/user-details.service";
+import {UserProfileComponent} from "../core/modules/user-profile/user-profile.component";
 declare var $: any;
 
 @Component({
@@ -37,13 +38,7 @@ declare var $: any;
         component: DashboardComponent,
         useAsDefault: true
 
-    },
-    {
-        path: '/profile',
-        name: 'Profile',
-        component: ProfileComponent
     }
-
 ])
 
 export class AppComponent implements OnInit {

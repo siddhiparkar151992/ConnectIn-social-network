@@ -1,0 +1,209 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fb-profile img.fb-image-lg{
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.fb-image-profile
+{
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+@media (max-width:768px)
+{
+
+  .fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+  }
+
+  .fb-image-profile
+  {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
+}
+/* FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$all-font: 'Montserrat', sans-serif;
+$headings: #dd5555;
+$shadows: #CECECE;
+$greys: #EBEBEB;
+$white: #ffffff;
+body {
+  background-color: $greys;
+}
+
+.container {
+  padding: 30px 0px 30px 0px;
+}
+
+
+/* NAVIGATION TABS*/
+
+.nav {
+  background-color: $white;
+  padding: 20px;
+  @include border-radius(5px);
+  box-shadow: 0px 4px $shadows;
+}
+
+.nav-tabs > li > a {
+  border: medium none;
+  color: #EBEBEB;
+  font-family: $all-font;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: #dd5555 !important;
+    border: medium none;
+    color: #ffffff;
+    @include border-radius(5px);
+  }
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus {
+  color: #dd5555;
+  border: transparent!important;
+  &:hover {
+    color: $white;
+  }
+}
+
+.nav-tabs > li,
+.nav-pills > li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* for IE7*/
+  *zoom: 1;
+  /* for IE7*/
+}
+
+.nav-tabs {
+  text-align: center;
+}
+
+
+/* ICONS */
+
+i {
+  color: $greys;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $headings;
+  }
+}
+
+
+/* TABS CONTAINER */
+
+.content {
+  padding: 20px;
+  background-color: $white;
+  margin-top: 15px;
+  @include border-radius(5px);
+  box-shadow: 0px 5px $shadows;
+}
+
+.btn,
+.btn:hover {
+  background-color: $headings;
+  color: $white;
+  font-family: $all-font;
+  padding: 5px 25px 5px 25px;
+}
+
+.btn-more,
+.btn-more:hover {
+  font-size: 11px;
+  padding: 5px 15px 5px 15px;
+  background-color: $headings;
+  color: $white;
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: $all-font;
+  color: $headings;
+  font-size: 22px;
+}
+
+h2 {
+  font-family: $all-font;
+  color: $headings;
+  font-size: 18px;
+}
+
+p {
+  font-family: $all-font;
+  color: $greys;
+}
+
+.social {
+  margin-top: 50px;
+  li {
+    display: inline;
+    margin-right: 35px;
+  }
+}
+
+.work {
+  padding: 20px;
+  margin-left: 20px;
+  border-left: 2px solid $headings;
+  i {
+    color: $headings;
+  }
+}
+
+.media {
+  margin-left: -29px;
+}
+
+
+/* CONTACT */
+
+.contact i {
+  color: #ffffff;
+}
+
+.form-horizontal {
+  padding: 15px;
+}
+
+.form-control {
+  border: transparent!important;
+  background-color: #EBEBEB;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group-addon {
+  background-color: $headings;
+  color: $white;
+  font-family: $all-font;
+  border: transparent!important;
+}
