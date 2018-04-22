@@ -2,31 +2,46 @@
     <div class="fb-profile">
         <img align="left" class="fb-image-lg" src="/resources/img/city-sunny-people-street-1.jpg"
              alt="Profile image example"/>
-        <img align="left" class="fb-image-profile thumbnail" src="/resources/img/IMG_9522.JPG"
+        <img align="left" class="fb-image-profile thumbnail d-flex rounded-circle img-fluid" src="/resources/img/IMG_9522.JPG"
              alt="Profile image example"/>
         <div class="fb-profile-text">
             <div class="">
                 <div class="">
                     <div>
-                        <div class="tabs">
+                        <div class="tabs tab-feed">
                             <!-- Nav tabs -->
-                            <ul class="nav nav-tabs col-6 row" role="tablist">
+                            <ul class="nav nav-tabs col-6 row tab-feed-nav" role="tablist">
                                 <li role="presentation" class="active col-3">
-                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">About</a>
+
+                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                        <i class="fa fa-file-text-o"></i>
+                                        Feed
+                                    </a>
                                 </li>
-                                <li role="presentation" class="col-3"><a href="#profile" aria-controls="profile"
-                                                                         role="tab" data-toggle="tab">Feed</a></li>
-                                <li role="presentation" class="col-3"><a href="#work" aria-controls="messages"
-                                                                         role="tab" data-toggle="tab">Edit Profile</a></li>
-                                <li role="presentation" class="col-3"><a href="#contact" aria-controls="settings"
-                                                                         role="tab" data-toggle="tab">Friends</a></li>
+                                <li role="presentation" class="col-3">
+
+                                    <a href="#profile" aria-controls="profile"
+                                       role="tab" data-toggle="tab"> <i class="fa fa-address-book-o"></i>
+                                        About</a>
+                                </li>
+                                <li role="presentation" class="col-3">
+
+                                    <a href="#work" aria-controls="messages"
+                                       role="tab" data-toggle="tab">
+                                        <i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+                                </li>
+                                <li role="presentation" class="col-3">
+
+                                    <a href="#contact" aria-controls="settings"
+                                       role="tab" data-toggle="tab">
+                                        <i class="fa fa-address-card-o"></i>Friends</a></li>
                             </ul>
                         </div>
 
                         <div class="row content col-6">
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active text-center" id="home">
+                                <div role="tabpanel" class="tab-pane active text-center" id="home">
                                     <div *ngFor="#p of feed">
                                         <story-card [post]='p' class="storyline-component story-card"></story-card>
 

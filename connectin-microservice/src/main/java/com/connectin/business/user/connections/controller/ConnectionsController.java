@@ -29,4 +29,14 @@ public class ConnectionsController {
         return userResponse;
 
     }
+
+    @RequestMapping("/")
+    public Response getUserConnection(HttpServletRequest request,
+                                HttpServletResponse response) throws AccountException {
+        User principal = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String username = principal.getUsername();
+        Response userResponse = connectionService.getUserConnections(username);
+        return userResponse;
+
+    }
 }
