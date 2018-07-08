@@ -1,11 +1,11 @@
 package com.connectin.business.post.controller;
 
+import com.connectin.authenticate.entity.User;
 import com.connectin.business.post.service.PostService;
 import com.connectin.domain.post.PostDTO;
 import com.connectin.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;

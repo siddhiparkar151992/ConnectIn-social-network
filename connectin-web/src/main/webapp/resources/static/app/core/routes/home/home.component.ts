@@ -6,13 +6,15 @@ import {TokenService} from "../../security/token/token.service";
 import {TokenResolver} from "../../security/token/token.resolver.service";
 import {UrlConfigService} from "../../../config/url-config.service";
 import {StorylineComponent} from "../../modules/feed/feed.component";
+import {UserProfileComponent} from "../../modules/user/user-profile/user-profile.component";
+import {FriendListComponent} from "../../modules/friend-list/friend-list.component";
 
 declare var $: any;
 
 @Component({
     selector: 'home',
     template: '<profile-header></profile-header><div><router-outlet></router-outlet></div>',
-    directives: [ROUTER_DIRECTIVES, ProfileHeaderComponent],
+    directives: [ROUTER_DIRECTIVES, ProfileHeaderComponent, FriendListComponent],
     providers: [UserService, TokenService, TokenResolver, UrlConfigService]
 
 })
@@ -24,10 +26,18 @@ declare var $: any;
 
     },
     {
-        path: '/storyline',
+        path: '/home',
         name: 'Storyline',
         component: StorylineComponent,
         useAsDefault: true,
+        resolve: {
+            token: TokenResolver
+        }
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: UserProfileComponent,
         resolve: {
             token: TokenResolver
         }

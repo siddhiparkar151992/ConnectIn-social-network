@@ -9,9 +9,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-
-@Entity
-@Table(name = "user")
+@Table
+@Entity(name = "user")
 public class User implements Serializable {
     @Id
     @Column(name = "id")

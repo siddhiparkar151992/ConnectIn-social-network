@@ -8,12 +8,12 @@ import {Component, Input, Output, ngOnInit,EventEmitter} from "angular2/core";
 })
 export class DropdownComponent {
 
-    @Input
+    @Input()
     public items:Array;
-    @Output
-    public onDropdownChange = new EventEmitter();
 
-    @Input
+    @Output() change:EventEmitter = new EventEmitter();
+
+    @Input()
     public selectedItem;
 
 
@@ -21,6 +21,6 @@ export class DropdownComponent {
 
     onSelect(item) {
         this.selectedItem =  item;
-        this.onDropdownChange.emit(this.selectedItem);
+        this.change.emit(this.selectedItem);
     }
 }

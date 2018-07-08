@@ -1,7 +1,8 @@
 <div class="card story-card">
     <div class="card-block story story-header">
         <div class="media">
-            <img height="5%" width="5%" [src]="post.user.profileImage.url" class="d-flex mr-3 rounded-circle float-left"
+            <img *ngIf="post.user" height="9%" width="9%" [src]="post.user.profileImage.url"
+                 class="d-flex mr-3 rounded-circle float-left"
                  alt="logo">
             <div class="media-body story-header name">
                 <div class="mt-0">
@@ -22,37 +23,44 @@
     </div>
     <div class="card-block story story-text">
         <p class="card-text">
-            {{post.text}}.... <a href="#">Read
-            more</a>
+            {{post.text}}.... <a href="#"></a>
         </p>
     </div>
     <div class="card-block story story-likes row">
-        <div class="image-pills col-4">
-            <ul class="list-inline like-list">
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+        <div *ngIf="post.likes && post.likes.length >= 3" class="image-pills col-6 row">
+            <ul class="list-inline like-list col-6">
+                <li *ngFor="#p of [0,1,2]"
+                    class="list-inline-item like-list-item">
+                    <img src="{{post.likes[p].user.images.url}}" class="d-flex rounded-circle float-left img-fluid"
                          alt="Generic placeholder image">
                 </li>
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
-                         alt="Generic placeholder image">
 
-                </li>
-                <li class="list-inline-item like-list-item">
-                    <img src="http://goo.gl/vswgSn" class="d-flex rounded-circle float-left img-fluid"
+            </ul>
+            <div class="likes col-6">
+                <span class="badge badge-pill badge-primary">+ {{post.likes.length-3}}</span>
+                <span class="card-text">Likes</span>
+            </div>
+        </div>
+        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3" class="image-pills col-6 row">
+            <ul class="list-inline like-list col-12">
+                <li *ngFor="#p of post.likes"
+                    class="list-inline-item like-list-item">
+                    <img src="/resources/img/IMG_9522.JPG" class="d-flex rounded-circle float-left img-fluid"
                          alt="Generic placeholder image">
-
                 </li>
+
             </ul>
 
         </div>
-        <div class="likes col-4">
-            <span class="badge badge-pill badge-primary">4</span>
-            <span class="card-text">Likes</span>
+        <div *ngIf="!post.likes || post.likes.length == 0" class="image-pills col-6">
+            <div class="likes col-12">
+                <span class="badge badge-pill badge-primary">0</span>
+                <span class="card-text">Likes</span>
+            </div>
         </div>
 
         <div class="col-4 float-right links">
-            <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
+            <a class="link-action" (click)="likePost()"><i class="fa fa-thumbs-o-up"></i></a>
             <a class="link-action" data-toggle="collapse" href="#collapse1"><i class="fa fa-comment-o"></i></a>
             <a class="link-action" href=""><i class="fa fa-mail-reply"></i></a>
 
@@ -71,15 +79,22 @@
     <div [id]="'commentDrp' + post.id" class="collapse story card-block story-comment-section">
         <ul class="list-group list-group-flush">
             <li *ngFor="#comment of post.comments" class="comment-row list-group-item row">
-                <div class="col-4"> <a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
-                                                      src="http://goo.gl/oM0Y8G" alt="...">
+                <div class="col-3"><a href="#"> <img width="20%" height="20%" class="d-flex rounded-circle float-left"
+                                                     src="http://goo.gl/oM0Y8G" alt="...">
                 </a><a href="">{{comment.firstName}} {{comment.lastName}} </a>
-                    <div>
-                        <span class="time"> 1 hr </span> <a class="link-action" href=""><i class="fa fa-thumbs-o-up"></i></a>
-                    </div></div>
-                <div class="col-6 float-right">
-                    <div class="comment-section comment-text">{{comment.text}}</div>
                 </div>
+                <div class="float-right">
+                    <span class="comment-section comment-text">{{comment.text}}</span>
+                    <span class="time">
+
+                            <span class="badge badge-pill badge-primary">{{comment.likes ? comment.likes.length : 0}}</span>
+                            <span class="card-text">Likes</span>
+                        </span>
+                    <span class="time"> {{datetimeService.formatDate(comment.createdDate,"DD, MMM, YYYY HH:mm:ss")}} </span>
+                    <a class="link-action" (click)="likeComment(comment)"><i
+                            class="fa fa-thumbs-o-up"></i></a>
+                </div>
+
             </li>
 
 
@@ -87,7 +102,10 @@
 
     </div>
     <div class="comment-post row" style="padding: 10px;">
-        <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment.text" class="form-control col">
-        <button class="btn btn-outline-primary btn-post" style="cursor: pointer;" (click)="postComment()" type="button">Post</button>
+        <input placeholder="do you wannt say something?" type="text" [(ngModel)]="postedComment.text"
+               class="form-control col">
+        <button class="btn btn-outline-primary btn-post" style="cursor: pointer;" (click)="postComment()" type="button">
+            Post
+        </button>
     </div>
 </div>

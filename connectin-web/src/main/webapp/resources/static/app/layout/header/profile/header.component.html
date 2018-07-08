@@ -17,15 +17,15 @@
                         class="fa fa-envelope icon-envelope"></i></a>
             </li>
             <notification-list></notification-list>
-            <li class="nav-item dropdown dropdown-profile-link">
+            <li *ngIf="userDetails && userDetails.firstName" class="nav-item dropdown dropdown-profile-link">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="profileLink" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                    <span class="user-avatar pull-left"
                          style="margin-right: 8px; margin-top: -5px;"> <img
-                           src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
-                           class="img-responsive img-circle" title="John Doe"
+                           [src]="userDetails.profileImage.url"
+                           class="img-responsive img-circle"
                            alt="John Doe" width="30px" height="30px">
-                        </span> <span class="user-name"> John Doe </span>
+                        </span> <span class="user-name"> {{userDetails.firstName}} {{userDetails.lastName}}</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="profileLink">
                     <a class="dropdown-item  item-row" href="#">

@@ -1,0 +1,334 @@
+/* line 4, ../../../scss/modules/post/story.scss */
+.story-card {
+  border-radius: 0px;
+  padding: 10px;
+  margin-bottom: 21px;
+}
+/* line 5, ../../../scss/modules/post/story.scss */
+.story-card .mr-divider-0 {
+  margin: 0px;
+}
+/* line 8, ../../../scss/modules/post/story.scss */
+.story-card .story {
+  padding: 0.25rem;
+}
+/* line 11, ../../../scss/modules/post/story.scss */
+.story-card .card-text {
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #999;
+  font-weight: 300;
+}
+/* line 22, ../../../scss/modules/post/story.scss */
+.story-card .story-header .mt-0 {
+  text-align: left;
+}
+/* line 25, ../../../scss/modules/post/story.scss */
+.story-card .story-header .name {
+  color: #333;
+  padding: 0 10px 0 10px;
+  font-size: 15px;
+}
+/* line 29, ../../../scss/modules/post/story.scss */
+.story-card .story-header .name .sub-header {
+  text-align: left;
+  font-size: small;
+  color: #5e5e5e;
+}
+/* line 35, ../../../scss/modules/post/story.scss */
+.story-card .story-header .privacy-icon {
+  color: #757780;
+  border-radius: 0px;
+  padding: 10px;
+}
+/* line 49, ../../../scss/modules/post/story.scss */
+.story-card .story-likes .image-pills .likes {
+  text-align: left;
+}
+/* line 52, ../../../scss/modules/post/story.scss */
+.story-card .story-likes .image-pills .like-list {
+  margin: 0px;
+}
+/* line 54, ../../../scss/modules/post/story.scss */
+.story-card .story-likes .image-pills .like-list .like-list-item {
+  height: 30px;
+}
+/* line 56, ../../../scss/modules/post/story.scss */
+.story-card .story-likes .image-pills .like-list .like-list-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 64, ../../../scss/modules/post/story.scss */
+.story-card .story-likes .links .link-action {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #EA6060;
+}
+/* line 72, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-link {
+  text-align: left;
+}
+/* line 74, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-link .comment-text {
+  color: #EA6060;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* line 81, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .comment-post {
+  padding: 10px;
+}
+/* line 83, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .comment-post button {
+  cursor: pointer;
+}
+/* line 87, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .comment-row {
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+}
+/* line 90, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .comment-row .comment-text {
+  line-height: 1.5em;
+  font-weight: 300;
+  color: #4B4D53;
+  font-size: 13px;
+}
+/* line 97, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .time {
+  padding: 0 1.1rem;
+  color: #9197A3;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+/* line 105, ../../../scss/modules/post/story.scss */
+.story-card .story-comment-section .link-action i {
+  font-size: 1.1rem;
+  color: #EA6060;
+  padding: 0.24rem;
+}
+
+/* line 113, ../../../scss/modules/post/story.scss */
+.component-post {
+  position: relative;
+  background: #fff;
+  padding: 18px;
+}
+/* line 116, ../../../scss/modules/post/story.scss */
+.component-post .component-header .post-header .sub-header {
+  font-size: small;
+  color: #5e5e5e;
+}
+/* line 121, ../../../scss/modules/post/story.scss */
+.component-post .component-header .img-user {
+  float: left;
+}
+/* line 124, ../../../scss/modules/post/story.scss */
+.component-post .component-header .icon-visibility {
+  float: right;
+  color: #757780;
+}
+/* line 129, ../../../scss/modules/post/story.scss */
+.component-post .icon-visibility {
+  float: right;
+  font-size: medium;
+}
+/* line 133, ../../../scss/modules/post/story.scss */
+.component-post .img-user {
+  width: 85px;
+}
+/* line 140, ../../../scss/modules/post/story.scss */
+.component-post .type {
+  display: block;
+  background: #57CBC8;
+  color: #fff;
+  font-size: 14pt;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+/* line 154, ../../../scss/modules/post/story.scss */
+.component-post h1 {
+  font-size: 19pt;
+  color: #475258;
+  margin-bottom: 3%;
+}
+/* line 160, ../../../scss/modules/post/story.scss */
+.component-post p {
+  line-height: 1.5em;
+  color: #999;
+  font-weight: 300;
+}
+/* line 166, ../../../scss/modules/post/story.scss */
+.component-post a {
+  color: #EA6060;
+  text-decoration: none;
+  transition: 0.3s;
+}
+/* line 170, ../../../scss/modules/post/story.scss */
+.component-post a:hover {
+  color: #9c1515;
+}
+/* line 177, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-stack {
+  padding: 5px;
+  color: #71747A;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+/* line 187, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-more-comments {
+  padding: 9px;
+}
+/* line 191, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-panel {
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25) !important;
+  padding: 20px 0 0;
+}
+/* line 194, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-panel .post-heading {
+  background-color: white !important;
+}
+/* line 198, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-new-comment img {
+  border-radius: 100px;
+  float: left;
+  height: 40px;
+  margin: 0;
+  object-fit: cover;
+  width: 40px;
+}
+/* line 206, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comment {
+  font-size: 13px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+/* line 213, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comment .comment-text {
+  padding-left: 20px;
+  border-radius: 51px;
+}
+/* line 217, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-more-comments {
+  padding: 9px;
+}
+/* line 220, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comment .time {
+  color: #9197A3;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+}
+/* line 227, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comment p {
+  color: #4B4D53;
+}
+/* line 230, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comment img {
+  border-radius: 100px;
+  float: left;
+  height: 33px;
+  margin: 0;
+  object-fit: cover;
+  width: 33px;
+}
+/* line 239, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-heading.content a {
+  color: #337ab7;
+  text-decoration: none;
+}
+/* line 243, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-status p {
+  margin: 0;
+}
+/* line 247, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comments {
+  padding: 0 !important;
+}
+/* line 250, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comments .list-group-item {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
+  /* padding: 0; */
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 257, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-comments .list-group {
+  margin: 0;
+}
+/* line 260, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-stack {
+  padding: 5px;
+  color: #71747A;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+/* line 270, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 276, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row > span {
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 2px 0 0;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 283, ../../../scss/modules/post/story.scss */
+.component-post .post-info .cpost-likes > .row:first-child {
+  float: left;
+  width: 60%;
+}
+/* line 287, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row:last-child {
+  float: left;
+  text-align: end;
+  width: 40%;
+}
+/* line 292, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span:nth-child(4) {
+  background: #4D679F;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 0 8px 0 6px;
+}
+/* line 298, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span:nth-child(4) > a {
+  color: #FFF;
+}
+/* line 301, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row:first-child > span,
+.component-post .post-info .post-likes > .row:last-child > span {
+  color: #9197A3;
+}
+/* line 305, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row:last-child > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 309, ../../../scss/modules/post/story.scss */
+.component-post .post-info .post-likes > .row img {
+  border-radius: 100px;
+  height: 28px;
+  object-fit: cover;
+  width: 28px;
+}

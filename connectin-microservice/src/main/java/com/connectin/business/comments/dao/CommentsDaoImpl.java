@@ -4,8 +4,10 @@
 package com.connectin.business.comments.dao;
 
 import com.connectin.business.comments.entity.Comment;
+import com.connectin.business.comments.repository.CommentRepository;
 import com.connectin.domain.comments.CommentDTO;
 import com.connectin.exceptions.ConnectinBaseException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,16 +26,14 @@ public class CommentsDaoImpl implements ICommentsDao {
     @PersistenceContext
     EntityManager entityManager;
 
+    @Autowired
+    private CommentRepository commentRepository;
 
     @Override
     public List<CommentDTO> getCommentsByPost(int postId) throws ConnectinBaseException {
         List<CommentDTO> posts = new ArrayList<>();
         try {
-            posts = (List<CommentDTO>) entityManager.createQuery("select new com.connectin.domain.comments.CommentDTO("
-                    + "c.createdTime,u.id,u.firstName,"
-                    + "u.lastName,u.email,c.text,c.id, i.type,i.url, i.alt) "
-                    + "from comments c join c.user u join c.post as p left join c.user.profileImage as i where p.id=:postId")
-                    .setParameter("postId", postId).getResultList();
+            posts = commentRepository.getCommentsByPost(postId);
             return posts;
         } catch (Exception e) {
             throw new ConnectinBaseException("Could not load comments!");

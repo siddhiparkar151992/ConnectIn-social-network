@@ -118,11 +118,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="connectin" target="1.7" />
-      <module name="connectin-auth" target="1.7" />
-      <module name="connectin-config" target="1.7" />
-      <module name="connectin-core" target="1.7" />
-      <module name="connectin-web" target="1.7" />
+      <module name="connectin" target="1.8" />
+      <module name="connectin-auth" target="1.8" />
+      <module name="connectin-config" target="1.8" />
+      <module name="connectin-core" target="1.8" />
+      <module name="connectin-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="Encoding">
@@ -149,6 +149,8 @@
   <component name="InspectionProjectProfileManager">
     <profile version="1.0">
       <option name="myName" value="Project Default" />
+      <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+      <inspection_tool class="TypeScriptCheckImport" enabled="false" level="ERROR" enabled_by_default="false" />
     </profile>
     <version value="1.0" />
   </component>

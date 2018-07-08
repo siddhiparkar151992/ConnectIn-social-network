@@ -1,6 +1,8 @@
 package com.connectin.domain.like;
 
+import com.connectin.common.domain.ImageDTO;
 import com.connectin.config.AppConfig;
+import com.connectin.constants.ImageOwnerType;
 import com.connectin.domain.user.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,12 +22,12 @@ public class LikeDTO {
     private DateFormat dateformat;
 
     public LikeDTO(int id, int userId, String firstName, String lastName,
-                   String email, Date createdDate, LikeType type) {
+                   String email, Date createdDate, LikeType type, String imageUrl, String imageAlt, ImageOwnerType imageOwnerType) {
         super();
         dateformat = new SimpleDateFormat("dd/MM/yyyy HH:MM:SS");
         this.id = id;
         this.type = type;
-        this.user = new UserDTO(userId, firstName, lastName, email);
+        this.user = new UserDTO(userId, firstName, lastName, email, new ImageDTO(imageUrl, imageAlt, imageOwnerType));
         this.createdTime = dateformat.format(createdDate);
     }
 

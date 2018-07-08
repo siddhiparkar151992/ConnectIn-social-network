@@ -1,0 +1,158 @@
+<div class="container">
+    <div class="fb-profile">
+        <img align="left" class="fb-image-lg" src="/resources/img/city-sunny-people-street-1.jpg"
+             alt="Profile image example"/>
+        <img align="left" class="fb-image-profile thumbnail d-flex rounded-circle img-fluid" src="/resources/img/IMG_9522.JPG"
+             alt="Profile image example"/>
+        <div class="fb-profile-text">
+            <div class="">
+                <div class="">
+                    <div>
+
+
+                        <div class="row content col-lg-6 col-sm-10 col-md-6">
+                            <div class="tabs tab-feed">
+                                <!-- Nav tabs -->
+
+                                <ul class="nav nav-tabs tab-feed-nav" role="tablist">
+                                    <li role="presentation" class="active">
+
+                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                            <span class="fa fa-file-text-o"></span>
+                                            Feed
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="">
+
+                                        <a href="#profile" aria-controls="profile"
+                                           role="tab" data-toggle="tab"> <span class="fa fa-address-book-o"></span>
+                                            About</a>
+                                    </li>
+                                    <li role="presentation" class="">
+
+                                        <a href="#work" aria-controls="messages"
+                                           role="tab" data-toggle="tab">
+                                            <span class="fa fa-pencil-square-o"></span>Edit Profile</a>
+                                    </li>
+                                    <li role="presentation" class="">
+
+                                        <a href="#friend-list" aria-controls="friend-list"
+                                           role="tab" data-toggle="tab">
+                                            <span class="fa fa-address-card-o"></span>Friends</a></li>
+                                </ul>
+                            </div>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active text-center" id="home">
+                                    <div *ngIf="!feed || feed.length == 0" class="text-white">No posts found! write something wonderful</div>
+                                    <div class="card post-card">
+
+                                        <div class="card-block">
+                                            <dropdown (change)='onDropdownChange($event)' [(selectedItem)]="privacyDropdown.selectedItem" [(items)]="privacyDropdown.items" ></dropdown>
+                                            <textarea class="form-control" [(ngModel)]="post.text"  rows="5"></textarea>
+                                            <button (click)="onPostClick()" type="button" class="float-right btn btn-outline-primary btn-post">Post</button>
+                                        </div>
+                                    </div>
+                                    <div *ngFor="#p of feed">
+                                        <story-card [post]='p' class="storyline-component story-card"></story-card>
+
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade" id="friend-list">
+                                   <friend-list [list]="list"></friend-list>
+                                </div>
+
+
+                                <div role="tabpanel" class="tab-pane fade" id="work">
+                                    <h1>Work experience</h1>
+                                    <div class="row work">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2011 - 2013</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2013 - 2016</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="fa fa-circle fa-lg" aria-hidden="true"></i>
+
+                                            </div>
+                                            <div class="media-body">
+                                                <h2 class="media-heading">2016 - </h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem
+                                                    libero, malesuada tincidunt mauris sed.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane fade contact" id="contact">
+                                    <h1 class="text-center">Contact me</h1>
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"
+                                                                           aria-hidden="true"></i>
+                                        </span>
+                                                <input type="email" class="form-control" id="inputEmail3"
+                                                       placeholder="Email">
+                                            </div>
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                                <input type="email" class="form-control" id="inputEmail3"
+                                                       placeholder="Name">
+                                            </div>
+                                            <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-align-left"
+                                                                           aria-hidden="true"></i>
+                                        </span>
+                                                <textarea class="form-control" rows="3"
+                                                          placeholder="Message"></textarea>
+                                            </div>
+                                            <div class="input-group pull-right">
+                                                <button type="submit" class="btn">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="row text-center">
+                                        <div class="col-md-6">
+                                            <h2>How to reach me:</h2>
+                                            <p>Email: contact@email.com</p>
+                                            <p>Phone: +123 45 678 987</p>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <h2>Address</h2>
+                                            <p>Street name No.</p>
+                                            <p>Zip City, Country</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /container -->

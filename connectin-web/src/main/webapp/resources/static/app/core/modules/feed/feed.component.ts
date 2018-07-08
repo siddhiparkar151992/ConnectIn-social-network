@@ -13,6 +13,8 @@ import {StorylineService} from "./feed.service";
 import {RequestHeaderService} from "../../../common/sevices/request-header.service";
 import {DatetimeService} from "../../../util/datetime.service";
 import {CommentService} from "../comment/comment.service";
+import {FriendListService} from "../friend-list/friend-list.service";
+import {ConnectionsService} from "../../../common/sevices/connections.service";
 @Component({
     selector: 'storyline',
     templateUrl: '/resources/static/app/core/modules/feed/feed.component.html',
@@ -46,7 +48,7 @@ export class StorylineComponent implements OnInit {
         }
     }
     onDropdownChange(event) {
-        this.privacyDropdown.selectedItem = event.target.value;
+        this.privacyDropdown.selectedItem = event;
     }
     onPostClick() {
         if (this.post.text != null && this.post.text != "") {

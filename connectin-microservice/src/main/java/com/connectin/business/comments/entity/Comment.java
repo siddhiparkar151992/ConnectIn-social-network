@@ -27,7 +27,7 @@ public class Comment implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "comment", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "comment")
     private List<Likes> likes;
 
     @Column(name = "created_timestamp")

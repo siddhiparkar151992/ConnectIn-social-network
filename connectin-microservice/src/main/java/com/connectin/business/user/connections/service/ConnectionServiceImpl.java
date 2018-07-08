@@ -35,5 +35,20 @@ public class ConnectionServiceImpl implements ConnectionService {
         return null;
     }
 
+    @Override
+    public Response<List<User>> getUserConnections(String userName) {
+        ResponseGenerator<List<User>> responseGenerator = new ResponseGenerator<>();
+        List<User> user = null;
+        try {
+            user = connectionDao.getConnectionByUserId(userName);
 
+            if (!user.equals(null)) {
+
+                return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, user);
+            }
+        } catch (ConnectinBaseException e) {
+            return responseGenerator.generateErrorResponse(e.getMessage(), Message.ERROR_CODE, user);
+        }
+        return null;
+    }
 }

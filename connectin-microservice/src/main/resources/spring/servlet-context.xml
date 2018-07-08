@@ -14,7 +14,7 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.connectin"></context:component-scan>
 
-    <beans:bean id="entityManagerFactoryBean"
+    <beans:bean id="entityManagerFactory"
                 class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <beans:property name="dataSource" ref="dataSource"/>
         <!-- This makes /META-INF/persistence.xml is no longer necessary -->
@@ -46,7 +46,7 @@
 
     <beans:bean id="transactionManager"
                 class="org.springframework.orm.jpa.JpaTransactionManager">
-        <beans:property name="entityManagerFactory" ref="entityManagerFactoryBean"/>
+        <beans:property name="entityManagerFactory" ref="entityManagerFactory"/>
     </beans:bean>
     <annotation-driven/>
     <resources location="/resources/" mapping="/resources/**"></resources>

@@ -3,42 +3,53 @@
  */
 package com.connectin.business.likes.service;
 
-import com.connectin.domain.like.LikeDTO;
+import com.connectin.business.likes.dao.ILikesDao;
+import com.connectin.constants.Message;
+import com.connectin.domain.like.LikeType;
 import com.connectin.exceptions.ConnectinBaseException;
 import com.connectin.utils.Response;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.List;
+import com.connectin.utils.ResponseGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @author Dell
  */
-@Repository
-@Transactional
+@Service("likesService")
 public class LikesServiceImpl implements LikesService {
-
-    @PersistenceContext
-    EntityManager entityManager;
+    @Autowired
+    private ILikesDao likesDao;
 
     @Override
-    public Response<List<LikeDTO>> getLikesByPostId(int postId) throws ConnectinBaseException {
-        List<LikeDTO> comments = new ArrayList<>();
-        try {
-
-        } catch (Exception e) {
-            throw new ConnectinBaseException("Could not load posts!");
-
+    public Response<String> likeComment(int commentId, int userId) {
+        ResponseGenerator<String> responseGenerator = new ResponseGenerator<>();
+        if (commentId < 0|| userId < 0) {
+            return responseGenerator.generateErrorResponse("Comment id or user id cannot be null",
+                    Message.ERROR_CODE, null);
         }
-        return null;
+        try {
+            likesDao.like(LikeType.comment, commentId, userId);
+            return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, "");
+        } catch (ConnectinBaseException e) {
+            return responseGenerator.generateErrorResponse("Could not like comment with id "+commentId,
+                    Message.ERROR_CODE, null);
+        }
     }
 
     @Override
-    public Response<List<LikeDTO>> getLikesByCommentId(int commentId) throws ConnectinBaseException {
-        // TODO Auto-generated method stub
-        return null;
+    public Response<String> likePost(int postId, int userId) {
+        ResponseGenerator<String> responseGenerator = new ResponseGenerator<>();
+        if (postId < 0|| userId < 0) {
+            return responseGenerator.generateErrorResponse("Post id or user id cannot be null",
+                    Message.ERROR_CODE, null);
+        }
+        try {
+            likesDao.like(LikeType.post, postId, userId);
+            return responseGenerator.generateSuccessResponse(Message.SUCCESS, Message.SUCCESS_CODE, "");
+        } catch (ConnectinBaseException e) {
+            return responseGenerator.generateErrorResponse("Could not like post with id "+postId,
+                    Message.ERROR_CODE, null);
+        }
     }
+
 }

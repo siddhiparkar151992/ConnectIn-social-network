@@ -2,7 +2,9 @@ body {
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif !important;
   background-color: #0b1e2f !important;
 }
-
+img {
+  image-orientation: from-image !important;
+}
 .navbar-custom {
   position: relative !important;
   background-color: #fff;

@@ -4,7 +4,7 @@ import com.connectin.business.user.entity.User;
 import com.connectin.exceptions.ConnectinBaseException;
 
 public interface IUserDao {
-    public User getByName(String userName) throws ConnectinBaseException;
-
-    public void insertUserAuthenticationDetails(String userName, String password, int userId) throws ConnectinBaseException;
+    User getByName(String userName) throws ConnectinBaseException;
+    User getById(int id) throws ConnectinBaseException;
+    void insertUserAuthenticationDetails(String userName, String password, int userId) throws ConnectinBaseException;
 }

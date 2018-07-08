@@ -1,28 +1,27 @@
 import {Component, OnInit} from "angular2/core";
 
 import {Route, RouteConfig, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from "angular2/router";
-import {DashboardComponent} from "./modules/dashboard/dashboard.component";
-import {HeaderComponent} from "./common/header/header.component";
-import {FooterComponent} from "./common/footer/footer.component";
 import {UrlConfigService} from "../config/url-config.service";
 import {UserFeedService} from "../core/modules/feed/user-feeds.service";
 import {UrlConfigService} from '../config/url-config.service';
-import  {TokenService} from './common/core/security/token/token.service';
-import {UserService} from "./common/core/security/user.service";
 import {DatetimeService} from "../util/datetime.service";
-import {StorylineService} from "./modules/storyline/service/storyline.service";
-import {RequestHeaderService} from "./common/core/security/request-header.service";
-import {CommentService} from "./modules/comment/comment.service";
+import {StorylineService} from "../core/modules/feed/feed.service";
+import {CommentService} from "../core/modules/comment/comment.service";
+import {LikeService} from "../core/modules/likes/likes.service";
+import {HeaderComponent} from "../layout/header/header.component";
+import {FooterComponent} from "../layout/footer/footer.component";
+import {UserService} from "../core/security/user/user.service";
+import {TokenService} from "../core/security/token/token.service";
+import {RequestHeaderService} from "../common/sevices/request-header.service";
+import {UserDetailsService} from "../core/modules/user/user-details/user-details.service";
 declare var $: any;
-declare var userData: any;
-declare var logActivity: any;
 
 @Component({
     selector: 'app',
     template: " <index-header></index-header><div><router-outlet></router-outlet></div><index-footer></index-footer>",
     directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
     providers: [UrlConfigService, UserFeedService, TokenService, UserService, DatetimeService,
-        StorylineService, RequestHeaderService,CommentService],
+        StorylineService, RequestHeaderService,CommentService, LikeService, UserDetailsService],
 
 })
 
@@ -39,7 +38,6 @@ declare var logActivity: any;
         useAsDefault: true
 
     }
-
 ])
 
 export class AppComponent implements OnInit {

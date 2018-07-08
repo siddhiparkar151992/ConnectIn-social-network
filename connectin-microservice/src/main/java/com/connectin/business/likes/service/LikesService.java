@@ -7,7 +7,6 @@ import com.connectin.utils.Response;
 import java.util.List;
 
 public interface LikesService {
-    Response<List<LikeDTO>> getLikesByPostId(int postId) throws ConnectinBaseException;
-
-    Response<List<LikeDTO>> getLikesByCommentId(int commentId) throws ConnectinBaseException;
+    Response<String> likeComment(int commentId, int userId);
+    Response<String> likePost(int postId, int userId);
 }

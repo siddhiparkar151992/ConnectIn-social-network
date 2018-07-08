@@ -1,5 +1,6 @@
 /**/*.classpath
-
+*.ipr
+*.iml
 /connectin-web/.sass-cache/*
 /connectin-web/node_modules/*
 /**/.settings
@@ -13,6 +14,6 @@
 **/*.prefs
 *.prefs
 .idea
-*.bat
 /target
 _site/
+*.iws
