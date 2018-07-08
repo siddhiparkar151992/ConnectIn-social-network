@@ -18,12 +18,11 @@ Includes interdependent maven projects to package it into one Connectin Spring b
 * Modularity
     The code has been following with strict guidelines and naming conventions according to airbnb
 
+
 ## Running Connectin locally
-```
-	git clone https://github.com/siddhiparkar151992/ConnectIn.git
-	cd connectin
-	run.bat
-```
+Run.bat file will automatically run all dependent modules like service and webapp and start server at http://localhost:9092
+1. Go to root project 
+2. double click on run.bat or open cmd and type run.bat
 
 ## Database configuration
 
@@ -38,6 +37,7 @@ pleas run sql commands for creating table using below steps:
 2. open create.sql 
 3. execute all commands from create.sql
 4. open insert.sql in same folder and execute insert commands
+
 ## Working with ConnectIn in Eclipse/STS
 
 ### prerequisites
@@ -56,7 +56,7 @@ Inside Eclipse
 File -> Import -> Maven -> Existing Maven project
 ```
 
-###Screenshots
+### Screenshots
 # Home Page
 ![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/homepage.png)
 
