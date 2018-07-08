@@ -1,0 +1,23 @@
+<div class="friend-list-component">
+
+	<div class="row">
+		<div *ngFor="#item of list.users" class="col-md-3">
+			<figure class="card card-product">
+				<div class="img-wrap">
+					{{item.firstName}} {{item.lastName}}
+				</div>
+				<figcaption class="info-wrap">
+					<div class="title text-dots"><a href="#">
+						<img class="img img-fluid" [src]="item.profileImage.url">
+					</a></div>
+					<div class="action-wrap">
+						<span class="fa fa-plus-square-o" (click)="sendFriendRequest(item)">Add Friend</span>
+						<span class="fa fa-plus-square-o" (click)="followFriend(item)">Follow</span>
+						 <!-- price-wrap.// -->
+					</div> <!-- action-wrap -->
+				</figcaption>
+			</figure> <!-- card // -->
+		</div> <!-- col // -->
+
+	</div>
+</div>

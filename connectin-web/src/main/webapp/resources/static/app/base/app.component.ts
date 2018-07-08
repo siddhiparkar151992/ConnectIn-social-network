@@ -13,8 +13,7 @@ import {FooterComponent} from "../layout/footer/footer.component";
 import {UserService} from "../core/security/user/user.service";
 import {TokenService} from "../core/security/token/token.service";
 import {RequestHeaderService} from "../common/sevices/request-header.service";
-import {UserDetailsService} from "../core/modules/user-details/user-details.service";
-import {UserProfileComponent} from "../core/modules/user-profile/user-profile.component";
+import {UserDetailsService} from "../core/modules/user/user-details/user-details.service";
 declare var $: any;
 
 @Component({

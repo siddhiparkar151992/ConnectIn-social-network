@@ -8,82 +8,59 @@
             <div class="">
                 <div class="">
                     <div>
-                        <div class="tabs tab-feed">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs col-6 row tab-feed-nav" role="tablist">
-                                <li role="presentation" class="active col-3">
 
-                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                                        <i class="fa fa-file-text-o"></i>
-                                        Feed
-                                    </a>
-                                </li>
-                                <li role="presentation" class="col-3">
 
-                                    <a href="#profile" aria-controls="profile"
-                                       role="tab" data-toggle="tab"> <i class="fa fa-address-book-o"></i>
-                                        About</a>
-                                </li>
-                                <li role="presentation" class="col-3">
+                        <div class="row content col-lg-6 col-sm-10 col-md-6">
+                            <div class="tabs tab-feed">
+                                <!-- Nav tabs -->
 
-                                    <a href="#work" aria-controls="messages"
-                                       role="tab" data-toggle="tab">
-                                        <i class="fa fa-pencil-square-o"></i>Edit Profile</a>
-                                </li>
-                                <li role="presentation" class="col-3">
+                                <ul class="nav nav-tabs tab-feed-nav" role="tablist">
+                                    <li role="presentation" class="active">
 
-                                    <a href="#contact" aria-controls="settings"
-                                       role="tab" data-toggle="tab">
-                                        <i class="fa fa-address-card-o"></i>Friends</a></li>
-                            </ul>
-                        </div>
+                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                            <span class="fa fa-file-text-o"></span>
+                                            Feed
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="">
 
-                        <div class="row content col-6">
+                                        <a href="#profile" aria-controls="profile"
+                                           role="tab" data-toggle="tab"> <span class="fa fa-address-book-o"></span>
+                                            About</a>
+                                    </li>
+                                    <li role="presentation" class="">
+
+                                        <a href="#work" aria-controls="messages"
+                                           role="tab" data-toggle="tab">
+                                            <span class="fa fa-pencil-square-o"></span>Edit Profile</a>
+                                    </li>
+                                    <li role="presentation" class="">
+
+                                        <a href="#friend-list" aria-controls="friend-list"
+                                           role="tab" data-toggle="tab">
+                                            <span class="fa fa-address-card-o"></span>Friends</a></li>
+                                </ul>
+                            </div>
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active text-center" id="home">
+                                    <div *ngIf="!feed || feed.length == 0" class="text-white">No posts found! write something wonderful</div>
+                                    <div class="card post-card">
+
+                                        <div class="card-block">
+                                            <dropdown (change)='onDropdownChange($event)' [(selectedItem)]="privacyDropdown.selectedItem" [(items)]="privacyDropdown.items" ></dropdown>
+                                            <textarea class="form-control" [(ngModel)]="post.text"  rows="5"></textarea>
+                                            <button (click)="onPostClick()" type="button" class="float-right btn btn-outline-primary btn-post">Post</button>
+                                        </div>
+                                    </div>
                                     <div *ngFor="#p of feed">
                                         <story-card [post]='p' class="storyline-component story-card"></story-card>
 
                                     </div>
                                 </div>
 
-                                <div role="tabpanel" class="tab-pane fade" id="profile">
-                                    <h1>Lorem Ipsum</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem libero,
-                                        malesuada tincidunt mauris sed, pulvinar maximus enim. Aliquam erat volutpat.
-                                        Integer imperdiet malesuada diam, id viverra libero iaculis sit amet.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lorem libero,
-                                        malesuada tincidunt mauris sed, pulvinar maximus enim.</p>
-                                    <br>
-                                    <div class="row text-center">
-                                        <div class="col-md-4 about"><img
-                                                src="https://static.pexels.com/photos/7095/people-coffee-notes-tea-medium.jpg"
-                                                width="100%" class="img-responsive"/>
-                                            <a class="btn btn-more" href="#" role="button">view</a>
-                                        </div>
-
-                                        <div class="col-md-4 about"><img
-                                                src="https://static.pexels.com/photos/35550/ipad-tablet-technology-touch-medium.jpg"
-                                                width="100%" class="img-responsive">
-                                            <a class="btn btn-more" href="#" role="button">view</a>
-                                        </div>
-
-                                        <div class="col-md-4 about"><img
-                                                src="https://static.pexels.com/photos/7097/people-coffee-tea-meeting-medium.jpg"
-                                                width="100%" class="img-responsive">
-                                            <a class="btn btn-more" href="#" role="button">view</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="row social text-center">
-                                        <ul>
-                                            <li><i class="fa fa-twitter  fa-3x" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-facebook  fa-3x" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-wordpress  fa-3x" aria-hidden="true"></i></li>
-                                            <li><i class="fa fa-instagram  fa-3x" aria-hidden="true"></i></li>
-                                        </ul>
-                                    </div>
+                                <div role="tabpanel" class="tab-pane fade" id="friend-list">
+                                   <friend-list [list]="list"></friend-list>
                                 </div>
 
 
@@ -176,7 +153,6 @@
                     </div>
                 </div>
             </div>
-            <p>Girls just wanna go fun.</p>
         </div>
     </div>
 </div> <!-- /container -->

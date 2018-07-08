@@ -20,7 +20,7 @@
             href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
             rel="stylesheet" type="text/css">
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="/resources/styles/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/styles/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <%--<link rel="stylesheet" href="/resources/styles/vendor/bootstrap.min.css">--%>
     <!-- Fancybox -->

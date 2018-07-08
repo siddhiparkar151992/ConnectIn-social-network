@@ -2,15 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a289a1e8-9cc7-475e-8412-6800d0169846" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/likes/repository/LikeRepository.java" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/likes/repository/LikeRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/constants/Visibility.java" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/constants/Visibility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/domain/like/LikeDTO.java" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/domain/like/LikeDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_1311.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_20160521_154325 - Copy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_20160521_154325.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_4348.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_4358.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/yash savla md.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java8Course/src/com/ge/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/dto/ConnectionDTO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/connections.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.service.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/friend-list/friend-list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/friend-list/friend-list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/create.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/insert.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.component.ts" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-details/user-details.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-details/user-details.service.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/service/ConnectionService.java" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/service/ConnectionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/home.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/index.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/font-awesome.min.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin.ipr" afterPath="$PROJECT_DIR$/connectin.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin.iws" afterPath="$PROJECT_DIR$/connectin.iws" />
     </list>
     <ignored path="$PROJECT_DIR$/connectin-config/target/" />
@@ -182,11 +211,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="story.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.ts">
+      <file leaf-file-name="friend-list.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="19" column="64" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="64" />
+            <state relative-caret-position="115">
+              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="friend-list.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -194,15 +235,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="story.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html">
+      <file leaf-file-name="connections.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/connections.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            <state relative-caret-position="391">
+              <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
               <folding>
-                <element signature="n#div#2;n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="url-config.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="friend-list.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-profile.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,28 +290,32 @@
       <file leaf-file-name="feed.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="368">
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datetime.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts">
+      <file leaf-file-name="user-profile.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-              <folding />
+            <state relative-caret-position="69">
+              <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feed.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts">
+      <file leaf-file-name="user-profile.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="157">
+              <caret line="62" column="2" lean-forward="false" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -252,10 +336,29 @@
       <find>likes</find>
       <find>Likes</find>
       <find>resourc</find>
+      <find>us</find>
+      <find>user-de</find>
+      <find>user-det</find>
+      <find>user-deta</find>
+      <find>user-detai</find>
+      <find>user-p</find>
+      <find>user-pro</find>
+      <find>user-profile</find>
+      <find>image</find>
+      <find>getUserDetailsUrl</find>
+      <find>tab-con</find>
+      <find>20</find>
+      <find>font</find>
+      <find>girls</find>
+      <find>height</find>
+      <find>ze1tof/image.jpg</find>
+      <find>nav-table</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp</dir>
       <dir>C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources</dir>
+      <dir>C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\static\app</dir>
+      <dir>C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\static</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -280,15 +383,11 @@
         <option value="$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/service/AuthenticationManager.java" />
         <option value="$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/AuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/post/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/notifications/notifications.component.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dashboard/dashboard.component.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/news/news.component.ts" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/app-main.ts" />
-        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/likes/likes.service.ts" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -300,9 +399,31 @@
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.html" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.ts" />
-        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-details/user-details.service.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.service.ts" />
+        <option value="$PROJECT_DIR$/sql/create.sql" />
+        <option value="$PROJECT_DIR$/sql/insert.sql" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/freind-list/friend-list.scss" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/friend-list/friend-list.scss" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/connections.service.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.service.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.ts" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" />
+        <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html" />
       </list>
     </option>
   </component>
@@ -384,6 +505,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,6 +529,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sql" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConnectIn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="connectin-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -455,6 +592,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConnectIn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,7 +789,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="post" />
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user-profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -661,14 +840,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConnectIn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConnectIn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="connectin-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -697,6 +966,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\styles\scss\modules\freind-list" />
+      <recent name="C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\static\app\core\modules\user" />
       <recent name="C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\styles\scss\modules\feed" />
       <recent name="C:\Users\Dell\Desktop\Connectin\ConnectIn\connectin-web\src\main\webapp\resources\styles\scss\modules\post" />
     </key>
@@ -1289,11 +1560,15 @@
       <workItem from="1522390685152" duration="5539000" />
       <workItem from="1522554098903" duration="1523000" />
       <workItem from="1523071673850" duration="6840000" />
+      <workItem from="1524887490232" duration="2596000" />
+      <workItem from="1528603760265" duration="17926000" />
+      <workItem from="1529823707827" duration="4902000" />
+      <workItem from="1531027196119" duration="605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28229000" />
+    <option name="totallyTimeSpent" value="54258000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1317,7 +1592,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1326,7 +1600,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1335,7 +1608,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4290375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2779456" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29380664" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1344,7 +1617,9 @@
       <window_info id="CVS" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1423,177 +1698,223 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/service/AuthenticationServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/run.bat.sh" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="322">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/userdetails/UserDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/provider/AuthProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/handlers/RestAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/handlers/AuthenticationFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/handlers/AuthenticationSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/service/AuthenticationManager.java">
+    <entry file="file://$PROJECT_DIR$/run.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/AuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/connectin-web/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/feed/storyline.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-microservice/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/security/token/token.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/post/story.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/resources/spring/root-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="64" lean-forward="false" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/security/token/token.resolver.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/request-header.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/post/controller/PostController.java">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="153" column="25" lean-forward="true" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/insert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/headers/profile-header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/tokenmanager/service/TokenAuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/tokenmanager/service/TokenHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/security/tokenmanager/util/JwtUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="89" column="14" lean-forward="false" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/service/IAuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-auth/src/main/java/com/connectin/authenticate/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dashboard/dashboard.component.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/index-header.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-details/user-details.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/footer/footer.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dashboard/dashboard.component.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/news/news.component.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        <state relative-caret-position="230">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="121" column="1" lean-forward="true" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/friend-list/friend-list.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4485">
+          <caret line="195" column="7" lean-forward="false" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/notifications/notifications.component.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/friend-list/friend-list.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="134">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/comment/comment.service.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/controller/ConnectionsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1606,204 +1927,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="92">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/comment/comment.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/app-main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/likes/likes.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/footer/index-footer.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/index-header.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.sh" />
-    <entry file="file://$PROJECT_DIR$/run.bat.sh" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4485">
-          <caret line="195" column="7" lean-forward="false" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.bat">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/feed/storyline.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/security/token/token.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/post/story.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="23" lean-forward="false" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/resources/spring/root-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="64" lean-forward="false" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/components/dropdown/dropdown.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/security/token/token.resolver.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="64" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/request-header.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/util/datetime.service.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+        <state relative-caret-position="0">
+          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/likes/likes.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="368">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.ts">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="64" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="64" />
+        <state relative-caret-position="386">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/connections.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="20" column="87" lean-forward="false" selection-start-line="20" selection-start-column="87" selection-end-line="20" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html">
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+        <state relative-caret-position="115">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="62" column="2" lean-forward="false" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="12" column="66" lean-forward="false" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
           <folding>
-            <element signature="n#div#2;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#2;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

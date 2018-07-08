@@ -15,7 +15,7 @@ body {
 .fb-image-profile {
   margin: -90px 10px 0px 50px;
   z-index: 9;
-  width: 20%;
+  width: 14%;
 }
 
 @media (max-width: 768px) {
@@ -50,7 +50,11 @@ body {
   box-shadow: 0px 4px #CECECE;
 }
 
-/* line 63, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 62, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs li {
+  width: 25%;
+}
+/* line 64, ../../../scss/modules/user-profile/user-profile.scss */
 .nav-tabs li:hover {
   background-color: #121025 !important;
   border: medium none;
@@ -61,31 +65,29 @@ body {
   border-radius: 5px;
 }
 
-/* line 70, ../../../scss/modules/user-profile/user-profile.scss */
-.nav-tabs > li > a, .nav-tabs > li > i {
+/* line 71, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs a, .nav-tabs i {
   border: medium none;
   color: #333;
   font-family: "Montserrat", sans-serif;
   transition: all 0.5s ease;
 }
-/* line 75, ../../../scss/modules/user-profile/user-profile.scss */
-.nav-tabs > li > a:hover, .nav-tabs > li > i:hover {
+/* line 76, ../../../scss/modules/user-profile/user-profile.scss */
+.nav-tabs a:hover, .nav-tabs i:hover {
   color: #ffffff;
 }
 
-/* line 79, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 80, ../../../scss/modules/user-profile/user-profile.scss */
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > i,
-.nav-tabs > li.active > i:focus {
-  color: #dd5555;
+.nav-tabs li.active i {
+  color: #dd5555 !important;
   border: transparent !important;
 }
 /* line 85, ../../../scss/modules/user-profile/user-profile.scss */
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus:hover,
-.nav-tabs > li.active > i:hover,
-.nav-tabs > li.active > i:focus:hover {
+.nav-tabs li.active i:hover {
   color: #ffffff;
 }
 
@@ -117,13 +119,18 @@ i:hover {
 }
 
 /* TABS CONTAINER */
-/* line 118, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 117, ../../../scss/modules/user-profile/user-profile.scss */
+.tab-feed {
+  width: 100%;
+}
+/* line 119, ../../../scss/modules/user-profile/user-profile.scss */
 .tab-feed .tab-feed-nav {
+  width: 100%;
   padding: 10px;
   border-radius: 0px;
 }
 
-/* line 126, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 128, ../../../scss/modules/user-profile/user-profile.scss */
 .content {
   padding: 0px;
   margin-top: 15px;
@@ -134,7 +141,7 @@ i:hover {
   box-shadow: 0px 5px #CECECE;
 }
 
-/* line 133, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 135, ../../../scss/modules/user-profile/user-profile.scss */
 .btn,
 .btn:hover {
   background-color: #dd5555;
@@ -143,7 +150,7 @@ i:hover {
   padding: 5px 25px 5px 25px;
 }
 
-/* line 141, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 143, ../../../scss/modules/user-profile/user-profile.scss */
 .btn-more,
 .btn-more:hover {
   font-size: 11px;
@@ -153,75 +160,75 @@ i:hover {
   margin-top: 10px;
 }
 
-/* line 150, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 152, ../../../scss/modules/user-profile/user-profile.scss */
 h1 {
   font-family: "Montserrat", sans-serif;
   color: #dd5555;
   font-size: 22px;
 }
 
-/* line 156, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 158, ../../../scss/modules/user-profile/user-profile.scss */
 h2 {
   font-family: "Montserrat", sans-serif;
   color: #dd5555;
   font-size: 18px;
 }
 
-/* line 162, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 164, ../../../scss/modules/user-profile/user-profile.scss */
 p {
   font-family: "Montserrat", sans-serif;
   color: #EBEBEB;
 }
 
-/* line 167, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 169, ../../../scss/modules/user-profile/user-profile.scss */
 .social {
   margin-top: 50px;
 }
-/* line 169, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 171, ../../../scss/modules/user-profile/user-profile.scss */
 .social li {
   display: inline;
   margin-right: 35px;
 }
 
-/* line 175, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 177, ../../../scss/modules/user-profile/user-profile.scss */
 .work {
   padding: 20px;
   margin-left: 20px;
   border-left: 2px solid #dd5555;
 }
-/* line 179, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 181, ../../../scss/modules/user-profile/user-profile.scss */
 .work i {
   color: #dd5555;
 }
 
-/* line 184, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 186, ../../../scss/modules/user-profile/user-profile.scss */
 .media {
   margin-left: -29px;
 }
 
 /* CONTACT */
-/* line 191, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 193, ../../../scss/modules/user-profile/user-profile.scss */
 .contact i {
   color: #ffffff;
 }
 
-/* line 195, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 197, ../../../scss/modules/user-profile/user-profile.scss */
 .form-horizontal {
   padding: 15px;
 }
 
-/* line 199, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 201, ../../../scss/modules/user-profile/user-profile.scss */
 .form-control {
   border: transparent !important;
   background-color: #EBEBEB;
 }
 
-/* line 204, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 206, ../../../scss/modules/user-profile/user-profile.scss */
 .input-group {
   margin-bottom: 15px;
 }
 
-/* line 208, ../../../scss/modules/user-profile/user-profile.scss */
+/* line 210, ../../../scss/modules/user-profile/user-profile.scss */
 .input-group-addon {
   background-color: #dd5555;
   color: #ffffff;

@@ -1,6 +1,6 @@
-import {Component, OnInit} from "angular2/core";
+import {Component, Inject, OnInit} from "angular2/core";
 import {NotificationComponent} from "../../../core/modules/notifications/notifications.component";
-import {UserDetailsService} from "../../../core/modules/user-details/user-details.service";
+import {UserDetailsService} from "../../../core/modules/user/user-details/user-details.service";
 
 
 declare var $: any;
@@ -14,16 +14,26 @@ declare var $: any;
 
 })
 
-export class ProfileHeaderComponent implements OnInit{
-    constructor() {
+export class ProfileHeaderComponent implements OnInit {
+    private userDetails: Object = {};
+
+    constructor(@Inject(UserDetailsService) private userDetailsService: UserDetailsService) {
 
     }
+
+    populateUserDetails() {
+        this.userDetailsService.getUserDetails().subscribe(response => {
+            this.userDetails = response.json().data;
+        });
+    }
+
     ngOnInit() {
-        $('.dropdown').on('show.bs.dropdown', function(e){
+        this.populateUserDetails();
+        $('.dropdown').on('show.bs.dropdown', function (e) {
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
         });
 
-        $('.dropdown').on('hide.bs.dropdown', function(e){
+        $('.dropdown').on('hide.bs.dropdown', function (e) {
             $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
         });
     }

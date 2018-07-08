@@ -1,7 +1,8 @@
 <div class="card story-card">
     <div class="card-block story story-header">
         <div class="media">
-            <img *ngIf="post.user" height="5%" width="5%" [src]="post.user.profileImage.url" class="d-flex mr-3 rounded-circle float-left"
+            <img *ngIf="post.user" height="9%" width="9%" [src]="post.user.profileImage.url"
+                 class="d-flex mr-3 rounded-circle float-left"
                  alt="logo">
             <div class="media-body story-header name">
                 <div class="mt-0">
@@ -26,7 +27,7 @@
         </p>
     </div>
     <div class="card-block story story-likes row">
-        <div *ngIf="post.likes && post.likes.length >= 3"  class="image-pills col-6 row">
+        <div *ngIf="post.likes && post.likes.length >= 3" class="image-pills col-6 row">
             <ul class="list-inline like-list col-6">
                 <li *ngFor="#p of [0,1,2]"
                     class="list-inline-item like-list-item">
@@ -40,7 +41,7 @@
                 <span class="card-text">Likes</span>
             </div>
         </div>
-        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3"  class="image-pills col-6 row">
+        <div *ngIf="post.likes && post.likes.length > 0 && post.likes.length < 3" class="image-pills col-6 row">
             <ul class="list-inline like-list col-12">
                 <li *ngFor="#p of post.likes"
                     class="list-inline-item like-list-item">
@@ -51,7 +52,7 @@
             </ul>
 
         </div>
-        <div *ngIf="!post.likes || post.likes.length == 0"  class="image-pills col-6">
+        <div *ngIf="!post.likes || post.likes.length == 0" class="image-pills col-6">
             <div class="likes col-12">
                 <span class="badge badge-pill badge-primary">0</span>
                 <span class="card-text">Likes</span>

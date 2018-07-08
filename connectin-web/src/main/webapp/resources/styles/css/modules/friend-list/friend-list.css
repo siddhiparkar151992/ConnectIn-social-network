@@ -1,0 +1,48 @@
+/* line 4, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product:after {
+  content: "";
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+/* line 10, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .price-new, .friend-list-component .card-product .price {
+  margin-right: 5px;
+}
+/* line 13, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .price-old {
+  color: #999;
+}
+/* line 16, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .img-wrap {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+/* line 22, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+/* line 28, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .info-wrap {
+  overflow: hidden;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+/* line 33, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .action-wrap {
+  padding-top: 4px;
+  margin-top: 4px;
+}
+/* line 37, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .bottom-wrap {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+/* line 41, ../../../scss/modules/friend-list/friend-list.scss */
+.friend-list-component .card-product .title {
+  margin-top: 0;
+}

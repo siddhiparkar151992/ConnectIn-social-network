@@ -60,6 +60,7 @@ body
   box-shadow: 0px 4px $shadows;
 }
 .nav-tabs li {
+  width: 25%;
   &:hover {
     background-color: $tab-pill-background-color !important;
     border: medium none;
@@ -114,7 +115,9 @@ i {
 
 /* TABS CONTAINER */
 .tab-feed {
+  width: 100%;
   .tab-feed-nav {
+    width: 100%;
     padding: 10px;
     border-radius: 0px;
     li {

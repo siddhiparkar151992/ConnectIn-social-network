@@ -4,18 +4,23 @@ body {
   background-color: #0b1e2f !important;
 }
 
-/* line 6, ../scss/home.scss */
+/* line 5, ../scss/home.scss */
+img {
+  image-orientation: from-image !important;
+}
+
+/* line 8, ../scss/home.scss */
 .navbar-custom {
   position: relative !important;
   background-color: #fff;
   padding: 10px 0;
 }
-/* line 12, ../scss/home.scss */
+/* line 14, ../scss/home.scss */
 .navbar-custom .nav li a {
   font-weight: 400;
   letter-spacing: 1px;
 }
-/* line 17, ../scss/home.scss */
+/* line 19, ../scss/home.scss */
 .navbar-custom .nav .active a {
   border-radius: 5px;
 }
