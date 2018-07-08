@@ -22,14 +22,8 @@ Includes interdependent maven projects to package it into one Connectin Spring b
 ```
 	git clone https://github.com/siddhiparkar151992/ConnectIn.git
 	cd connectin
-	mvn clean install
-	(for running UI application)
-	cd connectin-web
-	mvn clean spring-boot:run
-
+	run.bat
 ```
-
-
 
 ## Database configuration
 
@@ -39,6 +33,11 @@ Note that whenever the database type is changed, the application.properties file
 
 for creating database configrations run database.sql file at root folder
 
+pleas run sql commands for creating table using below steps:
+1. go to /sql folder in root project
+2. open create.sql 
+3. execute all commands from create.sql
+4. open insert.sql in same folder and execute insert commands
 ## Working with ConnectIn in Eclipse/STS
 
 ### prerequisites
@@ -56,3 +55,16 @@ Inside Eclipse
 ```
 File -> Import -> Maven -> Existing Maven project
 ```
+
+###Screenshots
+# Home Page
+![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/homepage.png)
+
+#Profile page
+![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/ptofile-page.png)
+
+#notifications
+![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/notification.png)
+
+#Friend List
+![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/friend-list.png)

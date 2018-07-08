@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a289a1e8-9cc7-475e-8412-6800d0169846" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_1311.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_20160521_154325 - Copy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_20160521_154325.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_4348.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/img/IMG_4358.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/yash savla md.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java8Course/src/com/ge/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/dto/ConnectionDTO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/common/sevices/connections.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.service.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/friend-list/friend-list.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/friend-list/friend-list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/create.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/insert.sql" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.component.ts" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-details/user-details.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-details/user-details.service.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user-profile/user-profile.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/service/ConnectionService.java" afterPath="$PROJECT_DIR$/connectin-microservice/src/main/java/com/connectin/business/user/connections/service/ConnectionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/base/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/config/url-config.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/post/story.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/routes/home/home.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/layout/header/profile/header.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/home.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/index.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/css/modules/user-profile/user-profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/font-awesome.min.css" afterPath="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/vendor/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin.ipr" afterPath="$PROJECT_DIR$/connectin.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectin.iws" afterPath="$PROJECT_DIR$/connectin.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/connectin-config/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -287,17 +249,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feed.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/feed/feed.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-profile.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user-profile.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="69">
@@ -307,6 +259,19 @@
                 <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="336">
+                <caret line="69" column="96" lean-forward="false" selection-start-line="69" selection-start-column="96" selection-end-line="69" selection-end-column="96" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -424,6 +389,7 @@
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/friend-list/friend-list.component.html" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/styles/scss/modules/user-profile/user-profile.scss" />
         <option value="$PROJECT_DIR$/connectin-web/src/main/webapp/resources/static/app/core/modules/user/user-profile/user-profile.component.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1563,12 +1529,12 @@
       <workItem from="1524887490232" duration="2596000" />
       <workItem from="1528603760265" duration="17926000" />
       <workItem from="1529823707827" duration="4902000" />
-      <workItem from="1531027196119" duration="605000" />
+      <workItem from="1531027196119" duration="3243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54258000" />
+    <option name="totallyTimeSpent" value="56896000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1608,7 +1574,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4290375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29380664" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26435044" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1698,7 +1664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run.bat.sh" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -2069,6 +2034,17 @@
             <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="336">
+            <caret line="69" column="96" lean-forward="false" selection-start-line="69" selection-start-column="96" selection-end-line="69" selection-end-column="96" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
