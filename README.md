@@ -60,11 +60,11 @@ File -> Import -> Maven -> Existing Maven project
 # Home Page
 ![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/homepage.png)
 
-#Profile page
-![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/ptofile-page.png)
+# Profile page
+![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/profile-page.png)
 
-#notifications
+# notifications
 ![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/notification.png)
 
-#Friend List
+# Friend List
 ![ScreenShot](https://raw.github.com/siddhiparkar151992/connectin/master/screenshots/friend-list.png)
